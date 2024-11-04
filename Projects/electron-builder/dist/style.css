@@ -1,0 +1,189 @@
+:root {
+  --main-color: #29B6F6;
+}
+
+html {
+  overflow: hidden;
+}
+
+body, #App {
+  height: 100vh;
+  background: #F6F8F8;
+  color: #37474f;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: default;
+}
+
+#App {
+  max-height: 500px;
+}
+#App .application--wrap {
+  min-height: auto;
+}
+#App .layout-1 {
+  flex-grow: 3;
+}
+#App .layout-2 {
+  flex-grow: 1;
+}
+#App .font-comfortaa {
+  font-family: "Comfortaa", cursive;
+}
+
+#atom {
+  width: 300px;
+  height: 300px;
+  margin-top: 20%;
+  flex-shrink: 0;
+}
+#atom .electrosphere {
+  width: var(--size);
+  height: var(--size);
+  margin-top: calc((var(--size) + 5.3%) * -1);
+  margin-left: calc((100% - var(--size)) / 2);
+  border: 1px solid #CCC;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+#atom .electrosphere.layer-7 {
+  margin: 0;
+}
+#atom .electrosphere.layer-1.empty {
+  visibility: visible;
+  opacity: 1;
+}
+#atom .electrosphere.empty {
+  visibility: hidden;
+  opacity: 0;
+}
+#atom .electron {
+  width: 100%;
+  height: 100%;
+  margin-top: -100%;
+  transform: rotate(calc(360deg * var(--index) / var(--base)));
+  transition: 0.3s;
+}
+#atom .electron:first-child {
+  margin-top: 0;
+}
+#atom .electron::before {
+  content: "";
+  margin: -3px 0 0 calc(50% - 1px);
+  outline: 3px solid #F6F8F8;
+  padding: 3px;
+  border-radius: 50%;
+  background: var(--main-color);
+  position: absolute;
+}
+#atom #element-search {
+  position: absolute;
+  opacity: 0;
+  top: -3%;
+}
+#atom #element-search:focus + label .element-initials {
+  -webkit-animation: test 1s step-end infinite;
+          animation: test 1s step-end infinite;
+}
+@-webkit-keyframes test {
+  from {
+    border-right: 1px solid #FFF;
+  }
+  50% {
+    border-right: 1px solid transparent;
+  }
+  to {
+    border-right: 1px solid #fff;
+  }
+}
+@keyframes test {
+  from {
+    border-right: 1px solid #FFF;
+  }
+  50% {
+    border-right: 1px solid transparent;
+  }
+  to {
+    border-right: 1px solid #fff;
+  }
+}
+#atom .nucleus {
+  width: 20%;
+  height: 20%;
+  margin: -30% 0 0 40%;
+  background: var(--main-color);
+  border-radius: 50%;
+  color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: text;
+  z-index: 99;
+  position: relative;
+}
+#atom .nucleus.match-error {
+  background: #FFEB3B;
+}
+#atom .nucleus .element-initials {
+  min-height: 19px;
+  text-transform: capitalize;
+}
+
+.electrons-slider {
+  margin-top: 0;
+  flex: none;
+}
+.electrons-slider .v-messages {
+  display: none;
+}
+
+.notation-display {
+  width: 260px;
+  height: 54px;
+  margin: 0;
+  font-weight: 600;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+.notation-display.show-full-notation .middle {
+  display: inline-block;
+}
+.notation-display.show-full-notation .truncate {
+  display: none;
+}
+.notation-display * {
+  width: 36px;
+  text-align: center;
+}
+.notation-display .middle {
+  color: var(--main-color);
+  display: none;
+}
+.notation-display .truncate {
+  margin-top: -3px;
+  font-size: 1.3em;
+  color: var(--main-color);
+}
+
+@media only screen and (max-width: 425px) {
+  #atom {
+    width: 250px;
+    height: 250px;
+  }
+  #atom .nucleus {
+    font-size: 0.7em;
+  }
+  #atom .electron::before {
+    margin: -3px 0 0 calc(50% - 3px);
+    padding: 2.5px;
+  }
+}

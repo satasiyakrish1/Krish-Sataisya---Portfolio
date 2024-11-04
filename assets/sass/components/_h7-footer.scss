@@ -1,0 +1,128 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Footer CSS
+----------------------------------------*/
+
+
+.tj-footer {
+     &-7 {
+          &-top {
+               padding: 110px 0 110px;
+               @media #{$md,$sm,$xs} {
+                    padding: 60px 0 60px;
+               }
+               &-wrapper {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    border-radius: 12px;
+                    padding: 0 0;
+                    gap: 8px;
+                    @media #{$lg,$md,$sm,$xs} {
+                         row-gap: 40px;
+                    }
+                    & .tj-footer-6-left {
+                         @media #{$xs} {
+                              max-width: inherit;
+                         }
+                    }
+               }
+               &-title {
+                    font-weight: var(--tj-fw-sbold);
+                    font-size: 47px;
+                    letter-spacing: -0.02em;
+                    margin-bottom: 30px;
+                    @media #{$xs} {
+                         font-size: 30px;
+                    }
+               }
+               &-form {
+                    & input {
+                         background: transparent;
+                         border: 2px solid var(--tj-theme-primary);
+                         border-radius: 60px;
+                         padding: 16px 70px 16px 30px;
+                         color: var(--tj-white);
+                         @media #{$sm} {
+                              padding: 16px 20px 16px 30px;
+                         }
+                         @media #{$xs} {
+                              padding: 16px 20px 16px 30px;
+                              width: 260px;
+                         }
+                         &::placeholder {
+                              font-size: 16px;
+                              color: var(--body);
+
+                         }
+                         &:focus {
+                              outline: none;
+                         }
+                    }
+               }
+               &-submit-btn {
+                    width: 61px;
+                    height: 61px;
+                    line-height: 1;
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: linear-gradient(90deg, #8750f7 0%, #2a1454 100%);
+                    border-radius: 50px;
+                    border: none;
+                    color: var(--tj-white);
+               }
+          }
+          &-wrapper {
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+               flex-wrap: wrap;
+               border-top: 1px solid #33283B;
+               padding: 30px 0 30px;
+               @media #{$lg} {
+                    row-gap: 20px;
+               }
+               @media #{$md} {
+                    row-gap: 20px;
+                    justify-content: center;
+               }
+               @media #{$sm,$xs} {
+                    justify-content: center;
+                    row-gap: 20px;
+               }
+          }
+          &-bottom {
+               & .tj-footer-6-copyright {
+                    @media #{$xs} {
+                         font-size: 13px;
+                    }
+               }
+          }
+          &-middle {
+               & li {
+                    & a {
+                         color: var(--tj-white);
+                         &::before {
+                              background: linear-gradient(90deg, #8750f7 0%, #2a1454 100%);
+                         }
+                    }
+               }
+               & .tj-header-5-right-media {
+                    @media #{$lg} {
+                         display: block;
+                    }
+               }
+          }
+     }
+}
+
+
+
+
+
+
+
+
+/* !END: Theme Footer CSS */

@@ -1,0 +1,189 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Cta CSS
+----------------------------------------*/
+.tj-cta-section {
+     &.style-5 {
+          padding-bottom: 0px;
+          background-color: var(--tj-black-2);
+     }
+}
+
+.cta-wrapper {
+     &.style-5 {
+          padding: 50px;
+          @media #{$lg} {
+               padding: 30px 25px;
+          }
+          @media #{$md, $sm, $xs} {
+               padding: 30px 15px;
+          }
+     }
+}
+
+.cta-inner-5 {
+     display: flex;
+     gap: 60px;
+     align-items: center;
+     .cta-images {
+          max-width: 295px;
+          width: 100%;
+          img {
+               width: 100%;
+               border-radius: 25px;
+          }
+     }
+     .cta-content {
+          display: flex;
+          align-items: end;
+          gap: 20px;
+          justify-content: space-between;
+          max-width: 840px;
+          width: 100%;
+          .cta-text {
+               max-width: 665px;
+               width: 100%;
+               .title {
+                    font-size: 60px;
+                    font-weight: var(--tj-fw-sbold);
+                    letter-spacing: -0.02em;
+                    margin-bottom: 40px;
+               }
+               span {
+                    display: block;
+                    color: var(--tj-white);
+               }
+          }
+          .cta-button {
+               .cta-link {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50%;
+                    color: var(--tj-white);
+                    font-size: 30px;
+                    background-color: var(--tj-black-2);
+                    text-decoration: none;
+                    .icon_box {
+                         position: relative;
+                         display: inline-flex;
+                         overflow: hidden;
+                         padding: 0 4px;
+                         transform: rotate(-45deg);
+                         .icon_first,
+                         .icon_second {
+                              transition: all 0.3s ease-in-out 0s;
+                         }
+                         .icon_second {
+                              position: absolute;
+	                         transform: translateX(-150%);
+                         }
+                    }
+                    &:hover {
+                         .icon_box {
+                              .icon_first {
+                                   transform: translateX(150%);
+                              }
+                              .icon_second {
+                                   transform: translateX(0%);
+                              }
+                         }
+                    }
+               }
+          }
+     }
+     @media #{$xl} {
+          gap: 40px;
+     }
+     @media #{$lg} {
+          gap: 30px;
+          .cta-content {
+               .cta-text {
+                    .title {
+                         font-size: 50px;
+                         margin-bottom: 30px;
+                    }
+               }
+               .cta-button {
+                    .cta-link {
+                         width: 90px;
+                         height: 90px;
+                         font-size: 25px;
+                    }
+               }
+          }
+     }
+     @media #{$md} {
+          gap: 30px;
+          .cta-images {
+               max-width: 230px;
+          }
+          .cta-content {
+               .cta-text {
+                    .title {
+                         font-size: 35px;
+                         margin-bottom: 30px;
+                    }
+               }
+               .cta-button {
+                    .cta-link {
+                         width: 75px;
+                         height: 75px;
+                         font-size: 25px;
+                    }
+               }
+          }
+     }
+     @media #{$sm} {
+          gap: 30px;
+          flex-direction: column;
+          .cta-images {
+               max-width: 230px;
+          }
+          .cta-content {
+               .cta-text {
+                    .title {
+                         font-size: 30px;
+                         margin-bottom: 30px;
+                    }
+               }
+               .cta-button {
+                    .cta-link {
+                         width: 75px;
+                         height: 75px;
+                         font-size: 25px;
+                         position: relative;
+                         z-index: 1;
+                    }
+               }
+          }
+     }
+     @media #{$xs} {
+          gap: 30px;
+          flex-direction: column;
+          .cta-images {
+               max-width: 100%;
+          }
+          .cta-content {
+               flex-direction: column;
+               .cta-text {
+                    .title {
+                         font-size: 30px;
+                         margin-bottom: 25px;
+                    }
+               }
+               .cta-button {
+                    .cta-link {
+                         width: 75px;
+                         height: 75px;
+                         font-size: 25px;
+                    }
+               }
+          }
+     }
+}
+
+/* !END: Theme Cta CSS */

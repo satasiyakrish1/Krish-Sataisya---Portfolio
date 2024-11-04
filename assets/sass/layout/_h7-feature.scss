@@ -1,0 +1,102 @@
+@use "../utilities"as *;
+
+
+
+/**----------------------------------------
+START: Feature CSS
+----------------------------------------*/
+
+.tj-feature {
+     &-7 {
+          &-area {
+               background: var(--tj-theme-accent-2);
+               position: relative;
+               z-index: 1;
+               &::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 650px;
+                    height: 550px;
+                    border-radius: 50%;
+                    background: linear-gradient(260deg, var(--tj-theme-primary) 0%, rgba(115, 67, 210, 0.1) 100%);
+                    filter: blur(150px);
+                    opacity: 0.6;
+                    z-index: -1;
+               }
+               & .hero_scroll {
+                    bottom: auto;
+                    top: 15px;
+                    @media #{$xxl,$xl,$lg} {
+                         top: -180px;
+                    }
+                    @media #{$md} {
+                         top: -100px;
+                    }
+                    @media #{$sm} {
+                         top: -100px;
+                    }
+               }
+          }
+          &-wrapper {
+               background: var(--tj-black-2);
+               padding: 30px;
+               border-radius: 15px;
+               height: 100%;
+               display: flex;
+               justify-content: space-between;
+               flex-direction: column;
+          }
+          &-subtitle {
+               font-weight: var(--tj-fw-medium);
+               font-size: 15px;
+          }
+          &-title {
+               font-size: 45px;
+               letter-spacing: -0.04em;
+               @media #{$xs} {
+                    font-size: 30px;
+               }
+               & span {
+                    color: #00F721;
+                    font-size: 28px;
+               }
+          }
+          &-review-img {
+               @media #{$lg} {
+                    max-width: 360px;
+                    width: 100%;
+                    height: 160px;
+               }
+               & img {
+                    @media #{$lg} {
+                         width: 100%;
+                         height: 100%;
+                    }
+               }
+          }
+          &-thumb {
+               max-width: 870px;
+               width: 100%;
+               @media #{$md,$sm,$xs} {
+                    margin-top: 30px;
+               }
+               & img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 15px;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center center;                  
+               }
+          }
+
+     }
+}
+
+
+
+/* !END: Feature CSS */

@@ -1,0 +1,143 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme sec title CSS
+----------------------------------------*/
+.section-header {
+     &.style-2 {
+          span {
+               display: inline-block;
+               font-size: 12px;
+               font-weight: var(--tj-fw-medium);
+               text-transform: uppercase;
+               background-color: var(--tj-theme-secondary);
+               padding: 10px 20px;
+               border-radius: 50px;
+               margin-bottom: 25px;
+          } 
+          .title {
+               font-weight: var(--tj-fw-medium);
+               margin-bottom: 0;
+          }
+     }
+     &.style-3 {
+          .subtitle {
+               display: inline-block;
+               color: var(--tj-theme-primary);
+               font-weight: var(--tj-fw-medium);
+               font-size: 12px;
+               text-transform: uppercase;
+               letter-spacing: 0.02em;
+               margin-bottom: 25px;
+          }
+          .title {
+               font-size: 44px;
+               font-weight: var(--tj-fw-sbold);
+               letter-spacing: -0.02em;
+               margin-bottom: 0;
+          }
+          @media #{$lg} {
+               .title {
+                    font-size: 40px;
+               }
+          }
+          @media #{$md} {
+               .title {
+                    font-size: 35px;
+               }
+          }
+          @media #{$sm, $xs} {
+               .title {
+                    font-size: 30px;
+               }
+          }
+     }
+     &.style-4 {
+          .subtitle {
+               display: inline-block;
+               color: var(--tj-theme-primary);
+               font-size: 12px;
+               font-weight: var(--tj-fw-sbold);
+               letter-spacing: 0.2em;
+               text-transform: uppercase;
+               border: 1px solid rgba(129, 76, 236, 0.2);
+               border-radius: 50px;
+               padding: 5px 12px;
+               margin-bottom: 25px;
+          }
+          .title {
+               font-size: 44px;
+               font-weight: var(--tj-fw-sbold);
+               text-transform: uppercase;
+               letter-spacing: -0.02em;
+               margin-bottom: 0;
+               display: block;
+               @media #{$xl} {
+                    font-size: 42px;
+               }
+               @media #{$xs} {
+                    font-size: 40px;
+               }
+          }
+          @media #{$lg} {
+               .title {
+                    font-size: 40px;
+               }
+          }
+          @media #{$md} {
+               .title {
+                    font-size: 35px;
+               }
+          }
+          @media #{$sm, $xs} {
+               .title {
+                    font-size: 30px;
+               }
+          }
+     }
+     &.style-5 {
+          .subtitle {
+               display: inline-block;
+               color: var(--tj-theme-primary);
+               font-size: 12px;
+               font-weight: var(--tj-fw-sbold);
+               letter-spacing: 0.2em;
+               text-transform: uppercase;
+               margin-bottom: 20px;
+          }
+          .title {
+               font-size: 44px;
+               font-weight: var(--tj-fw-sbold);
+               text-transform: uppercase;
+               letter-spacing: -0.02em;
+               margin-bottom: 0;
+               display: block;
+          }
+          @media #{$lg} {
+               .title {
+                    font-size: 40px;
+               }
+          }
+          @media #{$md} {
+               .title {
+                    font-size: 35px;
+               }
+          }
+          @media #{$sm, $xs} {
+               .title {
+                    font-size: 30px;
+               }
+          }
+     }
+}
+
+.tj-text-invert > div {
+     background-size: 200% 100%;
+     background-position-x: 100%;
+     color: transparent;
+     background-clip: text;
+     -webkit-background-clip: text;
+     background-image: linear-gradient(to right, rgb(255, 255, 255) 50%, rgb(255, 255, 255, .40) 50%);
+}
+
+/* !END: Theme sec title CSS */

@@ -1,0 +1,141 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Service CSS
+----------------------------------------*/
+
+
+.tj-service {
+     &-6 {
+          &-area {
+               padding: 0 0 120px;
+               @media #{$md} {
+                    padding: 0 0 50px;
+               }
+               @media #{$sm, $xs} {
+                    padding: 0 0 80px;
+               }
+               .tj-btn-primary {
+                    width: 100%;
+                    border-radius: 12px;
+                    padding: 28px 35px;
+                    .icon_box {
+                         position: relative;
+                         display: inline-flex;
+                         overflow: hidden;
+                         padding: 0 4px;
+                         transform: rotate(-45deg);
+                         .icon_first,
+                         .icon_second {
+                              transition: all 0.3s ease-in-out 0s;
+                         }
+                         .icon_second {
+                              position: absolute;
+	                         transform: translateX(-150%);
+                         }
+                         i {
+                              transform: rotate(0deg);
+                         }
+                    }
+                    &:hover {
+                         .icon_box {
+                              .icon_first {
+                                   transform: translateX(150%);
+                              }
+                              .icon_second {
+                                   transform: translateX(0%);
+                              }
+                         }
+                    }
+               }
+          }
+          &-section-wrapper {
+              & .section-header {
+                    margin: auto;
+                    margin-bottom: 50px;
+              }
+          }
+          &-wrapper {
+               background: var(--tj-theme-accent-2);
+               padding: 30px 32px 30px 32px;
+               margin-bottom: 30px;
+               border-radius: 12px;
+               @media #{$sm, $xs} {
+                    padding: 30px 15px;
+               }
+               &:hover {
+                    .tj-service-6-icon {
+                         span {
+                              transform: rotateY(180deg);
+                         }
+                    }
+               }
+          }
+          &-icon {
+               width: 64px;
+               height: 64px;
+               line-height: 1;
+               display: inline-flex;
+               align-items: center;
+               justify-content: center;
+               background: var(--tj-theme-primary);
+               border-radius: 50%;
+               margin-bottom: 35px;
+               & span {
+                    font-size: 32px;
+                    transition: all 0.5s ease;
+               }
+          }
+          &-title {
+               font-weight: var(--tj-fw-sbold);
+               font-size: 28px;
+               letter-spacing: -0.02em;
+               margin-bottom: 18px;
+               & a {
+                    display: inline-block;
+                    transition: .3s;
+                    &:hover {
+                         color: var(--tj-theme-primary);
+                    }
+               }
+          }
+          &-paragraph {
+               color: rgba(255, 255, 255, .50);
+               @media #{$xl,$md} {
+                    font-size: 14px;
+               }
+               & p {
+                    margin-bottom: 24px;
+               }
+               & ul {
+                    padding-left: 0;
+                    & li {
+                         color: var(--tj-white);
+                         list-style: none;
+                         position: relative;
+                         padding-left: 14px;
+                         line-height: 1;
+                         margin-bottom: 12px;
+                         &::before {
+                              content: "";
+                              position: absolute;
+                              width: 4px;
+                              height: 4px;
+                              top: 50%;
+                              left: 0;
+                              transform: translateY(-50%);
+                              background: var(--tj-white);
+                         }
+                    }
+               }
+          }
+     }
+}
+
+
+
+
+
+
+
+/* !END: Theme Service CSS */

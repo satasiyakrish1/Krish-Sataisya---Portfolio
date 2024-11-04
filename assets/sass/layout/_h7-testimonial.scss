@@ -1,0 +1,168 @@
+@use "../utilities"as *;
+
+
+
+/**----------------------------------------
+START: Testimonial CSS
+----------------------------------------*/
+
+
+
+
+.tj-testimonial {
+     &-7 {
+          &-area {
+               background: var(--tj-black-2);
+               padding: 120px 0 120px;
+               position: relative;
+               z-index: 1;
+               @media #{$md,$sm,$xs} {
+                    padding: 60px 0 60px;
+               }
+          }
+          &-section-wrapper {
+               & .section-header {
+                    margin: auto;
+                    margin-bottom: 50px;
+               }
+          }
+          &-active {
+               overflow: hidden;
+          }
+          &-wrapper {
+               display: flex;
+               align-items: center;
+               background: var(--tj-theme-accent-2);
+               padding: 30px;
+               border-radius: 15px;
+               @media #{$sm,$xs} {
+                    flex-wrap: wrap;
+                    row-gap: 40px;
+               }
+          }
+          &-thumb {
+               max-width: 470px;
+               width: 100%;
+               height: 385px;
+               & img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 15px;
+               }
+          }
+          &-content {
+               max-width: 630px;
+               margin-left: 50px;
+               @media #{$xl} {
+                    max-width: 547px;
+               }
+               @media #{$lg} {
+                    max-width: 500px;
+               }
+               @media #{$md} {
+                    max-width: 320px;
+               }
+               @media #{$sm,$xs} {
+                    margin-left: 0;
+               }
+          }
+          &-icon {
+               margin-bottom: 32px;
+          }
+          &-paragraph {
+               font-size: 24px;
+               color: rgba(255, 255, 255, .60);
+               margin-bottom: 30px;
+               @media #{$md,$sm,$xs} {
+                    font-size: 16px;
+               }
+
+          }
+          &-auother {
+               &-title {
+                    font-weight: var(--tj-fw-sbold);
+                    font-size: 20px;
+                    letter-spacing: -0.02em;
+                    margin-bottom: 6px;
+               }
+               &-paragraph {
+                    font-size: 14px;
+                    letter-spacing: 0.02em;
+                    color: rgba(255, 255, 255, .50);
+                    margin-bottom: 0;
+               }
+          }
+          &-arrow-box {
+               & button {
+                   width: 55px;
+                   height: 55px;
+                   line-height:1;
+                   font-size: 24px;
+                   display: inline-flex;
+                   align-items: center;
+                   justify-content: center;
+                   border-radius: 50%;
+                   transition: all 0.3s ease 0s;
+                   color: var(--tj-white);
+                   background: transparent;
+                   border: 1px solid var(--tj-border);
+                   position: absolute;
+                   left: -80px;
+                   top: 50%;
+                   transform: translate(0, -50%);
+                   z-index: 999;
+                   &::before {
+                         content: "";
+                         position: absolute;
+                         width: 100%;
+                         height: 100%;
+                         top: 0;
+                         left: 0;
+                         background: linear-gradient(90deg, #8750f7 0%, #2a1454 100%);
+                         border-radius: 50%;
+                         z-index: -1;
+                         opacity: 0;
+                         visibility: hidden;
+                         transition: .4s;
+                    }
+                    &:hover {
+                         &::before {
+                              visibility: visible;
+                              opacity: 1;
+                         }
+                    }
+               }
+               & button.slider-next {
+                   left: auto;
+                   right: -80px;
+          
+               }
+          }
+          &-pagination {
+               &-box {
+                    text-align: center;
+                    margin-top: 50px;
+                    & .swiper-pagination-bullet {
+                         background: rgba(255, 255, 255, 0.5);
+                         width: 8px;
+                         height: 8px;
+                         margin: 0 5px 0;
+                         transition: .4s;
+                         &-active {
+                              background: var(--tj-theme-primary);
+                         }
+                    }
+               }
+          }
+     }
+}
+
+
+
+
+
+
+
+
+/* !END: Testimonial CSS */

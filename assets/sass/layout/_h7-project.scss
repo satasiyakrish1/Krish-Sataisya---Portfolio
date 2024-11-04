@@ -1,0 +1,127 @@
+@use "../utilities"as *;
+
+
+
+/**----------------------------------------
+START: Project CSS
+----------------------------------------*/
+
+.tj-project {
+     &-7 {
+          &-area {
+               background: var(--tj-h3-bg);
+               padding: 0 0 120px;
+               @media #{$md,$sm,$xs} {
+                    padding: 60px 0 60px;
+               }
+          }
+          &-section-wrapper {
+               transform: translateY(260px);
+               @media #{$md,$sm,$xs} {
+                    transform: translateY(0);
+               }
+          }
+          &-wrappper {
+               padding-top: 250px;
+               @media #{$md,$sm,$xs} {
+                    padding-top: 0;
+               }
+          }
+          &-item {
+               &:nth-child(2) {
+                    margin-top: -250px;
+                    @media #{$md} {
+                         margin-top: 0;
+                    }
+               }
+               &-inner {
+                    background: var(--tj-black-2);
+                    padding: 35px;
+                    border-radius: 30px;
+               }
+          }
+          &-content {
+               display: flex;
+               align-items: center;
+               justify-content: space-between;
+               flex-wrap: wrap;
+               &-inner {
+                    @media #{$lg} {
+                         max-width: 250px;
+                         width: 100%;
+                    }
+               }
+          }
+          &-thumb {
+               margin-bottom: 30px;
+               & img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 15px;
+               }
+          }
+          &-title {
+               font-size: 20px;
+               letter-spacing: 0.02em;
+               text-transform: uppercase;
+               margin-bottom: 10px;
+               & a {
+                    display: inline-block;
+                    transition: .4s;
+                    &:hover {
+                         color: var(--tj-theme-primary);
+                    }
+               }
+          }
+          &-paragraph {
+               letter-spacing: 0.02em;
+               color: rgba(255, 255, 255, .60);
+               & p {
+                    &:last-child {
+                         margin-bottom: 0;
+                    }
+               }
+          }
+          &-icon {
+               & a {
+                    width: 60px;
+                    height: 60px;
+                    line-height: 1;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: transparent;
+                    border-radius: 50%;
+                    border: 1px solid rgba(255, 255, 255, .10);
+                    color: var(--tj-white);
+                    text-decoration: none;
+                    font-size: 22px;
+                    position: relative;
+                    z-index: 1;
+                    &::before {
+                         content: "";
+                         position: absolute;
+                         width: 100%;
+                         height: 100%;
+                         top: 0;
+                         left: 0;
+                         background: linear-gradient(90deg, #8750f7 0%, #2a1454 100%);
+                         border-radius: 50%;
+                         z-index: -1;
+                         opacity: 0;
+                         visibility: hidden;
+                         transition: 0.4s;
+                    }
+                    &:hover {
+                         &::before {
+                              visibility: visible;
+                              opacity: 1;
+                         }
+                    }
+               }
+          }
+     }
+}
+
+
+/* !END: Project CSS */

@@ -1,0 +1,46 @@
+@use "../utilities"as *;
+
+
+
+/**----------------------------------------
+START: Counter CSS
+----------------------------------------*/
+
+.tj-counter {
+     &-7 {
+          &-area {
+               background: var(--tj-theme-accent-2);
+               padding: 0 0 90px;
+               position: relative;
+               z-index: 1;
+               overflow: hidden;
+               @media #{$md,$sm,$xs} {
+                    padding: 0 0 60px;
+               }
+               &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: -408px;
+                    left: -330px;
+                    width: 650px;
+                    height: 550px;
+                    border-radius: 50%;
+                    background: linear-gradient(260deg, var(--tj-theme-primary) 0%, rgba(115, 67, 210, 0.1) 100%);
+                    filter: blur(150px);
+                    opacity: 0.6;
+                    z-index: -1;
+               }
+          }
+          &-wrapper {
+               border: none;
+               padding: 40px 30px 50px;
+               background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.01) 100%);
+               & .tj-counter-5-title {
+                    color: var(--tj-white);
+               }
+          }
+     }
+}
+
+
+/* !END: Counter CSS */

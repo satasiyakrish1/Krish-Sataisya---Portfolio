@@ -1,0 +1,281 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Resume CSS
+----------------------------------------*/
+
+.tj-resume {
+     &-6 {
+          &-area {
+               background: var(--tj-theme-accent-1);
+               padding-top: 120px;
+               padding-bottom: 120px;
+               position: relative;
+               overflow: hidden;
+               z-index: 1;
+               &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 420px;
+                    height: 420px;
+                    border-radius: 50%;
+                    background: var(--tj-theme-primary);
+                    background: linear-gradient(260deg, var(--tj-theme-primary) 0%, rgba(115, 67, 210, 0) 100%);
+                    filter: blur(150px);
+                    margin-right: -5%;
+                    opacity: 0.8;
+                    margin-top: -5%;
+                    z-index: -1;
+               }
+               &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: -12%;
+                    width: 520px;
+                    height: 520px;
+                    border-radius: 50%;
+                    background: var(--tj-theme-primary);
+                    background: linear-gradient(260deg, var(--tj-theme-primary) 0%, rgba(115, 67, 210, 0) 100%);
+                    filter: blur(150px);
+                    margin-right: -35%;
+                    opacity: 0.5;
+                    margin-top: -5%;
+                    z-index: -1;
+               }
+               @media #{$md, $sm, $xs} {
+                    padding-top: 80px;
+                    padding-bottom: 80px;
+                    .section-header {
+                         margin-bottom: 0;
+                    }
+               }
+          }
+          &-marquee {
+               &-top {
+                    padding-bottom: 80px;
+                    & .maquee-wrapper {
+                         transition-timing-function: linear;
+                    } 
+                    @media #{$sm, $xs} {
+                         padding-bottom: 40px;   
+                    }             
+               }
+               &-title {
+                    font-weight: var(--tj-fw-sbold);
+                    font-size: 164px;
+                    letter-spacing: -0.03em;
+                    text-transform: uppercase;
+                    background: linear-gradient(107deg, rgba(129, 76, 236, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    line-height: 1;
+                    margin-bottom: 0;
+                    @media #{$xl} {
+                         font-size: 120px;
+                    }
+                    @media #{$lg} {
+                         font-size: 100px;
+                    }
+                    @media #{$md} {
+                         font-size: 80px;
+                    }
+                    @media #{$sm} {
+                         font-size: 70px;
+                    }
+                    @media #{$xs} {
+                         font-size: 50px;
+                    }
+                    & span {
+                         line-height: 1;
+                         transform: translateY(-25px);
+                         display: inline-flex;
+                         @media #{$xl} {
+                              transform: translateY(-10px);
+                         }
+                         @media #{$lg} {
+                              transform: translateY(0);
+                              position: relative;
+                              left: -15px;
+                         }
+                         @media #{$md} {
+                              transform: translateY(0);
+                              max-width: 55px;
+                              width: 100%;
+                              position: relative;
+                              left: -15px;
+                              & img {
+                                   width: 100%;
+                              }
+                         }
+                         @media #{$sm} {
+                              transform: translateY(-3px);
+                              max-width: 45px;
+                              width: 100%;
+                              position: relative;
+                              left: -18px;
+                              & img {
+                                   width: 100%;
+                              }
+                         }
+                         @media #{$xs} {
+                              transform: translateY(-2px);
+                              max-width: 35px;
+                              width: 100%;
+                              position: relative;
+                              left: -18px;
+                              & img {
+                                   width: 100%;
+                              }
+                         }
+                         & img {
+                              animation: rotateImg5 6s infinite linear;
+                         }
+                    }
+               }
+          }
+          &-left {
+               & .tj-section-button {
+                    margin-top: 30px;
+               }
+          }
+          &-wrapper {
+               display: flex;
+               gap: 35px;
+               .resume-6-sidebar-content {
+                    max-width: 420px;
+                    width: 100%;
+               }
+               .resume-6-inner {
+                    max-width: 785px;
+                    width: 100%;
+                    margin-left: auto;
+               }
+               @media #{$lg} {
+                    .resume-6-sidebar-content {
+                         max-width: 365px;
+                    }
+               }
+               @media #{$md, $sm, $xs} {
+                    flex-direction: column;
+                    .side-sticky {
+                         position: relative !important;
+                         top: 0 !important;
+                         left: 0 !important;
+                    }
+               }
+          }
+          &-accordion-item {
+               background: var(--tj-black-2);
+               border: none !important;
+               padding: 23px 30px;
+               cursor: pointer;
+               @media #{$md, $sm, $xs} {
+                    padding: 16px 15px;
+               }
+          }
+          &-accordion-button {
+               background: var(--tj-black-2);
+               color: var(--tj-white);
+               font-size: 18px;
+               font-weight: 700;
+               padding-left: 0;
+               padding-right: 0;
+               & span {
+                    margin-right: 20px;
+               }
+               &::after {
+                    content: "+";
+                    width: 30px;
+                    height: 30px;
+                    border: 2px solid var(--tj-theme-h3-primary-1);
+                    font-size: 28px;
+                    border-radius: 50%;
+                    font-weight: var(--tj-fw-light);
+                    position: absolute;
+                    right: 0;
+                    top: 34%;
+                    transition: 0.4s;
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: var(--tj-theme-h3-primary-1);
+                    background-image: none;
+               }
+               &:not(.collapsed) {
+                    background-color: transparent;
+                    color: var(--tj-white);
+                    box-shadow: none !important;
+                    &::after {
+                         background-image: none;
+                         content: "-";
+                         transform: none;
+                         transition: .4s;
+                    }
+               }
+               &:focus {
+                    box-shadow: none !important;
+                    border: none;
+               }
+          }
+          &-accordion-button {
+               &-content {
+                    display: flex;
+               }
+          }
+          &-accordion-button-title {
+               & h4 {
+                    font-size: 20px;
+                    font-weight: var(--tj-fw-sbold);
+                    letter-spacing: 0.02em;
+                    text-transform: uppercase;
+                    margin-bottom: 14px;
+                    @media #{$xs} {
+                         font-size: 16px;
+                    }
+               }
+               & h6 {
+                    font-weight: 400;
+                    font-size: 15px;
+                    letter-spacing: 0.02em;
+                    text-transform: uppercase;
+                    margin-bottom: 0;
+                    @media #{$xs} {
+                         font-size: 12px;
+                    }
+               }
+          }
+          &-accordion-body {
+               padding-left: 0;
+               padding-right: 0;
+               & p {
+                    font-size: 16px;
+                    line-height: 30px;
+                    color: rgba(255, 255, 255, 0.5);
+                    margin-bottom: 32px;
+                    @media #{$xs} {
+                         font-size: 12px;
+                    }
+               }
+               & span {
+                    color: rgba(255, 255, 255, 0.6);
+                    & i {
+                         color: var(--tj-theme-primary);
+                         font-weight: var(--tj-fw-regular);
+                         line-height: 1;
+                         display: inline-flex;
+                         margin-right: 10px;
+                    }
+               }
+          }
+          
+     }
+}
+
+/* !END: Theme Resume CSS */
+
+
+

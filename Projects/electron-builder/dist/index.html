@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Krish Satasiya - Electron Builder  e⁻</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Comfortaa:300'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/vuetify/1.5.17/vuetify.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/2.6.95/css/materialdesignicons.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<v-app id="App">
+  <v-layout class="layout-1" align-center="align-center" justify-center="justify-center">
+    <div class="font-comfortaa" id="atom">
+      <div class="electrosphere" v-for="(layer, i) in reversedArr(diagram)" :class="[
+        'layer-' + (7 - i),
+        {
+          'empty': !reversedArr(layers)[i]
+        }
+      ]" :style="{
+       '--size': 100 - i * 10 + '%',
+       '--base': reversedArr(layers)[i]
+      }">
+        <div class="electron" v-for="(electrons, j) in reversedArr(layers)[i]" :style="{'--index': j}"></div>
+      </div>
+      <the-mask id="element-search" mask="Aa" v-model="search"></the-mask>
+      <label for="element-search">
+        <div class="nucleus" :class="{'match-error': electrons &lt; 1}">
+          <h2 class="element-initials">{{ search }}</h2><sup>{{ electrons | electronsIndicator }}</sup>
+        </div>
+      </label>
+    </div>
+  </v-layout>
+  <v-layout class="layout-2" align-center="align-center" column="column">
+    <v-slider class="electrons-slider" v-model="electronsSlide" thumb-label="thumb-label" min="1" max="118" color="light-blue lighten-1" append-icon="mdi-chevron-right" prepend-icon="mdi-chevron-left" @input="updateElectrons(), updateElementName()" @click:append="increment(1), updateElementName()" @click:prepend="increment(-1), updateElementName()"></v-slider>
+    <div class="notation-display font-comfortaa" :class="{
+        'show-full-notation': showFullNotation
+      }" @click="showFullNotation = !showFullNotation"><span v-for="item, i in notation" :class="{
+          'truncate': typeof item === 'string',
+          'middle': notation.length &gt; 5 &amp;&amp; 2 &lt; i &amp;&amp; i &lt; notation.length - 3
+        }" v-show="electrons &gt; 0"> <span v-if="typeof item === 'object'">{{ item.location }}<sup>{{ item.electrons }}</sup></span><span v-else="v-else">
+          <v-icon color="light-blue">mdi-dots-horizontal</v-icon></span></span><span class="input-error" v-if="!notation.length">Invalid input</span></div>
+  </v-layout>
+  <v-dialog scrollable="scrollable" max-width="500px" v-model="infoDialog">
+    <v-card max-width="500px">
+      <v-card-title class="pt-4">
+        <v-layout row="row" no-wrap="no-wrap"><img height="32" src="https://github.com/FelixLuciano/electron-builder/raw/master/public/icon.svg?sanitize=true"/>
+          <v-divider class="ml-3 mr-2" vertical="vertical"></v-divider>
+          <div class="headline text-truncate light-blue--text text--lighten-1">{{ 'Electron Builder ' }}<sup>e<sup>-</sup></sup></div>
+        </v-layout>
+      </v-card-title>
+      <v-card-text>
+        <v-layout row="row" wrap="wrap">
+          <v-flex class="pl-2" xs12="xs12">
+            <div class="caption">Help</div>
+          </v-flex>
+          <v-flex class="py-2" xs12="xs12" d-flex="d-flex" align-center="align-center" v-for="tip, index in help" :key="index">
+            <div class="px-2 headline light-blue--text">{{ index + 1 }}</div>
+            <div class="pl-3 body-1">{{ tip }}</div>
+          </v-flex>
+          <v-flex class="pl-2 pt-4" xs12="xs12">
+            <div class="subheading font-weight-light">see this project on
+              <v-btn class="px-0 ma-0 ml-1 font-weight-light" flat="flat" color="light-blue" target="_blank" href="https://github.com/FelixLuciano/electron-builder">Github</v-btn>
+            </div>
+          </v-flex>
+        </v-layout>
+      </v-card-text>
+      <v-card-actions class="px-3">
+        <v-spacer></v-spacer>
+        <v-btn class="px-4" flat="flat" round="round" color="light-blue" @click="infoDialog = false">Close</v-btn>
+      </v-card-actions>
+    </v-card>
+  </v-dialog>
+</v-app>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vuetify/1.5.17/vuetify.min.js'></script>
+<script src='https://unpkg.com/vue-the-mask@0.11.1/dist/vue-the-mask.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

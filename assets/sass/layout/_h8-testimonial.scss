@@ -1,0 +1,129 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Testimonial CSS
+----------------------------------------*/
+.tj-testimonial-section {
+     &.style-8 {
+          padding-top: 120px;
+          padding-bottom: 120px;
+          background-color: transparent;
+          position: relative;
+          z-index: 1;
+          .section-header {
+               max-width: 100%;
+          }
+          &::before {
+               content: "";
+               position: absolute;
+               top: -20%;
+               left: 0;
+               width: 420px;
+               height: 420px;
+               border-radius: 50%;
+               background: var(--tj-theme-primary);
+               background: linear-gradient(190deg, var(--tj-theme-primary) 0%, rgba(115, 67, 210, 0) 100%);
+               filter: blur(250px);
+               opacity: 0.3;
+               z-index: -1;
+          }
+          .testimonial-pagination {
+               text-align: center;
+               margin-top: 50px;
+               .swiper-pagination-bullet {
+                    background-color: var(--tj-grey-2);
+                    &.swiper-pagination-bullet-active {
+                         background-color: var(--tj-theme-primary);
+                    }
+               }
+          }
+     }
+     @media #{$md, $sm, $xs} {
+          &.style-8 {
+               padding-top: 80px;
+               padding-bottom: 80px;
+               .testimonial-pagination {
+                    margin-top: 35px;
+               }
+          } 
+     }
+}
+
+.testimonial-item {
+     &.style-8 {
+          background-color: var(--tj-black-2);
+          border: 1px solid rgba(116, 119, 121, 0.2);
+          padding: 30px;
+          border-radius: 10px;
+          transition: 0.4s;
+          .icon-box {
+               margin-bottom: 40px;
+          }
+          .quote {
+               font-size: 18px;
+               color: var(--tj-grey-1);
+               margin-bottom: 30px;
+          }
+          .testimonial-feature-item {
+               border-top: 1px solid rgba(116, 119, 121, 0.2);
+               padding-top: 25px;
+               .feature-content {
+                    .name {
+                         font-size: 20px;
+                         margin-bottom: 5px;
+                    }
+                    .designation {
+                         display: block;
+                         font-size: 14px;
+                         color: var(--tj-grey-1);
+                    }
+               }
+               .auother-images {
+                    max-width: 76px;
+                    height: 76px;
+                    width: 100%;
+                    border: 1px solid rgba(116, 119, 121, 0.2);
+                    padding: 8px;
+                    border-radius: 50%;
+                    img {
+                         height: 100%;
+                         width: 100%;
+                         object-fit: cover;
+                         border-radius: 50%;
+                    }
+               }
+          }
+     } 
+     &:hover {
+          &.style-8 {
+               border-color: var(--tj-theme-secondary);
+          }  
+     }
+     @media #{$md} {
+          &.style-8 {
+               padding: 30px 15px; 
+               .icon-box {
+                    margin-bottom: 25px;
+               }
+          } 
+     }
+     @media #{$sm, $xs} {
+          &.style-8 {
+               padding: 30px 15px; 
+               .icon-box {
+                    margin-bottom: 25px;
+               }
+               .quote {
+                    font-size: 16px;
+               }
+               .testimonial-feature-item {
+                    .feature-content {
+                         .name {
+                              font-size: 18px;
+                         }
+                    }
+               }
+          } 
+     }
+}
+/* !END: Theme Testimonial CSS */

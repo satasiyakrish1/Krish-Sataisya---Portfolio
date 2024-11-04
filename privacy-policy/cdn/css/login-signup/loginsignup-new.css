@@ -1,0 +1,2215 @@
+@charset "UTF-8";
+#login-signup-module-container .center {
+    text-align: center;
+}
+
+#login-signup-module-container .cursor-pointer {
+    cursor: pointer;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+form {
+    width: 100%;
+}
+
+#login-signup-module-container .login-desktop-left-section .login-illustration-left-section {
+    background-image: url("/cdn/images/login-signup-module/illustration_svg.png");
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    display: block;
+    background-size: cover;
+    width: 285px;
+    height: 187px;
+}
+
+.body-no-scroll {
+    overflow: hidden;
+}
+
+.is-hidden {
+    display: none !important;
+}
+
+#login-signup-module-container {
+    top: 0px;
+    padding-bottom: 40px;
+    position: fixed;
+    z-index: 99999999;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width:767px) {
+    #login-signup-module-container #login-loading-screen {
+        background-color: #fff;
+        height: 100%;
+        width: 100%;
+        z-index: 999;
+        opacity: 0.8;
+        position: absolute;
+        right: 0px;
+        top: 0;
+    }
+}
+
+#login-signup-module-container #login-loading-screen .loading-signal {
+    border: 5px solid #ff5722;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    border-radius: 30px;
+    height: 30px;
+    left: 50%;
+    margin: -15px 0 0 -15px;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    animation: pulsate 1s ease-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(0.1);
+        -webkit-transform: scale(0.1);
+        -moz-transform: scale(0.1);
+        -o-transform: scale(0.1);
+        -ms-transform: scale(0.1);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+@media (min-width:768px) {
+    #login-signup-module-container #login-loading-screen {
+        width: 384px;
+        height: 640px;
+        background-color: #fff;
+        z-index: 999;
+        opacity: 0.8;
+        position: absolute;
+        right: 0px;
+        top: 0;
+    }
+}
+
+#login-signup-module-container .login-desktop-left-section {
+    display: none;
+}
+
+#login-signup-module-container .login-desktop-left-section .login-illustration-left-section {
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+    width: 212px;
+    height: 141px;
+    background-size: 212px;
+}
+
+#login-signup-module-container .login-desktop-left-section .login-left-text-section {
+    position: absolute;
+    top: 116px;
+    left: 33px;
+    width: 159px;
+    font-size: 25px;
+    font-weight: 600;
+    color: #f35a34;
+    text-align: left;
+    line-height: 1.35em;
+}
+
+@media (min-width:768px) {
+    #login-signup-module-container .login-desktop-left-section {
+        display: block;
+        width: 256px;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        height: 100%;
+        background-image: linear-gradient(to top, #f8f7fc, #ffffff);
+    }
+}
+
+#login-signup-module-container .login-desktop-right-section {
+    float: right;
+}
+
+#login-signup-module-container .login-desktop-right-section .Mr. Krish Satasiya-logo-holder {
+    width: 100%;
+    margin-top: 28px;
+}
+
+#login-signup-module-container .login-desktop-right-section .Mr. Krish Satasiya-logo-holder a {
+    background-image: url("/cdn/images/login-signup-module/Mr. Krish Satasiyalogo_orange.svg");
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    display: block;
+    background-size: cover;
+    margin-right: 20px;
+    margin-top: 0px;
+    width: 100px;
+    height: 36px;
+    margin: 0 auto;
+}
+
+@media (min-width:768px) {
+    #login-signup-module-container .main-body {
+        width: 384px;
+        padding-right: 51px !important;
+        padding-left: 51px !important;
+        height: 518px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+#login-signup-module-container .login-input-group {
+    position: relative;
+    width: 100%;
+    margin-bottom: 32px;
+}
+
+#login-signup-module-container .login-input-group .error-container {
+    display: none;
+}
+
+#login-signup-module-container .login-input-group.error input {
+    color: #d0021b;
+}
+
+#login-signup-module-container .login-input-group.error .error-container {
+    position: absolute;
+    display: block;
+    text-align: center;
+    color: #d0021b;
+    font-size: 12px;
+    margin: 0 auto;
+    left: 4px;
+}
+
+#login-signup-module-container .login-input-group.error .error-container.phone-error {
+    top: 70px;
+    font-size: 11px;
+}
+
+@media (max-width:320px) {
+    #login-signup-module-container .login-input-group.error .error-container.phone-error {
+        font-size: 10px;
+    }
+}
+
+#login-signup-module-container .login-input-group input {
+    font-size: 18px;
+    padding: 10px 10px 5px 0;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #cccccc;
+    padding-left: 4px;
+}
+
+#login-signup-module-container .login-input-group input:focus {
+    outline: none;
+    color: #000;
+}
+
+#login-signup-module-container .login-input-group label {
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    bottom: 8px;
+    left: 4px;
+    transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+    -o-transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -ms-transition: 0.2s ease all;
+}
+
+#login-signup-module-container .login-input-group input:focus~label,
+#login-signup-module-container .login-input-group input:valid~label,
+#login-signup-module-container .login-input-group input:disabled~label {
+    top: -10px;
+    font-size: 10px;
+    color: #9b9b9b;
+}
+
+#login-signup-module-container .login-input-group input:focus {
+    border-bottom: none;
+}
+
+#login-signup-module-container .login-input-group .bar {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+#login-signup-module-container .login-input-group .bar:before,
+#login-signup-module-container .login-input-group .bar:after {
+    content: "";
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #4a29bf;
+    transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+    -o-transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -ms-transition: 0.2s ease all;
+}
+
+#login-signup-module-container .login-input-group .bar:before {
+    left: 50%;
+}
+
+#login-signup-module-container .login-input-group .bar:after {
+    right: 50%;
+}
+
+#login-signup-module-container .login-input-group input:focus~.bar:before,
+#login-signup-module-container .login-input-group input:focus~.bar:after,
+#login-signup-module-container .login-input-group input:disabled~.bar:before,
+#login-signup-module-container .login-input-group input:disabled~.bar:after {
+    width: 50%;
+}
+
+#login-signup-module-container .login-input-group-select {
+    position: relative;
+    height: 62px;
+    display: inline-block;
+}
+
+#login-signup-module-container .login-input-group-select label {
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    bottom: 8px;
+    left: 4px;
+    transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+    -o-transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -ms-transition: 0.2s ease all;
+}
+
+#login-signup-module-container .login-input-group-select.has-value label {
+    top: 10px;
+    font-size: 10px;
+    color: #9b9b9b;
+}
+
+#login-signup-module-container .login-input-group-select select {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 40px;
+    width: 100%;
+    outline: none;
+    font-size: 14px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    border-radius: 0px;
+    border: none;
+    background: none;
+    border-bottom: solid 1px #cccccc;
+    font-size: 18px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: "";
+}
+
+#login-signup-module-container .login-input-group-select select:invalid {
+    color: #9b9b9b;
+    font-size: 14px;
+}
+
+#login-signup-module-container .login-input-group-select select [disabled] {
+    color: #9b9b9b;
+    font-size: 14px;
+}
+
+#login-signup-module-container .login-input-group-select select::-ms-expand {
+    display: none;
+}
+
+#login-signup-module-container .login-input-group-select::after {
+    right: 5px;
+    bottom: 10px;
+    font-size: 12px;
+    position: absolute;
+    pointer-events: none;
+    content: "▼";
+}
+
+#login-signup-module-container .login-back-arrow {
+    border: solid #9b9b9b;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 5px;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    position: absolute;
+    top: 28px;
+    left: 28px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+#login-signup-module-container .login-google-btn,
+#login-signup-module-container .login-facebook-btn {
+    width: 280px;
+    height: 48px;
+    position: relative;
+    display: inline-block;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    -ms-border-radius: 24px;
+    border-radius: 24px;
+    border: solid 1px #cccccc;
+    color: #333333;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 48px;
+    text-align: center;
+    margin: 0 auto;
+    cursor: pointer;
+    margin-top: 32px;
+    padding-left: 10px;
+}
+
+#login-signup-module-container .login-google-btn .login-google-icon,
+#login-signup-module-container .login-facebook-btn .login-google-icon {
+    position: absolute;
+    left: 30px;
+    top: 12px;
+    width: 24px;
+    height: 24px;
+}
+
+@media (max-width:320px) {
+    #login-signup-module-container .login-google-btn,
+    #login-signup-module-container .login-facebook-btn {
+        margin-top: 16px;
+    }
+}
+
+@media (min-width:768px) {
+    #login-signup-module-container .login-google-btn,
+    #login-signup-module-container .login-facebook-btn {
+        margin-top: 56px;
+    }
+}
+
+#login-signup-module-container .login-google-btn {}
+
+#login-signup-module-container .login-facebook-btn {
+    background-color: #3b559f;
+    margin-top: 16px;
+    padding-left: 25px;
+    margin-left: 12px;
+}
+
+#login-signup-module-container .login-facebook-btn .login-fb-icon {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    top: 4px;
+    left: 5px;
+}
+
+#login-signup-module-container .login-heading {
+    font-size: 32px;
+    text-transform: uppercase;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+
+#login-signup-module-container .login-dont-have-acc {
+    margin: 0 auto;
+    margin-top: 8px;
+    font-size: 16px;
+}
+
+#login-signup-module-container .login-dont-have-acc span {
+    color: #f35a34;
+    text-transform: uppercase;
+}
+
+#login-signup-module-container .common-bottom-btn {
+    width: 280px;
+    height: 48px;
+    line-height: 48px;
+    cursor: pointer;
+    font-size: 14px;
+    text-transform: uppercase;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    -ms-border-radius: 24px;
+    border-radius: 24px;
+    background-color: #f35a34;
+    text-align: center;
+    box-shadow: 0 2px 2px 0 rgba(167, 167, 167, 0.45);
+    color: #fff;
+    margin: 0 auto;
+    margin-top: 47px;
+    position: relative;
+    border: none;
+    outline: none;
+}
+
+#login-signup-module-container .common-bottom-btn.inactive {
+    background-color: #666666;
+}
+
+#login-signup-module-container .login-modal-holder {
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    padding: 20px;
+    overflow: auto;
+}
+
+#login-signup-module-container .login-modal-holder-leadsquered .login-desktop-left-section .login-left-text-section {
+    font-size: 21px;
+}
+
+#login-signup-module-container .login-modal-holder-leadsquered #home-screen .main-body .header-section {
+    font-size: 22px;
+}
+
+@media (min-width:768px) {
+    #login-signup-module-container .login-modal-holder {
+        max-width: 640px;
+        max-height: 640px;
+        top: calc(50% - 320px);
+        left: calc(50% - 320px);
+        padding-right: 0;
+        padding-left: 0;
+    }
+    #login-signup-module-container .login-modal-holder-leadsquered {
+        top: 30px;
+    }
+}
+
+#login-signup-module-container .home-demo .home-demo-label {
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: left;
+    display: -webkit-flex;
+    display: flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -moz-flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+}
+
+#login-signup-module-container .home-demo .home-demo-label .click-txt {
+    margin-left: 8px;
+}
+
+#login-signup-module-container .home-demo .home-demo-label .checkmark {
+    content: "";
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    padding: 6px;
+    border: 2px solid #f35a34;
+    left: 8px;
+    top: 2px;
+    border-radius: 1px;
+    margin-right: 7px;
+    vertical-align: top;
+}
+
+#login-signup-module-container .home-demo .home-demo-label input:checked~.checkmark::after {
+    box-sizing: border-box;
+    content: "";
+    padding: 2px;
+    width: 0px;
+    height: 12px;
+    border: solid #f35a34;
+    border-width: 0 2px 2px 0;
+    transform: rotate(43deg);
+    border-radius: 2px;
+    display: inline-block;
+    left: -3px;
+    top: -10px;
+    position: relative;
+}
+
+#login-signup-module-container .home-demo .home-demo-label input[type=checkbox] {
+    opacity: 0;
+    display: none;
+}
+
+#login-signup-module-container #close-login-popup {
+    cursor: pointer;
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    z-index: 9;
+}
+
+#login-signup-module-container #close-login-popup::before {
+    content: "";
+    padding: 8px;
+    display: inline-block;
+    border: 1px solid #9b9b9b;
+    border-width: 0 0 2px 0;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    position: absolute;
+    top: 9px;
+    right: -1px;
+}
+
+#login-signup-module-container #close-login-popup::after {
+    content: "";
+    padding: 8px;
+    display: inline-block;
+    border: 1px solid #9b9b9b;
+    border-width: 0 0 2px 0;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    position: absolute;
+    top: -2px;
+    right: -1px;
+}
+
+#login-signup-module-container #login-screen .main-body {
+    padding: 46px 20px 20px 20px;
+}
+
+#login-signup-module-container #login-screen .main-body .login-input-holder {
+    position: relative;
+    width: 100%;
+    padding-bottom: 20px;
+    margin-top: 30%;
+}
+
+@media (max-width:320px) {
+    #login-signup-module-container #login-screen .main-body .login-input-holder {
+        padding-bottom: 32px;
+    }
+    #login-signup-module-container .main-body {
+        max-width: 280px;
+        margin: auto;
+    }
+    #login-signup-module-container .login-desktop-right-section {
+        float: unset;
+    }
+}
+
+#login-signup-module-container #login-screen .main-body .login-heading {
+    font-size: 32px;
+    text-transform: uppercase;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+
+#login-signup-module-container #login-screen .main-body #login-password .login-password-forgot {
+    position: absolute;
+    right: 5px;
+    bottom: 8px;
+    color: #f35a34;
+}
+
+#login-signup-module-container #signup-screen .home-demo .home-demo-label {
+    display: inline-block;
+    margin-top: 18%;
+}
+
+#login-signup-module-container #signup-screen .main-body {
+    padding: 40px 20px 20px 20px;
+}
+
+#login-signup-module-container #signup-screen .main-body .login-google-btn,
+#login-signup-module-container #signup-screen .main-body .login-facebook-btn {
+    margin-top: 32px;
+}
+
+#login-signup-module-container #signup-screen .main-body .login-facebook-btn {
+    margin-top: 16px;
+}
+
+#login-signup-module-container #signup-screen .main-body .login-input-holder {
+    width: 100%;
+    margin-top: 32px;
+}
+
+#login-signup-module-container #signup-screen .main-body #signup-password {
+    margin-bottom: 12px;
+}
+
+#login-signup-module-container #signup-screen .main-body #signup-password .login-password-show {
+    position: absolute;
+    right: 5px;
+    bottom: 8px;
+    color: #f35a34;
+    cursor: pointer;
+}
+
+#login-signup-module-container #signup-screen .main-body .select-class {
+    width: 100%;
+}
+
+#login-signup-module-container #signup-screen .main-body .select-board {
+    width: 100%;
+}
+
+#login-signup-module-container #signup-screen .main-body .board-select {
+    width: 100%;
+}
+
+#login-signup-module-container #signup-screen .main-body .common-bottom-btn {
+    margin-top: 10px;
+}
+
+#login-signup-module-container #home-screen .main-body .common-bottom-btn {}
+
+#login-signup-module-container #password-verify-screen .main-body #password-verify-form .common-bottom-btn {
+    margin-top: 15px;
+}
+
+#login-signup-module-container #password-verify-screen .main-body #password-verify-form .login-password-show {
+    position: absolute;
+    top: 8px;
+    right: 0;
+    color: #e6632f;
+}
+
+@media (max-width:320px) {
+    #login-signup-module-container #signup-screen .main-body .common-bottom-btn {
+        max-width: 240px;
+    }
+    #login-signup-module-container #home-screen .main-body .common-bottom-btn {}
+}
+
+#login-signup-module-container #home-screen {
+    justify-content: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+}
+
+#login-signup-module-container #home-screen .main-body {}
+
+#login-signup-module-container #home-screen .main-body .header-section,
+#login-signup-module-container #update-profile-screen .main-body .header-section {
+    margin: 0 auto;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.44;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+@media (max-width:320px) {
+    #login-signup-module-container #home-screen .main-body .header-section {
+        font-size: 20px;
+    }
+}
+
+#login-signup-module-container #home-screen .main-body .login-permission {
+    font-size: 12px;
+    color: #9b9b9b;
+    text-align: center;
+    position: relative;
+    width: 280px;
+    text-align: center;
+    padding-left: 10px;
+    margin: 0 auto;
+    margin-top: 8px;
+}
+
+#login-signup-module-container #home-screen .main-body .login-permission .login-permisson-icon {
+    position: absolute;
+    height: 13px;
+    top: 3px;
+    left: 18px;
+}
+
+#login-signup-module-container .main-body .login-tnc {
+    color: #cacaca;
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: -0.5px;
+    margin-top: 21px;
+}
+
+#login-signup-module-container .main-body .login-tnc a {
+    color: #cacaca;
+}
+
+@media (max-width:320px) {
+    #login-signup-module-container .main-body .login-tnc {
+        font-size: 10px;
+    }
+}
+
+#login-signup-module-container #home-screen .main-body .home-demo {
+    margin-top: 10px;
+}
+
+#login-signup-module-container #home-screen .main-body .home-demo .home-demo-checkbox {
+    width: 15px;
+    height: 15px;
+}
+
+@media (max-width:320px) {
+    #login-signup-module-container #home-screen .main-body .home-demo {
+        margin-top: 10px;
+    }
+}
+
+#login-signup-module-container #home-screen .main-body .login-google-btn,
+#login-signup-module-container #home-screen .main-body .login-facebook-btn {
+    margin-top: 10px;
+}
+
+#login-signup-module-container #home-screen .main-body .login-facebook-btn {
+    margin-top: 16px;
+}
+
+#login-signup-module-container #home-screen .main-body .signup-login-container {
+    text-align: center;
+    margin-top: 24px;
+}
+
+#login-signup-module-container #home-screen .main-body .signup-login-container .signup-btn,
+#login-signup-module-container #home-screen .main-body .signup-login-container .login-btn {
+    width: 126px;
+    height: 48px;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    -ms-border-radius: 24px;
+    border-radius: 24px;
+    border: solid 1px #e6632f;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    color: #e6632f;
+    line-height: 48px;
+    display: inline-block;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+@media (max-width:320px) {
+    #login-signup-module-container #home-screen .main-body .signup-login-container .signup-btn,
+    #login-signup-module-container #home-screen .main-body .signup-login-container .login-btn {
+        width: 120px;
+        height: 40px;
+        line-height: 40px;
+    }
+}
+
+#login-signup-module-container #home-screen .main-body .signup-login-container .login-btn {
+    margin-left: 24px;
+}
+
+#login-signup-module-container #enter-phone-screen .main-body .almost-done {
+    font-size: 24px;
+}
+
+#login-signup-module-container #enter-phone-screen .main-body .secure-account {
+    font-size: 20px;
+    color: #9a9a9a;
+}
+
+#login-signup-module-container #enter-phone-screen .main-body .common-bottom-btn {}
+
+#login-signup-module-container #enter-phone-screen .main-body .login-phone-container {
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    display: -ms-inline-flex;
+    display: -o-inline-flex;
+    display: -moz-inline-flex;
+    margin-top: 48px;
+}
+
+#login-signup-module-container #enter-phone-screen .main-body .login-phone-container .country-code select {
+    font-size: 18px;
+}
+
+#login-signup-module-container #enter-phone-screen .main-body .login-phone-container .phone-number {
+    margin-bottom: 0;
+    padding: 10px 10px 0px 0px;
+}
+
+#login-signup-module-container #enter-phone-screen .main-body .login-phone-container .phone-number input {
+    width: 100%;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 18px 5px 3px 0;
+    line-height: 30px;
+}
+
+#login-signup-module-container #enter-phone-screen .main-body .login-phone-container .phone-number input:focus {
+    padding: 18px 10px 5px 0;
+}
+
+#login-signup-module-container #enter-phone-screen .main-body .login-phone-container .phone-number label {
+    font-size: 18px;
+    bottom: 2px;
+}
+
+#login-signup-module-container #enter-phone-screen .main-body .login-phone-container .phone-number input:focus~label,
+#login-signup-module-container #enter-phone-screen .main-body .login-phone-container .phone-number input:valid~label {
+    top: 10px;
+    font-size: 10px;
+    color: #9b9b9b;
+}
+
+#login-signup-module-container #verify-otp-screen .main-body .otp-sent-text,
+#login-signup-module-container #otp-or-password-screen .main-body .otp-sent-text {
+    color: #9a9a9a;
+    font-size: 18px;
+    display: inline;
+}
+
+#login-signup-module-container #verify-otp-screen .main-body .otp-text-container .phoneNumber {
+    color: #000000;
+}
+
+#login-signup-module-container #verify-otp-screen .main-body .login-edit-number {
+    color: #f35a34;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+    vertical-align: middle;
+    display: inline-block;
+    height: 37px;
+    line-height: 31px;
+}
+
+#login-signup-module-container #verify-otp-screen .main-body .resend-otp {
+    color: #f35a34;
+    margin: 0 auto;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#login-signup-module-container #verify-otp-screen .resend-container {
+    margin-top: 24px;
+}
+
+#login-signup-module-container #verify-otp-screen .main-body .resend-otp-text {
+    color: #999999;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+#login-signup-module-container #verify-otp-screen .main-body .phone-otp-holder {
+    display: inline-block;
+    font-size: 24px;
+    margin-top: 8px;
+}
+
+#login-signup-module-container #verify-otp-screen .main-body .login-otp-container {
+    margin-top: 32px;
+}
+
+#login-signup-module-container #verify-otp-screen .main-body .login-otp-container .otp-error-holder {
+    color: #d0021b;
+    font-size: 12px;
+    margin-top: 9px;
+    font-weight: 600;
+    display: none;
+    text-align: center;
+}
+
+#login-signup-module-container #verify-otp-screen .main-body .login-otp-container.has-otp-error .otp-error-holder {
+    display: block;
+}
+
+#login-signup-module-container #verify-otp-screen .main-body .login-otp-container.has-otp-error .otp-dash-container .otp-dasher {
+    background: #d0021b;
+}
+
+#login-signup-module-container #verify-otp-screen .main-body .login-otp-container .otp-dash-container {
+    display: -webkit-flex;
+    display: flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -moz-flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    width: 229px;
+    margin: 0 auto;
+    height: 1px;
+}
+
+#login-signup-module-container #verify-otp-screen .main-body .login-otp-container .otp-dash-container .otp-dasher {
+    display: inline-block;
+    width: 45px;
+    height: 2px;
+    background: #cccccc;
+    margin-right: 17px;
+}
+
+#login-signup-module-container #verify-otp-screen .main-body .login-otp-container .otp-dash-container .otp-dasher:last-child {
+    margin-right: 0;
+}
+
+#login-signup-module-container #verify-otp-screen .main-body .login-otp-container input {
+    width: 282px;
+    outline: none;
+    display: block;
+    margin: 0 auto;
+    font-size: 30px;
+    font-weight: 600;
+    padding-right: 0px;
+    padding-left: 41px;
+    letter-spacing: 43px;
+    border: none;
+}
+
+#login-signup-module-container #verify-otp-screen .common-bottom-btn {
+    margin-top: 30px;
+}
+
+#login-signup-module-container #generate-new-password .main-body {
+    margin-top: 52px;
+}
+
+#login-signup-module-container #generate-new-password .main-body .enter-email-forgot {
+    margin-top: 24px;
+    color: #9a9a9a;
+    font-size: 18px;
+}
+
+#login-signup-module-container #generate-new-password .main-body #forgot-password-email {
+    margin-top: 28px;
+}
+
+#login-signup-module-container #generate-new-password .main-body .new-pwd-sent {
+    margin-top: 20px;
+    color: #9a9a9a;
+    font-size: 18px;
+}
+
+#login-signup-module-container #new-password-sent .main-body {
+    margin-top: 52px;
+}
+
+#login-signup-module-container #new-password-sent .main-body .pass-sent {
+    font-size: 18px;
+    color: #9a9a9a;
+}
+
+#login-signup-module-container #new-password-sent .main-body .change-pwd-forgot {
+    font-size: 11px;
+    text-align: left;
+    color: #9a9a9a;
+    margin-top: 24px;
+}
+
+#login-signup-module-container #new-password-sent .main-body .forgot-phone-email {
+    margin-top: 16px;
+    text-align: left;
+}
+
+#login-signup-module-container #new-password-sent .main-body .forgot-phone-email .data-holder {
+    margin-bottom: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#login-signup-module-container #new-password-sent .main-body .forgot-phone-email .user-label {
+    color: #9a9a9a;
+    font-size: 15px;
+    margin-right: 14px;
+}
+
+#login-signup-module-container #new-password-sent .main-body .forgot-phone-email .user-data {
+    font-size: 16px;
+}
+
+#login-signup-module-container #new-password-sent .main-body .forgot-issues {
+    font-size: 15px;
+    color: #9a9a9a;
+    margin-top: 50px;
+}
+
+#login-signup-module-container #new-password-sent .main-body .forgot-issues span {
+    color: #4a29bf;
+}
+
+@media (max-width:320px) {
+    #login-signup-module-container #new-password-sent .main-body .forgot-issues {
+        margin-top: 16px;
+    }
+}
+
+#login-signup-module-container #complete-profile-container {
+    color: #4a4a4a;
+    font-size: 16px;
+    background-color: #ffffff;
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+#login-signup-module-container #complete-profile-container .top-border {
+    padding: 2.5px 0;
+    background-color: #e6632f;
+    margin-top: -50px;
+}
+
+#login-signup-module-container #complete-profile-container .complete-profile-title {
+    font-size: 24px;
+    padding: 30px 0 25px;
+    text-align: center;
+    margin-top: 50px;
+    color: #e6632f;
+}
+
+#login-signup-module-container #complete-profile-container .complete-profile-subtitle {
+    font-size: 16px;
+    text-align: center;
+    color: #8c8c8c;
+}
+
+#login-signup-module-container #complete-profile-container .complete-profile-body {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#login-signup-module-container #complete-profile-container .complete-profile-row {
+    border-bottom: solid 1px #dddddd;
+    padding-bottom: 30px;
+    padding-top: 25px;
+}
+
+#login-signup-module-container #complete-profile-container .complete-profile-row:last-child {
+    border-bottom: none;
+}
+
+#login-signup-module-container #complete-profile-container .complete-profile-body .bottom-title {
+    font-weight: 600;
+}
+
+#login-signup-module-container #complete-profile-container .complete-profile-lhs {
+    display: inline-block;
+    vertical-align: top;
+    width: 137px;
+}
+
+#login-signup-module-container #complete-profile-container .complete-profile-rhs {
+    font-size: 14px;
+    display: inline-block;
+    position: relative;
+}
+
+#login-signup-module-container #complete-profile-container .select-targets {
+    list-style: none;
+    padding-left: 0;
+    background-color: #eeeeee;
+    border: 1px solid #eeeeee;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    margin-top: 0;
+    position: relative;
+    display: none;
+    max-height: 200px;
+    overflow: scroll;
+}
+
+#login-signup-module-container #complete-profile-container .show {
+    display: block;
+}
+
+#login-signup-module-container #complete-profile-container .select-targets li {
+    background: #fff;
+    cursor: pointer;
+}
+
+#login-signup-module-container #complete-profile-container .select-targets li:hover {
+    background-color: #f5f5f5;
+}
+
+#login-signup-module-container #complete-profile-container .select-targets li input {
+    vertical-align: sub;
+}
+
+#login-signup-module-container #complete-profile-container .complete-profile-bottom {
+    margin-top: 10px;
+    margin-bottom: -10px;
+}
+
+#login-signup-module-container #complete-profile-container .complete-profile-bottom .error-message {
+    color: #c31c1c;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+#login-signup-module-container #complete-profile-container .prepare-box {
+    margin-top: 20px;
+}
+
+#login-signup-module-container #complete-profile-container .complete-profile-bottom .complete-profile-submit {
+    max-width: 135px;
+    margin: 0 auto 30px;
+    text-align: center;
+    background-image: linear-gradient(105deg, #7871c2, #655fac);
+    font-weight: 600;
+    color: #ffffff;
+    padding: 10px 0;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#login-signup-module-container #complete-profile-container .complete-profile-bottom .inactive {
+    background-image: unset;
+    background-color: #ccc;
+}
+
+#login-signup-module-container #complete-profile-container .login-input-select-elem .target-select {
+    width: 200%;
+    border: none;
+    padding: 10px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+}
+
+@media (max-width:767px) {
+    #login-signup-module-container .login-desktop-right-section {
+        float: unset;
+    }
+    #login-signup-module-container .main-body {
+        min-height: 400px;
+    }
+    #login-signup-module-container #complete-profile-container select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 1px;
+        text-overflow: "";
+        width: 200px;
+        border: none;
+        padding: 10px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        border-radius: 4px;
+    }
+    #login-signup-module-container #complete-profile-container .select-caret {
+        width: 0px;
+        height: 0px;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 7px solid #666;
+        position: absolute;
+        left: 154px;
+        top: 17px;
+    }
+    #login-signup-module-container #complete-profile-container #select-targets-option {
+        width: 180px;
+        border: none;
+        padding: 10px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        border-radius: 4px;
+        margin-top: 10px;
+        text-align: left;
+        border-color: #ccc;
+        background-color: #fff;
+        border: solid 1px #dddddd;
+        font-size: 14px;
+        outline: none;
+        word-break: break-word;
+    }
+    #login-signup-module-container #complete-profile-container #city-selector {
+        width: 180px;
+        border: none;
+        padding: 10px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        border-radius: 4px;
+        margin-top: 10px;
+        text-align: left;
+        border-color: #ccc;
+        background-color: #fff;
+        border: solid 1px #dddddd;
+        font-size: 14px;
+        outline: none;
+    }
+    #login-signup-module-container #complete-profile-container .select-caret {
+        width: 0px;
+        height: 0px;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 7px solid #666;
+        position: absolute;
+        left: 154px;
+        top: 27px;
+    }
+    #login-signup-module-container #complete-profile-container .dropbox1:hover {
+        background-color: #f5f5f5;
+    }
+    #login-signup-module-container #complete-profile-container .inner-dropbox {
+        list-style: none;
+        padding-left: 0;
+        border: 1px solid #ccc;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        border-radius: 4px;
+        -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+        margin-top: 0;
+        position: relative;
+        max-height: 200px;
+        overflow: scroll;
+    }
+    #login-signup-module-container #complete-profile-container #select-targets-dropdown {
+        width: 200px;
+        word-break: break-word;
+    }
+    #login-signup-module-container #complete-profile-container .select-caret1 {
+        width: 0px;
+        height: 0px;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 7px solid #666;
+        position: absolute;
+        left: 160px;
+        top: 221px;
+    }
+    #login-signup-module-container #complete-profile-container .dropbox1 {
+        display: block;
+        cursor: pointer;
+        padding: 6px 10px;
+        margin-bottom: 0;
+        border-bottom: inset 1px;
+    }
+    #login-signup-module-container #complete-profile-container .select-targets li label {
+        width: 218px;
+        display: block;
+        cursor: pointer;
+        padding: 7px 10px;
+        margin-bottom: 0;
+        display: -webkit-inline-flex;
+        display: inline-flex;
+        display: -ms-inline-flex;
+        display: -o-inline-flex;
+        display: -moz-inline-flex;
+    }
+    #login-signup-module-container #home-screen .main-body .common-bottom-btn {}
+}
+
+@media (min-width:768px) {
+    #login-signup-module-container #complete-profile-container select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 1px;
+        text-overflow: "";
+        width: 250px;
+        border: none;
+        padding: 10px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        border-radius: 4px;
+    }
+    #login-signup-module-container #complete-profile-container .select-caret {
+        width: 0px;
+        height: 0px;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 7px solid #666;
+        position: absolute;
+        left: 215px;
+        top: 17px;
+    }
+    #login-signup-module-container #complete-profile-container #select-targets-option {
+        width: 250px;
+        border: none;
+        padding: 10px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        border-radius: 4px;
+        margin-top: 10px;
+        text-align: left;
+        border-color: #ccc;
+        background-color: #fff;
+        border: solid 1px #dddddd;
+        font-size: 14px;
+        outline: none;
+        word-break: break-word;
+    }
+    #login-signup-module-container #complete-profile-container .complete-profile-conatiner .select-caret1 {
+        width: 0px;
+        height: 0px;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 7px solid #666;
+        position: absolute;
+        left: 232px;
+        top: 100px;
+    }
+    #login-signup-module-container #complete-profile-container #city-selector {
+        width: 250px;
+        border: none;
+        padding: 10px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        border-radius: 4px;
+        margin-top: 10px;
+        text-align: left;
+        border-color: #ccc;
+        background-color: #fff;
+        border: solid 1px #dddddd;
+        font-size: 14px;
+        outline: none;
+    }
+    #login-signup-module-container #complete-profile-container .select-caret {
+        width: 0px;
+        height: 0px;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 7px solid #666;
+        position: absolute;
+        left: 217px;
+        top: 27px;
+    }
+    #login-signup-module-container #complete-profile-container .dropbox1:hover {
+        background-color: #f5f5f5;
+    }
+    #login-signup-module-container #complete-profile-container .inner-dropbox {
+        list-style: none;
+        padding-left: 0;
+        border: 1px solid #ccc;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        border-radius: 4px;
+        -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+        margin-top: 0;
+        position: relative;
+        max-height: 200px;
+        overflow: scroll;
+    }
+    #login-signup-module-container #complete-profile-container #select-targets-dropdown {
+        width: 250px;
+    }
+    #login-signup-module-container #complete-profile-container .dropbox1 {
+        display: block;
+        cursor: pointer;
+        padding: 6px 10px;
+        margin-bottom: 0;
+        border-bottom: inset 1px;
+    }
+    #login-signup-module-container #complete-profile-container .select-targets li label {
+        width: 218px;
+        display: block;
+        cursor: pointer;
+        padding: 7px 10px;
+        margin-bottom: 0;
+        display: -webkit-inline-flex;
+        display: inline-flex;
+        display: -ms-inline-flex;
+        display: -o-inline-flex;
+        display: -moz-inline-flex;
+    }
+    #login-signup-module-container #complete-profile-container .dropbox1 {
+        display: block;
+        cursor: pointer;
+        padding: 6px 10px;
+        margin-bottom: 0;
+        border-bottom: inset 1px;
+    }
+    #login-signup-module-container #complete-profile-container .select-targets li label {
+        width: 218px;
+        display: block;
+        cursor: pointer;
+        padding: 7px 10px;
+        margin-bottom: 0;
+        display: -webkit-inline-flex;
+        display: inline-flex;
+        display: -ms-inline-flex;
+        display: -o-inline-flex;
+        display: -moz-inline-flex;
+    }
+    #login-signup-module-container #home-screen .main-body .common-bottom-btn {
+        margin-top: 20%;
+    }
+}
+
+#login-signup-module-container #complete-profile-container div.options {
+    max-width: 370px;
+    margin-bottom: -20px;
+}
+
+#login-signup-module-container #complete-profile-container div.options>label {
+    display: inline-block;
+    margin-right: 3px;
+    padding: 0 0 20px 0;
+}
+
+#login-signup-module-container #complete-profile-container div.options>label>input {
+    visibility: hidden;
+    position: absolute;
+}
+
+#login-signup-module-container #complete-profile-container div.options>label>span {
+    background: none;
+    display: inline-block;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    border-radius: 25px;
+    background-color: #fff;
+    border: solid 1px #615aa7;
+    text-align: center;
+    padding: 6px 12px 6px 12px;
+    cursor: pointer;
+    color: #615aa7;
+}
+
+#login-signup-module-container #complete-profile-container div.options>label>input:checked+span,
+#login-signup-module-container #complete-profile-container div.options>label>input:hover+span {
+    color: #fff;
+    background-color: #615aa7;
+}
+
+@media screen and (max-width:640px) {
+    #login-signup-module-container #complete-profile-conatiner {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    #login-signup-module-container #complete-profile-conatiner .complete-profile-title {
+        padding-bottom: 0;
+    }
+    #login-signup-module-container #complete-profile-conatiner .complete-profile-row {
+        padding-top: 15px;
+    }
+    #login-signup-module-container #complete-profile-conatiner .complete-profile-lhs {
+        width: 100%;
+        padding-bottom: 10px;
+    }
+    #login-signup-module-container #complete-profile-conatiner .complete-profile-body .bottom-title,
+    #login-signup-module-container #complete-profile-conatiner .complete-profile-body .top-title {
+        display: inline-block;
+    }
+    #login-signup-module-container .popupWrapperHolder {
+        min-width: 340px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    #login-signup-module-container #complete-profile-conatiner {
+        max-width: 320px;
+        margin: 0 auto;
+    }
+}
+
+.country-code {
+    border: 0;
+    font-size: 18px !important;
+    outline: 0;
+    border-bottom: 1px solid #cccccc;
+}
+
+#login-signup-module-container #enter-phone-screen .main-body .login-phone-container .country-Code {
+    margin-left: 10px;
+    margin-bottom: 0;
+    max-width: 80px;
+    width: calc(100% - 80px);
+    padding: 10px 0px 0px 5px;
+}
+
+#login-signup-module-container #enter-phone-screen .main-body .login-phone-container .country-Code input {
+    width: 100%;
+    font-size: 18px;
+    padding: 18px 5px 3px 0;
+    line-height: 30px;
+}
+
+.login-input-group #code {}
+
+datalist {
+    display: none;
+}
+
+input::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+#login-signup-module-container #contact-number-linked-container .main-body #contact-number-linked-form {}
+
+#login-signup-module-container #contact-number-linked-container .main-body #contact-number-linked-form #contact-number {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.9px;
+}
+
+#login-signup-module-container #contact-number-linked-container .main-body #contact-number-linked-form .is-linked-with-an-ex {
+    font-size: 18px;
+    text-align: center;
+    height: 24px;
+    color: #666666;
+}
+
+#login-signup-module-container #contact-number-linked-container .main-body #contact-number-linked-form #contact-existing-number-login {
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+}
+
+#login-signup-module-container #contact-number-linked-container .main-body .contact-number-linked-or-text {
+    text-align: center;
+    color: #9b9b9b;
+    font-size: 14px;
+    font-weight: 600;
+    height: 19px;
+    margin-top: 43px;
+    margin-bottom: 35px;
+    width: 100%;
+}
+
+#login-signup-module-container #contact-number-linked-container .main-body .contact-number-linked-enter-another-mobile {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: #e6632f;
+    margin-bottom: 10px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#login-signup-module-container #contact-number-linked-container .main-body .contact-number-linked-enter-another-mobile:hover {
+    text-decoration: none;
+}
+
+#login-signup-module-container #contact-number-linked-container .main-body #contact-number-linked-to-link-with-email {
+    text-align: center;
+    color: #666666;
+    font-size: 14px;
+}
+
+#login-signup-module-container #otp-or-password-screen .main-body .otp-or-password-screen-or-text {
+    text-align: center;
+    color: #9b9b9b;
+    font-size: 14px;
+    font-weight: 600;
+    height: 19px;
+    margin: 35px 0px;
+}
+
+#login-signup-module-container #otp-or-password-screen .main-body .otp-or-password-login-text {
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: #e6632f;
+    margin-bottom: 10px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#login-signup-module-container #otp-or-password-screen .main-body .otp-or-password-login-text:hover {
+    text-decoration: none;
+}
+
+#login-signup-module-container #otp-or-password-screen .main-body .otp-sent-to {
+    color: #9a9a9a;
+    font-size: 18px;
+}
+
+#login-signup-module-container #otp-or-password-screen .common-bottom-btn {
+    margin-top: 30px;
+}
+
+#login-signup-module-container #otp-or-password-screen .main-body .otp-text-container .otp-sent-text .phoneNumber {
+    color: #000000;
+}
+
+#login-signup-module-container #otp-or-password-screen .main-body .login-edit-number {
+    color: #f35a34;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+    vertical-align: middle;
+    display: inline-block;
+    height: 37px;
+    line-height: 31px;
+}
+
+#login-signup-module-container #otp-or-password-screen .main-body .resend-otp-text {
+    color: #999999;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+#login-signup-module-container #otp-or-password-screen .main-body .resend-otp {
+    color: #f35a34;
+    margin: 0 auto;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#login-signup-module-container #otp-or-password-screen .main-body .resend-container {
+    margin-top: 24px;
+}
+
+#login-signup-module-container #otp-or-password-screen .main-body .phone-otp-holder {
+    display: inline-block;
+    font-size: 24px;
+    margin-top: 8px;
+}
+
+#login-signup-module-container #otp-or-password-screen .main-body .login-otp-container {
+    margin-top: 32px;
+}
+
+#login-signup-module-container #otp-or-password-screen .main-body .login-otp-container .otp-error-holder {
+    color: #d0021b;
+    font-size: 12px;
+    font-weight: 600;
+    display: none;
+    margin-top: 9px;
+    text-align: center;
+}
+
+#login-signup-module-container #otp-or-password-screen .main-body .login-otp-container.has-otp-error .otp-error-holder {
+    display: block;
+}
+
+#login-signup-module-container #otp-or-password-screen .main-body .login-otp-container.has-otp-error .otp-dash-container .otp-dasher {
+    background: #d0021b;
+}
+
+#login-signup-module-container #otp-or-password-screen .main-body .login-otp-container .otp-dash-container {
+    display: -webkit-flex;
+    display: flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -moz-flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    width: 229px;
+    margin: 0 auto;
+    height: 1px;
+}
+
+#login-signup-module-container #otp-or-password-screen .main-body .login-otp-container .otp-dash-container .otp-dasher {
+    display: inline-block;
+    width: 45px;
+    height: 2px;
+    background: #cccccc;
+    margin-right: 17px;
+}
+
+#login-signup-module-container #otp-or-password-screen .main-body .login-otp-container .otp-dash-container .otp-dasher:last-child {
+    margin-right: 0;
+}
+
+#login-signup-module-container #otp-or-password-screen .main-body .login-otp-container input {
+    width: 282px;
+    outline: none;
+    display: block;
+    margin: 0 auto;
+    font-size: 30px;
+    font-weight: 600;
+    padding-right: 0px;
+    padding-left: 41px;
+    letter-spacing: 43px;
+    border: none;
+}
+
+#login-signup-module-container #password-verify-screen .main-body #password-verify-form {}
+
+#login-signup-module-container #password-verify-screen .main-body #password-verify-form .common-bottom-btn {
+    margin-top: 47px;
+}
+
+#login-signup-module-container #password-verify-screen .main-body .password-verify-screen-or-text {
+    text-align: center;
+    color: #9b9b9b;
+    font-size: 14px;
+    font-weight: 600;
+    height: 19px;
+    width: 100%;
+    margin-top: 31px;
+    margin-bottom: 12px;
+}
+
+#login-signup-module-container #password-verify-screen .main-body .password-verify-screen-login-otp-text {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: #e6632f;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#login-signup-module-container #password-verify-screen .main-body .password-verify-screen-login-otp-text:hover {
+    text-decoration: none;
+}
+
+#login-signup-module-container #password-verify-screen .main-body .top-margin {}
+
+#login-signup-module-container #home-screen .main-body .or-continue-text {
+    text-align: center;
+    color: #9b9b9b;
+    font-size: 14px;
+    font-weight: 600;
+    height: 19px;
+    margin: 24px 0px 0px 0px;
+}
+
+#login-signup-module-container #home-screen #home-screen-form .bar {
+    top: 43px;
+}
+
+#login-signup-module-container #home-screen #home-screen-form .home-screen-country-code-container .bar {
+    width: 80px;
+}
+
+#login-signup-module-container #home-screen #home-screen-form .country-code {
+    position: absolute;
+    height: 40px;
+    max-width: 80px;
+    width: calc(100% - 80px);
+    font-size: 18px !important;
+}
+
+#login-signup-module-container #home-screen #home-screen-form #login-email-phone input {
+    left: 80px;
+    width: 100%;
+    font-weight: 600;
+    padding-bottom: 8px;
+    float: right;
+}
+
+#login-signup-module-container #verify-otp-screen #otp-verify-form #mobile-input-otp {}
+
+#login-signup-module-container #enter-phone-screen .main-body .header-text {
+    color: #9a9a9a;
+    font-size: 18px;
+}
+
+#login-signup-module-container .login-input-group-select .error-container {
+    color: #d0021b;
+}
+
+#login-signup-module-container #otp-or-password-screen .main-body .login-otp-container input {}
+
+#login-signup-module-container #otp-or-password-screen .main-body .common-bottom-btn {}
+
+#login-signup-module-container #update-profile-screen .main-body #update-profile-form {}
+
+#login-signup-module-container #update-profile-screen .main-body #update-profile-form #update-profile-email .email-text {
+    font-size: 12px;
+    margin-top: 5px;
+    text-align: left;
+    color: #9b9b9b;
+}
+
+#login-signup-module-container #email-input-screen-form #email-input-field .email-text {
+    font-size: 12px;
+    margin-top: 5px;
+    text-align: left;
+    color: #9b9b9b;
+}
+
+#login-signup-module-container #email-input-screen-form #email-input-field .error-container,
+#login-signup-module-container #update-profile-screen .main-body #update-profile-form #update-profile-email .error-container {
+    margin-top: 16px;
+}
+
+#login-signup-module-container #email-input-screen-form #email-input-field label {
+    bottom: 22px;
+}
+
+#login-signup-module-container #update-profile-screen .main-body #update-profile-form #update-profile-email label {
+    bottom: 18px;
+}
+
+#login-signup-module-container #update-profile-screen .main-body #update-profile-form .common-bottom-btn {
+    margin-top: 8%;
+}
+
+#login-signup-module-container #update-profile-screen .main-body #update-profile-form .login-input-holder .login-input-group {
+    margin-bottom: 16px;
+}
+
+#login-signup-module-container #update-profile-screen .main-body #update-profile-form .login-input-holder .login-input-group-select .error-container {
+    top: 62px;
+}
+
+#login-signup-module-container .login-input-group-select .error-container {
+    top: 68px
+}
+
+#login-signup-module-container .login-input-group.error .error-container {
+    top: 45px;
+}
+
+#login-signup-module-container .main-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+}
+
+#login-signup-module-container #home-screen #home-screen-form #login-email-phone label {
+    bottom: -30px;
+    position: absolute;
+}
+
+#login-signup-module-container #email-input-screen .header-section {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.33;
+}
+
+#login-signup-module-container #email-input-screen #email-input-screen-form {
+    margin-top: 25px;
+}
+
+#login-signup-module-container .otp-text-container {}
+
+#login-signup-module-container #update-profile-screen .main-body #update-profile-form .form-error {
+    color: #d0021b;
+    font-size: 12px;
+    top: 0;
+    text-align: left;
+}
+
+@media screen and (min-width:320px) and (max-width:425px) {
+    #login-signup-module-container .main-body {
+        max-width: 385px;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width:425px) and (max-width:767px) {
+    #login-signup-module-container .main-body {
+        max-width: 575px;
+        margin: auto;
+    }
+}
+
+#login-signup-module-container #home-screen #home-screen-form #login-email-phone input {
+    text-align: center;
+    box-shadow: none;
+}
+
+#login-signup-module-container #home-screen #home-screen-form #login-email-phone label {
+    left: calc(50% - 110px);
+}
+
+#login-signup-module-container #home-screen #home-screen-form #login-email-phone input:focus~label,
+#login-signup-module-container #home-screen #home-screen-form #login-email-phone input:valid~label,
+#login-signup-module-container #home-screen #home-screen-form #login-email-phone input:disabled~label {
+    left: calc(50% - 61px);
+}
+
+#login-signup-module-container #enter-phone-screen .main-body .login-phone-container .phone-number input {
+    text-align: center;
+}
+
+#login-signup-module-container #enter-phone-screen .main-body .login-phone-container .phone-number label {
+    left: calc(50% - 46px)
+}
+
+#login-signup-module-container #password-verify-screen .main-body #password-input-container input {
+    text-align: center;
+}
+
+#login-signup-module-container #password-verify-screen .main-body #password-input-container label {
+    left: calc(50% - 40px)
+}
+
+#login-signup-module-container #password-verify-screen .main-body #password-input-container input:focus~label,
+#login-signup-module-container #password-verify-screen .main-body #password-input-container input:valid~label {
+    left: calc(50% - 24px);
+}
+
+@media (max-width:767px) {
+    #login-signup-module-container .login-desktop-right-section .Mr. Krish Satasiya-logo-holder {
+        margin-top: 0;
+    }
+}
+
+#login-signup-module-container .popup-main-div {
+    background: rgba(0, 0, 0, 0.55);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 999
+}
+
+#login-signup-module-container .popup-main-div .popup-inner-div {
+    width: 380px;
+    height: 193px;
+    box-shadow: 0 9px 14px 0 rgba(0, 0, 0, 0.06);
+    background-color: #ffffff;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    padding: 39px 43px 56px;
+    line-height: 1.4
+}
+
+#login-signup-module-container .warning-div {
+    width: 27px;
+    height: 24px;
+    margin: auto;
+}
+
+#login-signup-module-container .warn-img {
+    width: 100%;
+}
+
+#login-signup-module-container .please-use-the-mobile {
+    width: 284px;
+    height: 45px;
+    font-family: OpenSans;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.14px;
+    text-align: center;
+    color: #000000;
+    padding-top: 12px;
+}
+
+#login-signup-module-container .ok-button {
+    width: 71px;
+    height: 32px;
+    border-radius: 20px;
+    background-color: #ff6200;
+    margin: auto;
+    margin-top: 16px;
+    cursor: pointer;
+    font-family: OpenSans;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#login-signup-module-container .popup-agent-div {
+    background: rgba(0, 0, 0, 0.55);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 999
+}
+
+#login-signup-module-container .popup-agent-div .popup-inner-div {
+    width: 380px;
+    height: 193px;
+    box-shadow: 0 9px 14px 0 rgba(0, 0, 0, 0.06);
+    background-color: #ffffff;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    padding: 39px 43px 56px;
+    line-height: 1.4
+}
+
+#login-signup-module-container .popup-agent-div .warning-div {
+    width: 27px;
+    height: 24px;
+    margin: auto;
+}
+
+#login-signup-module-container .popup-agent-div .warn-img {
+    width: 100%;
+}
+
+#login-signup-module-container .popup-agent-div .please-use-the-mobile {
+    width: 284px;
+    height: 45px;
+    font-family: OpenSans;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.14px;
+    text-align: center;
+    color: #000000;
+    padding-top: 12px;
+}
+
+#login-signup-module-container .agent-ok-button {
+    width: 71px;
+    height: 32px;
+    border-radius: 20px;
+    background-color: #ff6200;
+    margin: auto;
+    margin-top: 16px;
+    cursor: pointer;
+    font-family: OpenSans;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#login-signup-module-container .update-profile-form-parentName {
+    top: 20px;
+}
+
+.hasLaptop-checkbox-text {
+    padding-top: 29px;
+    text-align: left;
+}
+
+#login-signup-module-container .hasLaptop-radiocheck .error-container {
+    display: none;
+}
+
+#login-signup-module-container .hasLaptop-radiocheck.error input {
+    color: #d0021b;
+}
+
+#login-signup-module-container .hasLaptop-radiocheck.error .error-container {
+    display: block;
+    text-align: center;
+    color: #d0021b;
+    font-size: 12px;
+    margin: 0 auto;
+    left: 4px;
+    position: inherit;
+}
+
+#login-signup-module-container .home-demo .home-demo-label {
+    justify-content: start;
+    margin-top: 4px;
+}
+
+.home-demo-label input[type="radio"] {
+    justify-content: end;
+    width: 16px;
+    height: 16px;
+    margin: unset;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    padding: 2px;
+    background-clip: content-box;
+    border: 1px solid #aaaaaa;
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+
+.home-demo-label input[type=radio]:checked {
+    background-color: #fd6f2e;
+    border: 1px solid #fd6f2e;
+}
+
+.home-demo-label input[type=radio]:focus {
+    outline: none;
+}
+
+.home-demo-label .has-laptop-input-text-wrapper {
+    display: flex;
+    align-items: center;
+    width: 81px;
+}
+
+.home-demo-label .radio-buttons-text {
+    padding-left: 4px;
+}

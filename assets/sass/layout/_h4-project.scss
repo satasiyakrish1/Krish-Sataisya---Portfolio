@@ -1,0 +1,143 @@
+@use "../utilities" as *;
+
+
+
+
+/**----------------------------------------
+START: Theme Project CSS
+----------------------------------------*/
+
+.tj-project {
+     &-4 {
+          &-area {
+               padding: 115px 0 0;
+               position: relative;
+               z-index: 1;
+               @media #{$xl} {
+                    padding: 20px 0 0;
+               }
+               @media #{$lg, $md, $sm, $xs} {
+                    padding: 0px 0 0;
+               }
+               &::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: -380px;
+                    width: 700px;
+                    height: 700px;
+                    border-radius: 50%;
+                    background: var(--tj-theme-primary);
+                    background: linear-gradient(260deg, var(--tj-theme-primary) 0%, rgba(115, 67, 210, 0) 100%);
+                    filter: blur(150px);
+                    opacity: 0.6;
+                    z-index: -1;
+               }
+          }
+          &-wrappper {
+               display: flex;
+               flex-wrap: wrap;
+          }
+          &-item {
+               max-width: 541px;
+               margin-bottom: 100px;
+               position: relative;
+               z-index: 2;
+               @media #{$xl} {
+                    max-width: 460px;
+               }
+               @media #{$lg} {
+                    max-width: 400px;
+                    margin-bottom: 60px;
+               }
+               @media #{$md} {
+                    max-width: 280px;
+                    margin-bottom: 60px;
+               }
+               @media #{$sm,$xs} {
+                    margin-bottom: 60px;
+               }
+               &:nth-child(2) {
+                    margin-top: -120px;
+                    @media #{$sm,$xs} {
+                         margin-top: 0;
+                         margin-bottom: 60px;
+                    }
+               }
+               &:nth-child(3) {
+                    margin-left: 100px;
+                    @media #{$lg,$md,$sm,$xs} {
+                         margin-left: 0;
+                         margin-bottom: 60px;
+                    }
+               }
+               &:nth-child(4) {
+                    margin-left: 100px;
+                    @media #{$lg,$md,$sm,$xs} {
+                         margin-left: 0;
+                         margin-bottom: 60px;
+                    }
+               }
+               &:nth-child(8) {
+                    margin-left: 120px;
+               }
+          }
+          &-thumb {
+               background: #2e1f3e;
+               padding: 18px;
+               margin-bottom: 35px;
+               border-radius: 25px;
+               max-width: 536px;
+               width: 100%;
+               height: auto;
+               & img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 15px;
+               }
+          }
+          &-subtitle {
+               font-weight: var(--tj-fw-sbold);
+               color: var(--tj-theme-primary);
+               margin-bottom: 15px;
+               display: inline-block;
+          }
+          &-title {
+               font-weight: var(--tj-fw-sbold);
+               font-size: 32px;
+               @media #{$md} {
+                    font-size: 24px;
+               }
+               & a {
+                    display: inline-block;
+               }
+          }
+          &-button {
+               & .tj-btn-primary {
+                    padding: 17px 80px;
+               }
+          }
+     }
+}
+
+.tj-project-4-content {
+     position: relative;
+     z-index: 1;
+     .portfolio-link {
+          border: none;
+          padding: 0;
+          margin: 0;
+          background: transparent;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+     }
+}
+/* !END: Theme Project CSS */
+
+
+

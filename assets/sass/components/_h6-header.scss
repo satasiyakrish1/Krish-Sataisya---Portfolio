@@ -1,0 +1,139 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Header CSS
+----------------------------------------*/
+.tj-header-area {
+     &.header-6 {
+          position: absolute;
+          background-color: transparent;
+          left: 0;
+          top: 0;
+          width: 100%;
+          z-index: 99;
+          padding: 30px 50px;
+          .header-menu {
+               margin-left: 0;
+               background-color: var(--tj-black-2);
+               border-radius: 70px;
+               padding: 0px 40px;
+               ul {
+                    > li {
+                         > a {
+                              color: rgba(255,255,255,0.5);
+                              padding: 15px 0px;
+                              &::after,
+                              &::before {
+                                   display: none;
+                              }
+                              &.current-menu-ancestor,
+                              &.current-menu-item,
+                              &:hover {
+                                   color: var(--tj-white);
+                              }
+                         }
+                         > .sub-menu {
+                              > li {
+                                   &.current-menu-ancestor,
+                                   &.current-menu-item {
+                                        > a {
+                                             color: var(--tj-white);
+                                        }
+                                   }
+                                   &.has-dropdown {
+                                        a {
+                                             &::after {
+                                                  display: block;
+                                             }
+                                        }
+                                   }
+                              }
+                         }
+                    }
+               }
+          }
+     }
+     &.header-6-sticky {
+          padding: 30px 50px;
+          .header-menu {
+               margin-left: 0;
+               background-color: var(--tj-black-2);
+               border-radius: 70px;
+               padding: 0px 40px;
+               ul {
+                    > li {
+                         > a {
+                              color: rgba(255,255,255,0.5);
+                              padding: 15px 0px;
+                              &::after,
+                              &::before {
+                                   display: none;
+                              }
+                              &.current-menu-ancestor,
+                              &.current-menu-item,
+                              &:hover {
+                                   color: var(--tj-white);
+                              }
+                         }
+                         > .sub-menu {
+                              > li {
+                                   &.current-menu-ancestor,
+                                   &.current-menu-item {
+                                        > a {
+                                             color: var(--tj-white);
+                                        }
+                                   }
+                                   &.has-dropdown {
+                                        a {
+                                             &::after {
+                                                  display: block;
+                                             }
+                                        }
+                                   }
+                              }
+                         }
+                    }
+               }
+          }
+     }
+     @media #{$md} {
+          &.header-6 {
+               padding: 25px 25px;
+          }
+     }
+     @media #{$sm} {
+          &.header-6-sticky,
+          &.header-6 {
+               padding: 20px 15px;
+          }
+     }
+     @media #{$xs} {
+          &.header-6-sticky,
+          &.header-6 {
+               padding: 15px 0px;
+               .header-button {
+                    display: none;
+               }
+          }
+     }
+}
+
+.tj-header-area {
+     &.header-6-sticky,
+     &.header-6 {
+          .header-menu {
+               ul {
+                    > li {
+                         > ul.sub-menu {
+                              > li:hover {
+                                   > a {
+                                        color: var(--tj-white);
+                                   }
+                              }
+                         }
+                    }
+               }
+          } 
+     }
+}
+/* !END: Theme Header CSS */

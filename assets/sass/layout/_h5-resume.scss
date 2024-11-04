@@ -1,0 +1,204 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Resume CSS
+----------------------------------------*/
+.resume-section {
+     &.style-5 {
+          padding-bottom: 120px;
+          background-color: var(--tj-theme-accent-1);
+          position: relative;
+          overflow: hidden;
+          z-index: 1;
+          &::after {
+               content: "";
+               position: absolute;
+               top: 0;
+               left: 50%;
+               transform: translateX(-50%);
+               width: 650px;
+               height: 550px;
+               border-radius: 50%;
+               background: var(--tj-theme-primary);
+               background: linear-gradient(190deg, var(--tj-theme-primary) 0%, rgba(115, 67, 210, 0) 100%);
+               filter: blur(250px);
+               margin-top: -16%;
+               opacity: 0.5;
+               z-index: -1;
+          }
+          .section-header {
+               max-width: 560px;
+               margin-left: auto;
+               margin-right: auto;
+          }
+     }
+     @media #{$md, $sm, $xs} {
+          &.style-5 {
+               padding-bottom: 80px; 
+          } 
+     }  
+}
+
+.resume_menu_5  {
+     justify-content: center;
+     margin-bottom: 40px;
+     max-width: 395px;
+     width: 100%;
+     margin-left: auto;
+     margin-right: auto;
+     background-color: var(--tj-theme-primary);
+     border-radius: 60px;
+     position: relative;
+     padding: 5px;
+     z-index: 1;
+     .resume-tab {
+          font-size: 15px;
+          font-weight: var(--tj-fw-bold);
+          color: var(--tj-white);
+          border-radius: 60px;
+          padding: 11px 25px;
+          position: relative;
+          transition: 0.6s;
+          z-index: 1;
+          &.active {
+               background-color: var(--tj-theme-accent-2);
+          }
+     }
+     @media #{$xs} {
+          margin-bottom: 30px;
+          max-width: 320px;
+          .resume-tab {
+               font-size: 14px;
+               padding: 10px 15px;
+          } 
+     }
+}
+
+.resume_wrapper_5 {
+     border-radius: 16px;
+     border: 2px solid rgba(255,255,255,0.1);
+     padding: 60px;
+     .resume_inner_5 {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 40px;
+          &:not(:last-child) {
+               .resume_item {
+                    border-bottom: 2px solid rgba(255,255,255,0.1);
+                    padding-bottom: 35px;
+                    margin-bottom: 40px;
+               }
+          }
+          .icon_box {
+               max-width: 60px;
+               width: 100%;
+               img {
+                    width: 100%;
+               }
+          }
+          
+     } 
+     @media #{$lg, $md, $sm, $xs} {
+          padding: 30px 15px; 
+     }
+     @media #{$md, $sm, $xs} {
+          .resume_inner_5 {
+               gap: 20px;
+          }  
+     }
+}
+
+.resume_item {
+     &.style-5 {
+          justify-content: space-between;
+          max-width: 1070px;
+          width: 100%;
+          .resume_content {
+               .resume_text {
+                    .subtitle {
+                         color: var(--tj-white);
+                    }
+                    .desc {
+                         letter-spacing: 0.02em;
+                         color: rgba(255,255,255,0.6);
+                    }
+               }
+          }
+          .resume_date {
+               .date {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    justify-content: end;
+                    font-size: 20px;
+                    color: rgba(255,255,255,0.6);
+                    i {
+                         color: var(--tj-theme-primary);
+                         display: inline-flex;
+                         font-size: 20px;
+                         line-height: 1;
+                    }
+               }
+          }
+     }
+     @media #{$xl} {
+          &.style-5 {
+               max-width: 890px;
+          }
+     }
+     @media #{$lg} {
+          &.style-5 {
+               max-width: 800px;
+          }
+     }
+     @media #{$md} {
+          &.style-5 {
+               max-width: 580px;
+               .resume_date {
+                    max-width: 160px;
+               }
+          }
+     }
+     @media #{$md} {
+          &.style-5 {
+               max-width: 580px;
+               .resume_date {
+                    max-width: 160px;
+               }
+          }
+     }
+     @media #{$sm} {
+          &.style-5 {
+               .resume_content {
+                    .resume_text {
+                         .desc {
+                              font-size: 16px;
+                         }
+                    }
+               }
+               .resume_date {
+                    .date {
+                         justify-content: start;
+                    }
+               }
+          }
+     }
+     @media #{$xs} {
+          &.style-5 {
+               .resume_content {
+                    .resume_text {
+                         .desc {
+                              font-size: 16px;
+                         }
+                    }
+               }
+               .resume_date {
+                    .date {
+                         justify-content: start;
+                         font-size: 18px;
+                    }
+               }
+          }
+     }
+}
+/* !END: Theme Resume CSS */

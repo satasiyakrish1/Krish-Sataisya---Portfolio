@@ -1,0 +1,62 @@
+@use "../utilities"as *;
+
+
+
+/**----------------------------------------
+START: About CSS
+----------------------------------------*/
+
+.tj-about {
+     &-7 {
+          &-area {
+               background: var(--tj-theme-accent-2);
+               padding: 120px 0 90px;
+               @media #{$md,$sm,$xs} {
+                    padding: 60px 0 60px;
+               }
+          }
+          &-wrapper {
+               display: flex;
+               flex-wrap: wrap;
+               @media #{$sm,$xs} {
+                    row-gap: 30px;
+               }
+          }
+          &-bottom {
+               max-width: 810px;
+               width: 100%;
+               margin-left: auto; 
+               @media #{$lg} {
+                    max-width: 660px;
+               }
+               @media #{$md} {
+                    max-width: 420px;
+               }
+          }
+          &-title {
+               font-weight: var(--tj-fw-sbold);
+               font-size: 44px;
+               line-height: 1.2;
+               letter-spacing: -0.02em;
+               text-transform: capitalize;
+               margin-bottom: 30px;
+               @media #{$lg} {
+                    font-size: 36px;
+               }
+               @media #{$md,$sm} {
+                    font-size: 30px;
+               }
+               @media #{$xs} {
+                    font-size: 24px;
+               }
+               & span {
+                    font-size: 36px;
+               }
+          }
+     }
+}
+
+
+
+
+/* !END: About CSS */

@@ -1,0 +1,94 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Maquee CSS
+----------------------------------------*/
+.tj-maquee-section {
+     &.style-6 {
+          position: relative;
+          background-color: var(--tj-black-2);
+          padding: 60px 0;
+          z-index: 1;
+          &::before {
+               content: "";
+               position: absolute;
+               width: 720px;
+               height: 100%;
+               background: linear-gradient(90deg, var(--tj-black) 0%, rgba(5, 18, 41, 0) 100%);
+               top: 0;
+               left: 0;
+               z-index: 2;
+          }
+          &::after {
+               content: "";
+               position: absolute;
+               width: 720px;
+               height: 100%;
+               background: linear-gradient(90deg, var(--tj-black) 0%, rgba(5, 18, 41, 0) 100%);
+               top: 0;
+               right: 0;
+               z-index: 2;
+               transform: rotate(-180deg);
+          }
+          .maquee-wrapper {
+               transition-timing-function: linear;
+          }
+     }
+     @media #{$xl} {
+          &.style-6 {
+               padding: 30px 0;
+               &::before {
+                    width: 500px;
+               } 
+               &::after {
+                    width: 500px;
+               }
+          }
+     }
+     @media #{$lg} {
+          &.style-6 {
+               padding: 25px 0;
+               &::before {
+                    width: 300px;
+               } 
+               &::after {
+                    width: 300px;
+               }
+          }
+     }
+     @media #{$md} {
+          &.style-6 {
+               padding: 25px 0;
+               &::before {
+                    width: 200px;
+               } 
+               &::after {
+                    width: 200px;
+               }
+          }
+     }
+     @media #{$sm} {
+          &.style-6 {
+               padding: 20px 0;
+               &::before {
+                    width: 100px;
+               } 
+               &::after {
+                    width: 100px;
+               }
+          }
+     }
+     @media #{$xs} {
+          &.style-6 {
+               padding: 20px 0;
+               &::before {
+                    width: 100px;
+               } 
+               &::after {
+                    width: 100px;
+               }
+          }
+     }
+}
+
+/* !END: Theme Maquee CSS */

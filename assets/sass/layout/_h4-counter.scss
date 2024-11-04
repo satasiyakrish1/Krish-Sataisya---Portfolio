@@ -1,0 +1,124 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Counter CSS
+----------------------------------------*/
+
+.tj-counter-section {
+     &.style-4 {
+          justify-content: space-between;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          padding: 95px 0;
+          .section-header {
+               max-width: 530px;
+               width: 100%;
+          }
+     }
+     @media #{$lg} {
+          &.style-4 {
+               .section-header {
+                    max-width: 450px;
+               }
+          }
+     }
+     @media #{$md, $sm, $xs} {
+          &.style-4 {
+               padding: 80px 0;
+               .section-header {
+                    margin-bottom: 15px;
+               }
+          }  
+     }
+}
+
+.counter-content-area {
+     display: flex;
+     gap: 25px;
+     .funfact_wrapper {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: end;
+          column-gap: 40px;
+          row-gap: 35px;
+     }
+     @media #{$lg} {
+          .funfact_wrapper {
+               column-gap: 25px;
+               row-gap: 25px;
+          }  
+     }
+     @media #{$md, $sm} {
+          flex-direction: column;
+          .funfact_wrapper {
+               column-gap: 25px;
+               row-gap: 25px;
+               justify-content: start;
+          }  
+     }
+     @media #{$xs} {
+          flex-direction: column;
+          .funfact_wrapper {
+               column-gap: 25px;
+               row-gap: 25px;
+               justify-content: center;
+          }  
+     }
+}
+
+.funfact-item {
+     &.style-4 {
+          background-color: var(--tj-theme-accent-2);
+          backdrop-filter: blur(25px);
+          border-radius: 25px;
+          max-width: 310px;
+          width: 100%;
+          padding: 30px 25px 35px 30px;
+          margin-bottom: 0;
+          .number {
+               font-size: 48px;
+               font-weight: var(--tj-fw-sbold);
+               font-family: var(--tj-ff-body);
+               letter-spacing: 2px;
+               margin-bottom: 15px;
+          }
+          .odometer.odometer-auto-theme,
+          .odometer.odometer-theme-default {
+               font-family: var(--tj-ff-body);
+          }
+          .text {
+               text-align: end;
+               color: var(--tj-white);
+          }
+          @media #{$xl} {
+              max-width: 260px;
+          }
+          @media #{$lg} {
+               max-width: 215px;
+               padding: 30px 15px 35px 15px;
+               .number {
+                    font-size: 35px;
+               }
+          }
+          @media #{$md} {
+               .number {
+                    font-size: 40px;
+               }
+          }
+          @media #{$sm} {
+               max-width: 245px;
+               padding: 30px 15px 35px 15px;
+               .number {
+                    font-size: 40px;
+               }
+          }
+          @media #{$xs} {
+               padding: 30px 15px 35px 15px;
+               .number {
+                    font-size: 40px;
+               }
+          }
+     }
+}
+/* !END: Theme Counter CSS */

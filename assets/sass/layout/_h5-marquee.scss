@@ -1,0 +1,192 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Maquee CSS
+----------------------------------------*/
+.tj-maquee-section {
+     &.style-5 {
+          position: relative;
+          background-color: var(--tj-color-theme-secondary);
+          overflow: hidden;
+          .tj-maquee-slider-one {
+               position: relative;
+               background: var(--tj-theme-primary);
+               padding: 26px 0;
+               .marquee-item {
+                    .marquee-box {
+                         .marquee-icon {
+                              img {
+                                   animation: rotateImg2 6s infinite linear;
+                              }
+                         }
+                    }
+               }
+          }
+         .tj-maquee-slider-two {
+               background: var(--tj-color-theme-secondary);
+               padding: 26px 0;
+               .marquee-item {
+                    .marquee-box {
+                         .marquee-icon {
+                              img {
+                                   animation: rotateImg 6s infinite linear;
+                              }
+                         }
+                         .marquee-title {
+                              margin-left: 0px;
+                              margin-right: 0px;
+                         }
+                    }
+               }
+               @media #{$lg, $md} {
+                    .marquee-item {
+                         .marquee-box {
+                              gap: 35px;
+                              .marquee-title {
+                                   margin-right: 35px;
+                              }
+                         }
+                    } 
+               }
+               @media #{$sm, $xs} {
+                    .marquee-item {
+                         .marquee-box {
+                              gap: 30px;
+                              .marquee-title {
+                                   margin-left: 0px;
+                                   .title {
+                                        font-size: 18px;
+                                   }
+                              }
+                         }
+                    } 
+               }
+          }
+          .maquee-wrapper {
+               transition-timing-function: linear;
+          }
+     }
+     &.maquee-style-5 {
+          background: var(--tj-theme-primary);
+          position: relative;
+          padding: 30px 0;
+          z-index: 1;
+          .maquee-bg-shape {
+               position: absolute;
+               top: 0;
+               left: 0;
+               width: 100%;
+               height: 100%;
+               mask-image: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 28.52%, rgba(255, 255, 255, 0) 68.59%, rgba(255, 255, 255, 1) 96.94%);
+               mask-repeat: no-repeat;
+               mask-size: contain;
+               background: var(--tj-theme-primary);
+               z-index: 2;
+          }
+          .maquee-wrapper {
+               transition-timing-function: linear;
+          }
+          @media #{$lg} {
+               padding: 20px 0;
+          }
+          @media #{$md, $sm, $xs} {
+               padding: 12px 0;
+          }
+          @media #{$xs} {
+               .marquee-item {
+                    .marquee-logo {
+                         max-width: 120px;
+                         width: 100%;
+                         img {
+                              width: 100%;
+                         }
+                    }
+               }   
+          }
+     }
+     &.style-7 {
+           overflow: visible;
+          & .tj-maquee-slider-one {
+               rotate: 2deg;
+               z-index: 3;
+          }
+          & .tj-maquee-slider-two {
+               rotate: -4deg;
+               z-index: 2;
+               margin-top: -40px;
+               background: var(--tj-black-2);
+          }
+          & .marquee-title {
+               margin-right: 0;
+          }
+
+     }
+}
+
+.marquee-item {
+     width: auto;
+     display: inline-block;
+     .marquee-box {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 55px;
+          .marquee-icon {
+               max-width: 20px;
+               width: 100%;
+               img {
+                    width: 100%;
+                    animation: rotateImg 6s infinite linear;
+               }
+          }
+          .marquee-title {
+               margin-left: 0px;
+               margin-right: 55px;
+               .title {
+                    font-size: 20px;
+                    font-weight: var(--tj-fw-ebold);
+                    text-transform: uppercase;
+                    letter-spacing: 0.02em;
+                    margin-bottom: 0;
+               }
+          }
+     }
+     @media #{$lg, $md} {
+          .marquee-box {
+               gap: 35px;
+               .marquee-title {
+                    margin-right: 35px;
+               }
+          }
+     }
+     @media #{$sm, $xs} {
+          .marquee-box {
+               gap: 30px;
+               .marquee-title {
+                    margin-right: 30px;
+                    .title {
+                         font-size: 18px;
+                    }
+               }
+          }
+     }
+}
+
+@keyframes rotateImg {
+     0% {
+          transform: rotate(0deg);
+     }
+     100% {
+          transform: rotate(360deg);
+     }
+}
+
+@keyframes rotateImg2 {
+     0% {
+          transform: rotate(0deg);
+     }
+     100% {
+          transform: rotate(-360deg);
+     }
+}
+/* !END: Theme Maquee CSS */

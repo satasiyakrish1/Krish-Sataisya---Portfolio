@@ -1,0 +1,46 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Cta CSS
+----------------------------------------*/
+.tj-cta-section {
+     &.style-8 {
+          padding-bottom: 0px;
+          background-color: var(--tj-theme-accent-1);
+     }
+}
+
+.cta-wrapper {
+     &.style-8 {
+          .cta-content {
+               .subtitle {
+                    display: block;
+                    font-size: 12px;
+                    color: var(--tj-white);
+                    font-weight: var(--tj-fw-sbold);
+                    letter-spacing: 0.02em;
+                    text-transform: uppercase;
+                    margin-bottom: 20px;
+               }
+               .title {
+                    font-size: 88px;
+                    color: var(--tj-white);
+                    font-weight: var(--tj-fw-sbold);
+                    line-height: 1;
+                    letter-spacing: -0.02em;
+                    text-transform: uppercase;
+                    margin-bottom: 15px;
+               }
+               .desc {
+                    color: var(--tj-white);
+                    font-weight: var(--tj-fw-medium);
+                    p {
+                         &:last-child {
+                              margin-bottom: 0;
+                         }
+                    }
+               }
+          }
+     }
+}
+/* !END: Theme Cta CSS */

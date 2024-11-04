@@ -1,0 +1,93 @@
+@use "../utilities"as *;
+
+
+
+/**----------------------------------------
+START: Hero CSS
+----------------------------------------*/
+
+.tj-hero {
+     &-7 {
+          &-area {
+               background: var(--tj-theme-accent-2);
+               padding: 185px 0 100px;
+               position: relative;
+               z-index: 1;
+               @media #{$md,$sm,$xs} {
+                    padding: 130px 0 60px;
+               }
+               &::before {
+                    content: "";
+                    position: absolute;
+                    top: -250px;
+                    left: 43%;
+                    transform: translateX(-50%);
+                    width: 650px;
+                    height: 550px;
+                    border-radius: 50%;
+                    background: linear-gradient(260deg, var(--tj-theme-primary) 0%, rgba(115, 67, 210, 0.1) 100%);
+                    filter: blur(150px);
+                    opacity: 0.6;
+                    z-index: -1;
+               }
+          }
+          &-bg {
+               position: absolute;
+               width: 100%;
+               height: 100%;
+               top: 0;
+               left: 0;
+               z-index: -1;
+               background-position: top center;
+               background-size: cover;
+               background-repeat: no-repeat;
+          }
+          &-wrapper {
+               max-width: 900px;
+               width: 100%;
+               margin: auto;
+               text-align: center;
+          }
+          &-thumb {
+               max-width: 128px;
+               width: 100%;
+               height: 128px;
+               margin: auto;
+               border-radius: 50%;
+               border: 4px solid var(--tj-theme-primary);
+               margin-bottom: 32px;
+               & img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+               }
+          }
+          &-title {
+               font-weight: var(--tj-fw-sbold);
+               font-size: 68px;
+               line-height: 1.15;
+               letter-spacing: -0.03em;
+               text-transform: uppercase;
+               margin-bottom: 38px;
+               @media #{$md} {
+                    font-size: 54px;
+               }
+               @media #{$sm} {
+                    font-size: 40px;
+               }
+               @media #{$xs} {
+                    font-size: 27px;
+               }
+               & span {
+                    background-image: linear-gradient(107deg, #814cec 0%, #fff 100%);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+               }
+          }
+
+     }
+}     
+
+
+/* !END: Hero CSS */

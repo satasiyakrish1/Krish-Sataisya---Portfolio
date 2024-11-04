@@ -1,0 +1,52 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme FAQ CSS
+----------------------------------------*/
+.faq-section {
+     &.style-4 {
+          background-color: var(--tj-theme-accent-1);
+          padding-top: 210px;
+          padding-bottom: 180px;
+          @media #{$xl} {
+               padding-top: 120px;
+               padding-bottom: 120px;
+          }
+          @media #{$lg} {
+               padding-top: 100px;
+               padding-bottom: 100px;
+          }
+          @media #{$md, $sm, $xs} {
+               padding-top: 80px;
+               padding-bottom: 80px;
+          }
+     }
+}
+
+.accordion-item {
+     &.style-2 {
+          background-color: transparent;
+          .faq-title {
+               &::before {
+                    width: 28px;
+                    height: 28px;
+                    font-size: 15px;
+                    font-weight: var(--tj-fw-bold);
+                    color: var(--tj-theme-primary);
+                    border: 2px solid var(--tj-theme-primary);
+                    border-radius: 50%;
+               }
+          }
+          .faq-text {
+               max-width: 810px;
+          }
+     }
+     @media #{$xs} {
+          &.style-2 {
+               .faq-title {
+                    padding: 16px 50px 16px 15px;
+               }
+          }
+     }
+}
+/* !END: Theme FAQ CSS */

@@ -1,0 +1,56 @@
+@use "../utilities" as *;
+
+/**
+  Buttons CSS
+*/
+
+.btn-inline {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+  color: var(--tj-white);
+  gap: 8px;
+  overflow: hidden;
+  padding-right: 24px;
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease-in-out;
+	&::after,
+	&::before {
+		content: "\f178";
+		font-family: var(--tj-ff-fontawesome);
+		font-weight: var(--tj-fw-regular);
+    color: var(--tj-white);
+		font-size: 16px;
+		line-height: 1;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+    transition: transform 0.3s ease-in-out;
+	}
+	&::before {
+		transform: translateX(-120%) translateY(-50%);
+	}
+	&::after {
+		left: auto;
+		right: 0;
+	}
+	> span {
+    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+    line-height: normal;
+    letter-spacing: 0.02em;
+	}
+	&:hover {
+		&::before {
+			transform: translateX(0) translateY(-50%);
+		}
+		&::after {
+			transform: translateX(120%) translateY(-50%);
+		}
+		> span {
+			transform: translateX(24px);
+		}
+	}
+}

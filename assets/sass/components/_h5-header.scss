@@ -1,0 +1,166 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Hero CSS
+----------------------------------------*/
+
+.tj-header {
+     &-area {
+          &.header-5 {
+               padding: 0 60px 0 60px;
+               @media #{$xl,$lg,$md,$sm,$xs} {
+                    padding: 0 20px 0 20px;
+               }
+               &.header-sticky {
+                    @media #{$md, $sm, $xs} {
+                         padding: 12px 0px;
+                    } 
+               }
+               & .header-menu {
+                    & ul {
+                         column-gap: 26px;
+                         @media #{$lg} {
+                              column-gap: 8px;
+                         }
+                         & > li {
+                              & > a {
+                                   padding: 30px 14px;
+                                   &::before {
+                                        content: "";
+                                        position: absolute;
+                                        width: 100%;
+                                        height: 30px;
+                                        top: 51%;
+                                        transform: translateY(-50%);
+                                        left: 0;
+                                        border: 1px solid var(--tj-theme-primary);
+                                        border-radius: 50px;
+                                        background: transparent;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        transition: 0.3s;
+                                   }
+                                   &::after {
+                                        display: none;
+                                   }
+                                   &:hover {
+                                        &::before {
+                                             visibility: visible;
+                                             opacity: 1;
+                                        }
+                                   }
+                                   &.current-menu-item {
+                                        &::before {
+                                             visibility: visible;
+                                             opacity: 1;
+                                        }
+                                   }
+                              }
+                              & > .sub-menu {
+                                   & > li {
+                                     &.has-dropdown {
+                                       & > a {
+                                         &::after {
+                                           display: block;
+                                         }
+                                       }
+                                     }
+                                     
+                                   }
+                              }
+                         }
+                    }
+               }
+          }
+          &.header-5 {
+               & .social-icons {
+                    & li {
+                         & a {
+                              border: 1px solid rgba(255, 255, 255, 0.14);
+                              &:hover {
+                                   border-color: rgba(255, 255, 255, 0.14);
+                              }
+                         }
+                    }
+               }
+          }
+     }
+
+
+     &-5 {
+          &-right {
+               display: flex;
+               align-items: center;
+               &-button {
+                    margin-left: 25px;
+                    @media #{$xs} {
+                         display: none;
+                    }
+               }
+               &-media {
+                    @media #{$lg,$sm,$xs} {
+                         display: none;
+                    }
+               }
+               &-social-icons {
+                    gap: 10px;
+                    & li {
+                         & a {
+                              width: 30px;
+                              height: 30px;
+                              border: 1px solid rgba(255, 255, 255, .14);
+                              border-color: rgba(255, 255, 255, .14);
+                              font-size: 13px;
+                         }
+                    }
+               }
+               &-button {
+                    & .tj-btn-primary i {
+                         transform: rotate(0);
+                    }
+               }
+          }
+          &-logo {
+               max-width: 335px;
+               width: 100%;
+               @media #{$xxl} {
+                    max-width: 240px;
+               }
+               @media #{$xl} {
+                    max-width: 115px;
+               }
+               @media #{$lg} {
+                    max-width: 112px;
+               }
+               @media #{$md} {
+                    max-width: 112px;
+               }
+               @media #{$sm,$xs} {
+                    max-width: 112px;
+               }
+               &-box {
+                    width: 112px;
+                    height: 112px;
+                    background: var(--tj-bg);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 2px solid var(--tj-theme-primary);
+                    border-top: none;
+                    @media #{$md,$sm,$xs} {
+                         width: 90px;
+                         height: 80px;
+                    }
+               }
+          }
+     }
+
+}
+
+
+
+
+
+
+
+/* !END: Theme Hero CSS */

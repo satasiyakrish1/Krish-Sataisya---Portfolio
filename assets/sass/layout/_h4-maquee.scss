@@ -1,0 +1,33 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Marquee CSS
+----------------------------------------*/
+.tj-maquee-section {
+     &.style-4 {
+          background-color: var(--tj-black-2);
+          padding: 26px 0;
+          .maquee-wrapper {
+               transition-timing-function: linear;
+          }
+          .marquee-item {
+               .marquee-box {
+                    .marquee-icon {
+                         img {
+                              animation: rotateImg3 6s infinite linear;
+                         }
+                    }
+               }
+          }
+     }
+}
+
+@keyframes rotateImg3 {
+     0% {
+          transform: rotate(0deg);
+     }
+     100% {
+          transform: rotate(-360deg);
+     }
+}
+/* !END: Theme Marquee CSS */

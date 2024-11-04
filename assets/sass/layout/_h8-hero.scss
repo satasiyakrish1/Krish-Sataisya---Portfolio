@@ -1,0 +1,233 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Hero CSS
+----------------------------------------*/
+.hero-section {
+     &.style-8 {
+          padding: 250px 0 20px;
+          background-repeat: no-repeat;
+          background-size: initial;
+          background-position: top right;
+          &::before {
+               content: "";
+               position: absolute;
+               top: 0;
+               right: 0;
+               width: 750px;
+               height: 320px;
+               border-radius: 50%;
+               background: var(--tj-theme-primary);
+               background: linear-gradient(260deg, var(--tj-theme-primary) 0%, rgba(115, 67, 210, 0) 100%);
+               filter: blur(150px);
+               margin-right: 5%;
+               margin-top: -4%;
+               opacity: 0.5;
+               z-index: -1;
+          }
+     }
+     .hero-8-socials {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 50px;
+          .social-icons {
+               flex-direction: column;
+               li {
+                    a {
+                         color: var(--tj-white);
+                         border: 1px solid rgba(255,255,255,0.1);
+                         &::before {
+                              background: linear-gradient(-90deg, var(--tj-theme-secondary) 0%, var(--tj-theme-primary) 100%);
+                         }
+                    }
+               }
+          }
+     }
+}
+.hero-content-box {
+     &.style-8 {
+          .subtitle {
+               font-size: 18px;
+               color: var(--tj-grey-1);
+               font-weight: var(--tj-fw-sbold);
+               margin-bottom: 30px;
+               span {
+                    display: inline-block;
+                    color: var(--tj-white);
+               }
+          }
+          .hero-title {
+               font-size: 80px;
+               text-transform: uppercase;
+               font-weight: var(--tj-fw-sbold);
+               color: var(--tj-white);
+               -webkit-background-clip: initial;
+               -webkit-text-fill-color: initial;
+               background: none;
+               line-height: 1.1;
+               letter-spacing: -0.02em;
+               margin-bottom: 20px;
+               span {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    img {
+                         max-width: 140px;
+                         width: 100%;
+                         height: 75px;
+                         object-fit: cover;
+                         border-radius: 150px;
+                    }
+               }
+          }
+          .desc {
+               max-width: 420px;
+               width: 100%;
+               font-size: 20px;
+               color: var(--tj-grey-1);
+               p {
+                    &:last-child {
+                         margin-bottom: 0;
+                    }
+               }
+          }
+          .hero-button {
+               margin-top: 40px;
+          }
+     }
+}
+
+.hero-8-images {
+     max-width: 550px;
+     width: 100%;
+     margin-left: auto;
+     position: relative;
+     top: -60px;
+     z-index: 1;
+     img {
+          position: relative;
+          max-width: 520px;
+          width: 100%;
+          top: -45px;
+          left: 15px;
+          z-index: 2;
+     }
+     &::before {
+          position: absolute;
+          content: "";
+          width: 95%;
+          height: 85%;
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          background: linear-gradient(90deg, var(--tj-theme-primary), #CB0891, var(--tj-theme-primary), #CB0891, var(--tj-theme-primary), #CB0891);
+          background-size: 600% 100%;
+          animation: gradient 15s linear infinite;
+          animation-direction: alternate;
+          clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+          box-shadow: 0px 0px 16.98px 0px rgb(129, 76, 236) inset;
+
+     }
+     .hero-shapes {
+          &::before {
+               position: absolute;
+               content: "";
+               width: 100%;
+               height: 100%;
+               left: 0;
+               top: -30px;
+               background: var(--tj-theme-primary);
+               box-shadow: 0px 0px 16.98px 0px rgba(129, 76, 236, 1) inset;
+               clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+               z-index: -1;
+          } 
+          &::after {
+               position: absolute;
+               content: "";
+               width: 99.5%;
+               height: 99.5%;
+               left: 50%;
+               top: -28px;
+               background: var(--tj-black-2);
+               box-shadow: 0px 0px 16.98px 0px rgb(129, 76, 236) inset;
+               clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+               transform: translateX(-50%);
+               z-index: -1;
+          } 
+     }
+     .hero-circle {
+          position: absolute;
+          bottom: 25%;
+          left: -80px;
+          width: 150px;
+          height: 150px;
+          z-index: 3;
+          background: linear-gradient(150.14deg, rgba(255, 255, 255, 0.15) 14.68%, rgba(255, 255, 255, 0) 46.13%);
+          backdrop-filter: blur(32px);
+          border-radius: 50%;
+          border: 1.5px solid rgba(255,255,255,0.15);
+          .circle-wrap {
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%, -50%);
+          }
+          .rotate-image {
+               -webkit-animation: rotateImg 10s infinite linear;
+               animation: rotateImg 10s infinite linear;
+               textPath {
+                    fill: var(--tj-white);
+               }
+          }
+     }
+     .circle-button {
+          .circle {
+               display: inline-flex;
+               align-items: center;
+               justify-content: center;
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%, -50%);
+               color: var(--tj-white);
+               background: rgba(126, 74, 231, 1);
+               width: 60px;
+               height: 60px;
+               border-radius: 50%;
+               text-decoration: none;
+          }
+     }
+     .images_shapes {
+          position: absolute;
+          max-width: 100px;
+          width: 100%;
+          bottom: 45px;
+          left: -30%;
+          z-index: -1;
+          opacity: 0.1;
+          img {
+               width: 100%;
+          }
+     }
+     .images_shapes-2 {
+          position: absolute;
+          max-width: 40px;
+          width: 100%;
+          top: 80px;
+          right: 40px;
+          z-index: -1;
+          img {
+               width: 100%;
+          }
+     }
+}
+
+@keyframes gradient {
+     0% {background-position: 0%};
+     100% {background-position: 100%};
+ }
+/* !END: Theme Hero CSS */
+
+
+   

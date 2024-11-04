@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css">
+        <link rel="icon" sizes="512x512" href="/static/images/Icons/ico-01-removebg-preview (2).png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Notes Plus</title>
+</head>
+<body oncopy="return false" oncontextmenu="return false" >
+    <style type="text/css">
+       
+      ::-webkit-scrollbar{
+          width: 3px;
+      }
+      ::-webkit-scrollbar-thumb{
+          border-radius: 100px;
+          background: gray;
+      }
+      ::selection{
+                            background-color: transparent;
+                        }
+  
+  </style>
+  <header>
+    <div class="container">
+      <div class="nav">
+        <h1><i style="color: #c2ff3d;" class="fas fa-sticky-note"></i>Notes Plus</h1>
+        <div>
+          <button onclick="createNote()">Hide / Create Note</button>
+          <button onclick="deleteNotes()">Delete Notes</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="createBox">
+      <textarea placeholder="Write note..." id="user-input" maxlength="106"></textarea>
+    </div>
+    <div class="notes"></div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>

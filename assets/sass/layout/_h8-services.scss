@@ -1,0 +1,180 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Services CSS
+----------------------------------------*/
+.tj-service-section {
+     &.style-8 {
+          padding-top: 120px;
+          background-color: var(--tj-theme-accent-1);
+          position: relative;
+          z-index: 1;
+          &::before {
+               content: "";
+               position: absolute;
+               left: 50%;
+               transform: translateX(-50%);
+               bottom: 0;
+               width: 650px;
+               height: 650px;
+               border-radius: 50%;
+               background: var(--tj-theme-primary);
+               background: linear-gradient(45deg, var(--tj-theme-primary) 0%, rgba(115, 67, 210, 0) 100%);
+               -webkit-filter: blur(150px);
+               filter: blur(150px);
+               opacity: 0.4;
+               z-index: -1;
+          }
+          .section-header {
+               display: flex;
+               flex-wrap: wrap;
+               align-items: end;
+               justify-content: space-between;
+               max-width: 100%;
+          }
+          .service-navigation {
+               display: flex;
+               flex-wrap: wrap;
+               gap: 15px;
+               align-items: center;
+               .service-next,
+               .service-prev {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 54px;
+                    height: 54px;
+                    line-height: 1;
+                    border: 2px solid rgba(255,255,255,0.1);
+                    color: var(--tj-white);
+                    border-radius: 50%;
+                    position: relative;
+                    transition: 0.5s;
+                    z-index: 1;
+                    &::before {
+                         position: absolute;
+                         content: "";
+                         width: 100%;
+                         height: 100%;
+                         top: 0;
+                         left: 0;
+                        background-color: var(--tj-theme-primary);
+                         border-radius: 50%;
+                         opacity: 0;
+                         visibility: hidden;
+                         transition: 0.5s;
+                         z-index: -1;
+                    }
+                    &:hover {
+                         border-color: var(--tj-theme-primary);
+                         &::before {
+                              opacity: 1;
+                              visibility: visible;
+
+                         }
+                    }
+               }
+          }
+          .service-pagination {
+               text-align: center;
+               margin-top: 50px;
+               .swiper-pagination-bullet {
+                    background-color: var(--tj-grey-2);
+                    &.swiper-pagination-bullet-active {
+                         background-color: var(--tj-theme-primary);
+                    }
+               }
+          }
+          @media #{$md, $sm, $xs} {
+               padding-top: 80px;
+               .service-pagination {
+                    margin-top: 35px;
+               }
+          }
+     }
+}
+
+.tj-service-item {
+     &.style-8 {
+          text-align: center;
+          background-color: var(--tj-black-2);
+          border-radius: 12px;
+          border: 1px solid rgba(116, 119, 121, 0.1);
+          padding: 40px 30px;
+          .service-icon {
+               display: inline-flex;
+               align-items: center;
+               justify-content: center;
+               width: 64px;
+               height: 64px;
+               line-height: 1;
+               background: linear-gradient(-90deg, var(--tj-theme-secondary) 0%, var(--tj-theme-primary) 100%);
+               border-radius: 50%;
+               margin-bottom: 35px;
+               transition: 0.4s;
+               img {
+                    transition: 0.4s;  
+               }
+          }
+          .title {
+               font-size: 28px;
+               font-weight: var(--tj-fw-sbold);
+               letter-spacing: -0.02em;
+               margin-bottom: 25px;
+          }
+          .desc {
+               margin-bottom: 35px;
+               p {
+                    &:last-child {
+                         margin-bottom: 0;
+                    }
+               }
+          }
+          .service-link {
+               a {
+                    color: var(--tj-white);
+                    font-size: 20px;
+                    text-decoration: none;
+               }
+          }
+     }
+     &:hover {
+          &.style-8 {
+               .service-icon {
+                    img {
+                         transform: rotateY(180deg);
+                    }  
+               }
+          }
+     }
+     @media #{$md} {
+          &.style-8 {
+               padding: 30px 15px;
+               .service-icon {
+                    margin-bottom: 25px;
+               }
+               .title {
+                    margin-bottom: 15px;
+               }
+               .desc {
+                    margin-bottom: 25px;
+               }
+          } 
+     }
+     @media #{$sm, $xs} {
+          &.style-8 {
+               padding: 30px 15px;
+               .service-icon {
+                    margin-bottom: 25px;
+               }
+               .title {
+                    font-size: 24px;
+                    margin-bottom: 15px;
+               }
+               .desc {
+                    margin-bottom: 25px;
+               }
+          } 
+     }
+}
+/* !END: Theme Services CSS */

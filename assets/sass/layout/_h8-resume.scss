@@ -1,0 +1,193 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Resume CSS
+----------------------------------------*/
+.tj-resume-section {
+     &.style-8 {
+          padding-bottom: 120px;
+          position: relative;
+          overflow: hidden;
+          z-index: 1;
+          &::before {
+               content: "";
+               position: absolute;
+               left: 0;
+               bottom: -10%;
+               width: 420px;
+               height: 420px;
+               border-radius: 50%;
+               background: var(--tj-theme-primary);
+               background: linear-gradient(45deg, var(--tj-theme-primary) 0%, rgba(115, 67, 210, 0) 100%);
+               filter: blur(150px);
+               opacity: 0.3;
+               z-index: -1;
+          }
+          .resume_shapes {
+               position: absolute;
+               bottom: 40%;
+               left: 20%;
+               max-width: 40px;
+               width: 100%;
+               z-index: -1;
+               img {
+                    width: 100%;
+               }
+          }
+     }
+     @media #{$md, $sm, $xs} {
+          &.style-8 {
+               padding-bottom: 80px;
+          }
+     }
+}
+.resume-wrapper-8 {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 60px;
+     .resume-8-left {
+          max-width: 400px;
+          width: 100%;
+          .desc {
+               color: var(--tj-grey-1);
+               p {
+                    &:last-child {
+                         margin-bottom: 0;
+                    }
+               }
+          }
+          .tj-section-button {
+               margin-top: 35px;
+          }
+     }
+     .resume-inner-8 {
+          max-width: 815px;
+          width: 100%;
+          margin-left: auto;
+     }
+     @media #{$xl} {
+          .resume-inner-8 {
+               max-width: 655px;
+          }
+     }
+     @media #{$lg} {
+          gap: 30px;
+          .resume-inner-8 {
+               max-width: 540px;
+          }
+          .resume-8-left {
+               max-width: 365px;
+          }
+     }
+     @media #{$md, $sm, $xs} {
+          gap: 10px;
+     }
+}
+
+.resume_item {
+     &.style-8 {
+          flex-direction: column;
+          gap: 0px;
+          border: 1px solid rgba(255,255,255,0.1);
+          border-radius: 12px;
+          padding-bottom: 0px;
+          margin-bottom: 30px;
+          padding: 30px;
+          &:last-child {
+               margin-bottom: 0;
+          }
+          .resume-content {
+               display: flex;
+               flex-wrap: wrap;
+               gap: 30px;
+               .icon_box {
+                    max-width: 60px;
+                    width: 100%;
+                    img {
+                         width: 100%;
+                    }
+               }
+               .resume-text {
+                    .title {
+                         font-size: 20px;
+                         text-transform: uppercase;
+                         font-weight: var(--tj-fw-sbold);
+                         letter-spacing: 0.02em;
+                         margin-bottom: 15px;
+                    }
+                    .subtitle {
+                         display: block;
+                         color: var(--tj-white);
+                         text-transform: uppercase;
+                         margin-bottom: 15px;
+                    }
+               }
+          }
+          .resume_date {
+               max-width: 160px;
+               width: 100%;
+               margin-left: auto;
+               .date {
+                    color: var(--tj-grey-1);
+                    font-size: 20px;
+                    letter-spacing: 0.02em;
+                    i {
+                         color: var(--tj-theme-primary);
+                         margin-right: 5px;
+                    }
+               }
+          }
+          .desc {
+               padding-left: 90px;
+               letter-spacing: 0.02em;
+               font-size: 18px;
+               color: var(--tj-grey-1);
+               p {
+                    &:last-child {
+                         margin-bottom: 0;
+                    }
+               }
+          }
+     }
+     @media #{$lg, $sm} {
+          &.style-8 {
+               padding: 30px 15px;
+               .resume-content {
+                    .resume-text {
+                         .subtitle {
+                              margin-bottom: 0;
+                         }
+                    }
+                    .resume_date {
+                         margin-left: 90px;
+                         margin-bottom: 15px;
+                    }
+               }
+          }  
+     }
+     @media #{$md} {
+          &.style-8 {
+               padding: 30px 15px;
+          }  
+     }
+     @media #{$xs} {
+          &.style-8 {
+               padding: 30px 15px;
+               .resume-content {
+                    .resume-text {
+                         .subtitle {
+                              margin-bottom: 0;
+                         }
+                    }
+                    .resume_date {
+                         margin-left: 0px;
+                         margin-bottom: 15px;
+                    }
+               }
+               .desc {
+                    padding-left: 0;
+               }
+          }  
+     }
+}
+/* !END: Theme Resume CSS */

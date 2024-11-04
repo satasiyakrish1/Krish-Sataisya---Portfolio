@@ -1,0 +1,213 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Portfolio CSS
+----------------------------------------*/
+.portfolio-section {
+     &.style-5 {
+          padding-bottom: 120px;
+          background-color: var(--tj-black-2);
+          .section-header {
+               display: flex;
+               align-items: end;
+               justify-content: space-between;
+               gap: 20px;
+               max-width: 100%;
+               margin-bottom: 60px;
+               position: relative;
+               z-index: 1;
+               .sec-text {
+                    max-width: 560px;
+                    margin-left: 0;
+               }
+               .portfolio-shapes {
+                    position: absolute;
+                    bottom: 20px;
+                    right: 32%;
+                    max-width: 100px;
+                    width: 100%;
+                    z-index: -1;
+                    animation: up-down-move-2 3s forwards infinite alternate;
+                    img {
+                         width: 100%;
+                    }
+               }
+          }
+          .portfolio_slider {
+               margin-left: calc((100% - 1320px) / 2);
+               width: auto;
+               min-width: auto;
+               max-width: inherit;
+               .portfolio-pagination {
+                    position: relative;
+                    margin-top: 50px;
+                    bottom: 0;
+                    left: 38%;
+                    .swiper-pagination-bullet {
+                         opacity: 1;
+                         background-color: rgba(255,255,255,0.1);
+                         &.swiper-pagination-bullet-active {
+                              background-color: var(--tj-theme-primary);
+                         }
+                    }
+               }
+          }
+     }  
+     @media #{$xl} {
+          &.style-5 {
+               .portfolio_slider {
+                    margin-left: calc((100% - 1140px) / 2);
+                    .portfolio-pagination {
+                         left: 37%;
+                    }
+               }  
+          }
+     }
+     @media #{$lg} {
+          &.style-5 {
+               .portfolio_slider {
+                    margin-left: calc((100% - 960px) / 2);
+                    .portfolio-pagination {
+                         left: auto;
+                         text-align: center;
+                    }
+               } 
+               .section-header {
+                    .portfolio-shapes {
+                         max-width: 80px;
+                    }  
+               } 
+          }
+     }
+     @media #{$md, $sm} {
+          &.style-5 {
+               padding-bottom: 80px;
+               .portfolio_slider {
+                    margin-left: auto;
+                    .portfolio-pagination {
+                         left: auto;
+                         text-align: center;
+                         margin-top: 30px;
+                    }
+               } 
+               .section-header {
+                    flex-direction: column;
+                    align-items: start;
+                    margin-bottom: 40px;
+                    .portfolio-shapes {
+                         max-width: 80px;
+                    }  
+               } 
+          }
+     }
+     @media #{$xs} {
+          &.style-5 {
+               padding-bottom: 80px;
+               .portfolio_slider {
+                    margin-left: auto;
+                    .portfolio-pagination {
+                         left: auto;
+                         text-align: center;
+                         margin-top: 30px;
+                    }
+               } 
+               .section-header {
+                    flex-direction: column;
+                    align-items: start;
+                    margin-bottom: 40px;
+                    .portfolio-shapes {
+                         max-width: 65px;
+                         right: 10%;
+                    }  
+               } 
+          }
+     }
+}
+
+.portfolio-item  {
+     &.style-5 {
+          max-width: 645px;
+          width: 100%;
+          border: 2px solid rgba(255,255,255,0.1);
+          border-radius: 15px;
+          padding: 35px;
+          .image-box {
+               margin-bottom: 25px;
+               img {
+                    border-radius: 15px;
+               }
+          }
+          .content-box {
+               display: flex;
+               align-items: end;
+               gap: 25px;
+               justify-content: space-between;
+               .portfolio-text {
+                    .portfolio-title {
+                         font-size: 20px;
+                         letter-spacing: 0.02em;
+                         margin-bottom: 6px;
+                    }
+                    p {
+                         color: rgba(255,255,255,0.6);
+                         letter-spacing: 0.02em;
+                         margin-bottom: 0;
+                    }
+               }
+               .portfolio-arrow {
+                    a {
+                         display: inline-flex;
+                         align-items: center;
+                         justify-content: center;
+                         width: 60px;
+                         height: 60px;
+                         border: 1px solid rgba(255,255,255,0.1);
+                         color: var(--tj-white);
+                         font-size: 25px;
+                         border-radius: 50%;
+                         text-decoration: none;
+                         position: relative;
+                         transition: 0.4s;
+                         z-index: 1;
+                         &::before {
+                              position: absolute;
+                              content: "";
+                              width: 100%;
+                              height: 100%;
+                              top: 0;
+                              left: 0;
+                              background: linear-gradient(-10deg, var(--tj-theme-secondary) 0%, var(--tj-theme-primary) 100%);
+                              border-radius: 50%;
+                              opacity: 0;
+                              visibility: hidden;
+                              transition: 0.4s;
+                              z-index: -1;
+                         }
+                         i {
+                              display: inline-block;
+                              transition: 0.4s;
+                              transform: rotate(-45deg);
+                         }
+                         &:hover {
+                              &::before {
+                                   opacity: 1;
+                                   visibility: visible;
+                              }
+                              i {
+                                   transform: rotate(360deg);
+                              }
+                         }
+                    }
+               }
+          }
+          @media #{$lg} {
+               padding: 30px 15px; 
+          }
+          @media #{$md, $sm, $xs} {
+               padding: 30px 15px; 
+               margin-left: auto;
+               margin-right: auto;
+          }
+     }
+}
+/* !END: Theme Portfolio CSS */

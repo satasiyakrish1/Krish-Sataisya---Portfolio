@@ -1,0 +1,112 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Footer CSS
+----------------------------------------*/
+
+
+.tj-footer{
+     &-6 {
+          &-area {
+               background: var(--tj-black-2);
+               padding: 48px 0;
+               @media #{$sm, $xs} {
+                    padding: 35px 0;
+                    .footer-menu {
+                         ul {
+                              margin: 0 0 10px;
+                         }
+                    }
+               }
+          }
+          &-wrapper {
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+               flex-wrap: wrap;
+               @media #{$lg, $md} {
+                    row-gap: 40px;
+                    justify-content: center;
+               }
+               @media #{$sm,$xs} {
+                    justify-content: center;
+               }
+          }
+          &-left {
+               max-width: 332px;
+               width: 100%;
+               @media #{$sm} {
+                    max-width: 215px;
+                    margin-left: auto;
+               }
+               @media #{$xs} {
+                    max-width: 190px;
+                    margin-bottom: 10px;
+               }
+          }
+          &-paragraph {
+               font-weight: var(--tj-fw-sbold);
+               font-size: 12px;
+               margin-bottom: 0;
+               padding-left: 16px;
+               position: relative;
+               z-index: 1;
+               &::before {
+                    content: "";
+                    position: absolute;
+                    width: 7px;
+                    height: 7px;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                    background: #00FF2F;
+                    border-radius: 50%;
+               }
+          }
+          &-menu {
+               @media #{$xl} {
+                    margin-left: -40px;
+               }
+               & ul {
+                    margin-bottom: 0;
+                    & li {
+                         & a {
+                              color: rgba(255, 255, 255, 0.6);
+                              font-size: 14px;
+                              font-weight: var(--tj-fw-regular);
+                              text-decoration: none;
+                              text-transform: uppercase;
+                              position: relative;
+                              transition: .3s;
+                              &::before {
+                                   display: none;
+                              }
+                              &:hover {
+                                   color: var(--tj-white);
+                              }
+                         }
+                    }
+               }
+          }
+          &-copyright {
+               font-size: 14px;
+               text-transform: uppercase;
+               color: rgba(255, 255, 255, 0.6);
+               margin-bottom: 0;
+               & a {
+                    color: var(--tj-white);
+                    text-decoration: none;
+                    transition: .3s;
+                    &:hover {
+                         color: var(--tj-theme-primary);
+                    }
+               }
+          }
+     }
+}
+
+
+
+
+
+/* !END: Theme Footer CSS */

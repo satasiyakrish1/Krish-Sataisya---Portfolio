@@ -1,0 +1,170 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Maquee CSS
+----------------------------------------*/
+.tj-maquee-section {
+     &.style-8 {
+          position: relative;
+          background-color: var(--tj-color-theme-secondary);
+          overflow: hidden;
+          .maquee-wrapper {
+               transition-timing-function: linear;
+          }
+     }
+     &.maquee-style-8 {
+          position: relative;
+          background: var(--tj-theme-primary);
+          z-index: 1;
+          &::before {
+               position: absolute;
+               content: "";
+               top: 0;
+               right: 0;
+               width: 1424px;
+               height: 100%;
+               background: linear-gradient(90deg, var(--tj-theme-primary) 0%, var(--tj-theme-secondary) 110.61%);
+               z-index: 2;
+          }
+          .maquee-slider-one {
+               position: relative;
+               z-index: 2;
+          }
+          .maquee-wrapper {
+               transition-timing-function: linear;
+          }
+     }
+     &.maquee-style-bottom-8 {
+          position: relative;
+          background: linear-gradient(90deg, var(--tj-theme-primary) 0%, var(--tj-theme-secondary) 110.61%);
+          padding: 33px 0;
+          &::after {
+               position: absolute;
+               content: "";
+               width: 110%;
+               height: 100%;
+               top: 0;
+               left: -10px;
+               background: rgba(192, 172, 233, 1);
+               transform: rotate(-1.09deg);
+               z-index: -1;
+          }
+          .marquee-item {
+               .marquee-box {
+                    .marquee-icon {
+                         img {
+                              animation: rotateImg2 6s infinite linear;
+                         }
+                    }
+               }
+          }
+          .maquee-wrapper {
+               transition-timing-function: linear;
+          }
+          @media #{$sm, $xs} {
+             padding: 25px 0;
+          }
+     }
+}
+
+.marquee-item {
+     width: auto;
+     display: inline-block;
+     .marquee-box {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 80px;
+          .marquee-icon {
+               max-width: 20px;
+               width: 100%;
+               img {
+                    width: 100%;
+                    animation: rotateImg 6s infinite linear;
+               }
+          }
+          .marquee-title {
+               margin-left: 0px;
+               margin-right: 0px;
+               .title {
+                    font-size: 20px;
+                    font-weight: var(--tj-fw-ebold);
+                    text-transform: uppercase;
+                    letter-spacing: 0.02em;
+                    margin-bottom: 0;
+               }
+          }
+     }
+     @media #{$lg, $md} {
+          .marquee-box {
+               gap: 40px;
+          }
+     }
+     @media #{$sm, $xs} {
+          .marquee-box {
+               gap: 40px;
+               .marquee-title {
+                    .title {
+                         font-size: 18px;
+                    }
+               }
+          }
+          .marquee-logo {
+               max-width: 100px;
+               width: 100%;
+               img {
+                    width: 100%;
+               }
+          }
+     }
+}
+
+.funfact-item {
+     &.style-8 {
+          position: relative;
+          border-right: 1px solid rgba(255,255,255,0.2);
+          padding: 24px 0;
+          z-index: 3;
+          .number {
+               font-size: 40px;
+               font-weight: var(--tj-fw-sbold);
+               font-family: var(--tj-ff-heading);
+               line-height: 1;
+               letter-spacing: 0.02em;
+               color: var(--tj-white);
+               span {
+                    font-size: 40px;
+                    font-weight: var(--tj-fw-sbold);
+                    font-family: var(--tj-ff-heading);
+                    line-height: 1;
+                    letter-spacing: 0.09em;
+                    color: var(--tj-white);
+               }
+          }
+          .text {
+               font-size: 20px;
+               font-weight: var(--tj-fw-medium);
+               color: var(--tj-white);
+               letter-spacing: 0.02em;
+          }
+     }
+}
+
+@keyframes rotateImg {
+     0% {
+          transform: rotate(0deg);
+     }
+     100% {
+          transform: rotate(360deg);
+     }
+}
+
+@keyframes rotateImg2 {
+     0% {
+          transform: rotate(0deg);
+     }
+     100% {
+          transform: rotate(-360deg);
+     }
+}
+/* !END: Theme Maquee CSS */

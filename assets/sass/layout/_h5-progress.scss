@@ -1,0 +1,125 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Progress CSS
+----------------------------------------*/
+.tj-progress-section {
+     &.style-5 {
+          padding-top: 120px;
+          padding-bottom: 120px;
+          background-color: var(--tj-black-2);
+          position: relative;
+          z-index: 1;
+          .section-header {
+               max-width: 100%;
+               margin-bottom: 60px;
+          }
+          .h5-shapes-1 {
+               position: absolute;
+               left: 8%;
+               top: 50%;
+               max-width: 55px;
+               width: 100%;
+               z-index: -1;
+               animation: up-down-move 3s forwards infinite alternate;
+               img {
+                    width: 100%;
+               }
+          }
+          .h5-shapes-2 {
+               position: absolute;
+               bottom: 50px;
+               right: 150px;
+               max-width: 110px;
+               width: 100%;
+               z-index: -1;
+               animation: up-down-move-2 3s forwards infinite alternate;
+               img {
+                    width: 100%;
+               }
+          }
+          @media #{$xxl, $xl, $lg} {
+               .h5-shapes-1 {
+                    top: 20%;
+               }
+          }
+          @media #{$md} {
+               padding-top: 80px;
+               padding-bottom: 50px;
+               .section-header {
+                    margin-bottom: 40px;
+               }
+               .h5-shapes-1 {
+                    top: 15%;
+               }
+               .h5-shapes-2 {
+                    bottom: 30px;
+                    max-width: 75px;
+               }
+          }
+          @media #{$sm} {
+               padding-top: 80px;
+               padding-bottom: 50px;
+               .section-header {
+                    margin-bottom: 40px;
+               }
+               .h5-shapes-1 {
+                    top: 15%;
+                    max-width: 45px;
+                    left: 5%;
+               }
+               .h5-shapes-2 {
+                    bottom: 30px;
+                    max-width: 75px;
+               }
+          }
+          @media #{$xs} {
+               padding-top: 80px;
+               padding-bottom: 50px;
+               .section-header {
+                    margin-bottom: 40px;
+               }
+               .h5-shapes-1 {
+                    top: 10%;
+                    max-width: 45px;
+                    left: 5%;
+               }
+               .h5-shapes-2 {
+                    bottom: 30px;
+                    max-width: 75px;
+               }
+          }
+     }
+}
+
+.progress-single {
+     &.style-5 {
+          border: 2px solid rgba(255,255,255,0.1);
+          background-color: transparent;
+          border-radius: 10px;
+          .progress-text {
+               .progress-title {
+                    .title {
+                         font-weight: var(--tj-fw-bold);
+                         letter-spacing: -0.02em;
+                    }
+               }
+               .icon-box {
+                    border-radius: 50%;
+               }
+          }
+          p {
+               color: rgba(255,255,255,0.6);
+          }
+          .progress-item {
+               .item_bar {
+                    background: rgba(255,255,255,0.1);
+               }
+          }
+     }
+     &.style-7 {
+          background: #050709;
+          border: none;
+     }
+}
+/* !END: Theme Progress CSS */

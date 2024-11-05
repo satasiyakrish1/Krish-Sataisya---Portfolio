@@ -34,7 +34,7 @@ Disallow: /*.pdf$
 Disallow: /*.zip$
 
 # Allow the homepage and other important sections
-Allow: /projects/photo%20editing%20web%20application/index.html
+Allow: /projects/photo%20editing%20web%20application/
 Allow: /projects/3d%20solar%20system/
 
 

@@ -1,28 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <!-- Homepage -->
   <url>
-    <loc>https://krishsatasiya.netlify.app/</loc>
+    <loc>http://krishsatasiya.netlify.app/</loc>
+    <priority>0.4</priority>
+    <changefreq>daily</changefreq>
     <lastmod>2024-11-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
   </url>
-  
-  <!-- Specific Project: Photo Editing Web Application -->
   <url>
-    <loc>https://krishsatasiya.netlify.app/projects/photo%20editing%20web%20application/</loc>
+    <loc>http://krishsatasiya.netlify.app/Projects/photo editing web application/index.html</loc>
+    <priority>0.4</priority>
+    <changefreq>daily</changefreq>
     <lastmod>2024-11-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
-
-  <!-- Specific Project: Photo Editing Web Application -->
   <url>
-    <loc>https://krishsatasiya.netlify.app//projects/3d%20solar%20system/</loc>
+    <loc>http://krishsatasiya.netlify.app/Projects/3D Solar System/index.html</loc>
+    <priority>0.4</priority>
+    <changefreq>daily</changefreq>
     <lastmod>2024-11-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
-
+  <url>
+    <loc>http://krishsatasiya.netlify.app/projects/keybord/</loc>
+    <priority>0.4</priority>
+    <changefreq>daily</changefreq>
+    <lastmod>2024-11-05</lastmod>
+  </url>
+  <url>
+    <loc>http://krishsatasiya.netlify.app/Projects/Graph - Book/</loc>
+    <priority>0.4</priority>
+    <changefreq>daily</changefreq>
+    <lastmod>2024-11-05</lastmod>
+  </url>
+  <url>
+    <loc>http://krishsatasiya.netlify.app/Projects/Celender Pro/celender.html</loc>
+    <priority>0.4</priority>
+    <changefreq>daily</changefreq>
+    <lastmod>2024-11-05</lastmod>
+  </url>
+  <url>
+    <loc>http://krishsatasiya.netlify.app/games/cube/</loc>
+    <priority>0.4</priority>
+    <changefreq>daily</changefreq>
+    <lastmod>2024-11-05</lastmod>
+  </url>
+  <url>
+    <loc>http://krishsatasiya.netlify.app/games/archry/</loc>
+    <priority>0.4</priority>
+    <changefreq>daily</changefreq>
+    <lastmod>2024-11-05</lastmod>
+  </url>
+  <url>
+    <loc>http://krishsatasiya.netlify.app/tel:6353112999</loc>
+    <priority>0.4</priority>
+    <changefreq>daily</changefreq>
+    <lastmod>2024-11-05</lastmod>
+  </url>
+  <url>
+    <loc>http://krishsatasiya.netlify.app/tel:+91 6353112999</loc>
+    <priority>0.4</priority>
+    <changefreq>daily</changefreq>
+    <lastmod>2024-11-05</lastmod>
+  </url>
+  <url>
+    <loc>http://krishsatasiya.netlify.app/privacy-policy/privacy-policy</loc>
+    <priority>0.4</priority>
+    <changefreq>daily</changefreq>
+    <lastmod>2024-11-05</lastmod>
+  </url>
+  <url>
+    <loc>http://krishsatasiya.netlify.app/./Terms And Condition/Tm.html</loc>
+    <priority>0.4</priority>
+    <changefreq>daily</changefreq>
+    <lastmod>2024-11-05</lastmod>
+  </url>
+  <url>
+    <loc></loc>
+    <priority>0.4</priority>
+    <changefreq>daily</changefreq>
+    <lastmod>2024-11-05</lastmod>
+  </url>
 </urlset>

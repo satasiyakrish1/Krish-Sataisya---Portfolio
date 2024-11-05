@@ -17,4 +17,12 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Specific Project: Photo Editing Web Application -->
+  <url>
+    <loc>https://krishsatasiya.netlify.app//projects/3d%20solar%20system/</loc>
+    <lastmod>2024-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>

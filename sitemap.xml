@@ -9,38 +9,12 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- About Page -->
-  <url>
-    <loc>https://krishsatasiya.netlify.app/about</loc>
-    <lastmod>2024-11-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Contact Page -->
-  <url>
-    <loc>https://krishsatasiya.netlify.app/contact</loc>
-    <lastmod>2024-11-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Projects Overview Page -->
-  <url>
-    <loc>https://krishsatasiya.netlify.app/projects</loc>
-    <lastmod>2024-11-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
   <!-- Specific Project: Photo Editing Web Application -->
   <url>
-    <loc>https://krishsatasiya.netlify.app/projects/photo%20editing%20web%20application/</loc>
+    <loc>https://krishsatasiya.netlify.app/projects/photo%20editing%20web%20application/index.html</loc>
     <lastmod>2024-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
-  <!-- Add other project pages as needed -->
   
 </urlset>

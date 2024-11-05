@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
+  
   <!-- Homepage -->
   <url>
     <loc>https://krishsatasiya.netlify.app/</loc>
@@ -8,13 +8,13 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
+  
   <!-- Specific Project: Photo Editing Web Application -->
   <url>
-    <loc>https://krishsatasiya.netlify.app/projects/photo%20editing%20web%20application/index.html</loc>
+    <loc>https://krishsatasiya.netlify.app/projects/photo%20editing%20web%20application/</loc>
     <lastmod>2024-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  
+
 </urlset>

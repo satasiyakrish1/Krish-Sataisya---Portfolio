@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <link rel="apple-touch-icon" href="/assets/img/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.png" />
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #140c1c;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        .redirect-container {
+            max-width: 600px;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        .loader {
+            border: 5px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            border-top: 5px solid #fff;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        .redirect-link {
+            color: #9c7cff;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        .error-message {
+            color: #ff6b6b;
+            display: none;
+            margin-top: 20px;
+        }
+        .back-link {
+            margin-top: 30px;
+            color: #9c7cff;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="redirect-container">
+        <h1>Redirecting you...</h1>
+        <div class="loader"></div>
+        <p>You're being redirected to the destination URL.</p>
+        <p>If you're not redirected automatically, <a href="#" id="destination-link" class="redirect-link">click here</a>.</p>
+        <div id="error-message" class="error-message">
+            <p>Sorry, we couldn't find the URL you're looking for.</p>
+        </div>
+    </div>
+    <a href="/shorturl.html" class="back-link">← Back to URL Shortener</a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the short code from the URL path
+            const pathParts = window.location.pathname.split('/');
+            let shortCode = pathParts[pathParts.length - 1];
+            
+            // If we're at /s/ with no code, check if there's a query parameter
+            if (!shortCode || shortCode === '' || shortCode === 's' || shortCode === 'index.html') {
+                const urlParams = new URLSearchParams(window.location.search);
+                shortCode = urlParams.get('code');
+            }
+            
+            // Get URL history from localStorage
+            const urlHistory = JSON.parse(localStorage.getItem('shortUrlHistory')) || [];
+            
+            // Find the matching URL
+            const urlMatch = urlHistory.find(item => item.shortCode === shortCode);
+            
+            if (urlMatch) {
+                // Set the destination link
+                const destinationLink = document.getElementById('destination-link');
+                destinationLink.href = urlMatch.longUrl;
+                destinationLink.textContent = 'click here to go to ' + urlMatch.longUrl;
+                
+                // Redirect after a short delay
+                setTimeout(function() {
+                    window.location.href = urlMatch.longUrl;
+                }, 1500);
+            } else {
+                // Show error if no match found
+                document.querySelector('.loader').style.display = 'none';
+                document.getElementById('error-message').style.display = 'block';
+                document.querySelector('p').textContent = 'The short URL you're trying to access doesn't exist or has expired.';
+            }
+        });
+    </script>
+</body>
+</html>

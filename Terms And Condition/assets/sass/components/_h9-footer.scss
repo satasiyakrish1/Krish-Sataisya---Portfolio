@@ -1,0 +1,161 @@
+@use "../utilities" as *;
+
+
+/**----------------------------------------
+START: Theme Footer CSS
+----------------------------------------*/
+
+.tj-footer {
+     &-9 {
+          &-area {
+               background-position: center center;
+               background-size: cover;
+               background-repeat: no-repeat;
+               border-radius: 100px 100px 0 0;
+               & .widget-info {
+                    max-width: 360px;
+                    width: 100%;
+                    @media #{$xl} {
+                         max-width: 260px;
+                         width: 100%;
+                    }
+                    @media #{$lg} {
+                         max-width: 390px;
+                         width: 100%;
+                    }
+                    @media #{$md} {
+                         max-width: 280px;
+                         width: 100%;
+                    }
+                    @media #{$sm} {
+                         max-width: 270px;
+                    }
+               }
+               & .footer-logo {
+                    max-width: 180px;
+                    width: 100%;
+                    margin-bottom: 24px;
+                    & img {
+                         width: 100%;
+                         height: 100%;
+                    }
+               }
+               & .tj-footer-9-social {
+                    & .social-icons {
+                         & li {
+                              & a {
+                                   color: var(--tj-white);
+                                   &::before {
+                                        background: var(--tj-black-2);
+                                   }
+                              }
+                         }
+                    }
+               }
+               & .footer-widget {
+                    & .footer-title {
+                         & .title {
+                              font-weight: var(--tj-fw-sbold);
+                              font-size: 20px;
+                              letter-spacing: -0.02em;
+                              color: var(--tj-white);
+                         }
+                    }
+               }
+               & .tj-footer-7-top-title {
+                     font-size: 20px;
+                     letter-spacing: -0.02em;
+                     text-transform: uppercase;
+                     line-height: 1.50;
+                     margin-bottom: 26px;
+               }
+               & .tj-footer-7-top-form{
+                    & input {
+                         background: var(--tj-white);
+                         border: 2px solid var(--tj-bg-2);
+                         padding: 16px 20px 16px 25px;
+                         color: var(--tj-bg-2);
+                         @media #{$md} {
+                              padding: 16px 10px 16px 20px;
+                              width: 257px;
+                         }
+                         @media #{$sm} {
+                              padding: 16px 10px 16px 20px;
+                              width: 320px;
+                         }
+                         &::placeholder {
+                              @media #{$md,$sm} {
+                                   font-size: 12px;
+                              }
+                         }
+                    }
+               }
+               & .tj-footer-7-top-submit-btn {
+                    background: var(--tj-bg-2);
+                    @media #{$sm} {
+                         display: inline-block;
+                         margin-top: 0px;
+                    }
+               }
+               & .tj-footer-7-wrapper {
+                    border-top: 1px solid rgba(255, 255, 255, .15);
+               }
+               & .tj-footer-7-wrapper {
+                    @media #{$lg} {
+                         row-gap: 20px;
+                         justify-content: space-between;
+                    }
+               } 
+               & .tj-footer-6-left {
+                    @media #{$lg} {
+                         max-width: 224px;
+                    }
+                    @media #{$md} {
+                         display: flex;
+                         justify-content: center;
+                    }
+                    @media #{$sm} {
+                         max-width: 215px;
+                         margin-left: 0;
+                    }
+               }
+               & .footer-menu ul {
+                    @media #{$sm,$xs} {
+                         margin: 0 0 0;
+                    }
+               }
+               & .tj-footer-6-menu {
+                    & ul {
+                         @media #{$lg} {
+                              font-size: 12px;
+                         }
+                         & li a {
+                              @media #{$lg} {
+                                   font-size: 12px;
+                              }
+                         }
+                    }
+               }
+               & .tj-footer-6-copyright {
+                    @media #{$lg} {
+                         font-size: 12px;
+                    }
+               }
+          }
+          &-col {
+               &-2 {
+                    @media #{$lg} {
+                         max-width: 370px;
+                         width: 100%;
+                    }
+                    @media #{$md} {
+                         max-width: 326px;
+                         width: 100%;
+                    }
+               }
+          }
+     }
+}
+
+
+/* !END: Theme Footer CSS */

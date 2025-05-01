@@ -1,4 +1,16 @@
-//==================== JS INDEX ======================
+/*-----------------------------------------------------------------------------------
+
+Theme Name: Gerold - Personal Portfolio HTML5 Template
+Theme URI: https://themejunction.net/html/gerold/demo/
+Author: Theme-Junction
+Author URI: https://themeforest.net/user/theme-junction
+Description: Gerold - Personal Portfolio HTML5 Template
+
+-----------------------------------------------------------------------------------
+
+/***************************************************
+==================== JS INDEX ======================
+****************************************************
 // Lenis Scroll Js
 // Stacking Cards Js
 // Sticky Header Js
@@ -19,21 +31,13 @@
 // Anim Js
 // Contact Form Js
 
+****************************************************/
+
 (function($) {
     "use strict";
 
-    // Lenis Scroll Js
-    const lenis = new Lenis();
-
-    lenis.on("scroll", ScrollTrigger.update);
-    gsap.ticker.add(time => {
-        lenis.raf(time * 1000);
-    });
-    gsap.ticker.lagSmoothing(0);
-
     var windowSize = $(window).width();
-
-    $(window).on("load resize", function() {
+    $(window).on("load", function() {
         if (windowSize > 991) {
             // Stacking Cards Js
             const cards = document.querySelectorAll(".stack-item");
@@ -136,8 +140,6 @@
                 $("body").removeClass("overflow-hidden");
             });
 
-
-
         // Portfolio Filter Js
         $(".portfolio-box").imagesLoaded(function() {
             var $grid = $(".portfolio-box").isotope({
@@ -162,8 +164,6 @@
             });
         });
 
-
-
         // Portfolio filter js
         $(".tj-project-4-wrappper").isotope({
             percentPosition: true,
@@ -184,7 +184,6 @@
             });
         });
 
-
         // Portfolio Carousel Js
         $(".portfolio_gallery.owl-carousel").owlCarousel({
             items: 2,
@@ -192,7 +191,7 @@
             lazyLoad: true,
             center: true,
             // autoWidth: true,
-            autoplayHoverPause: true,
+            autoplayHoverPause: false,
             autoplay: false,
             autoplayTimeout: 5000,
             smartSpeed: 800,
@@ -270,7 +269,7 @@
         // testimonial Slider Js
         if ($(".testimonial-slider-6").length > 0) {
             var testimonial = new Swiper(".testimonial-slider-6", {
-                slidesPerView: 'auto',
+                slidesPerView: 4,
                 spaceBetween: 30,
                 centeredSlides: true,
                 loop: true,
@@ -302,8 +301,8 @@
                     1200: {
                         slidesPerView: 2.5,
                     },
-                    1400: {
-                        slidesPerView: 2.5,
+                    1440: {
+                        slidesPerView: 3.5,
                     },
                 },
             });
@@ -325,13 +324,13 @@
             autoplayTimeout: 3000,
         });
 
-
         // Services Slider Js
         if ($(".service-slider-8").length > 0) {
             var service = new Swiper(".service-slider-8", {
                 slidesPerView: 3,
                 spaceBetween: 30,
                 loop: true,
+                centeredSlides: true,
                 speed: 2000,
                 autoplay: {
                     delay: 2000,
@@ -366,6 +365,95 @@
                 },
             });
         }
+
+        // Project Slider Js
+        var slider = new Swiper(".tj-project-9-active", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            loop: true,
+            speed: 2000,
+            autoplay: true,
+            centeredSlides: true,
+            navigation: {
+                prevEl: ".tj-project-9-prev",
+                nextEl: ".tj-project-9-next",
+            },
+            pagination: {
+                el: ".tj-project-9-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                1200: {
+                    slidesPerView: 3,
+                },
+                992: {
+                    slidesPerView: 2,
+                },
+                768: {
+                    slidesPerView: 1.5,
+                },
+                576: {
+                    slidesPerView: 1,
+                },
+                0: {
+                    slidesPerView: 1,
+                },
+            },
+        });
+
+        // Home 7 testimonial Slider Js
+        var testimonialSwiper = new Swiper(".tj-testimonial-7-active", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2000,
+            },
+            speed: 3000,
+            pagination: {
+                el: ".testimonial-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".slider-next",
+                prevEl: ".slider-prev",
+            },
+        });
+
+
+        // Home 9 testimonial Slider  Js
+        var slider = new Swiper(".tj-testimonial-9-active", {
+            direction: "vertical",
+            slidesPerView: 1.8,
+            spaceBetween: 30,
+            centeredSlides: true,
+            loop: true,
+            speed: 1500,
+            autoplay: {
+                delay: 3000,
+            },
+        });
+
+        // Home 10 testimonial Slider Js
+        var testimonial = new Swiper(".tj-testimonial-10-active", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2000,
+            },
+            speed: 3000,
+            pagination: {
+                el: ".testimonial-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".slider-next",
+                prevEl: ".slider-prev",
+            },
+        });
 
         // Rating Js
         if ($(".fill-ratings span").length > 0) {
@@ -404,8 +492,8 @@
             });
         }
 
-        // reveal image Js
-        const hoverItem = document.querySelectorAll(".hover-item");
+        // hover blog image Js
+        const hoverItem = document.querySelectorAll(".anim-reveal-item");
 
         function moveImage(e, hoverItem, index) {
             const item = hoverItem.getBoundingClientRect();
@@ -416,53 +504,79 @@
             }
         }
         hoverItem.forEach((item, i) => {
-            item.addEventListener("mousemove", (e) => {
+            item.addEventListener("mousemove", e => {
                 setInterval(moveImage(e, item, 1), 50);
             });
         });
 
-        // Sticky Card Js
-        let ofsetHeight = document.querySelector(".portfolio-6-content-area");
-        if (ofsetHeight) {
-            ScrollTrigger.matchMedia({
-                "(min-width: 992px)": function() {
+        // Blog Hover animation Js
+        function hoverWidget_animation() {
+            let active_bg = $(".blog-wrapper-8 .active-bg");
+            let element = $(".blog-wrapper-8 .current");
+            $(".blog-wrapper-8 .blog-item").on("mouseenter", function() {
+                let e = $(this);
+                activeHover(active_bg, e);
+            });
+            $(".blog-wrapper-8").on("mouseleave", function() {
+                element = $(".blog-wrapper-8 .current");
+                activeHover(active_bg, element);
+                element.closest(".blog-item").siblings().removeClass("mleave");
+            });
+            activeHover(active_bg, element);
+        }
+        hoverWidget_animation();
 
-                    let pbmitpanels = gsap.utils.toArray(".portfolio-wrapper-6");
-                    const spacer = 0;
-
-                    let pbmitheight = pbmitpanels[0].offsetHeight + 120;
-                    pbmitpanels.forEach((pbmitpanel, i) => {
-                        //This is for padding between item
-                        TweenMax.set(pbmitpanel, {
-                            top: i * 0
-                        });
-                        const tween = gsap.to(pbmitpanel, {
-                            scrollTrigger: {
-                                trigger: pbmitpanel,
-                                start: () => `top bottom-=100`,
-                                end: () => `top top+=40`,
-                                scrub: true,
-                                invalidateOnRefresh: true
-                            },
-                            ease: "none",
-                            //This is for scaling outsite 
-                            scale: () => 1 - (pbmitpanels.length - i) * 0.035
-                        });
-                        ScrollTrigger.create({
-                            trigger: pbmitpanel,
-                            start: () => "top 140px",
-                            endTrigger: '.portfolio-6-content-area',
-                            end: `bottom top+=${pbmitheight + (pbmitpanels.length * spacer)}`,
-                            pin: true,
-                            pinSpacing: false,
-                        });
-                    });
-                },
-                "(max-width:1025px)": function() {
-                    ScrollTrigger.getAll().forEach(pbmitpanels => pbmitpanels.kill(true));
-                }
+        function activeHover(active_bg, e) {
+            if (!e.length) {
+                return false;
+            }
+            let topOff = e.offset().top;
+            let height = e.outerHeight();
+            let menuTop = $(".blog-wrapper-8").offset().top;
+            e.closest(".blog-item").removeClass("mleave");
+            e.closest(".blog-item").siblings().addClass("mleave");
+            active_bg.css({
+                top: topOff - menuTop + "px",
+                height: height + "px"
             });
         }
+
+        $(".blog-wrapper-8 .blog-item").on("click", function() {
+            $(".blog-wrapper-8 .blog-item").removeClass("current");
+            $(this).addClass("current");
+        });
+
+        // Sticky Card Js
+        function stackAnimations() {
+            const pineVanish = gsap.utils.toArray(".an-pine-vanish");
+            pineVanish.forEach(item => {
+                gsap.to(item, {
+                    // opacity: 0,
+                    // scale: 0.9,
+                    // y: 10,
+                    scrollTrigger: {
+                        trigger: item,
+                        scrub: true,
+                        // start: "bottom bottom",
+                        start: "top",
+                        end: "bottom",
+                        pin: true,
+                        pinSpacing: false,
+                        markers: false,
+                        invalidateOnRefresh: true,
+                    },
+                    ease: "none",
+                });
+            });
+        }
+
+        // Initialize animations on page load
+        stackAnimations();
+
+        // Refresh ScrollTrigger on resize
+        window.addEventListener("resize", () => {
+            ScrollTrigger.refresh();
+        });
 
         // Brand Slider Js
         if ($(".brand-slider").length > 0) {
@@ -566,6 +680,7 @@
             var brand = new Swiper(".tj-testimonial-slider8", {
                 slidesPerView: 3,
                 spaceBetween: 30,
+                active: true,
                 loop: true,
                 autoplay: {
                     delay: 6000,
@@ -595,7 +710,7 @@
         // Marquee slider Js
         if ($(".maquee-slider-one").length > 0) {
             var swiper = new Swiper(".maquee-slider-one", {
-                slidesPerView: 'auto',
+                slidesPerView: "auto",
                 spaceBetween: 80,
                 loop: true,
                 speed: 5000,
@@ -623,7 +738,7 @@
 
         if ($(".maquee-slider-two").length > 0) {
             var swiper = new Swiper(".maquee-slider-two", {
-                slidesPerView: 'auto',
+                slidesPerView: "auto",
                 spaceBetween: 80,
                 loop: true,
                 speed: 5000,
@@ -648,7 +763,7 @@
 
         if ($(".maquee-slider-three").length > 0) {
             var swiper = new Swiper(".maquee-slider-three", {
-                slidesPerView: 'auto',
+                slidesPerView: "auto",
                 spaceBetween: 50,
                 loop: true,
                 speed: 5000,
@@ -662,12 +777,42 @@
 
         if ($(".maquee-slider-four").length > 0) {
             var swiper = new Swiper(".maquee-slider-four", {
-                slidesPerView: 'auto',
+                slidesPerView: "auto",
                 spaceBetween: 0,
                 freemode: true,
                 centeredSlides: true,
                 loop: true,
                 speed: 5000,
+                allowTouchMove: false,
+                autoplay: {
+                    delay: 1,
+                    disableOnInteraction: true,
+                },
+            });
+        }
+
+        // Marquee slider Js
+        if ($(".maquee-slider-9").length > 0) {
+            var swiper = new Swiper(".maquee-slider-9", {
+                slidesPerView: "auto",
+                spaceBetween: 20,
+                centeredSlides: true,
+                loop: true,
+                speed: 5000,
+                breakpoints: {
+                    320: {
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        spaceBetween: 20,
+                    },
+                    992: {
+                        spaceBetween: 20,
+                    },
+                    1024: {
+                        spaceBetween: 20,
+                    },
+                },
                 allowTouchMove: false,
                 autoplay: {
                     delay: 1,
@@ -715,50 +860,6 @@
             live: true, // default
         });
         wow.init();
-
-        // Preloader Js
-        const svg = document.getElementById("preloaderSvg");
-        const svgText = document.querySelector(
-            ".hero-section .intro_text svg text"
-        );
-        const tl = gsap.timeline({
-            onComplete: startStrokeAnimation,
-        });
-        const curve = "M0 502S175 272 500 272s500 230 500 230V0H0Z";
-        const flat = "M0 2S175 1 500 1s500 1 500 1V0H0Z";
-
-        tl.to(".preloader-heading .load-text , .preloader-heading .cont", {
-            delay: 1.5,
-            y: -100,
-            opacity: 0,
-        });
-        tl.to(svg, {
-            duration: 0.5,
-            attr: {
-                d: curve
-            },
-            ease: "power2.easeIn",
-        }).to(svg, {
-            duration: 0.5,
-            attr: {
-                d: flat
-            },
-            ease: "power2.easeOut",
-        });
-        tl.to(".preloader", {
-            y: -1500,
-        });
-        tl.to(".preloader", {
-            zIndex: -1,
-            display: "none",
-        });
-
-        function startStrokeAnimation() {
-            if (svgText) {
-                // Add a class or directly apply styles to trigger the stroke animation
-                svgText.classList.add("animate-stroke");
-            }
-        }
 
         // Services Hover Js
         function service_animation() {
@@ -839,7 +940,7 @@
 
         // Side Bar Sticky Js
         if ($(".side-sticky").length > 0) {
-            var sticky = new Sticky('.side-sticky');
+            var sticky = new Sticky(".side-sticky");
         }
 
         // Rating Js
@@ -847,7 +948,6 @@
             var star_rating_width = $(".fill-ratings span").width();
             $(".star-ratings").width(star_rating_width);
         }
-
 
         // Skillbar Js
         if ($(".progress_bar").length > 0) {
@@ -857,19 +957,19 @@
 
             function progress_bar() {
                 var speed = 30;
-                var items = $('.progress_bar').find('.progress-item');
+                var items = $(".progress_bar").find(".progress-item");
                 items.appear(function() {
-                    var item = $(this).find('.progress');
-                    var itemValue = item.data('progress');
+                    var item = $(this).find(".progress");
+                    var itemValue = item.data("progress");
                     var i = 0;
                     var value = $(this);
                     var count = setInterval(function() {
                         if (i <= itemValue) {
                             var iStr = i.toString();
                             item.css({
-                                'width': iStr + '%'
+                                width: iStr + "%",
                             });
-                            value.find('.item_value').html(iStr + '%');
+                            value.find(".item_value").html(iStr + "%");
                         } else {
                             clearInterval(count);
                         }
@@ -877,111 +977,6 @@
                     }, speed);
                 });
             }
-        }
-
-        // Home 7 testimonial Slider Js
-        var testimonialSwiper = new Swiper(".tj-testimonial-7-active", {
-            slidesPerView: 1,
-            loop: true,
-            speed: 1500,
-            pagination: {
-                el: ".testimonial-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".slider-next",
-                prevEl: ".slider-prev",
-            },
-        });
-
-
-        // Text Invert With Scroll 
-        const split = new SplitText(".tj-text-invert", {
-            type: "lines"
-        });
-        split.lines.forEach((target) => {
-            gsap.to(target, {
-                backgroundPositionX: 0,
-                ease: "none",
-                scrollTrigger: {
-                    trigger: target,
-                    scrub: 1,
-                    start: 'top 80%',
-                    end: "bottom center"
-                }
-            });
-        });
-
-
-        // Home 7 Title Animation
-        if ($('.tj_title_anim').length > 0) {
-            let splitTitleLines = gsap.utils.toArray(".tj_title_anim");
-            splitTitleLines.forEach(splitTextLine => {
-                const tl = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: splitTextLine,
-                        start: 'top 90%',
-                        end: 'bottom 60%',
-                        scrub: false,
-                        markers: false,
-                        toggleActions: 'play none none none'
-                    }
-                });
-
-                const itemSplitted = new SplitText(splitTextLine, {
-                    type: "words, lines"
-                });
-                gsap.set(splitTextLine, {
-                    perspective: 400
-                });
-                itemSplitted.split({
-                    type: "lines"
-                })
-                tl.from(itemSplitted.lines, {
-                    duration: 1,
-                    delay: 0.3,
-                    opacity: 0,
-                    rotationX: -80,
-                    force3D: true,
-                    transformOrigin: "top center -50",
-                    stagger: 0.1
-                });
-            });
-        }
-
-
-
-        // Section Title Animation
-        if ($('.tj-char-animation').length > 0) {
-            let char_come = gsap.utils.toArray(".tj-char-animation");
-            char_come.forEach(splitTextLine => {
-                const tl = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: splitTextLine,
-                        start: 'top 90%',
-                        end: 'bottom 60%',
-                        scrub: false,
-                        markers: false,
-                        toggleActions: 'play none none none'
-                    }
-                });
-                const itemSplitted = new SplitText(splitTextLine, {
-                    type: "chars, words"
-                });
-                gsap.set(splitTextLine, {
-                    perspective: 300
-                });
-                itemSplitted.split({
-                    type: "chars, words"
-                })
-                tl.from(itemSplitted.chars, {
-                    duration: 1,
-                    delay: 0.5,
-                    x: 100,
-                    autoAlpha: 0,
-                    stagger: 0.05
-                });
-            });
         }
 
         // Anim Js
@@ -1004,17 +999,27 @@
         }
         splitTextToSpans(target);
 
-
         // accordion Js
-        $(".accordion-list > li:nth-child(1)").addClass("active").find(".tj-service-5-accordion-wrap").show();
-        $('.accordion-list > li:not(:nth-child(1)) .tj-service-5-accordion-wrap').hide();
-        $('.accordion-list > li').click(function() {
+        $(".accordion-list > li:nth-child(1)")
+            .addClass("active")
+            .find(".tj-service-5-accordion-wrap")
+            .show();
+        $(
+            ".accordion-list > li:not(:nth-child(1)) .tj-service-5-accordion-wrap"
+        ).hide();
+        $(".accordion-list > li").click(function() {
             if ($(this).hasClass("active")) {
-                $(this).removeClass("active").find(".tj-service-5-accordion-wrap").slideUp();
+                $(this)
+                    .removeClass("active")
+                    .find(".tj-service-5-accordion-wrap")
+                    .slideUp();
             } else {
                 $(".accordion-list > li.active .tj-service-5-accordion-wrap").slideUp();
                 $(".accordion-list > li.active").removeClass("active");
-                $(this).addClass("active").find(".tj-service-5-accordion-wrap").slideDown();
+                $(this)
+                    .addClass("active")
+                    .find(".tj-service-5-accordion-wrap")
+                    .slideDown();
             }
         });
 
@@ -1051,180 +1056,277 @@
                 },
             });
         }
+    });
 
-        // Home 4 Hero Animation
-        if ($(".tj-header-area.header-4.header-absolute").length > 0) {
-            tl.from(".tj-header-area.header-4:not(.header-sticky)", {
-                opacity: 0,
-                duration: .5
-            }, 3.5, {
-                autoAlpha: 1
-            });
+
+    /*****************************************************************
+================================= GSAP ====================================
+********************************************************************/
+    gsap.registerPlugin(ScrollTrigger, TweenMax, ScrollToPlugin);
+
+    gsap.config({
+        nullTargetWarn: false,
+    });
+
+    // Lenis Scroll Js
+
+    /*
+    ============================== Lenis Scroll Js =====================================
+    */
+    const lenis = new Lenis();
+    lenis.on("scroll", ScrollTrigger.update);
+    gsap.ticker.add(time => {
+        lenis.raf(time * 1000);
+    });
+    gsap.ticker.lagSmoothing(0);
+
+    /*
+    ============================== Preloader =====================================
+    */
+    const svg = document.getElementById("preloaderSvg");
+
+    const preTl = gsap.timeline({
+        onComplete: startAnimationAfterPreloader,
+    });
+
+    const curve = "M0 502S175 272 500 272s500 230 500 230V0H0Z";
+    const flat = "M0 2S175 1 500 1s500 1 500 1V0H0Z";
+
+    preTl.to(".preloader-heading .load-text , .preloader-heading .cont", {
+        delay: 1.5,
+        y: -100,
+        opacity: 0,
+    });
+    preTl
+        .to(svg, {
+            duration: 0.5,
+            attr: {
+                d: curve
+            },
+            ease: "power2.easeIn",
+        })
+        .to(svg, {
+            duration: 0.5,
+            attr: {
+                d: flat
+            },
+            ease: "power2.easeOut",
+        });
+    preTl.to(".preloader", {
+        y: -1500,
+    });
+    preTl.to(".preloader", {
+        zIndex: -1,
+        display: "none",
+    });
+
+    let svgText = document.querySelector(".hero-section .intro_text svg text");
+    let heroAnimation = document.querySelector(".heroAnimation");
+
+    function startAnimationAfterPreloader() {
+        if (svgText) {
+            // Add a class or directly apply styles to trigger the stroke animation
+            svgText.classList.add("animate-stroke");
         }
-        if ($(".tj-hero-4-area, .tj-hero-7-area, .tj-feature-7-area").length > 0) {
-            tl.from(".tj-hero-4-subtitle, .tj-hero-7-thumb", {
-                y: 50,
-                opacity: 0,
-                duration: .5
-            });
-            tl.from(".tj-hero-4-title, .tj-hero-7-content", {
-                y: 50,
-                opacity: 0,
-                duration: .5
-            });
-            tl.from(".tj-hero-4-bottom-thumb img, .tj-hero-7-button", {
-                y: 50,
-                opacity: 0,
-                duration: .5
-            });
-            tl.from(".tj-hero-4-bottom-thumb-shape-1", {
-                x: 50,
-                opacity: 0,
-                duration: .5
-            });
-            tl.from(".tj-hero-4-bottom-thumb-shape-2", {
-                x: -50,
-                opacity: 0,
-                duration: .5
-            });
-            tl.from(".tj-hero-4-bottom-reviews", {
-                x: -50,
-                opacity: 0,
-                duration: .5
-            });
-            tl.from(".tj-hero-4-bottom-counter", {
-                x: 50,
-                opacity: 0,
-                duration: .5
-            });
+
+        if (heroAnimation) {
+            // Add a class or directly apply styles to trigger the stroke animation
+            heroAnimation.classList.add("activeAnimation");
         }
 
+        heroAreaAnimation();
+    }
 
-        // project 07 masonry
-        let project4Wrapper = $(".tj-project-7-wrappper");
-        if (project4Wrapper.length > 0) {
-            let portfolioWrapId = $(".portfolio-wrap");
-            let portfolioId = $(".portfolios");
-            const adjustLayout = () => {
-                var $container = $(portfolioId);
-                let winWidth = window.innerWidth;
+    /*
+    ============================== Hero 04 & 07 Animation =====================================
+    */
+    function heroAreaAnimation() {
+        let heroArea = $(".heroAnimation.activeAnimation");
 
-                if (winWidth >= 1400) {
-                    $(portfolioWrapId).css({
-                        marginLeft: -15 + "px",
-                        marginRight: -15 + "px",
-                    });
-                    let portfolioWidth = $(portfolioId).width();
+        let hero4SubTitle = $(
+            ".activeAnimation .tj-hero-4-subtitle, .activeAnimation .tj-hero-7-thumb"
+        );
+        let hero4Title = $(
+            ".activeAnimation .tj-hero-4-title, .activeAnimation .tj-hero-7-content"
+        );
+        let hero4Thumb = $(
+            ".activeAnimation .tj-hero-4-bottom-thumb img, .activeAnimation .tj-hero-7-button"
+        );
+        let hero4Shape1 = $(
+            ".activeAnimation .tj-hero-4-bottom-thumb-shape-1, .activeAnimation .tj-feature-7-thumb"
+        );
+        let hero4Shape2 = $(
+            ".activeAnimation .tj-hero-4-bottom-thumb-shape-2, .activeAnimation .tj-feature-7-wrapper"
+        );
+        let hero4Reviews = $(".activeAnimation .tj-hero-4-bottom-reviews");
+        let hero4Counter = $(".activeAnimation .tj-hero-4-bottom-counter");
 
-                    let postWidth = Math.floor(portfolioWidth / 2);
+        if (heroArea.length > 0) {
+            const heroTl = gsap.timeline();
 
-                    $container.find(".grid-item").each(function() {
-                        $(".grid-item").css({
-                            width: postWidth + "px",
-                            height: "auto",
-                            paddingLeft: 15 + "px",
-                            paddingRight: 15 + "px",
-                            paddingTop: 15 + "px",
-                            paddingBottom: 15 + "px",
-                        });
-                    });
-                } else if (winWidth >= 1200) {
-                    $(portfolioWrapId).css({
-                        marginLeft: -15 + "px",
-                        marginRight: -15 + "px",
-                    });
-                    let portfolioWidth = $(portfolioId).width();
-
-                    let postWidth = Math.floor(portfolioWidth / 2);
-
-                    $container.find(".grid-item").each(function() {
-                        let postHeight = $(this).height();
-                        $(".grid-item").css({
-                            width: postWidth + "px",
-                            height: "auto",
-                            paddingLeft: 15 + "px",
-                            paddingRight: 15 + "px",
-                            paddingTop: 15 + "px",
-                            paddingBottom: 15 + "px",
-                        });
-                    });
-                } else if (winWidth >= 992) {
-                    $(portfolioWrapId).css({
-                        marginLeft: -15 + "px",
-                        marginRight: -15 + "px",
-                    });
-                    let portfolioWidth = $(portfolioId).width();
-
-                    let postWidth = Math.floor(portfolioWidth / 2);
-
-                    $container.find(".grid-item").each(function() {
-                        $(".grid-item").css({
-                            width: postWidth + "px",
-                            height: "auto",
-                            paddingLeft: 15 + "px",
-                            paddingRight: 15 + "px",
-                            paddingTop: 15 + "px",
-                            paddingBottom: 15 + "px",
-                        });
-                    });
-                } else if (winWidth < 991) {
-                    $(portfolioWrapId).css({
-                        marginLeft: -15 + "px",
-                        marginRight: -15 + "px",
-                    });
-                    let portfolioWidth = $(portfolioId).width();
-
-                    let postWidth = Math.floor(portfolioWidth / 1);
-
-                    $container.find(".grid-item").each(function() {
-                        $(".grid-item").css({
-                            width: postWidth + "px",
-                            height: "auto",
-                            paddingLeft: 15 + "px",
-                            paddingRight: 15 + "px",
-                            paddingTop: 15 + "px",
-                            paddingBottom: 15 + "px",
-                        });
-                    });
-                } else if (winWidth < 767) {
-                    $(portfolioWrapId).css({
-                        marginLeft: -15 + "px",
-                        marginRight: -15 + "px",
-                    });
-                    let portfolioWidth = $(portfolioId).width();
-
-                    let postWidth = Math.floor(portfolioWidth / 1);
-
-                    $container.find(".grid-item").each(function() {
-                        $(".grid-item").css({
-                            width: postWidth + "px",
-                            height: "auto",
-                            paddingLeft: 15 + "px",
-                            paddingRight: 15 + "px",
-                            paddingTop: 15 + "px",
-                            paddingBottom: 15 + "px",
-                        });
-                    });
-                }
-            };
-
-            adjustLayout(); // Call on initial load
-
-            $(window).resize(function() {
-                adjustLayout(); // Call on window resize
-            });
-
-            $(portfolioId).imagesLoaded(function() {
-                $(portfolioId).masonry({
-                    itemSelector: ".grid-item",
+            if (hero4SubTitle.length > 0) {
+                heroTl.from(hero4SubTitle, {
+                    y: 50,
+                    opacity: 0,
+                    duration: 0.5,
                 });
-            });
+            }
+            if (hero4Title.length > 0) {
+                heroTl.from(hero4Title, {
+                    y: 50,
+                    opacity: 0,
+                    duration: 0.5,
+                });
+            }
+            if (hero4Thumb.length > 0) {
+                heroTl.from(hero4Thumb, {
+                    y: 50,
+                    opacity: 0,
+                    duration: 0.5,
+                });
+            }
+            if (hero4Shape1.length > 0) {
+                heroTl.from(hero4Shape1, {
+                    x: 50,
+                    opacity: 0,
+                    duration: 0.5,
+                });
+            }
+            if (hero4Shape2.length > 0) {
+                heroTl.from(hero4Shape2, {
+                    x: -50,
+                    opacity: 0,
+                    duration: 0.5,
+                });
+            }
+            if (hero4Reviews.length > 0) {
+                heroTl.from(hero4Reviews, {
+                    x: -50,
+                    opacity: 0,
+                    duration: 0.5,
+                });
+            }
+            if (hero4Counter.length > 0) {
+                heroTl.from(hero4Counter, {
+                    x: 50,
+                    opacity: 0,
+                    duration: 0.5,
+                });
+            }
         }
+    }
+
+
+    //  button hover animation
+    $('.tj-btn-rounded').on('mouseenter', function(e) {
+        var x = e.pageX - $(this).offset().left;
+        var y = e.pageY - $(this).offset().top;
+        $(this).find('.tj-btn-circle-dot').css({
+            top: y,
+            left: x
+        });
+    });
+    $('.tj-btn-rounded').on('mouseout', function(e) {
+        var x = e.pageX - $(this).offset().left;
+        var y = e.pageY - $(this).offset().top;
+        $(this).find('.tj-btn-circle-dot').css({
+            top: y,
+            left: x
+        });
+    });
 
 
 
+    /*
+    ============================== Title Animation =====================================
+    */
 
+    // splitText
+    if ($(".tj-char-animation").length > 0) {
+        let char_come = gsap.utils.toArray(".tj-char-animation");
+        char_come.forEach(splitTextLine => {
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: splitTextLine,
+                    start: "top 90%",
+                    end: "bottom 60%",
+                    scrub: false,
+                    markers: false,
+                    toggleActions: "play none none none",
+                },
+            });
 
+            const itemSplitted = new SplitText(splitTextLine, {
+                type: "chars, words",
+            });
+            gsap.set(splitTextLine, {
+                perspective: 300
+            });
+            itemSplitted.split({
+                type: "chars, words"
+            });
+            tl.from(itemSplitted.chars, {
+                duration: 1,
+                delay: 0.5,
+                x: 100,
+                autoAlpha: 0,
+                stagger: 0.05,
+            });
+        });
+    }
 
+    // Text Invert
+    const split = new SplitText(".tj-text-invert", {
+        type: "lines"
+    });
+    split.lines.forEach(target => {
+        gsap.to(target, {
+            backgroundPositionX: 0,
+            ease: "none",
+            scrollTrigger: {
+                trigger: target,
+                scrub: 1,
+                start: "top 85%",
+                end: "bottom center",
+            },
+        });
+    });
+
+    // line 3d
+    let tj_title_anim = gsap.utils.toArray(".tj_title_anim");
+    tj_title_anim.forEach(splitTextLine => {
+        var delay_value = 0.5;
+        if (splitTextLine.getAttribute("data-delay")) {
+            delay_value = splitTextLine.getAttribute("data-delay");
+        }
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: splitTextLine,
+                start: "top 90%",
+                duration: 1.5,
+                scrub: false,
+                markers: false,
+                toggleActions: "play none none none",
+            },
+        });
+
+        const itemSplitted = new SplitText(splitTextLine, {
+            type: "lines",
+        });
+        gsap.set(splitTextLine, {
+            perspective: 400,
+        });
+        itemSplitted.split({
+            type: "lines",
+        });
+        tl.from(itemSplitted.lines, {
+            duration: 1,
+            delay: delay_value,
+            opacity: 0,
+            rotationX: -80,
+            force3D: true,
+            transformOrigin: "top center -50",
+            stagger: 0.1,
+        });
     });
 })(jQuery);

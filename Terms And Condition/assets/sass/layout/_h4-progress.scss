@@ -1,0 +1,149 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Progress CSS
+----------------------------------------*/
+.tj-progress-section {
+     padding-bottom: 220px;
+     @media #{$xl} {
+          padding-bottom: 90px;
+     }
+     @media #{$lg} {
+          padding-bottom: 70px;
+     }
+     @media #{$md, $sm, $xs} {
+          padding-bottom: 50px;
+     }
+}
+
+.progress-single {
+     max-width: 306px;
+     width: 100%;
+     background-color: var(--tj-theme-accent-2);
+     padding: 45px 30px 50px 35px;
+     margin-bottom: 30px;
+     border-radius: 25px;
+     .progress-text {
+          display: flex;
+          gap: 18px;
+          align-items: center;
+          margin-bottom: 15px;
+          .icon-box {
+               display: inline-flex;
+               align-items: center;
+               justify-content: center;
+               width: 80px;
+               height: 80px;
+               line-height: 1;
+               border-radius: 20px;
+               background-color: var(--tj-theme-accent-2);
+               img {
+                    max-width: 40px;
+                    width: 100%;
+               } 
+          }
+          .progress-title {
+               .title {
+                    font-weight: var(--tj-fw-medium);
+                    margin-bottom: 0;
+               }
+          }
+     }
+     .desc {
+          color: var(--tj-white);
+          p {
+               &:last-child {
+                    margin-bottom: 0;
+               }
+          }
+     }
+     @media #{$xl} {
+          padding: 35px 15px 40px;
+     }
+     @media #{$lg} {
+          padding: 35px 15px 40px;
+          .progress-text {
+               gap: 15px;
+               .icon-box {
+                    width: 46px;
+                    height: 46px;
+                    border-radius: 12px;
+                    img {
+                         max-width: 30px;
+                    }
+               }
+          }
+     }
+     @media #{$md} {
+          max-width: 100%;
+          padding: 30px 15px 35px;
+     }
+     @media #{$sm} {
+          max-width: 100%;
+          padding: 30px 15px 35px;
+          .progress-text {
+               gap: 15px;
+               .icon-box {
+                    width: 46px;
+                    height: 46px;
+                    border-radius: 12px;
+                    img {
+                         max-width: 30px;
+                    }
+               }
+          }
+     }
+     @media #{$xs} {
+          padding: 30px 15px 35px;
+          margin-left: auto;
+          margin-right: auto;
+          .progress-text {
+               .icon-box {
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 12px;
+                    img {
+                         max-width: 30px;
+                    }
+               }
+          }
+     }
+}
+
+.progress-item {
+     position: relative;
+     background: var(--tj-color-common-white);
+     margin-top: 50px;
+     z-index: 1;
+     .item_value {
+          position: absolute;
+          top: -30px;
+          right: 0;
+          font-size: 16px;
+          letter-spacing: 2px;
+          font-weight: var(--tj-fw-medium);
+          color: var(--tj-white);
+     }
+     .item_bar {
+          position: relative;
+          height: 4px;
+          background-color: var(--tj-theme-accent-2);
+          border-radius: 150px;
+          .progress {
+               position: absolute;
+               left: 0;
+               top: 0;
+               bottom: 0;
+               width: 0;
+               height: 4px;
+               margin: 0;
+               border-radius: 0px;
+               overflow: visible;
+               background-color: var(--tj-white);
+               border-radius: 150px;
+               transition: width 100ms ease;
+          }
+     }
+}
+
+/* !END: Theme Progress CSS */

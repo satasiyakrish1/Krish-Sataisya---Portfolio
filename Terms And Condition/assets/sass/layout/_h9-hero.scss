@@ -1,0 +1,480 @@
+@use "../utilities" as *;
+
+
+/**----------------------------------------
+START: Theme Hero CSS
+----------------------------------------*/
+
+.tj-hero {
+     &-9 {
+          &-area {
+               background: var(--tj-theme-accent-2);
+               padding: 185px 0 0;
+               @media #{$xl} {
+                    padding: 140px 0 0;
+               }
+               @media #{$md} {
+                    padding: 150px 0 0;
+               }
+               @media #{$sm} {
+                    padding: 165px 0 0;
+               }
+               @media #{$xs} {
+                    padding: 150px 0 0;
+               }
+          }
+          &-wrapper {
+               margin-bottom: 80px;
+               @media #{$lg} {
+                    margin-bottom: 40px;
+               }
+               @media #{$sm,$xs} {
+                    margin-bottom: 50px;
+               }
+               & .title {
+                    font-weight: var(--tj-fw-sbold);
+                    font-size: 203px;
+                    letter-spacing: -0.04em;
+                    text-transform: uppercase;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 80px;
+                    @media #{$xxxxl} {
+                         font-size: 174px;
+                    }
+                    @media #{$xxxl} {
+                         font-size: 164px;
+                    }
+                    @media #{$xxl} {
+                         font-size: 140px;
+                    }
+                    @media #{$xl} {
+                         font-size: 136px;
+                    }
+                    @media #{$lg} {
+                         font-size: 110px;
+                         margin-bottom: 26px;
+                    }
+                    @media #{$md} {
+                         font-size: 84px;
+                    }
+                    @media #{$sm} {
+                         font-size: 60px;
+                         margin-bottom: 20px;
+                    }
+                    @media #{$xs} {
+                         flex-direction: column;
+                         font-size: 80px;
+                         font-weight: var(--tj-fw-bold);
+                         margin-bottom: 22px;
+                    }
+                    & a {
+                         width: 215px;
+                         height: 215px;
+                         line-height: 1;
+                         display: inline-flex;
+                         align-items: center;
+                         justify-content: center;
+                         font-size: 24px;
+                         position: relative;
+                         z-index: 1;
+                         margin: 0 65px 0;
+                         @media #{$xl} {
+                              width: 120px;
+                              height: 120px;
+                              margin: 0 20px 0;
+                         }
+                         @media #{$lg,$md} {
+                              width: 80px;
+                              height: 80px;
+                              margin: 0 20px 0;
+                         }
+                         @media #{$sm} {
+                              width: 70px;
+                              height: 70px;
+                              margin: 0 20px 0;
+                         }
+                         @media #{$xs} {
+                              font-size: 22px;
+                              margin: 20px 10px 20px;
+                         }
+                         &::before {
+                              content: "";
+                              position: absolute;
+                              width: 100%;
+                              height: 100%;
+                              top: 0;
+                              left: 0;
+                              background: url(../img/hero/hero-9-play-bg.svg);
+                              background-position: center center;
+                              background-size: contain;
+                              background-repeat: no-repeat;
+                              z-index: -1;
+                              animation: rotate-animation 20s normal linear infinite;
+                         }
+                         &::after {
+                              position: absolute;
+                              content: "";
+                              width: 75%;
+                              height: 75%;
+                              line-height: 1;
+                              justify-content: center;
+                              align-items: center;
+                              border-radius: 50%;
+                              background: url(../img/hero/hero-9-play-bg-2.svg);
+                              background-position: center center;
+                              background-size: contain;
+                              background-repeat: no-repeat;
+                         }
+                         & i {
+                              position: relative;
+                              color: var(--tj-white);
+                              transform: scale(1);
+                              transition: 0.6s;
+                              z-index: 2;
+                         }
+                         &:hover {
+                              i {
+                                   transform: scale(1.1);
+                              }
+                         }
+                    }
+               }
+          }
+          &-thumb {
+               position: relative;
+               z-index: 1;
+               margin-bottom: 70px;
+               @media #{$xs} {
+                    margin-bottom: 40px;
+               }
+               & .image {
+                    max-width: 631px;
+                    width: 100%;
+                    margin: auto;
+                    position: relative;
+                    z-index: 1;
+                    @media #{$xl,$lg} {
+                         max-width: 450px;
+                    }
+                    @media #{$md} {
+                         max-width: 550px;
+                    }
+                    @media #{$sm} {
+                         max-width: 330px;
+                    }
+                    @media #{$xs} {
+                         position: relative;
+                         top: 30px;
+                    }
+                    &::before {
+                         content: "";
+                         position: absolute;
+                         width: 1320px;
+                         height: 480px;
+                         bottom: -10px;
+                         left: 50%;
+                         transform: translateX(-50%);
+                         background: linear-gradient(0deg, var(--tj-theme-accent-2) 12.86%, rgba(21, 9, 29, 0) 100%);
+                         z-index: 2;
+                    }
+                    & img {
+                         width: 100%;
+                         height: 100%;
+                         object-fit: cover;
+                         border-radius: 315px 315px 0 0;
+                    }
+
+               }
+          }
+          &-award-shape {
+               position: absolute;
+               top: 15%;
+               left: 16%;
+               z-index: 1;
+               animation: up-down-move 3s forwards infinite alternate;
+               @media #{$lg} {
+                    left: 11%;
+               }
+               @media #{$md} {
+                    top: 0;
+                    left: auto;
+                    right: 15%;
+               }
+               @media #{$sm} {
+                    top: 0;
+                    left: auto;
+                    right: 0;
+               }
+               @media #{$xs} {
+                    top: -20px;
+                    left: auto;
+                    right: 30px;
+               }
+          }
+          &-award-wrap {
+               display: flex;
+               flex-wrap: wrap;
+               padding: 45px 30px;
+               border: 1.5px dashed var(--tj-white);
+               gap: 6px;
+               border-radius: 10px;
+               background: rgba(255, 255, 255, .08);
+               backdrop-filter: blur(40px);
+               position: relative;
+               z-index: 1;
+               &::before {
+                    content: "";
+                    position: absolute;
+                    width: 13px;
+                    height: 13px;
+                    top: -6px;
+                    left: -6px;
+                    background: var(--tj-bg-2);
+                    border: 2px solid var(--tj-white);
+                    border-radius: 50%;
+               }
+               &::after {
+                    content: "";
+                    position: absolute;
+                    width: 13px;
+                    height: 13px;
+                    top: -6px;
+                    right: -6px;
+                    background: var(--tj-bg-2);
+                    border: 2px solid var(--tj-white);
+                    border-radius: 50%;
+               }
+               & .title {
+                    font-weight: var(--tj-fw-medium);
+                    font-size: 19px;
+                    line-height: 1.52;
+                    margin-bottom: 0;
+               }
+               & .line {
+                    position: absolute;
+                    width: 13px;
+                    height: 13px;
+                    bottom: -6px;
+                    right: -6px;
+                    background: var(--tj-bg-2);
+                    border: 2px solid var(--tj-white);
+                    border-radius: 50%;
+               }
+               @media #{$md, $sm} {
+                    padding: 30px 15px; 
+               }
+               @media #{$xs} {
+                    padding: 25px 15px; 
+                    .title {
+                         font-size: 16px;
+                    }
+               }
+          }
+          &-award-ponter {
+               position: absolute;
+               bottom: -43px;
+               left: -38px;
+               @media #{$xs} {
+                    bottom: -30px;
+                    max-width: 35px;
+                    left: -25px;
+               }
+          }
+          &-award-btn {
+               font-weight: var(--tj-fw-medium);
+               font-size: 17px;
+               letter-spacing: 0.01em;
+               color: var(--tj-white);
+               text-decoration: none;
+               background: var(--tj-theme-primary);
+               padding: 2px 16px;
+               display: inline-block;
+               border-radius: 40px;
+               margin-top: 36px;
+               margin-left: -122px;
+               @media #{$xs} {
+                    margin-left: -95px;
+               }
+          }
+          &-wrap {
+               max-width: 310px;
+               width: 100%;
+               position: absolute;
+               top: 50%;
+               right: -9%;
+               transform: translateY(-50%);
+               text-align: left;
+               z-index: 1;
+               @media #{$xxl} {
+                    right: 1%;
+               }
+               @media #{$xl} {
+                    top: 40%;
+                    right: 0;
+               }
+               @media #{$lg,$md} {
+                    right: 0;
+               }
+               @media #{$md} {
+                    right: auto;
+                    top: auto;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+               }
+               @media #{$sm,$xs} {
+                    max-width: 310px;
+                    width: 100%;
+                    position: relative;
+                    top: -40px;
+                    right: 0;
+                    transform: translateY(0);
+                    text-align: left;
+                    z-index: 1;
+                    margin: auto;
+               }
+          }
+          &-paragraph {
+               color: rgba(255, 255, 255, 0.6);
+               margin-bottom: 26px;
+               & p {
+                    &:last-child {
+                         margin-bottom: 0;
+                    }
+               }
+               & span {
+                    color: var(--tj-white);
+                    font-weight: var(--tj-fw-medium);
+               }
+          }
+          &-counter {
+               border-top: 1px solid rgba(255, 255, 255, 0.08);
+               border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+               padding: 2px 0 25px;
+               margin-bottom: 30px;
+               &-title {
+                    font-weight: var(--tj-fw-sbold);
+                    font-size: 112px;
+                    color: var(--tj-white);
+                    margin-bottom: -18px; 
+                    @media #{$lg} {
+                         font-size: 90px;
+                    }                 
+                    @media #{$md,$sm} {
+                         font-size: 65px;
+                         margin-bottom: -40px; 
+                    }                 
+                    @media #{$xs} {
+                         font-size: 55px;
+                         margin-bottom: -45px;
+                    }                 
+               }
+               &-desc {
+                    text-align: right;
+                    color: rgba(255, 255, 255, 0.6);
+               }
+          }
+          &-btn {
+               width: 100px;
+               height: 100px;
+               line-height: 1;
+               display: inline-flex;
+               align-items: center;
+               justify-content: center;
+               background: transparent;
+               border: 1px solid rgba(255, 255, 255, .08);
+               border-radius: 50%;
+               color: var(--tj-white);
+               text-decoration: none;
+               transition: all 0.4s ease;
+               position: relative;
+               z-index: 1;
+               overflow: hidden;
+               @media #{$lg} {
+                    width: 80px;
+                    height: 80px;
+               }    
+               @media #{$md,$sm} {
+                    width: 60px;
+                    height: 60px;
+               }       
+               @media #{$xs} {
+                    width: 60px;
+                    height: 60px;
+               }       
+          }
+          &-bottom {
+               margin-bottom: 60px;
+               position: relative;
+               z-index: 3;
+               &::before {
+                    content: "";
+                    position: absolute;
+                    width: 102%;
+                    height: 1px;
+                    top: 50%;
+                    left: -15px;
+                    background: #2e314c;
+                    transform: translateY(-50%);
+                    @media #{$xs} {
+                         display: none;
+                    }  
+               }
+               &-paragraaph {
+                    font-weight: var(--tj-fw-sbold);
+                    letter-spacing: 0.02em;
+                    text-transform: uppercase;
+                    padding: 0 24px;
+                    position: relative;
+                    z-index: 1;
+                    display: inline-block;
+                    background: var(--tj-theme-accent-2);
+                    @media #{$xs} {
+                         font-size: 13px;
+                    }   
+                    & span {
+                         color: var(--tj-theme-primary);
+                    }
+               }
+          }
+     }
+}
+.tj-btn-circle-dot {
+     position: absolute;
+     bottom: -11px;
+     left: 50%;
+     transform: translate(0, -50%);
+     width: 20px;
+     height: 20px;
+     transition: all 0.6s ease-out;
+     width: 20px;
+     height: 20px;
+     line-height: 20px;
+     border-radius: 50%;
+     background-color: var(--tj-theme-primary);
+     transform: translate(-50%, -50%);
+     border: 1px solid transparent;
+     z-index: -1;
+}
+.tj-hero-9-btn {
+     &:hover {
+          & .tj-btn-circle-dot {
+               width: 420px;
+               height: 420px;
+          }
+          & i {
+               transform: rotate(50deg);
+               transition: .4s;
+          }
+     }
+     & i {
+          transition: .4s;
+     }
+}
+
+
+
+
+/* !END: Theme Hero CSS */

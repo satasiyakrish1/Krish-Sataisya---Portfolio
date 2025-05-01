@@ -1,0 +1,198 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Project CSS
+----------------------------------------*/
+
+
+.tj-testimonial {
+     &-9 {
+          &-area {
+               background: var(--tj-theme-accent-2);
+               padding: 0 0 120px;
+               @media #{$md,$sm,$xs} {
+                    padding: 0 0 60px;
+               }
+               & .section-header {
+                    & p {
+                         color: rgba(255, 255, 255, 0.6);
+                         margin-bottom: 32px;
+                         margin-top: 24px;
+                         max-width: 350px;
+                         width: 100%;
+                    }
+               }
+          }
+          &-slider {
+               display: flex;
+               justify-content: end;
+          }
+          &-active {
+               height: 620px;
+               overflow: hidden;
+               display: flex;
+               align-items: center;
+               margin-right: 0;
+               position: relative;
+               z-index: 1;
+               @media #{$xl} {
+                    margin-left: 60px;
+               }
+               @media #{$lg} {
+                    margin-right: auto;
+                    margin-left: 0;
+               }
+               &::before {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 200px;
+                    top: 0;
+                    right: 0;
+                    background: linear-gradient(180deg, var(--tj-theme-accent-2) 0%, rgba(21, 9, 29, 0) 100%);
+                    z-index: 2;
+               }
+               &::after {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 200px;
+                    bottom: 0;
+                    right: 0;
+                    background: linear-gradient(180deg, var(--tj-theme-accent-2) 0%, rgba(21, 9, 29, 0) 100%);
+                    z-index: 2;
+                    rotate: 180deg;
+               }
+               & .swiper-slide {
+                    &.swiper-slide-active {
+                    border: 2px solid var(--tj-theme-primary);
+
+                    @media #{$sm,$xs} {
+                         margin-left: 0;
+                    }
+                    & .tj-testimonial-9-quote-icon span {
+                         opacity: 1;
+                    }
+                   }
+               }
+           }
+           &-wrapper {
+               background: #140C1C;
+               border: 2px solid var(--tj-theme-secondary);
+               border-radius: 10px;
+               padding: 28px 22px 40px 22px;
+               max-width: 750px;
+               width: 100%;
+               transition: 0.6s ease-in-out;
+           }
+           &-top {
+               display: flex;
+               align-items: end;
+               justify-content: space-between;
+               flex-wrap: wrap;
+               border-bottom: 1px solid rgba(255, 255, 255, .10);
+               padding-bottom: 22px;
+               margin-bottom: 22px;
+               @media #{$xs} {
+                    padding-bottom: 10px;
+                    margin-bottom: 16px;
+               }
+          }
+          &-author-name {
+               & .title {
+                    font-size: 20px;
+                    letter-spacing: -0.02em;
+                    margin-bottom: 8px;                 
+               }
+               & .desc {
+                    font-size: 14px;
+                    letter-spacing: 0.02em;
+                    color: rgba(221, 221, 221, .60);
+                    @media #{$xs} {
+                         font-size: 12px;
+                    }
+               }
+          }
+          &-author {
+               display: flex;
+               align-items: center;
+               gap: 15px;
+               flex-wrap: wrap;
+               @media #{$xs} {
+                    margin-bottom: 10px;
+               }
+          }
+          &-author-img {
+               max-width: 76px;
+               width: 100%;
+               height: 76px;
+               border: 2px solid rgba(255, 255, 255, .10);
+               border-radius: 50%;
+               padding: 8px;
+               @media #{$xs} {
+                    max-width: 60px;
+                    height: 60px;
+               }
+               & img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 50%;
+               }
+          }
+          &-paragraph {
+               font-size: 20px;
+               color: rgba(255, 255, 255, .60);
+               @media #{$xl} {
+                    font-size: 19px;
+               }
+               @media #{$lg, $md, $sm} {
+                    font-size: 16px;
+               }
+               @media #{$xs} {
+                    font-size: 13px;
+               }
+               & p {
+                    &:last-child {
+                         margin-bottom: 0;
+                    }
+               }
+          }
+
+     }
+}
+
+.star-ratings {
+     unicode-bidi: bidi-override;
+     font-size: 20px;
+     letter-spacing: 4px;
+     line-height: 1;
+     position: relative;
+     margin: 0;
+     padding: 0;
+     -webkit-text-stroke: 1px var(--tj-color-theme-secondary);
+     .fill-ratings {
+         color: var(--tj-color-theme-secondary);
+        padding: 0;
+        position: absolute;
+        z-index: 1;
+        display: block;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        span {
+          display: inline-block;
+        }
+     }
+     .empty-ratings {
+        padding: 0;
+        display: block;
+        z-index: 0;
+        color: var(--tj-color-common-white);
+     }
+}
+
+/* !END: Theme Project CSS */
+
+
+   

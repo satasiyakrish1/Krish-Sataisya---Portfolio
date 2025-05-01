@@ -1,0 +1,63 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Service CSS
+----------------------------------------*/
+
+.tj-service {
+     &-9 {
+          &-area {
+               background: var(--tj-theme-accent-2);
+               padding: 120px 0 90px;
+               @media #{$md, $sm, $xs} {
+                    padding: 80px 0 80px;
+               }
+               & .tj-service-6-wrapper {
+                    background: var(--tj-black-2);
+                    @media #{$sm} {
+                         padding: 30px 135px 30px 40px;
+                    }
+               }
+               & .tj-btn-primary {
+                    width: 100%;
+                    border-radius: 12px;
+                    padding: 28px 35px;
+                    & .icon_box {
+                         position: relative;
+                         display: inline-flex;
+                         overflow: hidden;
+                         padding: 0 4px;
+                         transform: rotate(-45deg);
+                         .icon_first,
+                         .icon_second {
+                              transition: all 0.3s ease-in-out 0s;
+                         }
+                         .icon_second {
+                              position: absolute;
+	                         transform: translateX(-150%);
+                         }
+                         i {
+                              transform: rotate(0deg);
+                         }
+                    }
+                    &:hover {
+                         .icon_box {
+                              .icon_first {
+                                   transform: translateX(150%);
+                              }
+                              .icon_second {
+                                   transform: translateX(0%);
+                              }
+                         }
+                    }
+               }
+
+          }
+     }
+}
+
+
+/* !END: Theme Service CSS */
+
+
+   

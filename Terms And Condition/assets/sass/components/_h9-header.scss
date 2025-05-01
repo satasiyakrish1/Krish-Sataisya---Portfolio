@@ -1,0 +1,36 @@
+@use "../utilities" as *;
+
+
+/**----------------------------------------
+START: Theme Header CSS
+----------------------------------------*/
+
+
+.tj-header {
+     &-9 {
+          &-logo {
+               & .logo-box {
+                    max-width: 190px;
+                    width: 100%;
+               }
+          }
+          &-right {
+               display: flex;
+               align-items: center;
+               flex-wrap: wrap;
+               & .header-button {
+                    margin-left: 30px;
+               }
+               & .social-icons {
+                    & li {
+                         & a {
+                              color: var(--tj-white);
+                         }
+                    }
+               }
+          }
+     }
+}
+
+
+/* !END: Theme Header CSS */

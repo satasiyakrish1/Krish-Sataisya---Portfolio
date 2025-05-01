@@ -1,0 +1,45 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Button CSS
+----------------------------------------*/
+
+.tj-arrow {
+     &-6-btn {
+          & .icon_box {
+               position: relative;
+               display: inline-flex;
+               overflow: hidden;
+               padding: 0 4px;
+               transform: rotate(-45deg);
+              transition: all 0.3s ease-in-out 0s;
+              & i {
+                  display: inline-flex;
+                  line-height: 1;
+              }
+          }
+          & .icon_box .icon_first {
+               display: -webkit-inline-box;
+               display: -ms-inline-flexbox;
+               display: inline-flex;
+               line-height: 1;
+               transition: all 0.3s ease-in-out 0s;
+          }
+          & .icon_box .icon_second {
+               position: absolute;
+               transform: translateX(-150%);
+              transition: all 0.3s ease-in-out 0s;
+          }
+          &:hover {
+               & .icon_box .icon_first {
+                    transform: translateX(150%);
+               }
+               & .icon_box .icon_second {
+                    transform: translateX(0%);
+               }
+          }
+     }
+     
+}
+
+/* !END: Theme Button CSS */

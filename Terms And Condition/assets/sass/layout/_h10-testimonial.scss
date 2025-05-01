@@ -1,0 +1,155 @@
+@use "../utilities"as *;
+
+/**----------------------------------------
+START: Testimonial CSS
+----------------------------------------*/
+
+.tj-testimonial-7-area {
+     &.style-10 {
+          padding-top: 0px;
+          background-color: var(--tj-theme-accent-1);
+          .section-header {
+               margin-bottom: 60px;
+          }
+          .tj-testimonial-7-arrow-box {
+               .slider-next,
+               .slider-prev {
+                    left: -70px;
+                    top: 38%;
+                    transform: translate(0, 0);
+               }
+               .slider-next {
+                    left: auto;
+                    right: -70px;
+               }
+          } 
+          @media #{$xxl} {
+               .tj-testimonial-7-arrow-box {
+                    .slider-next,
+                    .slider-prev {
+                         left: -30px;
+                    }
+                    .slider-next {
+                         left: auto;
+                         right: -30px;
+                    }
+               }  
+          }
+          @media #{$xl} {
+               .tj-testimonial-7-arrow-box {
+                    .slider-next,
+                    .slider-prev {
+                         left: -30px;
+                    }
+                    .slider-next {
+                         left: auto;
+                         right: -30px;
+                    }
+               }  
+          }
+          @media #{$lg} {
+               .tj-testimonial-7-arrow-box {
+                    .slider-next,
+                    .slider-prev {
+                         display: none;
+                    }
+               }  
+          }
+          @media #{$md, $sm, $xs} {
+               padding-bottom: 80px;
+               .section-header {
+                    margin-bottom: 40px;
+               }
+               .tj-testimonial-7-arrow-box {
+                    .slider-next,
+                    .slider-prev {
+                         display: none;
+                    }
+               }
+               .tj-testimonial-7-pagination-box {
+                    margin-top: 35px;
+               }  
+          }
+     }
+}
+
+.tj-testimonial-7-wrapper {
+     &.style-10 {
+          background-color: var(--tj-black-2);
+          border: 1px solid rgba(255,255,255,0.1);
+          .tj-testimonial-7-thumb {
+               height: auto;
+          }
+          @media #{$xxl} {
+               padding: 30px 20px;
+               .tj-testimonial-7-content {
+                    max-width: 420px;
+                    width: 100%;
+                    margin-left: 30px;
+               }
+               .tj-testimonial-7-paragraph {
+                    font-size: 22px;
+               }
+          }
+          @media #{$xl} {
+               padding: 30px 20px;
+               .tj-testimonial-7-content {
+                    max-width: 420px;
+                    width: 100%;
+                    margin-left: 30px;
+               }
+               .tj-testimonial-7-paragraph {
+                    font-size: 22px;
+               }
+          }
+          @media #{$lg} {
+               padding: 25px 15px;
+               .tj-testimonial-7-content {
+                    max-width: 420px;
+                    width: 100%;
+                    margin-left: 30px;
+               }
+               .tj-testimonial-7-paragraph {
+                    font-size: 20px;
+               }
+          }
+          @media #{$md} {
+               padding: 25px 15px;
+               .tj-testimonial-7-content {
+                    max-width: 450px;
+                    width: 100%;
+                    margin-left: 30px;
+               }
+               .tj-testimonial-7-paragraph {
+                    font-size: 20px;
+               }
+          }
+          @media #{$sm} {
+               padding: 25px 15px;
+               .tj-testimonial-7-content {
+                    max-width: 100%;
+               }
+               .tj-testimonial-7-paragraph {
+                    font-size: 20px;
+               }
+               .tj-testimonial-7-thumb {
+                    max-width: 100%;
+                    max-width: 100%;
+               }
+          }
+          @media #{$xs} {
+               padding: 25px 15px;
+               .tj-testimonial-7-content {
+                    max-width: 100%;
+               }
+               .tj-testimonial-7-paragraph {
+                    font-size: 18px;
+               }
+               .tj-testimonial-7-thumb {
+                    max-width: 100%;
+                    max-width: 100%;
+               }
+          }
+     }
+}
+/* !END: Testimonial CSS */

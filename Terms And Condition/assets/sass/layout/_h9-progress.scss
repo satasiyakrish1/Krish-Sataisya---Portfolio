@@ -1,0 +1,87 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Progress CSS
+----------------------------------------*/
+
+.tj-progress {
+     &-9 {
+          &-area {
+               background: var(--tj-theme-accent-2);
+               padding: 75px 0 90px;
+               position: relative;
+               z-index: 1;
+               @media #{$md,$sm,$xs} {
+                    padding: 75px 0 50px;
+               }
+               &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: -262px;
+                    left: 0;
+                    transform: translateX(-50%);
+                    width: 650px;
+                    height: 550px;
+                    border-radius: 50%;
+                    background: linear-gradient(260deg, var(--tj-theme-primary) 0%, rgba(115, 67, 210, 0.1) 100%);
+                    filter: blur(150px);
+                    opacity: 0.6;
+                    z-index: -1;
+               }
+          }
+          &-button {
+               display: flex;
+               justify-content: end;
+               @media #{$xs} {
+                    justify-content: left;
+                    margin-bottom: 40px;
+                    margin-top: -20px;
+               }
+
+          }
+          &-single {
+               padding: 45px 30px 50px 30px !important;
+               @media #{$xl} {
+                    padding: 45px 15px 50px 25px !important;
+               }
+               @media #{$sm} {
+                    padding: 45px 15px 50px 20px !important;
+               }
+               & .progress-text {
+                    margin-bottom: 26px;
+               }
+               & .progress-title {
+                    & .title {
+                         font-weight: var(--tj-fw-medium);
+                         font-size: 20px;
+                         letter-spacing: -0.02em;
+                    }
+               }
+               & .desc {
+                    color: rgba(255, 255, 255, .60);
+                    margin-bottom: 100px;
+                    @media #{$sm} {
+                         margin-bottom: 50px;
+                    }
+               }
+          }
+          &-icon {
+               & span {
+                    width: 80px;
+                    height: 80px;
+                    display: inline-block;
+                    @media #{$sm} {
+                         width: 60px;
+                         height: 60px;
+                    }
+               }
+          }
+     }
+
+}
+
+
+/* !END: Theme Progress CSS */
+
+
+   

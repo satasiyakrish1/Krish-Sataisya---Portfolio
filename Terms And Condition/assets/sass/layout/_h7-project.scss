@@ -1,0 +1,239 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Project CSS
+----------------------------------------*/
+
+.tj-project {
+	&-7 {
+		&-area {
+			background: var(--tj-h3-bg);
+			padding: 120px 0 120px;
+			position: relative;
+			z-index: 1;
+
+			@media #{$md} {
+				padding: 100px 0 100px;
+			}
+			@media #{$md,$sm,$xs} {
+				padding: 80px 0 80px;
+			}
+			&::before {
+				content: "";
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 650px;
+				height: 550px;
+				border-radius: 50%;
+				background: linear-gradient(
+					260deg,
+					var(--tj-theme-primary) 0%,
+					rgba(115, 67, 210, 0.1) 100%
+				);
+				filter: blur(150px);
+				opacity: 0.6;
+				z-index: -1;
+				transform: translate(-50%, -50%);
+			}
+		}
+		&-section-wrapper {
+			max-width: 475px;
+			width: 100%;
+			position: relative;
+			z-index: 2;
+
+			@media #{$md,$sm,$xs} {
+				margin: 0;
+			}
+		}
+		&-wrappper {
+			padding-top: 250px;
+			@media #{$md,$sm,$xs} {
+				padding-top: 0;
+			}
+		}
+		&-item {
+			cursor: pointer;
+			&:nth-child(2) {
+				// margin-top: -250px;
+				@media #{$md, $sm, $xs} {
+					margin-top: 0;
+				}
+			}
+			&-inner {
+				background: var(--tj-black-2);
+				padding: 35px;
+				border-radius: 30px;
+				transition: 0.5s;
+				&:hover {
+					background: var(--tj-theme-secondary);
+					&:hover {
+						& .tj-project-7-icon {
+							&::before {
+								opacity: 1;
+								visibility: visible;
+							}
+							& span {
+								&::before {
+									visibility: visible;
+									opacity: 1;
+								}
+							}
+							.icon_box {
+								.icon_first {
+									transform: translateX(150%);
+								}
+								.icon_second {
+									transform: translateX(0%);
+								}
+						   	}
+						}
+					}
+				}
+			}
+			& a {
+				text-decoration: none;
+			}
+		}
+		&-content {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			gap: 30px;
+			&-inner {
+				@media #{$lg} {
+					max-width: 250px;
+					width: 100%;
+				}
+			}
+		}
+		&-thumb {
+			margin-bottom: 30px;
+			& img {
+				width: 100%;
+				height: 100%;
+				border-radius: 15px;
+			}
+		}
+		&-title {
+			font-size: 20px;
+			letter-spacing: 0.02em;
+			text-transform: uppercase;
+			margin-bottom: 10px;
+			& a {
+				display: inline-block;
+				transition: 0.4s;
+				&:hover {
+					color: var(--tj-theme-primary);
+				}
+			}
+		}
+		&-paragraph {
+			letter-spacing: 0.02em;
+			color: rgba(255, 255, 255, 0.6);
+			& p {
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+.tj-project-7-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 60px;
+	height: 60px;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	color: var(--tj-white);
+	font-size: 25px;
+	border-radius: 50%;
+	text-decoration: none;
+	position: relative;
+	transition: 0.4s;
+	z-index: 1;
+	&::before {
+		position: absolute;
+		content: "";
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: linear-gradient(-10deg, var(--tj-theme-secondary) 0%, var(--tj-theme-primary) 100%);
+		border-radius: 50%;
+		opacity: 0;
+		visibility: hidden;
+		transition: 0.4s;
+		z-index: -1;
+	}
+	.icon_box {
+		position: relative;
+		display: inline-flex;
+		overflow: hidden;
+		padding: 0 4px;
+		transform: rotate(-45deg);
+		.icon_first,
+		.icon_second {
+			transition: all 0.3s ease-in-out 0s;
+			color: var(--tj-white);
+				
+		}
+		.icon_second {
+			position: absolute;
+			transform: translateX(-150%);
+		}
+	}
+}
+
+.project-7-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	row-gap: 30px;
+	column-gap: 30px;
+	.tj-project-7-item {
+		max-width: 630px;
+		width: 100%;
+		&:nth-child(even) {
+			margin-top: -510px;
+		}
+	}
+	@media #{$xl} {
+		.tj-project-7-item {
+			max-width: 540px;
+			width: 100%;
+		}
+	}
+	@media #{$lg} {
+		.tj-project-7-item {
+			max-width: 450px;
+			width: 100%;
+		}
+	}
+	@media #{$md} {
+		.tj-project-7-item {
+			max-width: 330px;
+			width: 100%;
+			.tj-project-7-item-inner {
+				padding: 30px 20px;
+			}
+		}
+	}
+	@media #{$sm, $xs} {
+		.tj-project-7-item {
+			max-width: 100%;
+			&:nth-child(even) {
+				margin-top: 0px;
+			}
+			.tj-project-7-item-inner {
+				padding: 30px 20px;
+			}
+		}
+	}
+}
+/* !END: Project CSS */

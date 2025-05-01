@@ -1,0 +1,14 @@
+@use "../utilities" as *;
+
+
+/**----------------------------------------
+START: Theme Blog CSS
+----------------------------------------*/
+.tj-blog-9-area {
+     &.style-10 {
+          padding-top: 120px;
+          padding-bottom: 90px;
+          background-color: var(--tj-theme-accent-1);
+     }
+}
+/* !END: Theme Blog CSS */

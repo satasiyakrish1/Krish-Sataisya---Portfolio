@@ -1,0 +1,135 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Contact CSS
+----------------------------------------*/
+.tj-contact-section {
+     &.style-10 {
+          padding: 0px 35px;
+          background-color: var(--tj-theme-accent-1);
+     }
+     @media #{$lg} {
+          &.style-10 {
+               padding: 0px 15px;
+          }
+     }
+     @media #{$md, $sm, $xs} {
+          &.style-10 {
+               padding: 0px 0px;
+          }
+     }
+}
+
+.contact-10-wrapper {
+     background-color: var(--tj-black-2);
+     border-radius: 24px;
+     padding: 120px 25px;
+     .contact-10-inner {
+          display: flex;
+          gap: 35px;
+          max-width: 1320px;
+          width: 100%;
+          margin-left: auto;
+          margin-right: auto;
+          .section-header {
+               max-width: 420px;
+               width: 100%;
+               .desc {
+                    color: var(--tj-grey-1);
+               }
+               .contact-button {
+                    margin-top: 35px;
+               }
+          }
+          .contact-form-box {
+               &.style-10 {
+                    max-width: 645px;
+                    width: 100%;
+                    margin-left: auto;
+                    background: linear-gradient(315.3deg, #E50093 -1.57%, var(--tj-theme-primary) 62.92%);
+                    backdrop-filter: blur(40px);
+                    .form_group {
+                         margin-bottom: 40px;
+                         label {
+                              text-transform: uppercase;
+                              color: var(--tj-white);
+                              font-weight: var(--tj-fw-sbold);
+                              margin-bottom: 18px;
+                         }
+                         textarea,
+                         input:not([type="submit"]):not([type="radio"]):not([type="checkbox"]):not([type="search"]),
+                         input[type="tel"],
+                         input[type="email"],
+                         input[type="text"] {
+                              padding: 16px 20px; 
+                              background-color: transparent;
+                              font-size: 16px;
+                              color: var(--tj-white);
+                              border: 1px solid transparent;
+                              background: rgba(255,255,255,0.1);
+                              border-radius: 10px;
+                              &::-ms-input-placeholder {
+                                   color: rgba(221,221,221,0.6);
+                                   font-size: 16px;
+                              }
+                              &::placeholder {
+                                   color: rgba(221,221,221,0.6);
+                                   font-size: 16px;
+                              }
+                              &:focus {
+                                   border: 1px solid var(--tj-white);
+                              }
+                         }
+                    }
+                    @media #{$lg} {
+                        padding: 35px 15px;
+                         .form_group textarea {
+                              height: 150px;
+                         }
+                    }
+                    .tj-btn-primary {
+                         background-color: var(--tj-black-2);
+                         background-image: none;
+                    }
+               }
+          }
+     }
+     @media #{$md} {
+          padding: 80px 15px;
+          .contact-10-inner {
+               flex-direction: column;
+               .section-header {
+                    max-width: 100%;
+                    margin-bottom: 15px;
+               }
+               .contact-form-box {
+                    &.style-10 {
+                         max-width: 100%;
+                    }
+               }
+          }
+     }
+     @media #{$sm, $xs} {
+          padding: 80px 0px;
+          .contact-10-inner {
+               flex-direction: column;
+               .section-header {
+                    max-width: 100%;
+                    margin-bottom: 15px;
+               }
+               .contact-form-box {
+                    &.style-10 {
+                         max-width: 100%;
+                         margin-top: 0px;
+                         .form_group {
+                              margin-bottom: 30px;
+                         }
+                         .form_group textarea {
+                              height: 145px;
+                         }
+                    }
+               }
+          }
+     }
+}
+/* !END: Theme Contact CSS */

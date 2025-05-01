@@ -1,0 +1,104 @@
+/* Terms and Conditions Styling */
+.terms-container {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.terms-content {
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+}
+
+.terms-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.terms-date {
+    color: #777;
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.terms-section {
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.subsection-title {
+    font-size: 20px;
+    font-weight: 500;
+    color: #444;
+    margin: 25px 0 15px;
+}
+
+.terms-list, .terms-numbered-list {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.terms-list li, .terms-numbered-list li {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.terms-link {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.terms-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.terms-divider {
+    height: 1px;
+    background-color: #eee;
+    margin: 40px 0;
+}
+
+.lead {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.contact-list {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+    border-left: 4px solid #007bff;
+}
+
+@media (max-width: 768px) {
+    .terms-content {
+        padding: 30px 20px;
+    }
+    
+    .terms-title {
+        font-size: 28px;
+    }
+    
+    .section-title {
+        font-size: 22px;
+    }
+    
+    .subsection-title {
+        font-size: 18px;
+    }
+}

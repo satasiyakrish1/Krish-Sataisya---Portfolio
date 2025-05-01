@@ -1,0 +1,193 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Portfolio CSS
+----------------------------------------*/
+.portfolio-section {
+     &.style-10 {
+          background-color: var(--tj-theme-accent-1);
+          padding-bottom: 120px;
+          .section-header {
+               max-width: 100%;
+               display: flex;
+               gap: 20px;
+               align-items: end;
+               justify-content: space-between;
+               .sec-text {
+                    max-width: 450px;
+                    width: 100%;
+               }
+          }
+          .portfolio-button {
+               margin-top: 30px;
+          }
+          @media #{$md, $sm, $xs} {
+               padding-top: 80px;
+               padding-bottom: 80px;
+               .section-header {
+                    align-items: center;
+                    text-align: center;
+                    flex-direction: column;
+                    margin-bottom: 0;
+               }
+               .portfolio-button {
+                    margin-top: 10px;
+               }
+          }
+     }
+}
+
+.portfolio-box {
+     &.style-10 {
+          &::before {
+               display: none;
+          }
+          .portfolio-item {
+               margin-bottom: 30px;
+          }
+     }
+}
+
+.portfolio-filter {
+     &.style-10 {
+          .button-group {
+               background-color: var(--tj-theme-primary);
+               padding: 5px;
+          }
+          .active-bg {
+               background: var(--tj-theme-accent-1);
+               height: 40px;
+               top: 50%;
+               transform: translateY(-50%);
+          }
+          @media #{$xs} {
+               .active-bg {
+                    height: 32px;
+               } 
+          }
+     }
+}
+
+.portfolio-box {
+     .portfolio-item {
+          &.style-10 {
+               border: 1px solid rgba(255,255,255,0.1);
+               background-color: var(--tj-black-2);
+               padding: 35px 30px;
+               margin-bottom: 25px;
+               width: 50%;
+               .image-box {
+                    position: relative;
+                    overflow: hidden;
+                    a {
+                         img {
+                              transition: 0.6s;
+                         }
+                    }
+               }
+               .portfolio-content {
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    justify-content: space-between;
+                    padding-top: 30px;
+                    .portfolio-title {
+                         font-size: 20px;
+                         font-weight: var(--tj-fw-sbold);
+                         text-transform: uppercase;
+                         margin-bottom: 10px;
+                         a {
+                              color: var(--tj-white);
+                              transition: 0.5s;
+                              &:hover {
+                                   color: var(--tj-theme-primary);
+                              }
+                         }
+                    }
+                    p {
+                         margin-bottom: 0;
+                         color: var(--tj-grey-1);
+                    }
+                    .portfolio-arrow {
+                         .link {
+                              display: inline-flex;
+                              align-items: center;
+                              justify-content: center;
+                              width: 60px;
+                              height: 60px;
+                              line-height: 1;
+                              color: var(--tj-white);
+                              text-decoration: none;
+                              border: 1px solid rgba(255,255,255,0.1);
+                              border-radius: 50%;
+                              position: relative;
+                              transition: all 0.3s ease-in-out 0s;
+                              z-index: 1;
+                              &::before {
+                                   position: absolute;
+                                   content: "";
+                                   width: 100%;
+                                   height: 100%;
+                                   background: linear-gradient(-90deg, var(--tj-theme-secondary) 0%, var(--tj-theme-primary) 100%);
+                                   border-radius: 50%;
+                                   opacity: 0;
+                                   visibility: hidden;
+                                   transition: all 0.3s ease-in-out 0s;
+                                   z-index: -1;
+                              }
+                              .icon_box {
+                                   position: relative;
+                                   display: inline-flex;
+                                   overflow: hidden;
+                                   padding: 0 4px;
+                                   transform: rotate(-45deg);
+                                   .icon_first,
+                                   .icon_second {
+                                        transition: all 0.3s ease-in-out 0s;
+                                   }
+                                   .icon_second {
+                                        position: absolute;
+                                        transform: translateX(-150%);
+                                   }
+                              }
+                         }
+                    }
+               }
+               &:hover {
+                    .image-box {
+                         a {
+                              img {
+                                   transform: scale(1.1);
+                              }
+                         }
+                    }
+                    .portfolio-content {
+                         .portfolio-arrow {
+                              .link {
+                                   &::before {
+                                        opacity: 1;
+                                        visibility: visible;
+                                   }
+                                   .icon_box {
+                                        .icon_first {
+                                             transform: translateX(150%);
+                                        }
+                                        .icon_second {
+                                             transform: translateX(0%);
+                                        }
+                                   }
+                              } 
+                         }
+                    }
+               }
+               @media #{$md, $sm, $xs} {
+                    padding: 25px 15px;
+               }
+               @media #{$sm, $xs} {
+                    width: 100%;
+                    padding: 25px 15px;
+               }
+          }
+     }
+}
+/* !END: Theme Portfolio CSS */

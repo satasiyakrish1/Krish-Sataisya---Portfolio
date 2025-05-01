@@ -1,0 +1,123 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Couter CSS
+----------------------------------------*/
+
+
+.tj-counter {
+     &-5 {
+          &-area {
+               padding: 120px 0 120px;
+               background-color: var(--tj-theme-accent-1);
+               position: relative;
+               z-index: 1;
+               &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: -380px;
+                    right: -211px;
+                    width: 900px;
+                    height: 700px;
+                    border-radius: 50%;
+                    background: linear-gradient(260deg, var(--tj-theme-primary) 0%, rgba(115, 67, 210, 0) 100%);
+                    filter: blur(150px);
+                    opacity: 0.6;
+                    z-index: -1;
+               }
+               @media #{$xl} {
+                    padding: 120px 0 90px;
+               }
+               @media #{$lg} {
+                    padding: 100px 0 70px;
+               }
+               @media #{$md, $sm, $xs} {
+                    padding: 80px 0 50px;
+               }
+          }
+          &-shape {
+               &-1 {
+                    position: absolute;
+                    left: 10%;
+                    bottom: 10%;
+                    z-index: -1;
+                    animation: up-down-move 3s forwards infinite alternate;
+                    @media #{$xxl,$xl} {
+                         left: 2%;
+                    }
+                    @media #{$lg} {
+                         left: 1%;
+                         bottom: 5%;
+                    }
+                    @media #{$md} {
+                         left: 1%;
+                         bottom: 7%;
+                    }
+                    @media #{$sm,$xs} {
+                         left: 0%;
+                         bottom: 6%;
+                    }
+               }
+               &-2 {
+                    position: absolute;
+                    top: 30%;
+                    right: 11%;
+                    z-index: -1;
+                    animation: up-down-move-2 3s forwards infinite alternate;
+                    @media #{$xxl} {
+                         top: 28%;
+                         right: 2%;
+                    }
+                    @media #{$xl} {
+                         top: 27%;
+                         right: 1%;
+                    }
+                    @media #{$lg} {
+                         top: 18%;
+                         right: 1%;
+                    }
+                    @media #{$sm} {
+                         top: 15%;
+                         right: 2%;
+                    }
+               }
+
+          }
+          &-wrapper {
+               border: 1px solid rgba(255, 255, 255, .10);
+               border-radius: 10px;
+               padding: 90px 30px 97px;
+               margin-bottom: 30px;
+               text-align: center;
+               @media #{$sm} {
+                    padding: 50px 15px 50px;  
+                    .funfact-item {
+                         margin-bottom: 15px;
+                    }
+               }
+               @media #{$xs} {
+                    padding: 45px 15px 45px;  
+                    .funfact-item {
+                         margin-bottom: 15px;
+                    }
+               }
+          }
+          &-title {
+               display: flex;
+               justify-content: center;
+               color: var(--tj-theme-primary);
+               font-size: 64px;
+               line-height: 150%;
+               letter-spacing: -0.02em;
+          }
+          &-paragraph {
+               &:last-child {
+                    margin-bottom: 0;
+               }
+          }
+     }
+}
+
+
+
+/* !END: Theme Couter CSS */

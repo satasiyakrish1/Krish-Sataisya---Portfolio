@@ -1,0 +1,129 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Project CSS
+----------------------------------------*/
+
+
+.tj-project {
+     &-9 {
+          &-area {
+               background: var(--tj-theme-accent-2);
+               padding: 0 0 120px;
+               @media #{$md,$sm,$xs} {  
+                    padding: 0 0 60px;
+               }
+               & .tj-project-7-item-inner {
+                    padding: 25px;
+               }
+               & .tj-project-7-content-inner {
+                    @media #{$xl} {
+                         max-width: 235px;
+                    }
+                    @media #{$md} {
+                         max-width: 370px;
+                    }
+                    @media #{$xs} {
+                         max-width: 230px;
+                    }
+
+               }
+               & .tj-project-7-paragraph {
+                    @media #{$xs} {
+                         font-size: 14px;
+                    }
+               }
+          }
+          &-navigation {
+               display: flex;
+               flex-wrap: wrap;
+               gap: 15px;
+               align-items: center;
+               justify-content: end;
+               @media #{$xs} {
+                    justify-content: left;
+                    margin-bottom: 40px;
+                    margin-top: -20px;
+               }
+          }
+          &-prev, 
+          &-next {
+               width: 55px;
+               height: 55px;
+               line-height: 1;
+               display: inline-flex;
+               align-items: center;
+               justify-content: center;
+               background: transparent;
+               border: 1px solid var(--tj-border);
+               border-radius: 50%;
+               position: relative;
+               z-index: 1;
+               &::before {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    border-radius: 50%;
+                    background: linear-gradient(90deg, #8750f7 0%, #2a1454 100%);
+                    z-index: -1;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: .4s;
+               }
+               &:hover {
+                    &::before {
+                         visibility: visible;
+                         opacity: 1;
+                    }
+               }
+          }
+          &-pagination {
+               text-align: center;
+               margin-top: 50px;
+               .swiper-pagination-bullet {
+                    background-color: var(--tj-grey-2);
+                    transition: .4s;
+                    &.swiper-pagination-bullet-active {
+                         background-color: var(--tj-theme-primary);
+                    }
+               }
+          }
+          &-wrapper {
+               position: relative;
+               transition: .4s;
+               overflow: hidden;
+               & a {
+                    text-decoration: none;
+               }
+               &:hover {
+                    & .tj-project-9-thumb img {
+                         mix-blend-mode: unset;
+                         transform: scale(1.1);
+                         transition: .4s;
+                    }
+               }
+          }
+          &-thumb {
+               position: relative;
+               overflow: hidden;
+               transition: .4s;
+               border-radius: 12px;
+               & img {
+                    mix-blend-mode: luminosity;
+                    transition: .4s;
+               }
+          }
+     }
+}
+
+
+
+
+
+/* !END: Theme Project CSS */
+
+
+   

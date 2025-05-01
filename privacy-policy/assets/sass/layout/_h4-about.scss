@@ -1,0 +1,53 @@
+@use "../utilities" as *;
+
+
+
+/**----------------------------------------
+START: Theme About CSS
+----------------------------------------*/
+
+
+.tj-about {
+     &-4 {
+          &-area{
+               padding: 70px 0 40px;
+               & .section-header {
+                    margin-bottom: 4px;
+               }
+          }
+          &-wrapper {
+               max-width: 1120px;
+               width: 100%;
+          }
+          &-paragraph {
+               font-size: 32px;
+               letter-spacing: 0.02em;
+               color: var(--tj-white);
+               text-align: center;
+               @media #{$md} {
+                    font-size: 22px;
+               }
+               @media #{$sm} {
+                    font-size: 21px;
+               }
+               @media #{$xs} {
+                    font-size: 23px;;
+               }
+               & .color {
+                    background: linear-gradient(90deg, #8750f7 0%, #f0a 100%);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent; 
+               }
+          }
+          &-button {
+               margin-top: 5px;
+          }
+     }
+}
+
+
+
+
+
+/* !END: Theme About CSS */

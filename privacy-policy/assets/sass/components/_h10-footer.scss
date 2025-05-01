@@ -1,0 +1,155 @@
+@use "../utilities" as *;
+
+
+/**----------------------------------------
+START: Theme Footer CSS
+----------------------------------------*/
+.tj-footer-7-area {
+     &.style-10 {
+          background-color: var(--tj-black-2);
+          border-radius: 0px;
+          .social-icons {
+               li {
+                    a {
+                         color: var(--tj-white);
+                         width: 35px;
+                         height: 35px;
+                         border: 1px solid rgba(255,255,255,0.1);
+                         border-radius: 50%;
+                         display: flex;
+                         align-items: center;
+                         justify-content: center;
+                         position: relative;
+                         text-decoration: none;
+                         z-index: 1;
+                         &::before {
+                              background: linear-gradient(-90deg, var(--tj-theme-secondary) 0%, var(--tj-theme-primary) 100%);
+                         }
+                    }
+               } 
+          } 
+          .tj-footer-7-top-submit-btn {
+               background: linear-gradient(-90deg, var(--tj-theme-secondary) 0%, var(--tj-theme-primary) 100%);
+               transition: 0.4s;
+               
+          }
+          .widget-info {
+               max-width: 360px;
+               width: 100%;
+               @media #{$md} {
+                    max-width: 330px;
+               }
+          }
+          .tj-footer-9-col-2 {
+               max-width: 190px;
+               width: 100%;
+               margin-left: auto;
+               @media #{$lg} {
+                   max-width: 370px;
+               }
+          }
+          .tj-footer-9-col-3 {
+               max-width: 180px;
+               width: 100%;
+               margin-left: auto;
+               @media #{$lg} {
+                    margin-left: 0;
+               }
+          }
+          .footer_socials_media {
+               max-width: 365px;
+               width: 100%;
+               margin-left: auto;
+          }
+          @media #{$xl} {
+               .tj-footer-9-col-2 {
+                    max-width: 185px;
+               }
+               .footer_socials_media {
+                    max-width: 320px;
+               }
+          }
+          @media #{$lg} {
+               .footer_socials_media {
+                    margin-left: 0;
+               }
+          }
+          @media #{$md} {
+               .tj-footer-9-col-2 {
+                    margin-left: 0;
+                    max-width: 310px;
+               }
+               .tj-footer-9-col-3 {
+                    margin-left: 0;
+               }
+               .footer_socials_media {
+                    margin-left: 0;
+                    max-width: 330px;
+               }
+               .tj-footer-6-left {
+                    max-width: 310px;
+               }
+          }
+          @media #{$sm} {
+               .widget-info {
+                    max-width: 100%;
+               }
+               .tj-footer-9-col-2 {
+                    margin-left: 0;
+                    max-width: 195px;
+               }
+               .tj-footer-9-col-3 {
+                    margin-left: 0;
+               }
+               .footer_socials_media {
+                    margin-left: 0;
+                    max-width: 100%;
+               }
+               .tj-footer-6-left {
+                    max-width: 195px;
+                    margin-left: auto;
+                    margin-right: auto;
+               }
+               .footer-menu ul {
+                    margin: 0px;
+                    gap: 10px 15px;
+               }
+          }
+          @media #{$xs} {
+               .widget-info {
+                    max-width: 100%;
+               }
+               .tj-footer-9-col-2 {
+                    margin-left: 0;
+                    max-width: 100%;
+               }
+               .tj-footer-9-col-3 {
+                    margin-left: 0;
+               }
+               .tj-footer-6-left {
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-bottom: 0;
+               }
+               .footer_socials_media {
+                    margin-left: 0;
+                    max-width: 100%;
+               }
+               .tj-footer-7-wrapper {
+                    row-gap: 5px;
+               }
+               .footer-menu ul {
+                    margin: 0px;
+               }
+          }
+          .tj-footer-7-top-form {
+               position: relative;
+               form {
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+               }
+          }
+     }
+}
+/* !END: Theme Footer CSS */

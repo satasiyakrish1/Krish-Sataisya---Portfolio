@@ -1,81 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
   <url>
-    <loc>http://krishsatasiya.netlify.app/</loc>
-    <priority>0.4</priority>
-    <changefreq>daily</changefreq>
-    <lastmod>2024-11-05</lastmod>
+    <loc>https://krishsatasiya.netlify.app/</loc>
+    <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+    <lastmod>2024-03-20</lastmod>
   </url>
+
+  <!-- Projects -->
   <url>
-    <loc>http://krishsatasiya.netlify.app/Projects/photo editing web application/index.html</loc>
-    <priority>0.4</priority>
-    <changefreq>daily</changefreq>
-    <lastmod>2024-11-05</lastmod>
+    <loc>https://krishsatasiya.netlify.app/Pages/Projects.html</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+    <lastmod>2024-03-20</lastmod>
   </url>
+  
   <url>
-    <loc>http://krishsatasiya.netlify.app/Projects/3D Solar System/index.html</loc>
-    <priority>0.4</priority>
-    <changefreq>daily</changefreq>
-    <lastmod>2024-11-05</lastmod>
+    <loc>https://krishsatasiya.netlify.app/Projects/photo-editing-web-application/index.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2024-03-20</lastmod>
   </url>
+
   <url>
-    <loc>http://krishsatasiya.netlify.app/projects/keybord/</loc>
-    <priority>0.4</priority>
-    <changefreq>daily</changefreq>
-    <lastmod>2024-11-05</lastmod>
+    <loc>https://krishsatasiya.netlify.app/Projects/3D-Solar-System/index.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2024-03-20</lastmod>
   </url>
+
   <url>
-    <loc>http://krishsatasiya.netlify.app/Projects/Graph - Book/</loc>
-    <priority>0.4</priority>
-    <changefreq>daily</changefreq>
-    <lastmod>2024-11-05</lastmod>
+    <loc>https://krishsatasiya.netlify.app/Projects/keyboard/index.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2024-03-20</lastmod>
   </url>
+
   <url>
-    <loc>http://krishsatasiya.netlify.app/Projects/Celender Pro/celender.html</loc>
-    <priority>0.4</priority>
-    <changefreq>daily</changefreq>
-    <lastmod>2024-11-05</lastmod>
+    <loc>https://krishsatasiya.netlify.app/Projects/Graph-Book/index.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2024-03-20</lastmod>
   </url>
+
   <url>
-    <loc>http://krishsatasiya.netlify.app/games/cube/</loc>
-    <priority>0.4</priority>
-    <changefreq>daily</changefreq>
-    <lastmod>2024-11-05</lastmod>
+    <loc>https://krishsatasiya.netlify.app/Projects/Calendar-Pro/calendar.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2024-03-20</lastmod>
   </url>
+
+  <!-- Games -->
   <url>
-    <loc>http://krishsatasiya.netlify.app/games/archry/</loc>
-    <priority>0.4</priority>
-    <changefreq>daily</changefreq>
-    <lastmod>2024-11-05</lastmod>
+    <loc>https://krishsatasiya.netlify.app/Games/Cube/index.html</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2024-03-20</lastmod>
   </url>
+
   <url>
-    <loc>http://krishsatasiya.netlify.app/tel:6353112999</loc>
-    <priority>0.4</priority>
-    <changefreq>daily</changefreq>
-    <lastmod>2024-11-05</lastmod>
+    <loc>https://krishsatasiya.netlify.app/Games/Archery/index.html</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2024-03-20</lastmod>
   </url>
+
+  <!-- Legal Pages -->
   <url>
-    <loc>http://krishsatasiya.netlify.app/tel:+916353112999</loc>
-    <priority>0.4</priority>
-    <changefreq>daily</changefreq>
-    <lastmod>2024-11-05</lastmod>
+    <loc>https://krishsatasiya.netlify.app/privacy-policy/privacy-policy.html</loc>
+    <priority>0.5</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2024-03-20</lastmod>
   </url>
+
   <url>
-    <loc>http://krishsatasiya.netlify.app/privacy-policy/privacy-policy</loc>
-    <priority>0.4</priority>
-    <changefreq>daily</changefreq>
-    <lastmod>2024-11-05</lastmod>
-  </url>
-  <url>
-    <loc>http://krishsatasiya.netlify.app/./Terms And Condition/Tm.html</loc>
-    <priority>0.4</priority>
-    <changefreq>daily</changefreq>
-    <lastmod>2024-11-05</lastmod>
-  </url>
-  <url>
-    <loc></loc>
-    <priority>0.4</priority>
-    <changefreq>daily</changefreq>
-    <lastmod>2024-11-05</lastmod>
+    <loc>https://krishsatasiya.netlify.app/Terms-And-Conditions/Tm.html</loc>
+    <priority>0.5</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2024-03-20</lastmod>
   </url>
 </urlset>

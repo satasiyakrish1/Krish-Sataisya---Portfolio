@@ -1,36 +1,38 @@
-User-agent: MSNBot
-Disallow: 
-User-agent: Slurp
-Disallow: 
-User-agent: yahoo-mmcrawler
-Disallow: 
-User-agent: yahoo-blogs/v3.9
-Disallow: 
+# Global rules for all web crawlers
 User-agent: *
-Disallow: 
+Allow: /
+
+# Important sections to be crawled
+Allow: /Pages/
+Allow: /Projects/
+Allow: /Games/
+Allow: /assets/
+Allow: /privacy-policy/
+Allow: /Terms And Condition/
+
+# Block sensitive or unnecessary directories
 Disallow: /cgi-bin/
-Sitemap: https://krishsatasiya.netlify.app/
-
-# Allow all web crawlers to access the website
-User-agent: *
-
-# Block access to specific directories or pages that shouldn’t be indexed
+Disallow: /.git/
 Disallow: /admin/
 Disallow: /login/
 Disallow: /register/
 Disallow: /cart/
-
-# Allow all project pages to be indexed, including the Photo Editing Web Application
-Allow: /projects/
-
-# Block certain file types from being indexed
+Disallow: /*?*
 Disallow: /*.pdf$
 Disallow: /*.zip$
 
-# Allow the homepage and other important sections
-Allow: /projects/photo%20editing%20web%20application/
-Allow: /projects/3d%20solar%20system/
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
 
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
 
-# Sitemap URL to guide search engines to all important pages
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+# Sitemap declaration
 Sitemap: https://krishsatasiya.netlify.app/sitemap.xml

@@ -1,0 +1,19 @@
+/* TEAM */
+Owner: Krish Satasiya
+Twitter: @satasiyakrish1
+GitHub: @satasiyakrish1
+Website: https://krishsatasiya.netlify.app
+Location: India
+
+/* THANKS */
+Thanks to all open source projects and communities that made this website possible.
+
+/* SITE */
+Last update: 2024/09/28
+Standards: HTML5, CSS3, JavaScript
+Components: Bootstrap, jQuery, Font Awesome
+Software: Visual Studio Code, Adobe Creative Suite, Figma
+
+/* NOTE */
+This website is designed and developed by Krish Satasiya.
+© 2025 Krish Satasiya. All rights reserved.

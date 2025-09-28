@@ -2,22 +2,51 @@
 User-agent: *
 Allow: /
 
-# Important sections to be crawled
+# Sitemap location
+Sitemap: https://krishsatasiya.netlify.app/sitemap.xml
+
+# Important sections to be crawled with higher priority
 Allow: /Pages/
 Allow: /Projects/
 Allow: /Games/
 Allow: /assets/
+
+# Legal pages
 Allow: /privacy-policy/
 Allow: /Terms And Condition/
 
 # Block sensitive or unnecessary directories
 Disallow: /cgi-bin/
 Disallow: /.git/
+Disallow: /.github/
+Disallow: /node_modules/
+Disallow: /vendor/
 Disallow: /admin/
 Disallow: /login/
 Disallow: /register/
 Disallow: /cart/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /trackback/
 Disallow: /*?*
+Disallow: /*.php$
+Disallow: /*.js$
+Disallow: /*.css$
+Disallow: /*.json$
+
+# Allow all valid web assets
+Allow: /*.css$ 
+Allow: /*.js$ 
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.webp$
+Allow: /*.woff$
+Allow: /*.woff2$
+Allow: /*.ttf$
+Allow: /*.eot$
 Disallow: /*.pdf$
 Disallow: /*.zip$
 

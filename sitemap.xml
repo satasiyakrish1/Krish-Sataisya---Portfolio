@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
@@ -9,7 +11,18 @@
     <loc>https://krishsatasiya.netlify.app/</loc>
     <priority>1.0</priority>
     <changefreq>daily</changefreq>
-    <lastmod>2024-09-28</lastmod>
+    <lastmod>2025-10-18</lastmod>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/Uplodes/images/krish-satasiya-profile-portrait.jpg</image:loc>
+      <image:title>Krish Satasiya - Professional Portrait</image:title>
+      <image:caption>Portrait of Krish Satasiya, MERN Developer and UI/UX Designer.</image:caption>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/UXTJ8fVg_Ko/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Interview with Krish Satasiya</video:title>
+      <video:description>Interview featuring Krish Satasiya discussing development, design, and projects.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/UXTJ8fVg_Ko</video:player_loc>
+    </video:video>
   </url>
   
   <!-- Main Pages -->
@@ -17,7 +30,12 @@
     <loc>https://krishsatasiya.netlify.app/Pages/krishsatasiya.html</loc>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
-    <lastmod>2024-09-28</lastmod>
+    <lastmod>2025-10-18</lastmod>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/img/project/IMG_20241020_111538.jpg</image:loc>
+      <image:title>Krish Satasiya - Profile</image:title>
+      <image:caption>Portrait of Krish Satasiya on the Connect With Me page.</image:caption>
+    </image:image>
   </url>
   
   <!-- Projects Section -->
@@ -117,7 +135,7 @@
   </url>
   
   <url>
-    <loc>https://krishsatasiya.netlify.app/Games/Archery/index.html</loc>
+    <loc>https://krishsatasiya.netlify.app/Games/Archry/index.html</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
     <lastmod>2024-03-20</lastmod>

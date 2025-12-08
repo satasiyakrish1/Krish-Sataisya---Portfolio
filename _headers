@@ -1,2 +1,159 @@
+# =============================================================================
+# Netlify Headers Configuration for SEO & Performance
+# Krish Satasiya Portfolio - Last Updated: 2025-12-08
+# =============================================================================
+
+# Default headers for all pages
+/*
+  # Security Headers
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+  
+  # Performance Headers
+  X-DNS-Prefetch-Control: on
+  
+  # SEO Headers
+  X-Robots-Tag: index, follow
+
+# HTML Pages - No cache for fresh content
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+  Content-Type: text/html; charset=utf-8
+
+# CSS Files - Long cache
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: text/css; charset=utf-8
+
+# JavaScript Files - Long cache
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: application/javascript; charset=utf-8
+
+# Images - Medium cache
+/*.jpg
+  Cache-Control: public, max-age=2592000, immutable
+  Content-Type: image/jpeg
+
+/*.jpeg
+  Cache-Control: public, max-age=2592000, immutable
+  Content-Type: image/jpeg
+
+/*.png
+  Cache-Control: public, max-age=2592000, immutable
+  Content-Type: image/png
+
+/*.gif
+  Cache-Control: public, max-age=2592000, immutable
+  Content-Type: image/gif
+
+/*.webp
+  Cache-Control: public, max-age=2592000, immutable
+  Content-Type: image/webp
+
+/*.svg
+  Cache-Control: public, max-age=2592000, immutable
+  Content-Type: image/svg+xml
+
+/*.ico
+  Cache-Control: public, max-age=604800, immutable
+  Content-Type: image/x-icon
+
+# Fonts - Long cache
+/*.woff
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: font/woff
+  Access-Control-Allow-Origin: *
+
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: font/woff2
+  Access-Control-Allow-Origin: *
+
+/*.ttf
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: font/ttf
+  Access-Control-Allow-Origin: *
+
+/*.eot
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: application/vnd.ms-fontobject
+  Access-Control-Allow-Origin: *
+
+/*.otf
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: font/otf
+  Access-Control-Allow-Origin: *
+
+# Video Files
+/*.mp4
+  Cache-Control: public, max-age=2592000, immutable
+  Content-Type: video/mp4
+
+/*.webm
+  Cache-Control: public, max-age=2592000, immutable
+  Content-Type: video/webm
+
+# SEO Files - Specific headers
 /sitemap.xml
-  Content-Type: application/xml
+  Content-Type: application/xml; charset=utf-8
+  Cache-Control: public, max-age=3600
+  X-Robots-Tag: noindex
+
+/robots.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=3600
+
+/llm.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=86400
+
+/humans.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=86400
+
+/feed.xml
+  Content-Type: application/rss+xml; charset=utf-8
+  Cache-Control: public, max-age=3600
+
+/.well-known/security.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=31536000
+
+/seo-guide.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=86400
+
+# Manifest Files
+/site.webmanifest
+  Content-Type: application/manifest+json; charset=utf-8
+  Cache-Control: public, max-age=604800
+
+/browserconfig.xml
+  Content-Type: application/xml; charset=utf-8
+  Cache-Control: public, max-age=604800
+
+# JSON Files
+/*.json
+  Content-Type: application/json; charset=utf-8
+  Cache-Control: public, max-age=3600
+
+# PDF Files
+/*.pdf
+  Content-Type: application/pdf
+  Cache-Control: public, max-age=2592000
+  Content-Disposition: inline
+
+# Download CV - Special handling
+/Uplodes/Krish\ Satasiya\ -\ CV.pdf
+  Content-Type: application/pdf
+  Cache-Control: public, max-age=86400
+  Content-Disposition: attachment; filename="Krish-Satasiya-CV.pdf"
+
+# =============================================================================
+# Note: Netlify automatically handles compression (Brotli/Gzip)
+# These headers optimize caching, security, and SEO performance
+# =============================================================================

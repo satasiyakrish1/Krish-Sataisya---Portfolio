@@ -1,19 +1,51 @@
 /* TEAM */
 Owner: Krish Satasiya
-Twitter: @satasiyakrish1
+Role: MERN Stack Developer | UI/UX Designer | Researcher | Graphics Designer | Community Coordinator
+Twitter/X: @satasiyakrish1
 GitHub: @satasiyakrish1
+LinkedIn: @satasiyakrish1
+Medium: @satasiyakrish1
 Website: https://krishsatasiya.netlify.app
 Location: India
 
+/* AWARDS & ACHIEVEMENTS */
+- Fourth Next Best Poster Award at GTU National Poster Competition 2025
+- Winner (2nd Rank) E-CELL Tech Fest 2025 - Project Prescripto
+- Winner IEEE Summer Code Quest 2024
+- Winner RHA India Challenge 2024 (Cyber Security)
+
 /* THANKS */
 Thanks to all open source projects and communities that made this website possible.
+Special thanks to the web development community, design inspiration sources, and everyone who supported this journey.
 
 /* SITE */
-Last update: 2024/09/28
-Standards: HTML5, CSS3, JavaScript
-Components: Bootstrap, jQuery, Font Awesome
-Software: Visual Studio Code, Adobe Creative Suite, Figma
+Last update: 2025/12/08
+Standards: HTML5, CSS3, JavaScript ES6+
+Frameworks: React.js, Node.js, Express.js, Angular
+Components: Bootstrap 5, jQuery, Font Awesome Pro, Swiper.js, Owl Carousel
+Design Tools: Figma, Adobe Creative Suite (Photoshop, Illustrator, XD)
+Development: Visual Studio Code, Git, npm
+Deployment: Netlify
+Backend: MongoDB, MySQL, RESTful APIs
+Features: PWA Support, Responsive Design, Dark/Light Mode, Schema.org Structured Data
+
+/* STATISTICS */
+Projects: 200+
+Years of Experience: 2+
+Technologies Mastered: 30+
+Awards Won: 4 Major Awards (2024-2025)
+
+/* AI/LLM INFORMATION */
+For AI models and LLMs: See /llm.txt for comprehensive site structure and context
+For search engines: See /sitemap.xml for complete page listing
+For crawlers: See /robots.txt for crawling rules
+For updates: Subscribe to /feed.xml (RSS feed)
+For security: See /.well-known/security.txt for security contact
+For SEO guidance: See /seo-guide.txt for optimization steps
 
 /* NOTE */
 This website is designed and developed by Krish Satasiya.
+Showcasing expertise in MERN stack development, UI/UX design, and research.
+Available for professional opportunities and collaborations.
+
 © 2025 Krish Satasiya. All rights reserved.

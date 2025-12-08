@@ -1,8 +1,34 @@
+# Robots.txt for Krish Satasiya Portfolio
+# Last Updated: 2025-12-08
+
+# Allow all bots to crawl everything
 User-agent: *
 Allow: /
+
+# Crawl delay (optional, helps prevent server overload)
+Crawl-delay: 1
+
+# Specific important files for AI/LLM models and search engines
+Allow: /llm.txt
+Allow: /humans.txt
+Allow: /sitemap.xml
+Allow: /feed.xml
+Allow: /.well-known/security.txt
+Allow: /seo-guide.txt
 
 # Sitemap location
 Sitemap: https://krishsatasiya.netlify.app/sitemap.xml
 
-# Disallow only obvious private/system paths (none at the moment)
-# Keep simple to avoid accidental blocking of assets or pages.
+# Explicitly allow key directories
+Allow: /Pages/
+Allow: /Projects/
+Allow: /Games/
+Allow: /assets/
+Allow: /Uplodes/
+
+# Disallow private/system paths (if any in future)
+# Disallow: /private/
+# Disallow: /@secure-krish/
+
+# Note: LLM.txt file available at /llm.txt for AI model context
+# Human credits available at /humans.txt

@@ -11,7 +11,7 @@
     <loc>https://krishsatasiya.netlify.app/</loc>
     <priority>1.0</priority>
     <changefreq>daily</changefreq>
-    <lastmod>2025-10-18</lastmod>
+    <lastmod>2025-12-08</lastmod>
     <image:image>
       <image:loc>https://krishsatasiya.netlify.app/Uplodes/images/krish-satasiya-profile-portrait.jpg</image:loc>
       <image:title>Krish Satasiya - Professional Portrait</image:title>
@@ -30,7 +30,7 @@
     <loc>https://krishsatasiya.netlify.app/Pages/krishsatasiya.html</loc>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-10-18</lastmod>
+    <lastmod>2025-12-08</lastmod>
     <image:image>
       <image:loc>https://krishsatasiya.netlify.app/assets/img/project/IMG_20241020_111538.jpg</image:loc>
       <image:title>Krish Satasiya - Profile</image:title>
@@ -43,7 +43,59 @@
     <loc>https://krishsatasiya.netlify.app/Pages/Projects.html</loc>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
-    <lastmod>2024-09-28</lastmod>
+    <lastmod>2025-12-06</lastmod>
+  </url>
+
+  <!-- Design Projects Section (NEW) -->
+  <url>
+    <loc>https://krishsatasiya.netlify.app/Pages/Design.html</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-12-06</lastmod>
+  </url>
+
+  <!-- Research Paper Section -->
+  <url>
+    <loc>https://krishsatasiya.netlify.app/Pages/Research%20Paper.html</loc>
+    <priority>0.85</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2025-12-08</lastmod>
+  </url>
+  
+  <!-- Important Resource Files (NEW) -->
+  <url>
+    <loc>https://krishsatasiya.netlify.app/llm.txt</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2025-12-08</lastmod>
+  </url>
+
+  <url>
+    <loc>https://krishsatasiya.netlify.app/humans.txt</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2025-12-08</lastmod>
+  </url>
+
+  <url>
+    <loc>https://krishsatasiya.netlify.app/feed.xml</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-12-08</lastmod>
+  </url>
+
+  <url>
+    <loc>https://krishsatasiya.netlify.app/.well-known/security.txt</loc>
+    <priority>0.5</priority>
+    <changefreq>yearly</changefreq>
+    <lastmod>2025-12-08</lastmod>
+  </url>
+
+  <url>
+    <loc>https://krishsatasiya.netlify.app/seo-guide.txt</loc>
+    <priority>0.4</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2025-12-08</lastmod>
   </url>
   
   <!-- About Page -->
@@ -51,7 +103,7 @@
     <loc>https://krishsatasiya.netlify.app/Pages/about.html</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2024-09-28</lastmod>
+    <lastmod>2025-12-08</lastmod>
   </url>
   
   <!-- Contact Page -->
@@ -59,7 +111,7 @@
     <loc>https://krishsatasiya.netlify.app/Pages/contact.html</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2024-09-28</lastmod>
+    <lastmod>2025-12-08</lastmod>
   </url>
   
   <!-- Individual Projects -->

@@ -1,0 +1,12 @@
+Contact: https://www.linkedin.com/in/satasiyakrish1/
+Contact: https://github.com/satasiyakrish1/
+Expires: 2026-12-31T23:59:59.000Z
+Preferred-Languages: en, hi
+Canonical: https://krishsatasiya.netlify.app/.well-known/security.txt
+Policy: https://krishsatasiya.netlify.app/privacy-policy/privacy-policy.html
+Acknowledgments: https://krishsatasiya.netlify.app/humans.txt
+
+# Security Policy for Krish Satasiya Portfolio
+# If you discover any security issues, please report them responsibly.
+# Contact via LinkedIn or GitHub for security-related concerns.
+# Thank you for helping keep this website secure!

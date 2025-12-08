@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" 
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Krish Satasiya - MERN Developer &amp; UI/UX Designer</title>
+    <link>https://krishsatasiya.netlify.app/</link>
+    <atom:link href="https://krishsatasiya.netlify.app/feed.xml" rel="self" type="application/rss+xml" />
+    <description>Award-winning MERN Stack Developer and UI/UX Designer. Winner of RHA India Challenge 2024, GTU National Poster Competition 2025, E-CELL Tech Fest 2025, and IEEE Summer Code Quest 2024. Portfolio updates, projects, and professional achievements.</description>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 08 Dec 2025 12:45:00 +0530</lastBuildDate>
+    <copyright>© 2025 Krish Satasiya. All rights reserved.</copyright>
+    <managingEditor>satasiyakrish1@gmail.com (Krish Satasiya)</managingEditor>
+    <webMaster>satasiyakrish1@gmail.com (Krish Satasiya)</webMaster>
+    <category>Web Development</category>
+    <category>UI/UX Design</category>
+    <category>MERN Stack</category>
+    <category>Portfolio</category>
+    <image>
+      <url>https://krishsatasiya.netlify.app/Uplodes/images/krish-satasiya-profile-portrait.jpg</url>
+      <title>Krish Satasiya</title>
+      <link>https://krishsatasiya.netlify.app/</link>
+      <width>144</width>
+      <height>144</height>
+    </image>
+    
+    <!-- Latest Achievement -->
+    <item>
+      <title>Fourth Next Best Poster Award at GTU National Poster Competition 2025</title>
+      <link>https://krishsatasiya.netlify.app/</link>
+      <guid isPermaLink="true">https://krishsatasiya.netlify.app/#award-gtu-2025</guid>
+      <pubDate>Sun, 15 Sep 2025 10:00:00 +0530</pubDate>
+      <category>Award</category>
+      <category>Research</category>
+      <category>AI</category>
+      <description>Awarded Fourth Next Best Poster Award (Consolation Prize – ₹5000) at Gujarat Technological University's National Level Poster Competition &amp; Hackathon on AI-Powered Research &amp; Innovation.</description>
+      <dc:creator>Krish Satasiya</dc:creator>
+    </item>
+    
+    <item>
+      <title>Winner of E-CELL Tech Fest 2025 - Project Prescripto</title>
+      <link>https://krishsatasiya.netlify.app/</link>
+      <guid isPermaLink="true">https://krishsatasiya.netlify.app/#award-ecell-2025</guid>
+      <pubDate>Sat, 15 Feb 2025 14:00:00 +0530</pubDate>
+      <category>Award</category>
+      <category>Project</category>
+      <category>AI Healthcare</category>
+      <description>Secured 2nd Rank (Winner) at E-CELL Tech Fest 2025 for Project Prescripto - an AI-powered medical appointment booking system. Organized by E-Cell Silver Oak University &amp; Ignite SOU.</description>
+      <dc:creator>Krish Satasiya</dc:creator>
+    </item>
+    
+    <item>
+      <title>Winner of IEEE Summer Code Quest 2024</title>
+      <link>https://krishsatasiya.netlify.app/</link>
+      <guid isPermaLink="true">https://krishsatasiya.netlify.app/#award-ieee-2024</guid>
+      <pubDate>Mon, 15 Jul 2024 12:00:00 +0530</pubDate>
+      <category>Award</category>
+      <category>Coding Competition</category>
+      <description>Awarded Winner of IEEE Summer Code Quest 2024, recognized for outstanding coding proficiency by IEEE SOU SB.</description>
+      <dc:creator>Krish Satasiya</dc:creator>
+    </item>
+    
+    <item>
+      <title>Winner of RHA India Challenge 2024 - Cyber Security Competition</title>
+      <link>https://krishsatasiya.netlify.app/</link>
+      <guid isPermaLink="true">https://krishsatasiya.netlify.app/#award-rha-2024</guid>
+      <pubDate>Thu, 15 Aug 2024 16:00:00 +0530</pubDate>
+      <category>Award</category>
+      <category>Cyber Security</category>
+      <category>Competition</category>
+      <description>Champion at RHA India Challenge 2024 - National Level Cyber Security Competition organized by Red Hat with Electromech Ltd.</description>
+      <dc:creator>Krish Satasiya</dc:creator>
+    </item>
+    
+    <item>
+      <title>Design Projects Portfolio Update</title>
+      <link>https://krishsatasiya.netlify.app/Pages/Design.html</link>
+      <guid isPermaLink="true">https://krishsatasiya.netlify.app/Pages/Design.html</guid>
+      <pubDate>Fri, 06 Dec 2025 10:30:00 +0530</pubDate>
+      <category>Portfolio</category>
+      <category>UI/UX Design</category>
+      <description>Launched dedicated Design Projects section showcasing UI/UX design work including mobile applications, web interfaces, branding, and graphic design projects.</description>
+      <dc:creator>Krish Satasiya</dc:creator>
+    </item>
+    
+    <item>
+      <title>Web Development Projects Portfolio</title>
+      <link>https://krishsatasiya.netlify.app/Pages/Projects.html</link>
+      <guid isPermaLink="true">https://krishsatasiya.netlify.app/Pages/Projects.html</guid>
+      <pubDate>Fri, 06 Dec 2025 10:00:00 +0530</pubDate>
+      <category>Portfolio</category>
+      <category>Web Development</category>
+      <category>MERN Stack</category>
+      <description>Comprehensive showcase of 200+ web development projects including MERN stack applications, Angular projects, interactive tools, and innovative web solutions.</description>
+      <dc:creator>Krish Satasiya</dc:creator>
+    </item>
+    
+    <item>
+      <title>Research Paper Publications</title>
+      <link>https://krishsatasiya.netlify.app/Pages/Research%20Paper.html</link>
+      <guid isPermaLink="true">https://krishsatasiya.netlify.app/Pages/Research%20Paper.html</guid>
+      <pubDate>Sun, 08 Dec 2025 09:00:00 +0530</pubDate>
+      <category>Research</category>
+      <category>Academic</category>
+      <description>Academic research papers and publications focusing on AI, web technologies, and innovative solutions in computer science.</description>
+      <dc:creator>Krish Satasiya</dc:creator>
+    </item>
+    
+    <item>
+      <title>Interactive Web Games Collection</title>
+      <link>https://krishsatasiya.netlify.app/Games/</link>
+      <guid isPermaLink="true">https://krishsatasiya.netlify.app/games</guid>
+      <pubDate>Wed, 20 Mar 2024 15:00:00 +0530</pubDate>
+      <category>Projects</category>
+      <category>Game Development</category>
+      <description>Collection of interactive HTML5/JavaScript games including Cube Game and Archery Game, demonstrating creative coding and game development skills.</description>
+      <dc:creator>Krish Satasiya</dc:creator>
+    </item>
+    
+  </channel>
+</rss>

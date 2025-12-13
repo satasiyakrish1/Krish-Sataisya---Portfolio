@@ -5228,7 +5228,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
     -ms-flex-pack: center;
     justify-content: center;
     margin-bottom: 40px;
-    max-width: 395px;
+    max-width: 520px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -5258,11 +5258,12 @@ only screen and (min-width: 576px) and (max-width: 767px),
 @media (max-width: 575px) {
     .resume_menu_5 {
         margin-bottom: 30px;
-        max-width: 320px;
+        max-width: 100%;
+        padding: 5px 10px;
     }
     .resume_menu_5 .resume-tab {
-        font-size: 14px;
-        padding: 10px 15px;
+        font-size: 13px;
+        padding: 10px 12px;
     }
 }
 

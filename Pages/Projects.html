@@ -5,14 +5,75 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="" />
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Explore Krish Satasiya's portfolio of 27+ innovative projects including full-stack web applications, mobile apps, interactive tools, and games. Featuring MERN stack, Flutter, and modern web technologies." />
+    <meta name="keywords"
+        content="Krish Satasiya projects, full stack developer, MERN stack, React projects, Flutter apps, web applications, mobile development, portfolio, computer programmer, web developer projects" />
+    <meta name="author" content="Krish Satasiya" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href="https://krishsatasiya.in/Pages/Projects.html" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://krishsatasiya.in/Pages/Projects.html" />
+    <meta property="og:title" content="Projects Portfolio - Krish Satasiya | Full Stack Developer" />
+    <meta property="og:description"
+        content="Discover 27+ innovative projects spanning full-stack applications, mobile apps, productivity tools, and interactive games. Built with MERN, React, Flutter, and modern web technologies." />
+    <meta property="og:image" content="https://krishsatasiya.in/assets/img/project/IMG_20241020_111538.jpg" />
+    <meta property="og:site_name" content="Krish Satasiya Portfolio" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://krishsatasiya.in/Pages/Projects.html" />
+    <meta name="twitter:title" content="Projects Portfolio - Krish Satasiya | Full Stack Developer" />
+    <meta name="twitter:description"
+        content="Discover 27+ innovative projects spanning full-stack applications, mobile apps, productivity tools, and interactive games." />
+    <meta name="twitter:image" content="https://krishsatasiya.in/assets/img/project/IMG_20241020_111538.jpg" />
+    <meta name="twitter:creator" content="@satasiyakrish1" />
+
+    <!-- Geographic Targeting for GIO -->
+    <meta name="geo.region" content="IN-GJ" />
+    <meta name="geo.placename" content="Gujarat, India" />
+    <meta name="geo.position" content="23.0225;72.5714" />
+    <meta name="ICBM" content="23.0225, 72.5714" />
+
+    <!-- Language & International Targeting -->
+    <meta http-equiv="content-language" content="en-US" />
+    <link rel="alternate" hreflang="en" href="https://krishsatasiya.netlify.app/Pages/Projects.html" />
+    <link rel="alternate" hreflang="x-default" href="https://krishsatasiya.netlify.app/Pages/Projects.html" />
+
+    <!-- Additional Answer Engine Optimization -->
+    <meta name="abstract"
+        content="Portfolio of 27+ full-stack web development projects by Krish Satasiya including MERN stack applications, mobile apps, and interactive tools" />
+    <meta name="topic" content="Web Development Portfolio, Full Stack Projects, MERN Stack Applications" />
+    <meta name="summary"
+        content="Comprehensive showcase of innovative web and mobile applications built with modern technologies" />
+    <meta name="classification" content="Technology Portfolio" />
+    <meta name="designer" content="Krish Satasiya" />
+    <meta name="owner" content="Krish Satasiya" />
+    <meta name="url" content="https://krishsatasiya.netlify.app/Pages/Projects.html" />
+    <meta name="identifier-URL" content="https://krishsatasiya.netlify.app/Pages/Projects.html" />
+    <meta name="coverage" content="Worldwide" />
+    <meta name="distribution" content="Global" />
+    <meta name="rating" content="General" />
+    <meta name="revisit-after" content="7 days" />
 
     <!-- Site Title -->
-    <title>Krish Satasiya - Computer Programmer</title>
+    <title>27+ Web Development Projects Portfolio | Krish Satasiya - MERN Stack Developer</title>
 
-<!-- Place favicon.ico in the root directory -->
-    <link rel="apple-touch-icon" href="/assets/img/favicon.png" />
-    <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.png" />
+    <!-- Favicon and App Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon.png" />
+    <link rel="shortcut icon" href="/assets/img/favicon.ico" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#2563eb" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+    <meta name="msapplication-TileColor" content="#2563eb" />
+    <meta name="msapplication-TileImage" content="/assets/img/favicon.png" />
 
     <!-- CSS here -->
     <link rel="stylesheet" href="/assets/css/animate.min.css" />
@@ -35,39 +96,495 @@
     <link rel="stylesheet" href="/assets/css/responsive-2.css" />
     <link rel="stylesheet" href="/assets/css/responsive-3.css" />
     <style>
+        :root {
+            --project-card-bg: var(--tj-theme-accent-2);
+            --project-hover-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+            --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --tj-theme-primary-rgb: 98, 84, 243;
+            --tj-theme-secondary-rgb: 251, 126, 40;
+            --tj-theme-accent-2-rgb: 20, 20, 30;
+            --badge-gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --badge-gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --badge-gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --badge-gradient-4: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            --badge-gradient-5: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+        }
+
+        /* Project Category Container */
         .project-category {
-            background: var(--tj-theme-accent-2);
-            border-radius: 15px;
-            padding: 30px;
-            transition: all 0.3s ease;
+            background: linear-gradient(145deg, var(--project-card-bg) 0%, rgba(var(--tj-theme-accent-2-rgb, 20, 20, 30), 0.95) 100%);
+            border-radius: 24px;
+            padding: 45px;
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        }
+
+        .project-category::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--tj-theme-primary), var(--tj-theme-secondary), var(--tj-theme-primary));
+            background-size: 200% 100%;
+            opacity: 0;
+            transition: opacity 0.6s ease;
+            animation: gradientShift 3s ease infinite;
+        }
+
+        @keyframes gradientShift {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .project-category:hover::before {
+            opacity: 1;
         }
 
         .project-category:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25), 0 0 40px rgba(var(--tj-theme-primary-rgb, 98, 84, 243), 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            border-color: rgba(var(--tj-theme-primary-rgb, 98, 84, 243), 0.2);
         }
 
+        /* Category Title */
         .project-category .category-title {
             color: var(--tj-theme-primary);
-            font-size: 24px;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid var(--tj-theme-secondary);
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            padding-bottom: 18px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            display: inline-block;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
+        .project-category .category-title::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 70px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--tj-theme-primary), var(--tj-theme-secondary));
+            border-radius: 3px;
+            transition: width 0.4s ease;
+            box-shadow: 0 0 15px var(--tj-theme-primary);
+        }
+
+        .project-category:hover .category-title::after {
+            width: 100%;
+        }
+
+        /* Project List Items */
         .project-category .tj-service-5-accordion-list {
             margin: 0;
             padding: 0;
+            list-style: none;
+        }
+
+        .project-category .tj-service-5-accordion-list li {
+            margin-bottom: 22px;
+            padding: 24px;
+            background: linear-gradient(135deg, rgba(var(--tj-theme-primary-rgb, 98, 84, 243), 0.05) 0%, rgba(var(--tj-theme-secondary-rgb, 251, 126, 40), 0.03) 100%);
+            border-radius: 16px;
+            transition: var(--transition-smooth);
+            border: 2px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-category .tj-service-5-accordion-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--tj-theme-primary), var(--tj-theme-secondary));
+            transform: scaleY(0);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-origin: bottom;
+        }
+
+        .project-category .tj-service-5-accordion-list li:hover {
+            background: linear-gradient(135deg, rgba(var(--tj-theme-primary-rgb, 98, 84, 243), 0.12) 0%, rgba(var(--tj-theme-secondary-rgb, 251, 126, 40), 0.08) 100%);
+            border-color: rgba(var(--tj-theme-primary-rgb, 98, 84, 243), 0.3);
+            transform: translateX(10px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2), 0 0 20px rgba(var(--tj-theme-primary-rgb, 98, 84, 243), 0.15);
+        }
+
+        .project-category .tj-service-5-accordion-list li:hover::before {
+            transform: scaleY(1);
+            transform-origin: top;
         }
 
         .project-category .tj-service-5-accordion-list li h4 {
-            transition: all 0.3s ease;
+            transition: var(--transition-smooth);
+            margin: 0;
+            display: flex;
+            align-items: center;
+            font-size: 19px;
+            font-weight: 600;
         }
 
-        .project-category .tj-service-5-accordion-list li h4:hover {
-            transform: translateX(10px);
+        .project-category .tj-service-5-accordion-list li h4 span {
+            color: #fff;
+            font-weight: 700;
+            margin-right: 15px;
+            font-size: 15px;
+            min-width: 38px;
+            background: linear-gradient(135deg, rgba(var(--tj-theme-primary-rgb, 98, 84, 243), 0.8) 0%, rgba(var(--tj-theme-secondary-rgb, 251, 126, 40), 0.7) 100%);
+            padding: 6px 10px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            transition: var(--transition-smooth);
+        }
+
+        .project-category .tj-service-5-accordion-list li h4 a {
+            color: inherit;
+            text-decoration: none;
+            flex: 1;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        /* Project Description */
+        .project-description {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.75);
+            margin-top: 12px;
+            line-height: 1.7;
+            padding-left: 53px;
+            font-weight: 400;
+        }
+
+        /* Technology Badges */
+        .tech-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+            padding-left: 53px;
+        }
+
+        .tech-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 6px 16px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.06) 100%);
+            border-radius: 25px;
+            font-size: 12px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            letter-spacing: 0.3px;
+        }
+
+        .tech-badge::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .tech-badge:hover::before {
+            left: 100%;
+        }
+
+
+
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .project-category {
+                padding: 28px;
+                border-radius: 20px;
+            }
+
+            .project-category .category-title {
+                font-size: 24px;
+            }
+
+            .project-category .tj-service-5-accordion-list li {
+                padding: 20px;
+            }
+
+            .project-category .tj-service-5-accordion-list li h4 {
+                font-size: 17px;
+            }
+
+            .project-description {
+                font-size: 13px;
+                padding-left: 38px;
+            }
+
+            .tech-badges {
+                padding-left: 38px;
+                gap: 8px;
+            }
+
+            .tech-badge {
+                padding: 5px 12px;
+                font-size: 11px;
+            }
+        }
+
+        /* Project Count Badge */
+        .project-count {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--tj-theme-primary), var(--tj-theme-secondary));
+            color: #fff;
+            padding: 6px 14px;
+            border-radius: 25px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-left: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Enhanced project item glow effect */
+        .project-category .tj-service-5-accordion-list li::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 16px;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+            background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(var(--tj-theme-primary-rgb, 98, 84, 243), 0.08) 0%, transparent 60%);
+        }
+
+        .project-category .tj-service-5-accordion-list li:hover::after {
+            opacity: 1;
         }
     </style>
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Krish Satasiya",
+        "jobTitle": "Full Stack Developer & Computer Programmer",
+        "url": "https://krishsatasiya.in",
+        "sameAs": [
+            "https://www.facebook.com/satasiyakrish1/",
+            "https://www.instagram.com/satasiyakrish1/",
+            "https://github.com/satasiyakrish1",
+            "https://www.linkedin.com/in/krish-satasiya"
+        ],
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Freelance Developer"
+        },
+        "knowsAbout": ["MERN Stack", "React.js", "Node.js", "MongoDB", "Flutter", "Full Stack Development", "Web Development", "Mobile App Development"],
+        "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "Computer Programming"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Krish Satasiya's Project Portfolio",
+        "description": "A comprehensive collection of web applications, mobile apps, and interactive tools",
+        "numberOfItems": 27,
+        "itemListElement": [
+            {
+                "@type": "SoftwareApplication",
+                "position": 1,
+                "name": "Prescripto - Hospital Appointment System",
+                "applicationCategory": "BusinessApplication",
+                "operatingSystem": "Web",
+                "url": "https://krishsatasiya-prescriptosystem.onrender.com/"
+            },
+            {
+                "@type": "SoftwareApplication",
+                "position": 2,
+                "name": "Hirix - Job Portal",
+                "applicationCategory": "BusinessApplication",
+                "operatingSystem": "Web",
+                "url": "https://hirix-web.vercel.app/"
+            },
+            {
+                "@type": "SoftwareApplication",
+                "position": 3,
+                "name": "Quarix - Cloud Storage System",
+                "applicationCategory": "UtilitiesApplication",
+                "operatingSystem": "Web",
+                "url": "https://krishsatasiya-storages.vercel.app/sign-in"
+            }
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://krishsatasiya.in/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Projects",
+                "item": "https://krishsatasiya.in/Pages/Projects.html"
+            }
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Krish Satasiya's Project Portfolio",
+        "description": "A comprehensive showcase of 27+ innovative software projects including full-stack web applications, mobile apps, productivity tools, and games",
+        "url": "https://krishsatasiya.in/Pages/Projects.html",
+        "author": {
+            "@type": "Person",
+            "name": "Krish Satasiya",
+            "jobTitle": "Full Stack Developer & Computer Programmer"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Krish Satasiya Portfolio"
+        },
+        "mainEntity": {
+            "@type": "ItemList",
+            "numberOfItems": 27,
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@type": "SoftwareApplication",
+                        "name": "Prescripto - Hospital Appointment System",
+                        "applicationCategory": "BusinessApplication",
+                        "operatingSystem": "Web Browser",
+                        "offers": {
+                            "@type": "Offer",
+                            "price": "0",
+                            "priceCurrency": "USD"
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@type": "SoftwareApplication",
+                        "name": "Hirix - Job Portal",
+                        "applicationCategory": "BusinessApplication",
+                        "operatingSystem": "Web Browser"
+                    }
+                },
+                {
+                    "@type": "ListItem  ",
+                    "position": 3,
+                    "item": {
+                        "@type": "SoftwareApplication",
+                        "name": "Quarix - Cloud Storage System",
+                        "applicationCategory": "UtilitiesApplication",
+                        "operatingSystem": "Web Browser"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What technologies does Krish Satasiya use for web development?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Krish Satasiya specializes in the MERN stack (MongoDB, Express.js, React.js, Node.js), Next.js, TypeScript, Flutter for mobile development, and modern web technologies including Three.js for 3D graphics, WebGL, and various API integrations."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How many projects has Krish Satasiya completed?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Krish Satasiya has completed 27+ projects across various categories including 7 full-stack web applications, 4 interactive web applications, 5 productivity tools, 2 games, 3 platform clones, 3 mobile applications, and 2 API services."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What types of projects does Krish Satasiya work on?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Krish Satasiya works on diverse projects including healthcare management systems (Prescripto), job portals (Hirix), cloud storage solutions (Quarix), AI-powered applications (Imagica), e-commerce platforms, educational tools, interactive 3D visualizations, mobile applications, and enterprise-level APIs."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Are Krish Satasiya's projects open source?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Many of Krish Satasiya's projects are available for viewing and some are open source on GitHub. Platform clones like Spotify Clone, Figma Clone, and Zoom Clone are available on his GitHub profile at github.com/satasiyakrish1."
+                }
+            }
+        ]
+    }
+    </script>
 </head>
 
 <body class="tj-magic-cursor">
@@ -231,139 +748,581 @@
                         <div class="tj-service-5-wrapper">
                             <!-- Full Stack Web Applications -->
                             <div class="project-category mb-5">
-                                <h3 class="category-title mb-4">Full Stack Web Applications</h3>
+                                <h3 class="category-title mb-4">Full Stack Web Applications<span
+                                        class="project-count">7</span></h3>
                                 <ul class="tj-service-5-accordion-list accordion-list">
-                                    <li>
-                                        <h4 class=""><span>01.</span> <a href="https://krishsatasiya-prescriptosystem.onrender.com/">Prescripto : Hospital Appointment System</a></h4>
+                                    <li itemscope itemtype="https://schema.org/SoftwareApplication">
+                                        <h4 class=""><span>01.</span> <a
+                                                href="https://krishsatasiya-prescriptosystem.onrender.com/"
+                                                target="_blank" rel="noopener noreferrer" itemprop="url"><span
+                                                    itemprop="name">Prescripto : Hospital Appointment System</span></a>
+                                        </h4>
+                                        <p class="project-description" itemprop="description">Enterprise-grade
+                                            healthcare management system and hospital appointment booking platform built
+                                            with MERN stack. Features include doctor appointment scheduling, electronic
+                                            medical records (EMR), patient portal, telemedicine integration, real-time
+                                            SMS/email notifications, secure JWT authentication, role-based access
+                                            control for doctors/patients/admins, prescription management, and payment
+                                            gateway integration. Perfect solution for clinics, hospitals, and healthcare
+                                            providers seeking digital transformation.</p>
+                                        <div class="tech-badges">
+                                            <span class="tech-badge">MERN Stack</span>
+                                            <span class="tech-badge">React.js</span>
+                                            <span class="tech-badge">Node.js</span>
+                                            <span class="tech-badge">MongoDB</span>
+                                            <span class="tech-badge">Express</span>
+                                        </div>
                                     </li>
-                                    <li>
-                                        <h4 class=""><span>02.</span> <a href="https://hirix-web.vercel.app/">Hirix : Job Portal</a></h4>
+                                    <li itemscope itemtype="https://schema.org/SoftwareApplication">
+                                        <h4 class=""><span>02.</span> <a href="https://hirix-web.vercel.app/"
+                                                target="_blank" rel="noopener noreferrer" itemprop="url"><span
+                                                    itemprop="name">Hirix : Job Portal</span></a>
+                                        </h4>
+                                        <p class="project-description" itemprop="description">Full-stack job portal and
+                                            recruitment platform connecting employers with qualified candidates.
+                                            Features advanced job search with filters (location, salary, experience),
+                                            applicant tracking system (ATS), resume builder, company profiles, job
+                                            alerts via email, candidate screening, interview scheduling, real-time
+                                            application status tracking, and recruiter dashboard. Built with React.js,
+                                            Node.js, and MongoDB for scalable job matching and career opportunities
+                                            platform.</p>
+                                        <div class="tech-badges">
+                                            <span class="tech-badge">React.js</span>
+                                            <span class="tech-badge">Node.js</span>
+                                            <span class="tech-badge">MongoDB</span>
+                                            <span class="tech-badge">REST API</span>
+                                        </div>
                                     </li>
-                                    <li>
-                                        <h4 class=""><span>03.</span> <a href="https://krishsatasiya-storages.vercel.app/sign-in"> Quarix : Cloud Storage System</a></h4>
+                                    <li itemscope itemtype="https://schema.org/SoftwareApplication">
+                                        <h4 class=""><span>03.</span> <a
+                                                href="https://krishsatasiya-storages.vercel.app/sign-in" target="_blank"
+                                                rel="noopener noreferrer" itemprop="url"><span itemprop="name">Quarix :
+                                                    Cloud Storage System</span></a>
+                                        </h4>
+                                        <p class="project-description" itemprop="description">Enterprise cloud storage
+                                            and file management system similar to Google Drive and Dropbox. Built with
+                                            Next.js, TypeScript, and Appwrite backend. Features include secure file
+                                            upload/download, folder organization, file sharing with permissions,
+                                            real-time collaboration, version control, end-to-end encryption (AES-256),
+                                            team workspaces, file preview for documents/images/videos, search
+                                            functionality, and storage analytics. Ideal for businesses, teams, and
+                                            individuals needing secure cloud backup and document management.</p>
+                                        <div class="tech-badges">
+                                            <span class="tech-badge">Next.js</span>
+                                            <span class="tech-badge">TypeScript</span>
+                                            <span class="tech-badge">Appwrite</span>
+                                            <span class="tech-badge">Cloud Storage</span>
+                                        </div>
                                     </li>
-                                    <li>
-                                        <h4 class=""><span>04.</span> <a href="https://blogger-9dcg.onrender.com/">Blog Managment System</a></h4>
+                                    <li itemscope itemtype="https://schema.org/SoftwareApplication">
+                                        <h4 class=""><span>04.</span> <a href="https://blogger-9dcg.onrender.com/"
+                                                target="_blank" rel="noopener noreferrer" itemprop="url"><span
+                                                    itemprop="name">Blog Management System</span></a>
+                                        </h4>
+                                        <p class="project-description" itemprop="description">Professional blogging
+                                            platform and content management system (CMS) for writers, bloggers, and
+                                            content creators. Built with MERN stack featuring rich text editor
+                                            (WYSIWYG), markdown support, SEO optimization tools, category/tag
+                                            management, comment moderation, user engagement analytics, social media
+                                            integration, scheduled publishing, responsive blog templates, image
+                                            optimization, RSS feed generation, and multi-author support. Perfect for
+                                            personal blogs, news websites, and content marketing.</p>
+                                        <div class="tech-badges">
+                                            <span class="tech-badge">MERN Stack</span>
+                                            <span class="tech-badge">Rich Text Editor</span>
+                                            <span class="tech-badge">Analytics</span>
+                                        </div>
                                     </li>
-                                    <li>
-                                        <h4 class=""><span>05.</span> <a href="https://exploitxplorers.in/">Exploit Cyber Security Community</a></h4>
+                                    <li itemscope itemtype="https://schema.org/SoftwareApplication">
+                                        <h4 class=""><span>05.</span> <a href="https://exploitxplorers.in/"
+                                                target="_blank" rel="noopener noreferrer" itemprop="url"><span
+                                                    itemprop="name">Exploit Cyber Security Community</span></a>
+                                        </h4>
+                                        <p class="project-description" itemprop="description">Cybersecurity community
+                                            platform and ethical hacking hub for information security professionals and
+                                            students. Features include Capture The Flag (CTF) challenges, penetration
+                                            testing tutorials, vulnerability databases, security tool documentation,
+                                            discussion forums, bug bounty program listings, security certifications
+                                            guide (CEH, OSCP, CISSP), threat intelligence sharing, and cybersecurity
+                                            news. Built for ethical hackers, security researchers, and IT security teams
+                                            in India and globally.</p>
+                                        <div class="tech-badges">
+                                            <span class="tech-badge">React.js</span>
+                                            <span class="tech-badge">Community Platform</span>
+                                            <span class="tech-badge">Security</span>
+                                        </div>
                                     </li>
-                                    <li>
-                                        <h4 class=""><span>06.</span> <a href="https://ornate-otter-f9a23b.netlify.app/">Gaudhara Organic Production Limited</a></h4>
+                                    <li itemscope itemtype="https://schema.org/SoftwareApplication">
+                                        <h4 class=""><span>06.</span> <a href="https://ornate-otter-f9a23b.netlify.app/"
+                                                target="_blank" rel="noopener noreferrer" itemprop="url"><span
+                                                    itemprop="name">Gaudhara Organic Production Limited</span></a>
+                                        </h4>
+                                        <p class="project-description" itemprop="description">Professional corporate
+                                            website and e-commerce platform for organic farming and agricultural
+                                            production company. Showcases certified organic products, farming practices,
+                                            sustainability initiatives, quality certifications (USDA Organic, India
+                                            Organic), product catalog with online ordering, farmer partnerships, CSR
+                                            activities, company timeline, and contact information. Built with React.js
+                                            for modern web presence, helping organic food businesses reach customers and
+                                            promote sustainable agriculture.</p>
+                                        <div class="tech-badges">
+                                            <span class="tech-badge">React.js</span>
+                                            <span class="tech-badge">E-commerce</span>
+                                            <span class="tech-badge">Corporate</span>
+                                        </div>
                                     </li>
-                                    <li>
-                                        <h4 class=""><span>07.</span> <a href="https://imagica-client.onrender.com/">Imagica : AI Image generator </a></h4>
+                                    <li itemscope itemtype="https://schema.org/SoftwareApplication">
+                                        <h4 class=""><span>07.</span> <a href="https://imagica-client.onrender.com/"
+                                                target="_blank" rel="noopener noreferrer" itemprop="url"><span
+                                                    itemprop="name">Imagica : AI Image Generator</span></a>
+                                        </h4>
+                                        <p class="project-description" itemprop="description">AI-powered image
+                                            generation platform leveraging DALL-E, Stable Diffusion, and machine
+                                            learning models for creating digital art from text prompts. Features
+                                            text-to-image generation, style transfer, image upscaling, prompt
+                                            engineering, gallery management, and downloadable high-resolution outputs.
+                                            Perfect for graphic designers, content creators, marketers, and AI
+                                            enthusiasts exploring generative AI and artificial intelligence art
+                                            creation. Built with React.js and AI/ML API integration.</p>
+                                        <div class="tech-badges">
+                                            <span class="tech-badge">React.js</span>
+                                            <span class="tech-badge">AI/ML</span>
+                                            <span class="tech-badge">Image Processing</span>
+                                            <span class="tech-badge">API Integration</span>
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
 
                             <!-- Interactive Web Applications -->
                             <div class="project-category mb-5">
-                                <h3 class="category-title mb-4">Interactive Web Applications</h3>
+                                <h3 class="category-title mb-4">Interactive Web Applications<span
+                                        class="project-count">4</span></h3>
                                 <ul class="tj-service-5-accordion-list accordion-list">
-                                    <li>
-                                        <h4 class=""><span>08.</span> <a href="/Projects/3D Solar System/index.html">3D Solar System</a></h4>
+                                    <li itemscope itemtype="https://schema.org/SoftwareApplication">
+                                        <h4 class=""><span>08.</span> <a href="/Projects/3D Solar System/index.html"
+                                                itemprop="url"><span itemprop="name">3D Solar System</span></a></h4>
+                                        <p class="project-description" itemprop="description">Interactive 3D solar
+                                            system simulator and astronomy education tool built with Three.js and WebGL.
+                                            Features realistic planetary orbits, accurate scale models, planet textures
+                                            with bump mapping, rotation animation, clickable planets for detailed
+                                            information, asteroid belt visualization, and educational astronomy facts.
+                                            Perfect for students, teachers, space enthusiasts, and science education.
+                                            Explore planets like Earth, Mars, Jupiter, Saturn with interactive 3D
+                                            graphics in your web browser.</p>
+                                        <div class="tech-badges">
+                                            <span class="tech-badge">Three.js</span>
+                                            <span class="tech-badge">WebGL</span>
+                                            <span class="tech-badge">3D Graphics</span>
+                                            <span class="tech-badge">JavaScript</span>
+                                        </div>
                                     </li>
-                                    <li>
-                                        <h4 class=""><span>09.</span> <a href="/Projects/Animated Periodic Table/index.html">Animated Periodic Table</a></h4>
+                                    <li itemscope itemtype="https://schema.org/SoftwareApplication">
+                                        <h4 class=""><span>09.</span> <a
+                                                href="/Projects/Animated Periodic Table/index.html" itemprop="url"><span
+                                                    itemprop="name">Animated Periodic Table</span></a></h4>
+                                        <p class="project-description" itemprop="description">Educational interactive
+                                            periodic table of elements web app for chemistry students and teachers.
+                                            Features animated element cards, detailed atomic information including
+                                            atomic number, mass, electron configuration, chemical properties, discovery
+                                            history, uses, and element categories (metals, nonmetals, noble gases).
+                                            Includes search functionality, element filtering by properties, and
+                                            responsive design. Perfect learning tool for high school chemistry, NEET,
+                                            JEE preparation, and science education.</p>
+                                        <div class="tech-badges">
+                                            <span class="tech-badge">HTML5</span>
+                                            <span class="tech-badge">CSS3</span>
+                                            <span class="tech-badge">JavaScript</span>
+                                            <span class="tech-badge">Education</span>
+                                        </div>
                                     </li>
-                                    <li>
-                                        <h4 class=""><span>10.</span> <a href="/Projects/Graph - Book/index.html">Graph Book</a></h4>
+                                    <li itemscope itemtype="https://schema.org/SoftwareApplication">
+                                        <h4 class=""><span>10.</span> <a href="/Projects/Graph - Book/index.html"
+                                                itemprop="url"><span itemprop="name">Graph Book</span></a></h4>
+                                        <p class="project-description" itemprop="description">Advanced graphing
+                                            calculator and mathematical visualization tool for plotting functions,
+                                            equations, and data. Features include function graphing (linear, quadratic,
+                                            trigonometric, exponential), coordinate system, zoom controls, grid
+                                            customization, multiple function plotting, derivatives and integrals
+                                            visualization, and export options. Built with Canvas API for performance.
+                                            Ideal for students, engineers, mathematicians, and anyone learning algebra,
+                                            calculus, statistics, or data visualization.</p>
+                                        <div class="tech-badges">
+                                            <span class="tech-badge">JavaScript</span>
+                                            <span class="tech-badge">Canvas API</span>
+                                            <span class="tech-badge">Math Visualization</span>
+                                        </div>
                                     </li>
-                                    <li>
-                                        <h4 class=""><span>11.</span> <a href="/Projects/White Bord Pro/index.html">Digital Board</a></h4>
+                                    <li itemscope itemtype="https://schema.org/SoftwareApplication">
+                                        <h4 class=""><span>11.</span> <a href="/Projects/White Bord Pro/index.html"
+                                                itemprop="url"><span itemprop="name">Digital Board</span></a></h4>
+                                        <p class="project-description" itemprop="description">Collaborative digital
+                                            whiteboard and online drawing tool for remote teams, online teaching, and
+                                            virtual meetings. Features include drawing tools (pen, pencil, marker),
+                                            shapes library, text annotations, color picker, eraser, undo/redo, layer
+                                            management, real-time collaboration, screen capture, and export to PNG/PDF.
+                                            Perfect for online education, remote work, brainstorming sessions, design
+                                            reviews, and virtual classrooms. Alternative to Microsoft Whiteboard and
+                                            Miro for India-based teams.</p>
+                                        <div class="tech-badges">
+                                            <span class="tech-badge">Canvas API</span>
+                                            <span class="tech-badge">JavaScript</span>
+                                            <span class="tech-badge">Collaboration</span>
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
 
                             <!-- Productivity Tools -->
                             <div class="project-category mb-5">
-                                <h3 class="category-title mb-4">Productivity Tools</h3>
+                                <h3 class="category-title mb-4">Productivity Tools<span class="project-count">5</span>
+                                </h3>
                                 <ul class="tj-service-5-accordion-list accordion-list">
-                                    <li>
-                                        <h4 class=""><span>12.</span> <a href="/Projects/Calculator/index.html">Calculator</a></h4>
+                                    <li itemscope itemtype="https://schema.org/SoftwareApplication">
+                                        <h4 class=""><span>12.</span> <a href="/Projects/Calculator/index.html"
+                                                itemprop="url"><span itemprop="name">Calculator</span></a></h4>
+                                        <p class="project-description" itemprop="description">Advanced scientific
+                                            calculator web application with comprehensive mathematical functions.
+                                            Features include basic arithmetic operations, trigonometric functions (sin,
+                                            cos, tan), logarithmic calculations, exponential operations, square root,
+                                            percentage calculations, memory functions (M+, M-, MR, MC), calculation
+                                            history, keyboard shortcuts, and responsive design. Perfect for students,
+                                            engineers, accountants, and professionals needing quick calculations without
+                                            installing apps. Works offline as PWA.</p>
+                                        <div class="tech-badges">
+                                            <span class="tech-badge">JavaScript</span>
+                                            <span class="tech-badge">HTML5</span>
+                                            <span class="tech-badge">CSS3</span>
+                                        </div>
                                     </li>
-                                    <li>
-                                        <h4 class=""><span>13.</span> <a href="/Projects/Celender Pro/celender.html">Calendar Pro</a></h4>
+                                    <li itemscope itemtype="https://schema.org/SoftwareApplication">
+                                        <h4 class=""><span>13.</span> <a href="/Projects/Celender Pro/celender.html"
+                                                itemprop="url"><span itemprop="name">Calendar Pro</span></a></h4>
+                                        <p class="project-description" itemprop="description">Feature-rich calendar and
+                                            event management web application for scheduling and time management.
+                                            Includes month/week/day views, event creation with reminders, recurring
+                                            events support, color-coded categories, drag-and-drop scheduling,
+                                            notifications, holiday calendar (India and international), local storage
+                                            persistence, and export to iCal format. Perfect productivity tool for
+                                            professionals, students, and anyone managing appointments, meetings,
+                                            deadlines, and personal schedules efficiently.</p>
+                                        <div class="tech-badges">
+                                            <span class="tech-badge">JavaScript</span>
+                                            <span class="tech-badge">Local Storage</span>
+                                            <span class="tech-badge">Event Management</span>
+                                        </div>
                                     </li>
-                                    <li>
-                                        <h4 class=""><span>14.</span> <a href="/Projects/Notes/index.html">Notes Web App</a></h4>
+                                    <li itemscope itemtype="https://schema.org/SoftwareApplication">
+                                        <h4 class=""><span>14.</span> <a href="/Projects/Notes/index.html"
+                                                itemprop="url"><span itemprop="name">Notes Web App</span></a></h4>
+                                        <p class="project-description" itemprop="description">Minimalist note-taking
+                                            progressive web app (PWA) for quick notes, to-do lists, and personal
+                                            organization. Features rich text formatting, markdown support, note
+                                            categorization with tags, full-text search, pin important notes, dark and
+                                            light themes, local storage with cloud sync option, offline functionality,
+                                            and fast performance. Alternative to Google Keep, Evernote, and Notion for
+                                            simple note management. Perfect for students, writers, journalists, and
+                                            professionals managing ideas and tasks.</p>
+                                        <div class="tech-badges">
+                                            <span class="tech-badge">JavaScript</span>
+                                            <span class="tech-badge">Local Storage</span>
+                                            <span class="tech-badge">PWA</span>
+                                        </div>
                                     </li>
-                                    <li>
-                                        <h4 class=""><span>15.</span> <a href="/Projects/photo editing web application/index.html">Photo Editor</a></h4>
+                                    <li itemscope itemtype="https://schema.org/SoftwareApplication">
+                                        <h4 class=""><span>15.</span> <a
+                                                href="/Projects/photo editing web application/index.html"
+                                                itemprop="url"><span itemprop="name">Photo Editor</span></a></h4>
+                                        <p class="project-description" itemprop="description">Browser-based photo
+                                            editing tool and image manipulation web app without watermarks. Features
+                                            include filters (vintage, B&W, sepia), adjustments (brightness, contrast,
+                                            saturation, hue), cropping, resizing, rotation, flip, blur effects,
+                                            sharpening, red-eye removal, and drawing tools. Export in JPEG, PNG formats.
+                                            Perfect alternative to Photoshop, GIMP, and Canva for quick photo editing
+                                            online. Works on desktop and mobile browsers for photographers, social media
+                                            managers, and content creators.</p>
+                                        <div class="tech-badges">
+                                            <span class="tech-badge">Canvas API</span>
+                                            <span class="tech-badge">JavaScript</span>
+                                            <span class="tech-badge">Image Processing</span>
+                                        </div>
                                     </li>
-                                    <li>
-                                        <h4 class=""><span>16.</span> <a href="/Projects/Keybord/index.html">Keyboard Learning</a></h4>
+                                    <li itemscope itemtype="https://schema.org/SoftwareApplication">
+                                        <h4 class=""><span>16.</span> <a href="/Projects/Keybord/index.html"
+                                                itemprop="url"><span itemprop="name">Keyboard Learning</span></a></h4>
+                                        <p class="project-description" itemprop="description">Interactive typing tutor
+                                            and keyboard learning game to improve typing speed and accuracy. Features
+                                            include typing lessons for beginners, WPM (words per minute) test, accuracy
+                                            tracking, finger position guide, difficulty levels, leaderboard, practice
+                                            texts, real-time feedback, and progress analytics. Perfect for students,
+                                            professionals, data entry workers improving touch typing skills. Supports
+                                            QWERTY keyboard layout for English typing practice and competitive typing
+                                            tests.</p>
+                                        <div class="tech-badges">
+                                            <span class="tech-badge">JavaScript</span>
+                                            <span class="tech-badge">Education</span>
+                                            <span class="tech-badge">Gamification</span>
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
 
                             <!-- Games -->
                             <div class="project-category mb-5">
-                                <h3 class="category-title mb-4">Interactive Games</h3>
+                                <h3 class="category-title mb-4">Interactive Games<span class="project-count">2</span>
+                                </h3>
                                 <ul class="tj-service-5-accordion-list accordion-list">
-                                    <li>
-                                        <h4 class=""><span>17.</span> <a href="/Games/Cube/index.html">Cube Game</a></h4>
+                                    <li itemscope itemtype="https://schema.org/SoftwareApplication">
+                                        <h4 class=""><span>17.</span> <a href="/Games/Cube/index.html"
+                                                itemprop="url"><span itemprop="name">Cube Game</span></a></h4>
+                                        <p class="project-description" itemprop="description">Engaging 3D puzzle game
+                                            with physics-based mechanics built using Three.js and WebGL. Features
+                                            challenging levels, intuitive controls, realistic 3D graphics, collision
+                                            detection, gravity simulation, progressive difficulty, sound effects, score
+                                            tracking, and level completion rewards. Perfect casual game for puzzle
+                                            enthusiasts, students, and anyone looking for brain-training entertainment.
+                                            Play directly in browser without downloads on desktop, tablet, or mobile
+                                            devices.</p>
+                                        <div class="tech-badges">
+                                            <span class="tech-badge">Three.js</span>
+                                            <span class="tech-badge">WebGL</span>
+                                            <span class="tech-badge">Game Dev</span>
+                                        </div>
                                     </li>
-                                    <li>
-                                        <h4 class=""><span>18.</span> <a href="/Games/Archry/index.html">Archery Game</a></h4>
+                                    <li itemscope itemtype="https://schema.org/SoftwareApplication">
+                                        <h4 class=""><span>18.</span> <a href="/Games/Archry/index.html"
+                                                itemprop="url"><span itemprop="name">Archery Game</span></a></h4>
+                                        <p class="project-description" itemprop="description">Fun archery simulation
+                                            browser game with realistic arrow physics and trajectory calculation.
+                                            Features include bow and arrow mechanics, multiple targets at varying
+                                            distances, wind effects, scoring system, accuracy metrics, difficulty
+                                            levels, and leaderboard. Built with JavaScript Canvas API for smooth
+                                            gameplay. Perfect sports simulation game for archery enthusiasts, casual
+                                            gamers, and anyone enjoying precision targeting games. Play free online
+                                            without installation.</p>
+                                        <div class="tech-badges">
+                                            <span class="tech-badge">JavaScript</span>
+                                            <span class="tech-badge">Canvas</span>
+                                            <span class="tech-badge">Physics Engine</span>
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
 
                             <!-- Clone Projects -->
                             <div class="project-category mb-5">
-                                <h3 class="category-title mb-4">Platform Clones</h3>
+                                <h3 class="category-title mb-4">Platform Clones<span class="project-count">3</span></h3>
                                 <ul class="tj-service-5-accordion-list accordion-list">
-                                    <li>
-                                        <h4 class=""><span>19.</span> <a href="https://github.com/satasiyakrish1//Spotify-Clone">Spotify Clone</a></h4>
+                                    <li itemscope itemtype="https://schema.org/SoftwareApplication">
+                                        <h4 class=""><span>19.</span> <a
+                                                href="https://github.com/satasiyakrish1//Spotify-Clone" target="_blank"
+                                                rel="noopener noreferrer" itemprop="url"><span itemprop="name">Spotify
+                                                    Clone</span></a>
+                                        </h4>
+                                        <p class="project-description" itemprop="description">Full-featured Spotify
+                                            clone music streaming web application with audio player and playlist
+                                            management. Built with React.js and Node.js featuring user authentication,
+                                            music library, create/edit playlists, search songs by title/artist/album,
+                                            play/pause controls, volume adjustment, shuffle and repeat modes, recently
+                                            played tracks, and responsive design. Perfect project demonstrating
+                                            full-stack MERN development, REST API integration, and modern music player
+                                            UI/UX for portfolio and learning.</p>
+                                        <div class="tech-badges">
+                                            <span class="tech-badge">React.js</span>
+                                            <span class="tech-badge">Node.js</span>
+                                            <span class="tech-badge">Audio API</span>
+                                        </div>
                                     </li>
-                                    <li>
-                                        <h4 class=""><span>20.</span> <a href="https://github.com/satasiyakrish1//FIGMA-CLONE">Figma Clone</a></h4>
+                                    <li itemscope itemtype="https://schema.org/SoftwareApplication">
+                                        <h4 class=""><span>20.</span> <a
+                                                href="https://github.com/satasiyakrish1//FIGMA-CLONE" target="_blank"
+                                                rel="noopener noreferrer" itemprop="url"><span itemprop="name">Figma
+                                                    Clone</span></a>
+                                        </h4>
+                                        <p class="project-description" itemprop="description">Figma clone -
+                                            collaborative design tool and vector graphics editor for UI/UX designers.
+                                            Built with Next.js, Fabric.js, and WebSockets. Features include real-time
+                                            multi-user collaboration, vector drawing tools, shapes library, text
+                                            editing, layers panel, grouping elements, undo/redo, color picker, export to
+                                            PNG/SVG, comments and annotations, design components, and prototype sharing.
+                                            Demonstrating real-time collaboration technology, canvas manipulation, and
+                                            modern design tool architecture perfect for design teams and remote work.
+                                        </p>
+                                        <div class="tech-badges">
+                                            <span class="tech-badge">Next.js</span>
+                                            <span class="tech-badge">Fabric.js</span>
+                                            <span class="tech-badge">WebSockets</span>
+                                        </div>
                                     </li>
-                                    <li>
-                                        <h4 class=""><span>21.</span> <a href="https://krishsatasiya-connectly.vercel.app/sign-in?redirect_url=https%3A%2F%2Fkrishsatasiya-connectly.vercel.app%2F">Zoom Clone</a></h4>
+                                    <li itemscope itemtype="https://schema.org/SoftwareApplication">
+                                        <h4 class=""><span>21.</span> <a
+                                                href="https://krishsatasiya-connectly.vercel.app/sign-in?redirect_url=https%3A%2F%2Fkrishsatasiya-connectly.vercel.app%2F"
+                                                target="_blank" rel="noopener noreferrer" itemprop="url"><span
+                                                    itemprop="name">Zoom Clone</span></a>
+                                        </h4>
+                                        <p class="project-description" itemprop="description">Zoom clone - video
+                                            conferencing platform for virtual meetings, online classes, and remote
+                                            collaboration. Built with Next.js and WebRTC technology. Features include HD
+                                            video calls, screen sharing, virtual backgrounds, meeting chat, participant
+                                            management, mute/unmute controls, recording functionality, meeting
+                                            scheduling, waiting room, breakout rooms support, and end-to-end encryption.
+                                            Perfect for remote teams, online education, webinars, and virtual events.
+                                            Demonstrating WebRTC implementation, peer-to-peer communication, and modern
+                                            video call infrastructure in India and globally.</p>
+                                        <div class="tech-badges">
+                                            <span class="tech-badge">Next.js</span>
+                                            <span class="tech-badge">WebRTC</span>
+                                            <span class="tech-badge">Stream API</span>
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
 
                             <!-- Mobile Applications -->
                             <div class="project-category mb-5">
-                                <h3 class="category-title mb-4">Mobile Applications</h3>
+                                <h3 class="category-title mb-4">Mobile Applications<span class="project-count">3</span>
+                                </h3>
                                 <ul class="tj-service-5-accordion-list accordion-list">
-                                    <li>
-                                        <h4 class=""><span>22.</span> <a href="https://play.google.com/store/apps/details?id=com.notesplus.KrishSatasiya&hl=en">Note Plus - Android application</a></h4>
+                                    <li itemscope itemtype="https://schema.org/MobileApplication">
+                                        <h4 class=""><span>22.</span> <a
+                                                href="https://play.google.com/store/apps/details?id=com.notesplus.KrishSatasiya&hl=en"
+                                                target="_blank" rel="noopener noreferrer" itemprop="url"><span
+                                                    itemprop="name">Note Plus - Android Application</span></a>
+                                        </h4>
+                                        <p class="project-description" itemprop="description">Note Plus - Feature-rich
+                                            note-taking Android mobile application available on Google Play Store. Built
+                                            with Java and Firebase for cloud synchronization across devices. Features
+                                            include rich text formatting (bold, italic, underline), color-coded notes,
+                                            categories and tags, quick search, voice-to-text notes, reminders and
+                                            alarms, backup and restore, dark mode, offline access, note sharing, and
+                                            password protection. Perfect productivity app for students, professionals,
+                                            and anyone managing notes, to-do lists, and ideas on Android smartphones and
+                                            tablets in India.</p>
+                                        <div class="tech-badges">
+                                            <span class="tech-badge">Android</span>
+                                            <span class="tech-badge">Java</span>
+                                            <span class="tech-badge">Firebase</span>
+                                        </div>
                                     </li>
-                                    <li>
-                                        <h4 class=""><span>23.</span> <a href="https://play.google.com/store/apps/details?id=com.calculatMe.KrishSatasiya&hl=en">Calculator - Android application</a></h4>
+                                    <li itemscope itemtype="https://schema.org/MobileApplication">
+                                        <h4 class=""><span>23.</span> <a
+                                                href="https://play.google.com/store/apps/details?id=com.calculatMe.KrishSatasiya&hl=en"
+                                                target="_blank" rel="noopener noreferrer" itemprop="url"><span
+                                                    itemprop="name">Calculator - Android Application</span></a>
+                                        </h4>
+                                        <p class="project-description" itemprop="description">Advanced Calculator -
+                                            Scientific calculator Android application published on Google Play Store.
+                                            Built with Java and Material Design UI. Features include basic arithmetic
+                                            operations, advanced scientific functions (trigonometry, logarithms,
+                                            exponentials), degree/radian mode, memory operations, calculation history
+                                            with timestamps, unit converter (length, weight, temperature, currency),
+                                            percentage calculations, fraction support, and equation solver. Perfect
+                                            calculator app for engineering students, scientists, accountants, and
+                                            professionals needing advanced calculations on Android mobile devices.</p>
+                                        <div class="tech-badges">
+                                            <span class="tech-badge">Android</span>
+                                            <span class="tech-badge">Java</span>
+                                            <span class="tech-badge">Material Design</span>
+                                        </div>
                                     </li>
-                                    <li>
-                                        <h4 class=""><span>24.</span> <a href="https://github.com/satasiyakrish1//flutter-task-manager">Task Manager Application - Flutter</a></h4>
+                                    <li itemscope itemtype="https://schema.org/MobileApplication">
+                                        <h4 class=""><span>24.</span> <a
+                                                href="https://github.com/satasiyakrish1//flutter-task-manager"
+                                                target="_blank" rel="noopener noreferrer" itemprop="url"><span
+                                                    itemprop="name">Task Manager Application - Flutter</span></a>
+                                        </h4>
+                                        <p class="project-description" itemprop="description">Task Manager -
+                                            Cross-platform mobile application built with Flutter and Dart for iOS and
+                                            Android. Features include task creation with due dates, priority levels
+                                            (high, medium, low), categories and projects, subtasks, reminders and push
+                                            notifications, progress tracking, calendar view, productivity statistics,
+                                            team collaboration, file attachments, offline mode with cloud sync, and dark
+                                            theme. Perfect project management and to-do list app for busy professionals,
+                                            teams, students, and freelancers seeking productivity improvement and task
+                                            organization.</p>
+                                        <div class="tech-badges">
+                                            <span class="tech-badge">Flutter</span>
+                                            <span class="tech-badge">Dart</span>
+                                            <span class="tech-badge">Cross-platform</span>
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
 
                             <!-- Development Tools -->
                             <div class="project-category mb-5">
-                                <h3 class="category-title mb-4">Development Tools</h3>
+                                <h3 class="category-title mb-4">Development Tools<span class="project-count">1</span>
+                                </h3>
                                 <ul class="tj-service-5-accordion-list accordion-list">
-                                    <li>
-                                        <h4 class=""><span>25.</span> <a href="/Projects/electron-builder/dist/index.html">Electron Builder</a></h4>
+                                    <li itemscope itemtype="https://schema.org/SoftwareApplication">
+                                        <h4 class=""><span>25.</span> <a
+                                                href="/Projects/electron-builder/dist/index.html" itemprop="url"><span
+                                                    itemprop="name">Electron Builder</span></a></h4>
+                                        <p class="project-description" itemprop="description">Electron Builder - Desktop
+                                            application development tool for creating cross-platform apps using web
+                                            technologies (HTML, CSS, JavaScript). Built with Electron framework and
+                                            Node.js. Enables developers to build native desktop applications for
+                                            Windows, macOS, and Linux from a single codebase. Features include
+                                            packaging, auto-updates, native menus, system tray integration, file system
+                                            access, and installer generation. Perfect for web developers transitioning
+                                            to desktop app development, showcasing modern desktop application
+                                            architecture and distribution.</p>
+                                        <div class="tech-badges">
+                                            <span class="tech-badge">Electron</span>
+                                            <span class="tech-badge">Node.js</span>
+                                            <span class="tech-badge">Desktop App</span>
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
 
-                            <!-- Clone Projects -->
+                            <!-- API Services -->
                             <div class="project-category mb-5">
-                                <h3 class="category-title mb-4">Api Services</h3>
+                                <h3 class="category-title mb-4">API Services<span class="project-count">2</span></h3>
                                 <ul class="tj-service-5-accordion-list accordion-list">
-                                    <li>
-                                        <h4 class=""><span>26.</span> <a href="https://krishsatasiya-prescripto.onrender.com/">Prescirpto Api</a></h4>
+                                    <li itemscope itemtype="https://schema.org/SoftwareApplication">
+                                        <h4 class=""><span>26.</span> <a
+                                                href="https://krishsatasiya-prescripto.onrender.com/" target="_blank"
+                                                rel="noopener noreferrer" itemprop="url"><span
+                                                    itemprop="name">Prescripto API</span></a>
+                                        </h4>
+                                        <p class="project-description" itemprop="description">Prescripto Backend API -
+                                            Enterprise RESTful API service powering the Prescripto healthcare management
+                                            system. Built with Node.js, Express, and MongoDB. Provides secure endpoints
+                                            for appointment booking and management, patient registration and profiles,
+                                            doctor availability scheduling, medical records (EMR/EHR), prescription
+                                            generation, payment processing, notification services (email/SMS), admin
+                                            panel operations, and analytics dashboards. Features JWT authentication,
+                                            data validation, error handling, rate limiting, and comprehensive API
+                                            documentation perfect for healthcare software integration.</p>
+                                        <div class="tech-badges">
+                                            <span class="tech-badge">Node.js</span>
+                                            <span class="tech-badge">Express</span>
+                                            <span class="tech-badge">MongoDB</span>
+                                            <span class="tech-badge">REST API</span>
+                                        </div>
                                     </li>
-                                    <li>
-                                        <h4 class=""><span>27.</span> <a href="https://hirix-api.vercel.app/">Hirix Api</a></h4>
+                                    <li itemscope itemtype="https://schema.org/SoftwareApplication">
+                                        <h4 class=""><span>27.</span> <a href="https://hirix-api.vercel.app/"
+                                                target="_blank" rel="noopener noreferrer" itemprop="url"><span
+                                                    itemprop="name">Hirix API</span></a>
+                                        </h4>
+                                        <p class="project-description" itemprop="description">Hirix Backend API -
+                                            Scalable backend API service for the Hirix job portal platform. Built with
+                                            Node.js, Express, and MongoDB database. Provides RESTful endpoints for job
+                                            posting and management, candidate applications, resume parsing, company
+                                            profiles, user authentication (OAuth, JWT), job search with advanced
+                                            filters, applicant tracking system (ATS) integration, email notifications,
+                                            analytics and reporting, recruiter dashboard, and payment processing for
+                                            premium listings. Demonstrates modern backend architecture, database design,
+                                            API security best practices for recruitment platforms.</p>
+                                        <div class="tech-badges">
+                                            <span class="tech-badge">Node.js</span>
+                                            <span class="tech-badge">Express</span>
+                                            <span class="tech-badge">MongoDB</span>
+                                            <span class="tech-badge">JWT Auth</span>
+                                        </div>
                                     </li>
-                                    
                                 </ul>
                             </div>
 
@@ -383,8 +1342,7 @@
                         <!-- logo -->
                         <div class="footer-logo-box">
                             <a href="/index.html">
-                                <img src="/assets/img/logo/logo-5.png"
-                                    alt="logo">
+                                <img src="/assets/img/logo/logo-5.png" alt="logo">
                             </a>
                         </div>
 
@@ -396,20 +1354,25 @@
                                     id="menu-item-548"
                                     class="menu-item menu-item-type-post_type_archive menu-item-object-services menu-item-548 nav-item">
                                     <a title="Services." href="https://www.facebook.com/satasiyakrish1/"
-                                        class="nav-links">Facebook.</a></li>
+                                        class="nav-links">Facebook.</a>
+                                </li>
                                 <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"
                                     id="menu-item-549"
                                     class="menu-item menu-item-type-post_type_archive menu-item-object-portfolios menu-item-549 nav-item">
                                     <a title="Work." href="https://www.instagram.com/satasiyakrish1/"
-                                        class="nav-links">Instagram.</a></li>
+                                        class="nav-links">Instagram.</a>
+                                </li>
                                 <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"
                                     id="menu-item-551"
                                     class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item active menu-item-551 nav-item">
-                                    <a title="Skills." href="/index.html" class="nav-links">Portfolio.</a></li>
+                                    <a title="Skills." href="/index.html" class="nav-links">Portfolio.</a>
+                                </li>
                                 <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"
                                     id="menu-item-550"
                                     class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item active menu-item-550 nav-item">
-                                    <a title="Experience." href="/Uplodes/Krish Satasiya - Resume.pdf" class="nav-links">Resume.</a></li>
+                                    <a title="Experience." href="/Uplodes/Krish Satasiya - Resume.pdf"
+                                        class="nav-links">Resume.</a>
+                                </li>
                             </ul>
                         </div>
                     </div>

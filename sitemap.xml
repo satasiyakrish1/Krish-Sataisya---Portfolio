@@ -61,6 +61,70 @@
     <changefreq>monthly</changefreq>
     <lastmod>2025-12-08</lastmod>
   </url>
+
+  <!-- Success Pictures / Photos Gallery (NEW) -->
+  <url>
+    <loc>https://krishsatasiya.netlify.app/Pages/Photos.html</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-12-13</lastmod>
+    <!-- Image Gallery - 11 Photos -->
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/img/Photos/586d8feb-1b2a-4511-8272-4af95efa63ba.JPG</image:loc>
+      <image:title>Krish Satasiya Success Photo</image:title>
+      <image:caption>Professional success photo of Krish Satasiya - MERN Stack Developer and UI/UX Designer</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/img/Photos/IMG-20251116-WA0065.jpg</image:loc>
+      <image:title>Krish Satasiya Achievement Photo</image:title>
+      <image:caption>Achievement photo from Krish Satasiya's professional journey</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/img/Photos/IMG-20240906-WA0009(1).jpg</image:loc>
+      <image:title>Krish Satasiya Event Photo</image:title>
+      <image:caption>Tech event photo featuring Krish Satasiya</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/img/Photos/IMG_20250117_163324.jpg</image:loc>
+      <image:title>Krish Satasiya Professional Photo</image:title>
+      <image:caption>Professional photo of Krish Satasiya</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/img/Photos/IMG_20251102_080246.jpg</image:loc>
+      <image:title>Krish Satasiya Photo</image:title>
+      <image:caption>Photo from Krish Satasiya's portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/img/Photos/IMG_20251129_141307687.jpg</image:loc>
+      <image:title>Krish Satasiya Success Moment</image:title>
+      <image:caption>Success moment captured from Krish Satasiya's journey</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/img/Photos/IMG-20250726-WA0113.jpg</image:loc>
+      <image:title>Krish Satasiya Event Photo</image:title>
+      <image:caption>Event photo from Krish Satasiya's professional activities</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/img/Photos/IMG-20240203-WA0073.jpg</image:loc>
+      <image:title>Krish Satasiya Achievement Milestone</image:title>
+      <image:caption>Achievement milestone photo of Krish Satasiya</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/img/Photos/IMG-20250727-WA0029.jpg</image:loc>
+      <image:title>Krish Satasiya Success Moment</image:title>
+      <image:caption>Notable success moment from Krish Satasiya's career</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/img/Photos/IMG_20251129_101846813.jpg</image:loc>
+      <image:title>Krish Satasiya Professional Event</image:title>
+      <image:caption>Professional event photo featuring Krish Satasiya</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/img/Photos/RHA%20India%20Challenge%202024_page-0001.jpg</image:loc>
+      <image:title>RHA India Challenge 2024 Certificate - Krish Satasiya</image:title>
+      <image:caption>RHA India Challenge 2024 achievement certificate awarded to Krish Satasiya for excellence in technology and innovation</image:caption>
+    </image:image>
+  </url>
   
   <!-- Important Resource Files (NEW) -->
   <url>

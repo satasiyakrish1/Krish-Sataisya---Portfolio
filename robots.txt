@@ -26,6 +26,7 @@ Allow: /Games/
 Allow: /assets/
 Allow: /Uplodes/
 
+
 # Disallow private/system paths (if any in future)
 # Disallow: /private/
 # Disallow: /@secure-krish/

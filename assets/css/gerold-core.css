@@ -252,6 +252,7 @@ START: Theme Header CSS
         -ms-flex-direction: column;
         flex-direction: column;
     }
+
     .footer-contact-infos .contact-footer-item .line {
         display: none;
     }
@@ -264,12 +265,15 @@ START: Theme Header CSS
         -ms-flex-direction: column;
         flex-direction: column;
     }
+
     .footer-contact-infos .contact-footer-item .line {
         display: none;
     }
+
     .footer-contact-infos .contact-footer-item .contact_text span {
         font-size: 18px;
     }
+
     .footer-contact-infos .contact-footer-item .contact_text a {
         font-size: 18px;
     }
@@ -282,12 +286,15 @@ START: Theme Header CSS
         -ms-flex-direction: column;
         flex-direction: column;
     }
+
     .footer-contact-infos .contact-footer-item .line {
         display: none;
     }
+
     .footer-contact-infos .contact-footer-item .contact_text span {
         font-size: 16px;
     }
+
     .footer-contact-infos .contact-footer-item .contact_text a {
         font-size: 16px;
     }
@@ -432,6 +439,7 @@ START: Theme Header CSS
     .footer-social-media {
         max-width: 360px;
     }
+
     .footer-social-media ul {
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -443,9 +451,11 @@ START: Theme Header CSS
         column-gap: 16px;
         row-gap: 16px;
     }
+
     .footer-social-media ul li {
         border-right: none;
     }
+
     .footer-social-media ul li a {
         width: 170px;
         height: auto;
@@ -466,9 +476,11 @@ START: Theme Header CSS
         column-gap: 16px;
         row-gap: 16px;
     }
+
     .footer-social-media ul li {
         border-right: none;
     }
+
     .footer-social-media ul li a {
         width: 160px;
         height: auto;
@@ -824,6 +836,7 @@ START: Theme Animation CSS
         -ms-transform: translateY(-30px);
         transform: translateY(-30px);
     }
+
     100% {
         -webkit-transform: translateY(20px);
         -ms-transform: translateY(20px);
@@ -837,6 +850,7 @@ START: Theme Animation CSS
         -ms-transform: translateY(-30px);
         transform: translateY(-30px);
     }
+
     100% {
         -webkit-transform: translateY(20px);
         -ms-transform: translateY(20px);
@@ -845,11 +859,13 @@ START: Theme Animation CSS
 }
 
 @-webkit-keyframes waves {
+
     0%,
     100% {
         -webkit-clip-path: polygon(0% 45%, 16% 44%, 33% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
         clip-path: polygon(0% 45%, 16% 44%, 33% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
     }
+
     50% {
         -webkit-clip-path: polygon(0% 60%, 15% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
         clip-path: polygon(0% 60%, 15% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
@@ -857,11 +873,13 @@ START: Theme Animation CSS
 }
 
 @keyframes waves {
+
     0%,
     100% {
         -webkit-clip-path: polygon(0% 45%, 16% 44%, 33% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
         clip-path: polygon(0% 45%, 16% 44%, 33% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
     }
+
     50% {
         -webkit-clip-path: polygon(0% 60%, 15% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
         clip-path: polygon(0% 60%, 15% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
@@ -874,6 +892,7 @@ START: Theme Animation CSS
         -ms-transform: translateY(-20px);
         transform: translateY(-20px);
     }
+
     100% {
         -webkit-transform: translateY(20px);
         -ms-transform: translateY(20px);
@@ -887,6 +906,7 @@ START: Theme Animation CSS
         -ms-transform: translateY(-20px);
         transform: translateY(-20px);
     }
+
     100% {
         -webkit-transform: translateY(20px);
         -ms-transform: translateY(20px);
@@ -900,6 +920,7 @@ START: Theme Animation CSS
         -ms-transform: translateX(-20px);
         transform: translateX(-20px);
     }
+
     100% {
         -webkit-transform: translateX(20px);
         -ms-transform: translateX(20px);
@@ -913,6 +934,7 @@ START: Theme Animation CSS
         -ms-transform: translateX(-20px);
         transform: translateX(-20px);
     }
+
     100% {
         -webkit-transform: translateX(20px);
         -ms-transform: translateX(20px);
@@ -1480,6 +1502,7 @@ START: Theme Marquee CSS
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
     }
+
     100% {
         -webkit-transform: rotate(-360deg);
         transform: rotate(-360deg);
@@ -1491,6 +1514,7 @@ START: Theme Marquee CSS
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
     }
+
     100% {
         -webkit-transform: rotate(-360deg);
         transform: rotate(-360deg);
@@ -1994,6 +2018,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
     .cta-wrapper {
         padding: 80px 25px;
     }
+
     .cta-wrapper .cta-inner .title {
         font-size: 45px;
     }
@@ -2003,6 +2028,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
     .cta-wrapper {
         padding: 75px 15px;
     }
+
     .cta-wrapper .cta-inner .title {
         font-size: 40px;
     }
@@ -2012,6 +2038,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
     .cta-wrapper {
         padding: 75px 15px;
     }
+
     .cta-wrapper .cta-inner .title {
         font-size: 35px;
     }
@@ -2200,6 +2227,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
     .testimonial-item.style-4 {
         padding: 35px 15px;
     }
+
     .testimonial-item.style-4 .top-infos {
         gap: 10px;
     }
@@ -2225,6 +2253,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
         margin-left: auto;
         margin-right: auto;
     }
+
     .testimonial-item.style-4 .top-infos {
         gap: 12px;
     }
@@ -2297,6 +2326,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
     .tj-counter-section.style-4 {
         padding: 80px 0;
     }
+
     .tj-counter-section.style-4 .section-header {
         margin-bottom: 15px;
     }
@@ -2341,6 +2371,7 @@ only screen and (min-width: 576px) and (max-width: 767px) {
         -ms-flex-direction: column;
         flex-direction: column;
     }
+
     .counter-content-area .funfact_wrapper {
         -webkit-column-gap: 25px;
         -moz-column-gap: 25px;
@@ -2359,6 +2390,7 @@ only screen and (min-width: 576px) and (max-width: 767px) {
         -ms-flex-direction: column;
         flex-direction: column;
     }
+
     .counter-content-area .funfact_wrapper {
         -webkit-column-gap: 25px;
         -moz-column-gap: 25px;
@@ -2410,6 +2442,7 @@ only screen and (min-width: 576px) and (max-width: 767px) {
         max-width: 215px;
         padding: 30px 15px 35px 15px;
     }
+
     .funfact-item.style-4 .number {
         font-size: 35px;
     }
@@ -2426,6 +2459,7 @@ only screen and (min-width: 576px) and (max-width: 767px) {
         max-width: 245px;
         padding: 30px 15px 35px 15px;
     }
+
     .funfact-item.style-4 .number {
         font-size: 40px;
     }
@@ -2435,6 +2469,7 @@ only screen and (min-width: 576px) and (max-width: 767px) {
     .funfact-item.style-4 {
         padding: 30px 15px 35px 15px;
     }
+
     .funfact-item.style-4 .number {
         font-size: 40px;
     }
@@ -2535,14 +2570,17 @@ only screen and (min-width: 576px) and (max-width: 767px),
     .progress-single {
         padding: 35px 15px 40px;
     }
+
     .progress-single .progress-text {
         gap: 15px;
     }
+
     .progress-single .progress-text .icon-box {
         width: 46px;
         height: 46px;
         border-radius: 12px;
     }
+
     .progress-single .progress-text .icon-box img {
         max-width: 30px;
     }
@@ -2560,14 +2598,17 @@ only screen and (min-width: 576px) and (max-width: 767px),
         max-width: 100%;
         padding: 30px 15px 35px;
     }
+
     .progress-single .progress-text {
         gap: 15px;
     }
+
     .progress-single .progress-text .icon-box {
         width: 46px;
         height: 46px;
         border-radius: 12px;
     }
+
     .progress-single .progress-text .icon-box img {
         max-width: 30px;
     }
@@ -2579,11 +2620,13 @@ only screen and (min-width: 576px) and (max-width: 767px),
         margin-left: auto;
         margin-right: auto;
     }
+
     .progress-single .progress-text .icon-box {
         width: 60px;
         height: 60px;
         border-radius: 12px;
     }
+
     .progress-single .progress-text .icon-box img {
         max-width: 30px;
     }
@@ -2703,6 +2746,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
         padding-top: 120px;
         padding-bottom: 120px;
     }
+
     .resume-section.style-4 .resume_wrapper {
         max-width: 950px;
     }
@@ -2713,6 +2757,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
         padding-top: 100px;
         padding-bottom: 100px;
     }
+
     .resume-section.style-4 .resume_wrapper {
         max-width: 950px;
     }
@@ -2725,6 +2770,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
         padding-top: 80px;
         padding-bottom: 80px;
     }
+
     .resume-section.style-4 .section-header {
         margin-bottom: 50px;
     }
@@ -2855,6 +2901,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
         -ms-flex-direction: column;
         flex-direction: column;
     }
+
     .resume_item .resume_content {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
@@ -2862,9 +2909,11 @@ only screen and (min-width: 576px) and (max-width: 767px),
         flex-direction: column;
         gap: 30px;
     }
+
     .resume_item .resume_date {
         max-width: 100%;
     }
+
     .resume_item .resume_date .date {
         text-align: start;
     }
@@ -3136,6 +3185,7 @@ START: Theme Footer CSS
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     }
+
     .footer-content-area .line {
         display: none;
     }
@@ -3149,6 +3199,7 @@ START: Theme Footer CSS
         flex-wrap: wrap;
         gap: 40px;
     }
+
     .footer-content-area .line {
         display: none;
     }
@@ -3858,6 +3909,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
 }
 
 @-webkit-keyframes jump-arrow {
+
     0%,
     20%,
     55%,
@@ -3866,14 +3918,17 @@ only screen and (min-width: 576px) and (max-width: 767px),
         -webkit-transform: translate3d(-50%, 0, 0) rotate(-90deg);
         transform: translate3d(-50%, 0, 0) rotate(-90deg);
     }
+
     40% {
         -webkit-transform: translate3d(-50%, -8px, 0) rotate(-90deg);
         transform: translate3d(-50%, -8px, 0) rotate(-90deg);
     }
+
     70% {
         -webkit-transform: translate3d(-50%, -8px, 0) rotate(-90deg);
         transform: translate3d(-50%, -8px, 0) rotate(-90deg);
     }
+
     90% {
         -webkit-transform: translate3d(-50%, -5px, 0) rotate(-90deg);
         transform: translate3d(-50%, -5px, 0) rotate(-90deg);
@@ -3881,6 +3936,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
 }
 
 @keyframes jump-arrow {
+
     0%,
     20%,
     55%,
@@ -3889,14 +3945,17 @@ only screen and (min-width: 576px) and (max-width: 767px),
         -webkit-transform: translate3d(-50%, 0, 0) rotate(-90deg);
         transform: translate3d(-50%, 0, 0) rotate(-90deg);
     }
+
     40% {
         -webkit-transform: translate3d(-50%, -8px, 0) rotate(-90deg);
         transform: translate3d(-50%, -8px, 0) rotate(-90deg);
     }
+
     70% {
         -webkit-transform: translate3d(-50%, -8px, 0) rotate(-90deg);
         transform: translate3d(-50%, -8px, 0) rotate(-90deg);
     }
+
     90% {
         -webkit-transform: translate3d(-50%, -5px, 0) rotate(-90deg);
         transform: translate3d(-50%, -5px, 0) rotate(-90deg);
@@ -4038,6 +4097,7 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
     .tj-counter-5-wrapper {
         padding: 50px 15px 50px;
     }
+
     .tj-counter-5-wrapper .funfact-item {
         margin-bottom: 15px;
     }
@@ -4047,6 +4107,7 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
     .tj-counter-5-wrapper {
         padding: 45px 15px 45px;
     }
+
     .tj-counter-5-wrapper .funfact-item {
         margin-bottom: 15px;
     }
@@ -4487,10 +4548,12 @@ only screen and (min-width: 576px) and (max-width: 767px),
     .cta-inner-5 {
         gap: 30px;
     }
+
     .cta-inner-5 .cta-content .cta-text .title {
         font-size: 50px;
         margin-bottom: 30px;
     }
+
     .cta-inner-5 .cta-content .cta-button .cta-link {
         width: 90px;
         height: 90px;
@@ -4502,13 +4565,16 @@ only screen and (min-width: 576px) and (max-width: 767px),
     .cta-inner-5 {
         gap: 30px;
     }
+
     .cta-inner-5 .cta-images {
         max-width: 230px;
     }
+
     .cta-inner-5 .cta-content .cta-text .title {
         font-size: 35px;
         margin-bottom: 30px;
     }
+
     .cta-inner-5 .cta-content .cta-button .cta-link {
         width: 75px;
         height: 75px;
@@ -4524,13 +4590,16 @@ only screen and (min-width: 576px) and (max-width: 767px),
         -ms-flex-direction: column;
         flex-direction: column;
     }
+
     .cta-inner-5 .cta-images {
         max-width: 230px;
     }
+
     .cta-inner-5 .cta-content .cta-text .title {
         font-size: 30px;
         margin-bottom: 30px;
     }
+
     .cta-inner-5 .cta-content .cta-button .cta-link {
         width: 75px;
         height: 75px;
@@ -4548,19 +4617,23 @@ only screen and (min-width: 576px) and (max-width: 767px),
         -ms-flex-direction: column;
         flex-direction: column;
     }
+
     .cta-inner-5 .cta-images {
         max-width: 100%;
     }
+
     .cta-inner-5 .cta-content {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
     }
+
     .cta-inner-5 .cta-content .cta-text .title {
         font-size: 30px;
         margin-bottom: 25px;
     }
+
     .cta-inner-5 .cta-content .cta-button .cta-link {
         width: 75px;
         height: 75px;
@@ -4918,6 +4991,7 @@ only screen and (min-width: 992px) and (max-width: 1199px),
 only screen and (min-width: 768px) and (max-width: 991px),
 only screen and (min-width: 576px) and (max-width: 767px),
 (max-width: 575px) {
+
     .testimonial-section.style-5::after,
     .testimonial-section.style-5::before {
         width: 650px;
@@ -4933,6 +5007,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
         padding-top: 80px;
         padding-bottom: 80px;
     }
+
     .testimonial-section.style-5 .section-header {
         margin-bottom: 40px;
     }
@@ -5003,6 +5078,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
     .testimonial-item.style-5 {
         padding: 30px 15px;
     }
+
     .testimonial-item.style-5 .quote {
         font-size: 18px;
     }
@@ -5012,9 +5088,11 @@ only screen and (min-width: 576px) and (max-width: 767px),
     .testimonial-item.style-5 {
         padding: 30px 15px;
     }
+
     .testimonial-item.style-5 .quote {
         font-size: 18px;
     }
+
     .testimonial-item.style-5 .icon-box {
         margin-bottom: 20px;
     }
@@ -5024,12 +5102,15 @@ only screen and (min-width: 576px) and (max-width: 767px),
     .testimonial-item.style-5 {
         padding: 30px 15px;
     }
+
     .testimonial-item.style-5 .quote {
         font-size: 16px;
     }
+
     .testimonial-item.style-5 .icon-box {
         margin-bottom: 20px;
     }
+
     .testimonial-item.style-5 .testimonial-rating {
         padding-left: 90px;
     }
@@ -5097,12 +5178,15 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
         padding-top: 80px;
         padding-bottom: 50px;
     }
+
     .tj-progress-section.style-5 .section-header {
         margin-bottom: 40px;
     }
+
     .tj-progress-section.style-5 .h5-shapes-1 {
         top: 15%;
     }
+
     .tj-progress-section.style-5 .h5-shapes-2 {
         bottom: 30px;
         max-width: 75px;
@@ -5114,14 +5198,17 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
         padding-top: 80px;
         padding-bottom: 50px;
     }
+
     .tj-progress-section.style-5 .section-header {
         margin-bottom: 40px;
     }
+
     .tj-progress-section.style-5 .h5-shapes-1 {
         top: 15%;
         max-width: 45px;
         left: 5%;
     }
+
     .tj-progress-section.style-5 .h5-shapes-2 {
         bottom: 30px;
         max-width: 75px;
@@ -5133,14 +5220,17 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
         padding-top: 80px;
         padding-bottom: 50px;
     }
+
     .tj-progress-section.style-5 .section-header {
         margin-bottom: 40px;
     }
+
     .tj-progress-section.style-5 .h5-shapes-1 {
         top: 10%;
         max-width: 45px;
         left: 5%;
     }
+
     .tj-progress-section.style-5 .h5-shapes-2 {
         bottom: 30px;
         max-width: 75px;
@@ -5228,7 +5318,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
     -ms-flex-pack: center;
     justify-content: center;
     margin-bottom: 40px;
-    max-width: 520px;
+    max-width: 800px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -5249,6 +5339,9 @@ only screen and (min-width: 576px) and (max-width: 767px),
     -webkit-transition: 0.6s;
     transition: 0.6s;
     z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .resume_menu_5 .resume-tab.active {
@@ -5259,11 +5352,32 @@ only screen and (min-width: 576px) and (max-width: 767px),
     .resume_menu_5 {
         margin-bottom: 30px;
         max-width: 100%;
-        padding: 5px 10px;
+        padding: 4px;
+        border-radius: 60px;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        align-items: center;
     }
+
     .resume_menu_5 .resume-tab {
-        font-size: 13px;
-        padding: 10px 12px;
+        font-size: 16px;
+        padding: 8px 10px;
+        gap: 0;
+    }
+
+    .resume_menu_5 .resume-tab span {
+        display: none;
+    }
+
+    .resume_menu_5 .resume-tab.active {
+        padding: 8px 15px;
+        gap: 6px;
+    }
+
+    .resume_menu_5 .resume-tab.active span {
+        display: inline-block;
+        font-size: 11px;
     }
 }
 
@@ -5371,6 +5485,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
     .resume_item.style-5 {
         max-width: 580px;
     }
+
     .resume_item.style-5 .resume_date {
         max-width: 160px;
     }
@@ -5380,6 +5495,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
     .resume_item.style-5 {
         max-width: 580px;
     }
+
     .resume_item.style-5 .resume_date {
         max-width: 160px;
     }
@@ -5389,6 +5505,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
     .resume_item.style-5 .resume_content .resume_text .desc {
         font-size: 16px;
     }
+
     .resume_item.style-5 .resume_date .date {
         -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -5400,6 +5517,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
     .resume_item.style-5 .resume_content .resume_text .desc {
         font-size: 16px;
     }
+
     .resume_item.style-5 .resume_date .date {
         -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -5483,6 +5601,7 @@ START: Theme Portfolio CSS
     .portfolio-section.style-5 .portfolio_slider {
         margin-left: calc((100% - 1140px) / 2);
     }
+
     .portfolio-section.style-5 .portfolio_slider .portfolio-pagination {
         left: 37%;
     }
@@ -5492,10 +5611,12 @@ START: Theme Portfolio CSS
     .portfolio-section.style-5 .portfolio_slider {
         margin-left: calc((100% - 960px) / 2);
     }
+
     .portfolio-section.style-5 .portfolio_slider .portfolio-pagination {
         left: auto;
         text-align: center;
     }
+
     .portfolio-section.style-5 .section-header .portfolio-shapes {
         max-width: 80px;
     }
@@ -5506,14 +5627,17 @@ only screen and (min-width: 576px) and (max-width: 767px) {
     .portfolio-section.style-5 {
         padding-bottom: 80px;
     }
+
     .portfolio-section.style-5 .portfolio_slider {
         margin-left: auto;
     }
+
     .portfolio-section.style-5 .portfolio_slider .portfolio-pagination {
         left: auto;
         text-align: center;
         margin-top: 30px;
     }
+
     .portfolio-section.style-5 .section-header {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
@@ -5524,6 +5648,7 @@ only screen and (min-width: 576px) and (max-width: 767px) {
         align-items: start;
         margin-bottom: 40px;
     }
+
     .portfolio-section.style-5 .section-header .portfolio-shapes {
         max-width: 80px;
     }
@@ -5533,14 +5658,17 @@ only screen and (min-width: 576px) and (max-width: 767px) {
     .portfolio-section.style-5 {
         padding-bottom: 80px;
     }
+
     .portfolio-section.style-5 .portfolio_slider {
         margin-left: auto;
     }
+
     .portfolio-section.style-5 .portfolio_slider .portfolio-pagination {
         left: auto;
         text-align: center;
         margin-top: 30px;
     }
+
     .portfolio-section.style-5 .section-header {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
@@ -5551,6 +5679,7 @@ only screen and (min-width: 576px) and (max-width: 767px) {
         align-items: start;
         margin-bottom: 40px;
     }
+
     .portfolio-section.style-5 .section-header .portfolio-shapes {
         max-width: 65px;
         right: 10%;
@@ -5716,6 +5845,7 @@ only screen and (min-width: 768px) and (max-width: 991px) {
     .tj-maquee-section.style-5 .tj-maquee-slider-two .marquee-item .marquee-box {
         gap: 35px;
     }
+
     .tj-maquee-section.style-5 .tj-maquee-slider-two .marquee-item .marquee-box .marquee-title {
         margin-right: 35px;
     }
@@ -5726,9 +5856,11 @@ only screen and (min-width: 768px) and (max-width: 991px) {
     .tj-maquee-section.style-5 .tj-maquee-slider-two .marquee-item .marquee-box {
         gap: 30px;
     }
+
     .tj-maquee-section.style-5 .tj-maquee-slider-two .marquee-item .marquee-box .marquee-title {
         margin-left: 0px;
     }
+
     .tj-maquee-section.style-5 .tj-maquee-slider-two .marquee-item .marquee-box .marquee-title .title {
         font-size: 18px;
     }
@@ -5788,6 +5920,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
         max-width: 120px;
         width: 100%;
     }
+
     .tj-maquee-section.maquee-style-5 .marquee-item .marquee-logo img {
         width: 100%;
     }
@@ -5860,6 +5993,7 @@ only screen and (min-width: 768px) and (max-width: 991px) {
     .marquee-item .marquee-box {
         gap: 35px;
     }
+
     .marquee-item .marquee-box .marquee-title {
         margin-right: 35px;
     }
@@ -5870,9 +6004,11 @@ only screen and (min-width: 768px) and (max-width: 991px) {
     .marquee-item .marquee-box {
         gap: 30px;
     }
+
     .marquee-item .marquee-box .marquee-title {
         margin-right: 30px;
     }
+
     .marquee-item .marquee-box .marquee-title .title {
         font-size: 18px;
     }
@@ -5883,6 +6019,7 @@ only screen and (min-width: 768px) and (max-width: 991px) {
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
     }
+
     100% {
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
@@ -5894,6 +6031,7 @@ only screen and (min-width: 768px) and (max-width: 991px) {
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
     }
+
     100% {
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
@@ -5905,6 +6043,7 @@ only screen and (min-width: 768px) and (max-width: 991px) {
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
     }
+
     100% {
         -webkit-transform: rotate(-360deg);
         transform: rotate(-360deg);
@@ -5916,6 +6055,7 @@ only screen and (min-width: 768px) and (max-width: 991px) {
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
     }
+
     100% {
         -webkit-transform: rotate(-360deg);
         transform: rotate(-360deg);
@@ -6013,6 +6153,7 @@ START: Theme Header CSS
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
+
     .tj-header-area.header-6-sticky,
     .tj-header-area.header-6 {
         padding: 20px 15px;
@@ -6020,10 +6161,12 @@ START: Theme Header CSS
 }
 
 @media (max-width: 575px) {
+
     .tj-header-area.header-6-sticky,
     .tj-header-area.header-6 {
         padding: 15px 0px;
     }
+
     .tj-header-area.header-6-sticky .header-button,
     .tj-header-area.header-6 .header-button {
         display: none;
@@ -6339,16 +6482,19 @@ START: Theme Hero CSS
         margin-bottom: 0px;
         padding-bottom: 80px;
     }
+
     .hero-wrapper-style-6 .hero-infos {
         max-width: 280px;
         padding: 30px 15px;
         margin-top: -60px;
     }
+
     .hero-wrapper-style-6 .hero-infos .hero-images {
         max-width: 200px;
         margin-left: auto;
         margin-right: auto;
     }
+
     .hero-wrapper-style-6 .hero-infos .hero-images img {
         height: 75px;
     }
@@ -6360,17 +6506,20 @@ START: Theme Hero CSS
         gap: 35px;
         margin-bottom: 0px;
     }
+
     .hero-wrapper-style-6 .hero-infos {
         max-width: 280px;
         padding: 30px 15px;
         margin-right: auto;
         margin-top: 0px;
     }
+
     .hero-wrapper-style-6 .hero-infos .hero-images {
         max-width: 200px;
         margin-left: auto;
         margin-right: auto;
     }
+
     .hero-wrapper-style-6 .hero-infos .hero-images img {
         height: 75px;
     }
@@ -6382,16 +6531,19 @@ START: Theme Hero CSS
         gap: 35px;
         margin-bottom: 0px;
     }
+
     .hero-wrapper-style-6 .hero-infos {
         max-width: 100%;
         padding: 30px 15px;
         margin-top: 0px;
     }
+
     .hero-wrapper-style-6 .hero-infos .hero-images {
         max-width: 200px;
         margin-left: auto;
         margin-right: auto;
     }
+
     .hero-wrapper-style-6 .hero-infos .hero-images img {
         height: 75px;
     }
@@ -6454,6 +6606,7 @@ START: Theme Hero CSS
     .hero-content-box.style-6 {
         max-width: 930px;
     }
+
     .hero-content-box.style-6 .hero-title {
         font-size: 120px;
     }
@@ -6463,12 +6616,15 @@ START: Theme Hero CSS
     .hero-content-box.style-6 {
         max-width: 750px;
     }
+
     .hero-content-box.style-6 .hero-title {
         font-size: 95px;
     }
+
     .hero-content-box.style-6 .hero-title span {
         gap: 10px;
     }
+
     .hero-content-box.style-6 .hero-title span img {
         max-width: 185px;
         height: 85px;
@@ -6479,12 +6635,15 @@ START: Theme Hero CSS
     .hero-content-box.style-6 {
         max-width: 560px;
     }
+
     .hero-content-box.style-6 .hero-title {
         font-size: 75px;
     }
+
     .hero-content-box.style-6 .hero-title span {
         gap: 10px;
     }
+
     .hero-content-box.style-6 .hero-title span img {
         max-width: 165px;
         height: 70px;
@@ -6495,17 +6654,21 @@ START: Theme Hero CSS
     .hero-content-box.style-6 {
         max-width: 435px;
     }
+
     .hero-content-box.style-6 .desc {
         font-size: 25px;
         margin-bottom: 20px;
     }
+
     .hero-content-box.style-6 .hero-title {
         font-size: 55px;
         line-height: 1.1;
     }
+
     .hero-content-box.style-6 .hero-title span {
         gap: 10px;
     }
+
     .hero-content-box.style-6 .hero-title span img {
         max-width: 130px;
         height: 60px;
@@ -6516,17 +6679,21 @@ START: Theme Hero CSS
     .hero-content-box.style-6 {
         max-width: 435px;
     }
+
     .hero-content-box.style-6 .desc {
         font-size: 20px;
         margin-bottom: 20px;
     }
+
     .hero-content-box.style-6 .hero-title {
         font-size: 55px;
         line-height: 1.1;
     }
+
     .hero-content-box.style-6 .hero-title span {
         gap: 10px;
     }
+
     .hero-content-box.style-6 .hero-title span img {
         max-width: 130px;
         height: 60px;
@@ -6537,17 +6704,21 @@ START: Theme Hero CSS
     .hero-content-box.style-6 {
         max-width: 435px;
     }
+
     .hero-content-box.style-6 .desc {
         font-size: 20px;
         margin-bottom: 20px;
     }
+
     .hero-content-box.style-6 .hero-title {
         font-size: 45px;
         line-height: 1.1;
     }
+
     .hero-content-box.style-6 .hero-title span {
         gap: 10px;
     }
+
     .hero-content-box.style-6 .hero-title span img {
         max-width: 85px;
         height: 40px;
@@ -6632,6 +6803,7 @@ only screen and (min-width: 576px) and (max-width: 767px) {
 }
 
 @keyframes jump-arrow {
+
     0%,
     20%,
     55%,
@@ -6640,14 +6812,17 @@ only screen and (min-width: 576px) and (max-width: 767px) {
         -webkit-transform: translate3d(-50%, 0, 0) rotate(-90deg);
         transform: translate3d(-50%, 0, 0) rotate(-90deg);
     }
+
     40% {
         -webkit-transform: translate3d(-50%, -8px, 0) rotate(-90deg);
         transform: translate3d(-50%, -8px, 0) rotate(-90deg);
     }
+
     70% {
         -webkit-transform: translate3d(-50%, -8px, 0) rotate(-90deg);
         transform: translate3d(-50%, -8px, 0) rotate(-90deg);
     }
+
     90% {
         -webkit-transform: translate3d(-50%, -5px, 0) rotate(-90deg);
         transform: translate3d(-50%, -5px, 0) rotate(-90deg);
@@ -6659,10 +6834,12 @@ only screen and (min-width: 576px) and (max-width: 767px) {
         -webkit-transform: scale(1, 1);
         transform: scale(1, 1);
     }
+
     50% {
         -webkit-transform: scale(1.5, 1.5);
         transform: scale(1.5, 1.5);
     }
+
     100% {
         -webkit-transform: scale(1, 1);
         transform: scale(1, 1);
@@ -6674,10 +6851,12 @@ only screen and (min-width: 576px) and (max-width: 767px) {
         -webkit-transform: scale(1, 1);
         transform: scale(1, 1);
     }
+
     50% {
         -webkit-transform: scale(1.5, 1.5);
         transform: scale(1.5, 1.5);
     }
+
     100% {
         -webkit-transform: scale(1, 1);
         transform: scale(1, 1);
@@ -6690,6 +6869,7 @@ only screen and (min-width: 576px) and (max-width: 767px) {
         -ms-transform: rotate(0deg) translateX(-50px);
         transform: rotate(0deg) translateX(-50px);
     }
+
     100% {
         -webkit-transform: rotate(360deg) translateY(100px);
         -ms-transform: rotate(360deg) translateY(100px);
@@ -6703,6 +6883,7 @@ only screen and (min-width: 576px) and (max-width: 767px) {
         -ms-transform: rotate(0deg) translateX(-50px);
         transform: rotate(0deg) translateX(-50px);
     }
+
     100% {
         -webkit-transform: rotate(360deg) translateY(100px);
         -ms-transform: rotate(360deg) translateY(100px);
@@ -6717,18 +6898,21 @@ only screen and (min-width: 576px) and (max-width: 767px) {
         -webkit-transform-origin: right;
         transform-origin: right;
     }
+
     49% {
         -webkit-transform: scaleX(0);
         transform: scaleX(0);
         -webkit-transform-origin: right;
         transform-origin: right;
     }
+
     50% {
         -webkit-transform: scaleX(0);
         transform: scaleX(0);
         -webkit-transform-origin: left;
         transform-origin: left;
     }
+
     to {
         -webkit-transform: scaleX(1);
         transform: scaleX(1);
@@ -6744,18 +6928,21 @@ only screen and (min-width: 576px) and (max-width: 767px) {
         -webkit-transform-origin: right;
         transform-origin: right;
     }
+
     49% {
         -webkit-transform: scaleX(0);
         transform: scaleX(0);
         -webkit-transform-origin: right;
         transform-origin: right;
     }
+
     50% {
         -webkit-transform: scaleX(0);
         transform: scaleX(0);
         -webkit-transform-origin: left;
         transform-origin: left;
     }
+
     to {
         -webkit-transform: scaleX(1);
         transform: scaleX(1);
@@ -6813,9 +7000,11 @@ START: Theme Maquee CSS
     .tj-maquee-section.style-6 {
         padding: 30px 0;
     }
+
     .tj-maquee-section.style-6::before {
         width: 500px;
     }
+
     .tj-maquee-section.style-6::after {
         width: 500px;
     }
@@ -6825,9 +7014,11 @@ START: Theme Maquee CSS
     .tj-maquee-section.style-6 {
         padding: 25px 0;
     }
+
     .tj-maquee-section.style-6::before {
         width: 300px;
     }
+
     .tj-maquee-section.style-6::after {
         width: 300px;
     }
@@ -6837,9 +7028,11 @@ START: Theme Maquee CSS
     .tj-maquee-section.style-6 {
         padding: 25px 0;
     }
+
     .tj-maquee-section.style-6::before {
         width: 200px;
     }
+
     .tj-maquee-section.style-6::after {
         width: 200px;
     }
@@ -6849,9 +7042,11 @@ START: Theme Maquee CSS
     .tj-maquee-section.style-6 {
         padding: 20px 0;
     }
+
     .tj-maquee-section.style-6::before {
         width: 100px;
     }
+
     .tj-maquee-section.style-6::after {
         width: 100px;
     }
@@ -6861,9 +7056,11 @@ START: Theme Maquee CSS
     .tj-maquee-section.style-6 {
         padding: 20px 0;
     }
+
     .tj-maquee-section.style-6::before {
         width: 100px;
     }
+
     .tj-maquee-section.style-6::after {
         width: 100px;
     }
@@ -6911,6 +7108,7 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
     .tj-about-section.style-6 {
         padding-bottom: 120px;
     }
+
     .tj-about-section.style-6 .section-header {
         margin-bottom: 20px;
     }
@@ -6922,6 +7120,7 @@ only screen and (min-width: 576px) and (max-width: 767px) {
         padding-top: 80px;
         padding-bottom: 80px;
     }
+
     .tj-about-section.style-6 .section-header {
         margin-bottom: 20px;
     }
@@ -6932,6 +7131,7 @@ only screen and (min-width: 576px) and (max-width: 767px) {
         padding-top: 80px;
         padding-bottom: 120px;
     }
+
     .tj-about-section.style-6 .section-header {
         margin-bottom: 20px;
     }
@@ -7010,9 +7210,11 @@ only screen and (min-width: 576px) and (max-width: 767px),
     .about-6-images {
         max-width: 475px;
     }
+
     .about-6-images .about-shapes {
         right: -60px;
     }
+
     .about-6-images .about-shapes svg {
         width: 90px;
     }
@@ -7022,9 +7224,11 @@ only screen and (min-width: 576px) and (max-width: 767px),
     .about-6-images {
         max-width: 310px;
     }
+
     .about-6-images .about-shapes {
         right: -75px;
     }
+
     .about-6-images .about-shapes svg {
         width: 70px;
     }
@@ -7049,9 +7253,11 @@ only screen and (min-width: 576px) and (max-width: 767px),
     .about-6-images {
         max-width: 300px;
     }
+
     .about-6-images .about-shapes {
         right: -80px;
     }
+
     .about-6-images .about-shapes svg {
         width: 60px;
     }
@@ -7200,6 +7406,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
     .fun-fact-6 {
         top: -65px;
     }
+
     .fun-fact-6 .number {
         font-size: 95px;
     }
@@ -7209,6 +7416,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
     .fun-fact-6 {
         top: -70px;
     }
+
     .fun-fact-6 .number {
         font-size: 75px;
     }
@@ -7218,6 +7426,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
     .fun-fact-6 {
         top: -70px;
     }
+
     .fun-fact-6 .number {
         font-size: 75px;
     }
@@ -7227,6 +7436,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
     .fun-fact-6 {
         top: -70px;
     }
+
     .fun-fact-6 .number {
         font-size: 75px;
     }
@@ -7239,6 +7449,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
         -ms-transform: rotate(0deg);
         transform: rotate(0deg);
     }
+
     .fun-fact-6 .number {
         font-size: 60px;
     }
@@ -7249,6 +7460,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
         -webkit-transform: translateY(-25px);
         transform: translateY(-25px);
     }
+
     100% {
         -webkit-transform: translateY(25px);
         transform: translateY(25px);
@@ -7260,6 +7472,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
         -webkit-transform: translateY(-25px);
         transform: translateY(-25px);
     }
+
     100% {
         -webkit-transform: translateY(25px);
         transform: translateY(25px);
@@ -7451,6 +7664,7 @@ only screen and (min-width: 992px) and (max-width: 1199px),
 only screen and (min-width: 768px) and (max-width: 991px),
 only screen and (min-width: 576px) and (max-width: 767px),
 (max-width: 575px) {
+
     .tj-testimonial-section.style-6::after,
     .tj-testimonial-section.style-6::before {
         width: 650px;
@@ -7466,9 +7680,11 @@ only screen and (min-width: 576px) and (max-width: 767px),
         padding-top: 0px;
         padding-bottom: 80px;
     }
+
     .tj-testimonial-section.style-6 .section-header {
         margin-bottom: 40px;
     }
+
     .tj-testimonial-section.style-6 .testimonial-pagination {
         margin-top: 35px;
     }
@@ -7544,6 +7760,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
     .testimonial-item.style-6 {
         padding: 30px 15px;
     }
+
     .testimonial-item.style-6 .quote {
         font-size: 18px;
     }
@@ -7553,9 +7770,11 @@ only screen and (min-width: 576px) and (max-width: 767px),
     .testimonial-item.style-6 {
         padding: 30px 15px;
     }
+
     .testimonial-item.style-6 .quote {
         font-size: 18px;
     }
+
     .testimonial-item.style-6 .icon-box {
         margin-bottom: 20px;
     }
@@ -7565,12 +7784,15 @@ only screen and (min-width: 576px) and (max-width: 767px),
     .testimonial-item.style-6 {
         padding: 30px 15px;
     }
+
     .testimonial-item.style-6 .quote {
         font-size: 16px;
     }
+
     .testimonial-item.style-6 .icon-box {
         margin-bottom: 20px;
     }
+
     .testimonial-item.style-6 .testimonial-rating {
         padding-left: 90px;
     }
@@ -7657,6 +7879,7 @@ START: Theme Portfolio CSS
     .tj-portfolio-section.style-6 {
         padding-bottom: 120px;
     }
+
     .tj-portfolio-section.style-6 .section-header.style-4 .title {
         font-size: 120px;
     }
@@ -7666,6 +7889,7 @@ START: Theme Portfolio CSS
     .tj-portfolio-section.style-6 {
         padding-bottom: 80px;
     }
+
     .tj-portfolio-section.style-6 .section-header.style-4 .title {
         font-size: 100px;
     }
@@ -7675,6 +7899,7 @@ START: Theme Portfolio CSS
     .tj-portfolio-section.style-6 {
         padding-bottom: 80px;
     }
+
     .tj-portfolio-section.style-6 .section-header.style-4 .title {
         font-size: 75px;
     }
@@ -7684,6 +7909,7 @@ START: Theme Portfolio CSS
     .tj-portfolio-section.style-6 {
         padding-bottom: 80px;
     }
+
     .tj-portfolio-section.style-6 .section-header.style-4 .title {
         font-size: 45px;
     }
@@ -7890,6 +8116,7 @@ START: Theme Portfolio CSS
     .portfolio-item.style-6 .portfolio-images::before {
         height: 350px;
     }
+
     .portfolio-item.style-6 .portfolio-content .portfolio-header .title {
         font-size: 40px;
     }
@@ -7899,9 +8126,11 @@ START: Theme Portfolio CSS
     .portfolio-item.style-6 .portfolio-content .portfolio-header .title {
         font-size: 35px;
     }
+
     .portfolio-item.style-6 .portfolio-images::before {
         height: 250px;
     }
+
     .portfolio-item.style-6 .portfolio-images .portfolio-link {
         width: 80px;
         height: 80px;
@@ -7912,18 +8141,23 @@ START: Theme Portfolio CSS
     .portfolio-item.style-6 .portfolio-content {
         padding: 15px;
     }
+
     .portfolio-item.style-6 .portfolio-content .portfolio-header {
         max-width: 100%;
     }
+
     .portfolio-item.style-6 .portfolio-content .portfolio-header .sub-tile {
         margin-bottom: 10px;
     }
+
     .portfolio-item.style-6 .portfolio-content .portfolio-header .title {
         font-size: 30px;
     }
+
     .portfolio-item.style-6 .portfolio-images::before {
         height: 165px;
     }
+
     .portfolio-item.style-6 .portfolio-images .portfolio-link {
         width: 65px;
         height: 65px;
@@ -7935,29 +8169,37 @@ START: Theme Portfolio CSS
         gap: 15px;
         padding: 15px;
     }
+
     .portfolio-item.style-6 .portfolio-content .portfolio-header {
         max-width: 100%;
     }
+
     .portfolio-item.style-6 .portfolio-content .portfolio-header .sub-tile {
         margin-bottom: 10px;
     }
+
     .portfolio-item.style-6 .portfolio-content .portfolio-header .title {
         font-size: 25px;
     }
+
     .portfolio-item.style-6 .portfolio-content .portfolio-list ul li {
         font-size: 14px;
         padding-right: 10px;
     }
+
     .portfolio-item.style-6 .portfolio-content .portfolio-list ul li:last-child {
         padding-left: 10px;
     }
+
     .portfolio-item.style-6 .portfolio-content .portfolio-list ul li span {
         font-size: 14px;
         color: var(--tj-white);
     }
+
     .portfolio-item.style-6 .portfolio-images::before {
         height: 165px;
     }
+
     .portfolio-item.style-6 .portfolio-images .portfolio-link {
         width: 50px;
         height: 50px;
@@ -7982,6 +8224,7 @@ START: Theme Footer CSS
     .tj-footer-6-area {
         padding: 35px 0;
     }
+
     .tj-footer-6-area .footer-menu ul {
         margin: 0 0 10px;
     }
@@ -8402,6 +8645,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
         padding-top: 80px;
         padding-bottom: 80px;
     }
+
     .tj-resume-6-area .section-header {
         margin-bottom: 0;
     }
@@ -8504,6 +8748,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
         position: relative;
         left: -15px;
     }
+
     .tj-resume-6-marquee-title span img {
         width: 100%;
     }
@@ -8519,6 +8764,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
         position: relative;
         left: -18px;
     }
+
     .tj-resume-6-marquee-title span img {
         width: 100%;
     }
@@ -8534,6 +8780,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
         position: relative;
         left: -18px;
     }
+
     .tj-resume-6-marquee-title span img {
         width: 100%;
     }
@@ -8581,6 +8828,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
         -ms-flex-direction: column;
         flex-direction: column;
     }
+
     .tj-resume-6-wrapper .side-sticky {
         position: relative !important;
         top: 0 !important;
@@ -9047,6 +9295,7 @@ START: Theme Cta CSS
         font-size: 14px;
         padding-left: 0;
     }
+
     .tj-cta-6-socail ul li::after {
         display: none;
     }
@@ -9059,12 +9308,15 @@ START: Theme Cta CSS
         margin-bottom: 20px;
         margin-right: 20px;
     }
+
     .tj-cta-6-socail ul li::after {
         display: none;
     }
+
     .tj-cta-6-socail ul li:nth-child(3) {
         margin-bottom: 0;
     }
+
     .tj-cta-6-socail ul li:nth-child(4) {
         margin-bottom: 0;
     }
@@ -10960,6 +11212,7 @@ START: Theme Hero CSS
     0% {
         background-position: 0%;
     }
+
     100% {
         background-position: 100%;
     }
@@ -10969,6 +11222,7 @@ START: Theme Hero CSS
     0% {
         background-position: 0%;
     }
+
     100% {
         background-position: 100%;
     }
@@ -11111,13 +11365,16 @@ only screen and (min-width: 768px) and (max-width: 991px) {
     .marquee-item .marquee-box {
         gap: 40px;
     }
+
     .marquee-item .marquee-box .marquee-title .title {
         font-size: 18px;
     }
+
     .marquee-item .marquee-logo {
         max-width: 100px;
         width: 100%;
     }
+
     .marquee-item .marquee-logo img {
         width: 100%;
     }
@@ -11160,6 +11417,7 @@ only screen and (min-width: 768px) and (max-width: 991px) {
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
     }
+
     100% {
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
@@ -11171,6 +11429,7 @@ only screen and (min-width: 768px) and (max-width: 991px) {
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
     }
+
     100% {
         -webkit-transform: rotate(-360deg);
         transform: rotate(-360deg);
@@ -11300,9 +11559,11 @@ only screen and (min-width: 576px) and (max-width: 767px) {
         margin-left: auto;
         margin-right: auto;
     }
+
     .about-8-images::before {
         height: 300px;
     }
+
     .about-8-images::after {
         height: 295px;
         left: -5px;
@@ -11348,6 +11609,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
     .about-8-content {
         margin-left: 0;
     }
+
     .about-8-content .about-button {
         margin-top: 25px;
     }
@@ -11556,10 +11818,12 @@ only screen and (min-width: 576px) and (max-width: 767px),
     .portfolio-tem.style-8 {
         gap: 60px;
     }
+
     .portfolio-tem.style-8 .portfolio-content .number {
         font-size: 100px;
         margin-bottom: 15px;
     }
+
     .portfolio-tem.style-8 .portfolio-content .title {
         font-size: 40px;
     }
@@ -11569,14 +11833,17 @@ only screen and (min-width: 576px) and (max-width: 767px),
     .portfolio-tem.style-8 {
         gap: 30px;
     }
+
     .portfolio-tem.style-8 .portfolio-content .number {
         font-size: 75px;
         margin-bottom: 10px;
     }
+
     .portfolio-tem.style-8 .portfolio-content .title {
         font-size: 32px;
         margin-bottom: 10px;
     }
+
     .portfolio-tem.style-8 .portfolio-content .arrow_link {
         width: 50px;
         height: 50px;
@@ -11593,20 +11860,25 @@ only screen and (min-width: 576px) and (max-width: 767px),
         flex-direction: column;
         margin-bottom: 50px;
     }
+
     .portfolio-tem.style-8:last-child {
         margin-bottom: 0;
     }
+
     .portfolio-tem.style-8 .portfolio-8-images {
         padding: 15px;
     }
+
     .portfolio-tem.style-8 .portfolio-content .number {
         font-size: 70px;
         margin-bottom: 10px;
     }
+
     .portfolio-tem.style-8 .portfolio-content .title {
         font-size: 30px;
         margin-bottom: 10px;
     }
+
     .portfolio-tem.style-8 .portfolio-content .arrow_link {
         width: 50px;
         height: 50px;
@@ -11742,6 +12014,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
     .tj-service-section.style-8 {
         padding-top: 80px;
     }
+
     .tj-service-section.style-8 .service-pagination {
         margin-top: 35px;
     }
@@ -11811,12 +12084,15 @@ only screen and (min-width: 576px) and (max-width: 767px),
     .tj-service-item.style-8 {
         padding: 30px 15px;
     }
+
     .tj-service-item.style-8 .service-icon {
         margin-bottom: 25px;
     }
+
     .tj-service-item.style-8 .title {
         margin-bottom: 15px;
     }
+
     .tj-service-item.style-8 .desc {
         margin-bottom: 25px;
     }
@@ -11827,13 +12103,16 @@ only screen and (min-width: 576px) and (max-width: 767px),
     .tj-service-item.style-8 {
         padding: 30px 15px;
     }
+
     .tj-service-item.style-8 .service-icon {
         margin-bottom: 25px;
     }
+
     .tj-service-item.style-8 .title {
         font-size: 24px;
         margin-bottom: 15px;
     }
+
     .tj-service-item.style-8 .desc {
         margin-bottom: 25px;
     }
@@ -11931,9 +12210,11 @@ only screen and (min-width: 576px) and (max-width: 767px),
     .resume-wrapper-8 {
         gap: 30px;
     }
+
     .resume-wrapper-8 .resume-inner-8 {
         max-width: 540px;
     }
+
     .resume-wrapper-8 .resume-8-left {
         max-width: 365px;
     }
@@ -12030,9 +12311,11 @@ only screen and (min-width: 576px) and (max-width: 767px) {
     .resume_item.style-8 {
         padding: 30px 15px;
     }
+
     .resume_item.style-8 .resume-content .resume-text .subtitle {
         margin-bottom: 0;
     }
+
     .resume_item.style-8 .resume-content .resume_date {
         margin-left: 90px;
         margin-bottom: 15px;
@@ -12049,13 +12332,16 @@ only screen and (min-width: 576px) and (max-width: 767px) {
     .resume_item.style-8 {
         padding: 30px 15px;
     }
+
     .resume_item.style-8 .resume-content .resume-text .subtitle {
         margin-bottom: 0;
     }
+
     .resume_item.style-8 .resume-content .resume_date {
         margin-left: 0px;
         margin-bottom: 15px;
     }
+
     .resume_item.style-8 .desc {
         padding-left: 0;
     }
@@ -12115,6 +12401,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
         padding-top: 80px;
         padding-bottom: 80px;
     }
+
     .tj-testimonial-section.style-8 .testimonial-pagination {
         margin-top: 35px;
     }
@@ -12180,6 +12467,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
     .testimonial-item.style-8 {
         padding: 30px 15px;
     }
+
     .testimonial-item.style-8 .icon-box {
         margin-bottom: 25px;
     }
@@ -12190,12 +12478,15 @@ only screen and (min-width: 576px) and (max-width: 767px),
     .testimonial-item.style-8 {
         padding: 30px 15px;
     }
+
     .testimonial-item.style-8 .icon-box {
         margin-bottom: 25px;
     }
+
     .testimonial-item.style-8 .quote {
         font-size: 16px;
     }
+
     .testimonial-item.style-8 .testimonial-feature-item .feature-content .name {
         font-size: 18px;
     }

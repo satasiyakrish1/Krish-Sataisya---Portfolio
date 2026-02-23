@@ -33,19 +33,19 @@ const heroData = {
     // Counter Statistics (Measuring Success By Numbers)
     counters: [
         {
-            number: "2",
+            number: "3",
             suffix: "+",
             label: "Years of",
             sublabel: "Experience"
         },
         {
-            number: "33",
+            number: "23",
             suffix: "+",
             label: "Project",
             sublabel: "Completed"
         },
         {
-            number: "4",
+            number: "6",
             suffix: "+",
             label: "Industrial",
             sublabel: "Projects"

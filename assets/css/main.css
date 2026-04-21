@@ -2272,6 +2272,27 @@ body.loaded {
     transition: 0.3s;
 }
 
+.tj-progress-section .progress-single.style-5 .progress-text .icon-box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.tj-progress-section .progress-single.style-5 .progress-text .icon-box img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+}
+
+.tj-progress-section .progress-single.style-5 .progress-text .icon-box img[src$="1.svg"] {
+    width: 70%;
+    height: 70%;
+}
+
 .skills-widget .skill-item:hover .icon-box img {
     filter: grayscale(0);
     -webkit-filter: grayscale(0);

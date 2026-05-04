@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Primary Meta Tags -->
-    <title>Krish Satasiya | MERN Developer | UI/UX Designer | Researcher | Community Coordinator</title>
+    <title>Krish Satasiya | MERN Developer | UI/UX & Graphics Designer | Researcher | Full Stack Developer</title>
     <meta name="title" content="Krish Satasiya | MERN Developer | UI/UX Designer | Researcher">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2762448295053630"
-     crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
     <meta name="google-adsense-account" content="ca-pub-2762448295053630">
     <meta name="description"
         content="Award-winning MERN Stack Developer and UI/UX Designer. Winner of RHA India Challenge 2024, GTU National Poster Competition Award 2025, and E-CELL Tech Fest 2025. Specializing in web development, research, and design with expertise in React, Node.js, and modern web technologies.">
@@ -300,6 +300,172 @@
             .portfolio-item.style-5 {
                 height: 550px;
                 /* Increased height for mobile */
+            }
+        }
+
+        /* Uniform Testimonial Box Height */
+        .testimonial-item.style-5 {
+            height: 550px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .testimonial-item.style-5 .quote {
+            flex: 1;
+            overflow-y: auto;
+            padding-right: 10px;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-item.style-5 .quote::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .testimonial-item.style-5 .quote::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 4px;
+        }
+
+        .testimonial-item.style-5 .quote::-webkit-scrollbar-thumb {
+            background: var(--tj-theme-primary);
+            border-radius: 4px;
+        }
+
+        .testimonial-item.style-5 .testimonial-feature-item {
+            margin-top: auto;
+        }
+
+        /* Mobile adjustments for testimonial boxes */
+        @media (max-width: 768px) {
+            .testimonial-item.style-5 {
+                height: 500px;
+            }
+        }
+
+        /* Default Photo Placeholder */
+        .auother-images {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .auother-images img {
+            transition: opacity 0.3s ease;
+        }
+
+        .auother-images .default-avatar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(135deg, var(--tj-theme-primary) 0%, var(--tj-theme-secondary) 100%);
+            z-index: 1;
+        }
+
+        .auother-images img:not([src]),
+        .auother-images img[src=""],
+        .auother-images img[src=" "] {
+            opacity: 0;
+        }
+
+        /* Uniform Skill Box Height - No Progress Bar */
+        .tj-progress-section.style-5 .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .tj-progress-section.style-5 .row>[class*="col-"] {
+            display: flex;
+            justify-content: center;
+        }
+
+        .progress-single.style-5 {
+            height: 280px;
+            display: flex;
+            flex-direction: column;
+            padding: 30px 25px;
+            width: 100%;
+            max-width: 350px;
+        }
+
+        .progress-single.style-5 .progress-text {
+            flex-shrink: 0;
+        }
+
+        .progress-single.style-5 .desc {
+            flex: 1;
+            overflow-y: auto;
+            margin-bottom: 0;
+            padding-right: 5px;
+        }
+
+        .progress-single.style-5 .desc::-webkit-scrollbar {
+            width: 3px;
+        }
+
+        .progress-single.style-5 .desc::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 3px;
+        }
+
+        .progress-single.style-5 .desc::-webkit-scrollbar-thumb {
+            background: var(--tj-theme-primary);
+            border-radius: 3px;
+        }
+
+        .progress-single.style-5 .tj-progress-bar {
+            display: none;
+        }
+
+        /* Mobile adjustments for skill boxes */
+        @media (max-width: 991px) {
+            .progress-single.style-5 {
+                height: 260px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .progress-single.style-5 {
+                height: 240px;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .progress-single.style-5 {
+                height: auto;
+                min-height: 220px;
+            }
+        }
+
+        /* Fix Timeline Dates - Prevent Breaking into 2 Lines */
+        .resume_item .resume_date {
+            max-width: none !important;
+            width: auto !important;
+        }
+
+        .resume_item .resume_date .date {
+            white-space: nowrap;
+            display: inline-block;
+        }
+
+        /* Responsive Timeline Adjustments */
+        @media only screen and (min-width: 576px) and (max-width: 767px),
+        (max-width: 575px) {
+            .resume_item .resume_date {
+                max-width: 100% !important;
+            }
+
+            .resume_item .resume_date .date {
+                white-space: normal;
+                word-wrap: break-word;
             }
         }
     </style>
@@ -788,74 +954,16 @@
         </section>
         <!-- end: Testimonial Section -->
 
-        <!-- start: Counter Area -->
-        <section class="tj-counter-5-area" id="scroll-hero">
-            <div class="tj-counter-5-shape">
-                <img class="tj-counter-5-shape-1" src="assets/img/counter/couner-5-shape-1.png" alt="Shapes">
-                <img class="tj-counter-5-shape-2" src="assets/img/counter/couner-5-shape-2.png" alt="Shapes">
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="section-header style-3">
-                        <div class="sec-text">
-                            <span class="subtitle wow fadeInLeft" data-wow-delay=".3s">Behind the Pixels</span>
-                            <h2 class="title">Measuring Success</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-                        <div class="tj-counter-5-wrapper">
-                            <div class="tj-counter-5-title">
-                                <div class="funfact-item">
-                                    <div class="number"><span class="odometer" data-count="3"></span>+</div>
-                                </div>
-                            </div>
-                            <p class="tj-counter-5-paragraph">Years of Experience</p>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-                        <div class="tj-counter-5-wrapper">
-                            <div class="tj-counter-5-title">
-                                <div class="funfact-item">
-                                    <div class="number"><span class="odometer" data-count="23"></span></div>
-                                </div>
-                            </div>
-                            <p class="tj-counter-5-paragraph">Project Completed</p>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-                        <div class="tj-counter-5-wrapper">
-                            <div class="tj-counter-5-title">
-                                <div class="funfact-item">
-                                    <div class="number"><span class="odometer" data-count="200"></span>+</div>
-                                </div>
-                            </div>
-                            <p class="tj-counter-5-paragraph">5 Star Review</p>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-                        <div class="tj-counter-5-wrapper">
-                            <div class="tj-counter-5-title">
-                                <div class="funfact-item">
-                                    <div class="number"><span class="odometer" data-count="6"></span></div>
-                                </div>
-                            </div>
-                            <p class="tj-counter-5-paragraph">Industrial Projects</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- end: Counter Area -->
+
 
         <!-- start: Custom Collage Area (Perfect Layout Design Divisions) -->
         <section class="main-collage-section"
             style="margin: 60px 0; display: flex; flex-direction: column; align-items: center;">
             <div class="container" style="display: flex; flex-direction: column; align-items: center;">
-                <div class="section-header style-3 text-center" style="margin-bottom: 32px;">
+                <div class="section-header style-3 text-center"
+                    style="margin-bottom: 32px; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%;">
                     <span class="subtitle wow fadeInLeft" data-wow-delay=".3s">Behind the Pixels</span>
-                    <h2 class="title">Every pixel tells a story.</h2>
+                    <h2 class="title wow fadeInRight" data-wow-delay=".4s">Every pixel tells a story.</h2>
                 </div>
             </div>
             <div class="main-container">
@@ -1099,53 +1207,7 @@
         </section>
         <!-- end: Custom Collage Area -->
 
-        <!-- start: Faq Area -->
-        <section class="tj-service-5-area">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="section-header style-3 text-center">
-                        <div class="sec-text">
-                            <span class="subtitle wow fadeInLeft" data-wow-delay=".3s">Behind the Pixels</span>
-                            <h2 class="title">Measuring Success By Numbers</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="tj-service-5-wrapper">
-                            <ul class="tj-service-5-accordion-list">
-                                <li>
-                                    <h3 class="tj-service-5-accordion-list-title"><span>01.</span> UI/UX Design</h3>
 
-                                </li>
-                                <li>
-                                    <h3 class="tj-service-5-accordion-list-title"><span>02.</span> Branding Design</h3>
-
-                                </li>
-                                <li>
-                                    <h3 class="tj-service-5-accordion-list-title"><span>03.</span> UI Research</h3>
-
-                                </li>
-                                <li>
-                                    <h3 class="tj-service-5-accordion-list-title"><span>04.</span> UX Modification</h3>
-
-                                </li>
-                                <li>
-                                    <h3 class="tj-service-5-accordion-list-title"><span>05.</span>Web Development</h3>
-
-                                </li>
-                                <li>
-                                    <h3 class="tj-service-5-accordion-list-title"><span>06.</span>Cloud Computing &
-                                        Security</h3>
-
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- end: Faq Area -->
 
         <!-- start: Portfolio Area -->
         <section class="portfolio-section style-5">
@@ -1241,7 +1303,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="portfolio-pagination"></div>
                         </div>
                     </div>
                 </div>
@@ -1323,8 +1384,7 @@
                                                 </div>
                                                 <div class="resume_date">
                                                     <span class="date"><i class="fa-thin fa-calendar-check"></i> Jan
-                                                        2026 -
-                                                        Jan 2026</span>
+                                                        2026 - Jan 2026</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -1347,8 +1407,7 @@
                                                 </div>
                                                 <div class="resume_date">
                                                     <span class="date"><i class="fa-thin fa-calendar-check"></i> Sep
-                                                        2025 -
-                                                        Dec 2025</span>
+                                                        2025 - Dec 2025</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -1371,7 +1430,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="resume_date">
-                                                    <span class="date"><i class="fa-thin fa-calendar-check"></i>2025 -
+                                                    <span class="date"><i class="fa-thin fa-calendar-check"></i> 2025 -
                                                         Sept 25</span>
                                                 </div>
                                             </div>
@@ -1392,7 +1451,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="resume_date">
-                                                    <span class="date"><i class="fa-thin fa-calendar-check"></i>2025 -
+                                                    <span class="date"><i class="fa-thin fa-calendar-check"></i> 2025 -
                                                         July 2025</span>
                                                 </div>
                                             </div>
@@ -1613,7 +1672,7 @@
                                                 </div>
                                                 <div class="resume_date">
                                                     <span class="date"><i class="fa-thin fa-calendar-check"></i>2023 -
-                                                        Present</span>
+                                                        2026</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -1640,7 +1699,7 @@
                                                 </div>
                                                 <div class="resume_date">
                                                     <span class="date"><i class="fa-thin fa-calendar-check"></i>2023 -
-                                                        Present</span>
+                                                        2026</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -1717,7 +1776,7 @@
                                                 </div>
                                                 <div class="resume_date">
                                                     <span class="date"><i class="fa-thin fa-calendar-check"></i> 2023 -
-                                                        Present</span>
+                                                        2026</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -3399,6 +3458,7 @@
                                             </div>
                                         </div>
                                     </form>
+                                    <div id="form-status" style="margin-top:12px;font-weight:600;display:none;"></div>
                                 </div>
                             </div>
 
@@ -3428,27 +3488,40 @@
                                     const emailOne = document.querySelector('input[name="emailOne"]').value.trim();
                                     const phoneOne = document.querySelector('input[name="phoneOne"]').value.trim();
                                     const messageOne = document.querySelector('textarea[name="messageOne"]').value.trim();
+                                    const statusEl = document.getElementById('form-status');
 
-                                    // Check if any required fields are empty
                                     if (!firstName || !lastName || !emailOne || !phoneOne || !messageOne) {
-                                        alert('Please fill out all required fields.');
-                                        return; // Stop submission if validation fails
+                                        statusEl.style.display = 'block';
+                                        statusEl.style.color = '#ef4444';
+                                        statusEl.textContent = 'Please fill out all required fields.';
+                                        return;
                                     }
 
                                     try {
+                                        // Save to Firebase
                                         await addDoc(collection(db, "contacts"), {
-                                            firstName: firstName,
-                                            lastName: lastName,
-                                            email: emailOne,
-                                            phone: phoneOne,
+                                            firstName, lastName,
+                                            email: emailOne, phone: phoneOne,
                                             message: messageOne,
                                             timestamp: serverTimestamp()
                                         });
-                                        alert('Message sent successfully!');
+
+                                        // Send Email via EmailJS
+                                        await emailjs.send(
+                                            'service_26291lk',
+                                            'template_olhd19m',
+                                            { firstName, lastName, emailOne, phoneOne, messageOne }
+                                        );
+
+                                        statusEl.style.display = 'block';
+                                        statusEl.style.color = '#22c55e';
+                                        statusEl.textContent = '✅ Message sent successfully!';
                                         document.getElementById('contact-form').reset();
                                     } catch (error) {
-                                        console.error('Error writing document: ', error);
-                                        alert('Failed to send message, please try again.');
+                                        console.error('Error: ', error);
+                                        statusEl.style.display = 'block';
+                                        statusEl.style.color = '#ef4444';
+                                        statusEl.textContent = '❌ Failed to send. Please try again.';
                                     }
                                 });
                             </script>
@@ -3580,6 +3653,12 @@
 
     <!-- end: Footer Area -->
 
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        emailjs.init('i-JnrI1dm2wgGhaUV');
+    </script>
+
     <!-- JS here -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
@@ -3606,12 +3685,77 @@
     <script src="assets/js/hero-data.js"></script>
     <script src="assets/js/tj-cursor.js"></script>
     <script>
-        // Global handler for broken images
-        document.addEventListener('error', function (event) {
-            if (event.target.tagName.toLowerCase() === 'img') {
-                event.target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%238750f7'%3E%3Cpath d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/%3E%3C/svg%3E";
+        // Function to get initials from name
+        function getInitials(name) {
+            if (!name) return 'U';
+            const parts = name.split(' ');
+            let initials = '';
+            for (let i = 0; i < Math.min(parts.length, 2); i++) {
+                if (parts[i]) {
+                    initials += parts[i][0].toUpperCase();
+                }
             }
-        }, true);
+            return initials || 'U';
+        }
+
+        // Function to create default avatar
+        function createDefaultAvatar(container, name) {
+            const initials = getInitials(name);
+            const avatar = document.createElement('div');
+            avatar.className = 'default-avatar';
+            avatar.textContent = initials;
+            container.appendChild(avatar);
+        }
+
+        // Handle testimonial avatar errors
+        document.addEventListener('DOMContentLoaded', function () {
+            const testimonialItems = document.querySelectorAll('.testimonial-item.style-5');
+
+            testimonialItems.forEach(function (item) {
+                const imgContainer = item.querySelector('.auother-images');
+                const img = imgContainer.querySelector('img');
+                const nameElement = item.querySelector('.name');
+                const name = nameElement ? nameElement.textContent : '';
+
+                // Create default avatar immediately as fallback
+                createDefaultAvatar(imgContainer, name);
+
+                // Hide default avatar if image loads successfully
+                img.addEventListener('load', function () {
+                    const defaultAvatar = imgContainer.querySelector('.default-avatar');
+                    if (defaultAvatar) {
+                        defaultAvatar.style.display = 'none';
+                    }
+                    img.style.opacity = '1';
+                });
+
+                // Show default avatar if image fails
+                img.addEventListener('error', function () {
+                    img.style.opacity = '0';
+                    const defaultAvatar = imgContainer.querySelector('.default-avatar');
+                    if (defaultAvatar) {
+                        defaultAvatar.style.display = 'flex';
+                    }
+                });
+
+                // Check if image is already loaded
+                if (img.complete) {
+                    if (img.naturalWidth === 0) {
+                        img.style.opacity = '0';
+                        const defaultAvatar = imgContainer.querySelector('.default-avatar');
+                        if (defaultAvatar) {
+                            defaultAvatar.style.display = 'flex';
+                        }
+                    } else {
+                        const defaultAvatar = imgContainer.querySelector('.default-avatar');
+                        if (defaultAvatar) {
+                            defaultAvatar.style.display = 'none';
+                        }
+                        img.style.opacity = '1';
+                    }
+                }
+            });
+        });
     </script>
 </body>
 

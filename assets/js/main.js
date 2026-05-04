@@ -221,7 +221,7 @@
             margin: 30,
             nav: false,
             dots: true,
-            autoplay: false,
+            autoplay: true,
             active: true,
             smartSpeed: 1000,
             autoplayTimeout: 7000,
@@ -244,10 +244,10 @@
             margin: 30,
             nav: false,
             dots: true,
-            autoplay: false,
+            autoplay: true,
             active: true,
             smartSpeed: 1000,
-            autoplayTimeout: 7000,
+            autoplayTimeout: 2500,
             responsive: {
                 0: {
                     items: 1,
@@ -497,9 +497,10 @@
         var portfolio = new Swiper(".portfolio-slider-5", {
             spaceBetween: 30,
             autoplay: {
-                delay: 8500,
+                delay: 2500,
+                disableOnInteraction: false,
             },
-            speed: 3000,
+            speed: 1500,
             pagination: {
                 el: ".portfolio-pagination",
                 clickable: true,
@@ -531,9 +532,10 @@
                 spaceBetween: 30,
                 loop: true,
                 autoplay: {
-                    delay: 6000,
+                    delay: 2500,
+                    disableOnInteraction: false,
                 },
-                speed: 3000,
+                speed: 1500,
                 pagination: {
                     el: ".testimonial-pagination",
                     clickable: true,
@@ -568,9 +570,10 @@
                 spaceBetween: 30,
                 loop: true,
                 autoplay: {
-                    delay: 6000,
+                    delay: 2500,
+                    disableOnInteraction: false,
                 },
-                speed: 3000,
+                speed: 1500,
                 pagination: {
                     el: ".testimonial-pagination",
                     clickable: true,

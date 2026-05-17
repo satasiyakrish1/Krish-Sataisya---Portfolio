@@ -1,0 +1,19 @@
+{
+  "name": "Krish Satasiya - Portfolio",
+  "short_name": "Krish Satasiya",
+  "description": "Portfolio of Krish Satasiya - MERN Developer, Computer Engineer, UI/UX Designer, Researcher, and Community Coordinator",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4452FF",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["technology", "web development", "design"]
+}

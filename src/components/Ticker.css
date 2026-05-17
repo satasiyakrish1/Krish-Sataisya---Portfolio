@@ -1,0 +1,18 @@
+.ticker {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.ticker__track {
+  animation: ticker-scroll 28s linear infinite;
+  width: max-content;
+}
+
+.ticker:hover .ticker__track {
+  animation-play-state: paused;
+}
+
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-33.333%); }
+}

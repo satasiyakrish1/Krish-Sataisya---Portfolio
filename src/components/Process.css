@@ -1,0 +1,8 @@
+.process-card {
+  min-height: 340px;
+}
+
+.process-card__badge {
+  display: flex;
+  align-items: center;
+}

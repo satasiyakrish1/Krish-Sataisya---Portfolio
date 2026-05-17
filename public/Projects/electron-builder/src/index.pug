@@ -1,0 +1,113 @@
+v-app#App
+
+  v-layout.layout-1(align-center justify-center): #atom.font-comfortaa
+    .electrosphere(
+      v-for  = '(layer, i) in reversedArr(diagram)'
+      :class = `[
+        'layer-' + (7 - i),
+        {
+          'empty': !reversedArr(layers)[i]
+        }
+      ]`
+      :style = `{
+       '--size': 100 - i * 10 + '%',
+       '--base': reversedArr(layers)[i]
+      }`
+    )
+      .electron(
+        v-for  = '(electrons, j) in reversedArr(layers)[i]'
+        :style = "{'--index': j}"
+      )
+    the-mask#element-search(mask='Aa' v-model='search')
+    label(for='element-search')
+      .nucleus(:class="{'match-error': electrons < 1}")
+        h2.element-initials {{ search }}
+        sup {{ electrons | electronsIndicator }}
+        
+  v-layout.layout-2(align-center column)
+    v-slider.electrons-slider(
+      v-model='electronsSlide'
+      thumb-label
+      min='1'
+      max='118'
+      color='light-blue lighten-1'
+      append-icon='mdi-chevron-right'
+      prepend-icon='mdi-chevron-left'
+      @input='updateElectrons(), updateElementName()'
+      @click:append='increment(1), updateElementName()'
+      @click:prepend='increment(-1), updateElementName()'
+    )
+
+
+    .notation-display.font-comfortaa(
+      :class = `{
+        'show-full-notation': showFullNotation
+      }`
+      @click = 'showFullNotation = !showFullNotation'
+    )
+      span(
+        v-for  = 'item, i in notation'
+        :class = `{
+          'truncate': typeof item === 'string',
+          'middle': notation.length > 5 && 2 < i && i < notation.length - 3
+        }`
+        v-show = 'electrons > 0'
+      ) 
+        span(v-if="typeof item === 'object'") {{ item.location }}
+          sup {{ item.electrons }}
+        span(v-else)
+          v-icon(color='light-blue') mdi-dots-horizontal
+
+      span.input-error(v-if = '!notation.length') Invalid input
+  
+  
+
+  v-toolbar.px-4.pt-1(flat fixed color='transparent')
+
+    v-spacer
+
+    v-btn(flat large icon color='light-blue' @click='infoDialog = true')
+      v-icon mdi-information-variant
+
+    v-tooltip(bottom)
+      v-btn(flat large icon color='light-blue' slot='activator' :disabled='electrons < 1' @click='googleSearchElement')
+        v-icon mdi-magnify
+      span Seach on Google
+
+
+
+  v-dialog(scrollable max-width='500px' v-model='infoDialog')
+    v-card(max-width='500px')
+
+      v-card-title.pt-4
+        v-layout(row no-wrap)
+
+          img(height='32' src='https://github.com/FelixLuciano/electron-builder/raw/master/public/icon.svg?sanitize=true')
+
+          v-divider.ml-3.mr-2(vertical)
+
+          .headline.text-truncate.light-blue--text.text--lighten-1 {{ 'Electron Builder ' }}
+            sup e
+              sup -
+
+
+      v-card-text
+        v-layout(row wrap)
+
+          v-flex.pl-2(xs12)
+            .caption Help
+
+          v-flex.py-2(xs12 d-flex align-center v-for='tip, index in help' :key='index')
+              .px-2.headline.light-blue--text {{ index + 1 }}
+
+              .pl-3.body-1 {{ tip }}
+
+          v-flex.pl-2.pt-4(xs12)
+            .subheading.font-weight-light see this project on
+              v-btn.px-0.ma-0.ml-1.font-weight-light(flat color='light-blue' target='_blank' href='https://github.com/FelixLuciano/electron-builder') Github
+
+
+      v-card-actions.px-3
+        v-spacer
+        v-btn.px-4(flat round color='light-blue' @click='infoDialog = false') Close
+      

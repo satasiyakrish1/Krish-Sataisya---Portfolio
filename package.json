@@ -1,16 +1,38 @@
 {
-  "dependencies": {
-    "firebase": "^10.7.1",
-    "krish_satasiya_website": "file:"
-  },
-  "name": "krish_satasiya_website",
-  "description": "[![MasterHead](https://github.com/satasiyakrish1//Krish_Satasiya_Website/blob/main/static/Cover.png)](https://rishavchanda.io)\r <h1 align=\"center\">Hi 👋, I'm Krish Satasiya</h1>\r <h3 align=\"center\">A passionate frontend developer & Java Application Developer from India</h3>\r <img align=\"right\" alt=\"Coding\" width=\"400\" src=\"https://img.freepik.com/premium-vector/young-man-writing-code-desktop-computer-software-developer-work-programming_625536-3102.jpg\"></img>",
+  "name": "krish-portfolio",
   "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "private": true,
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^7.15.0",
+    "react-scripts": "5.0.1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "qrcode-terminal": "^0.12.0"
+  }
 }

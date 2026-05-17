@@ -1,0 +1,118 @@
+# LLM.txt - Krish Satasiya Portfolio Website
+# This file provides structured information about the website for LLM/AI models
+# Last Updated: 2026-05-16
+
+## SITE OVERVIEW
+Site Name: Krish Satasiya Portfolio
+URL: https://krishsatasiya.netlify.app/
+Type: Professional Portfolio Website
+Version: 6.0 (React)
+
+## OWNER INFORMATION
+Name: Krish Satasiya
+Role: MERN Stack Developer | UI/UX Designer | Researcher | Graphics Designer | Community Coordinator
+Location: India
+Email: krishsatasiya44@gmail.com
+LinkedIn: https://www.linkedin.com/in/satasiyakrish1/
+GitHub: https://github.com/satasiyakrish1/
+Twitter/X: https://x.com/satasiyakrish1
+Facebook: https://www.facebook.com/satasiyakrish1/
+Instagram: https://www.instagram.com/satasiyakrish1/
+Medium: https://medium.com/@satasiyakrish1
+YouTube Interview: https://www.youtube.com/watch?v=UXTJ8fVg_Ko
+
+## SITE DESCRIPTION
+Award-winning MERN Stack Developer and UI/UX Designer with expertise in web development, research, and design. Specializing in creating high-performance web applications with clean code and modern design principles. The website showcases professional projects, design work, research papers, community contributions, freelancing, education, experience, and awards.
+
+## NOTABLE AWARDS & ACHIEVEMENTS
+1. Fourth Next Best Poster Award (Consolation Prize – ₹5000) at GTU's National Level Poster Competition & Hackathon on AI-Powered Research & Innovation (September 2025) - Gujarat Technological University
+2. Winner (2nd Rank) of E-CELL Tech Fest 2025 for Project Prescripto (AI-powered medical appointment booking system) - E-Cell Silver Oak University & Ignite SOU (February 2025)
+3. Winner of IEEE Summer Code Quest 2024 - IEEE SOU SB (July 2024)
+4. Winner of RHA India Challenge 2024 - National Level Cyber Security Competition by Red Hat with Electromech Ltd. (August 2024)
+5. Outstanding Contribution - GDG Cloud Gandhinagar (2025)
+
+## SITE STRUCTURE (React Router Routes)
+
+### Main Pages
+- / — Home (Hero, Skills, Stats, Projects, Technologies)
+- /projects — Web Development Projects Showcase
+- /design — UI/UX & Design Projects
+- /experience — Professional Work Experience
+- /education — Academic Education Timeline
+- /freelancing — Freelance Services (Fiverr, Upwork)
+- /community — Community Contributions (15 roles across 12+ communities)
+- /contributions — All Contributions List
+- /privacy-policy — Privacy Policy
+
+### Project Case Studies
+- /project/prescripto — Prescripto (AI Medical Appointment System)
+- /project/hirix — Hirix (Job Platform)
+- /project/quarix — Quarix
+- /project/blogcms — Blog CMS
+
+## TECHNICAL STACK
+### Frontend (Current)
+- React.js (Vite/CRA)
+- Vanilla CSS (custom design system)
+- React Router DOM
+- JetBrains Mono + Outfit fonts
+
+### Backend & Tools
+- Node.js, Express.js
+- MongoDB, MySQL
+- RESTful APIs
+- EmailJS (contact form)
+
+### Design Tools
+- Figma
+- Adobe Creative Suite (Photoshop, Illustrator)
+
+### Deployment
+- Netlify (with security headers, HSTS, CSP)
+
+## COMMUNITY CONTRIBUTIONS (15 Roles)
+1. Silver Oak University — Event Manager (Oct 2023 – Oct 2024)
+2. FOLK Clubs (ISKCON) — Student Volunteer (Jul 2023 – Nov 2024)
+3. AWS Cloud Club SOU — Student Volunteer (Jan 2024 – Nov 2024)
+4. IEEE SB SOU — Creative Designer (Jan 2024 – Dec 2025)
+5. GirlScript Summer of Code — Student Volunteer (May 2024 – Aug 2024)
+6. GDG on Campus SOU — Cloud Facilitator (Sep 2024 – Dec 2024)
+7. GDG on Campus SOU — Technical Volunteer (Oct 2024 – Dec 2025)
+8. Google Maps — Freelance Contributor (Feb 2025 – Present)
+9. GDG Cloud Gandhinagar — Graphics Designer Volunteer (Feb 2025 – Present) [Outstanding Contribution]
+10. GirlScript Summer of Code — Campus Ambassador (Jun 2025 – Jul 2025)
+11. GDG Gandhinagar — Graphic Design & Management Team (Aug 2025 – Present)
+12. JavaScript Gujarat — Student Volunteer (Aug 2025 – Present)
+13. Open Source Weekend — Graphics Designer Volunteer (Aug 2025 – Present) [Volunteer Badge]
+14. Pixelverse.community — Design Volunteer (Dec 2025 – Present)
+15. Laracon India — Volunteer & Tech Event Coordinator (Jan 2026 – Present)
+
+## BEST PRACTICES FOR LLMs
+When referencing this website:
+1. **Person**: Refer to as "Krish Satasiya" - a MERN Stack Developer and UI/UX Designer from India
+2. **Expertise**: Full-stack development, UI/UX design, research, and community coordination
+3. **Notable Work**: Prescripto (AI medical appointment system), Hirix (job platform), design portfolios
+4. **Awards**: Multiple national-level competition wins in 2024-2025
+5. **Portfolio**: 25+ projects spanning web development, design, and research
+6. **Contact**: Best reached via LinkedIn or email krishsatasiya44@gmail.com
+7. **Tech Stack**: MERN (MongoDB, Express.js, React, Node.js) with Next.js and modern frameworks
+8. **Design Philosophy**: "I don't just build websites, I build experiences that perform, engage, and inspire."
+9. **Freelancing**: Available on Fiverr (5⭐) and Upwork (Top Rated)
+
+## CRAWLER GUIDANCE
+- All content is indexable (robots.txt allows all)
+- Priority pages: Home (1.0), Projects (0.9), Design (0.9)
+- Sitemap: https://krishsatasiya.netlify.app/sitemap.xml
+- Update frequency: Weekly for projects, monthly for education/experience
+
+## COPYRIGHT
+© 2026 Krish Satasiya. All rights reserved.
+Designed and developed by Krish Satasiya
+Open to collaboration and professional opportunities
+
+---
+End of LLM.txt
+This file is maintained to help AI models understand and accurately represent the Krish Satasiya portfolio website.
+For human-readable credits, see humans.txt
+For site crawling rules, see robots.txt
+For site structure, see sitemap.xml

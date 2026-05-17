@@ -1,0 +1,8 @@
+.footer__social-link:hover {
+  color: var(--color-primary-500);
+}
+
+.footer__skill-tag {
+  display: inline-flex;
+  align-items: center;
+}

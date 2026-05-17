@@ -1,0 +1,40 @@
+.testimonial-card {
+  border: 1px solid #000;
+  transition: background 0.15s;
+}
+
+.testimonial-card:hover {
+  background: var(--color-gray-50);
+}
+
+.star-icon {
+  flex-shrink: 0;
+}
+
+.testimonials-scroll {
+  width: 100%;
+  overflow: hidden;
+}
+
+.testimonials-track {
+  display: flex;
+  gap: 1rem;
+  width: fit-content;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
+
+.testimonials-scroll:hover .animate-scroll {
+  animation-play-state: paused;
+}

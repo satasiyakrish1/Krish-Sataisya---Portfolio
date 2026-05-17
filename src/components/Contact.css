@@ -1,0 +1,39 @@
+.contact-wrapper {
+  display: grid;
+  gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
+.contact-form-wrapper {
+  border: 1px solid #000;
+}
+
+.contact-link:hover {
+  color: var(--color-primary-500);
+}
+
+.form-input {
+  display: block;
+  font-family: var(--font-body);
+  background: transparent;
+}
+
+.form-input:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 2px #000;
+}
+
+.form-submit {
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.form-submit:hover {
+  background: var(--color-primary-500);
+}

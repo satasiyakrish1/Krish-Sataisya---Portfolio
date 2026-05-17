@@ -1,0 +1,42 @@
+.experience-section {
+  background-color: #fff;
+}
+
+.exp-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.exp-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 0;
+  background-color: var(--color-primary-500);
+  transition: height 0.3s ease;
+}
+
+.exp-item:hover::after {
+  height: 100%;
+}
+
+.edu-item {
+  transition: transform 0.3s ease;
+}
+
+.edu-item:hover {
+  transform: translateX(4px);
+  background-color: #fafafa;
+}
+
+.cert-tags span {
+  transition: all 0.2s ease;
+  cursor: default;
+}
+
+.cert-tags span:hover {
+  background-color: var(--color-primary-500);
+  color: #fff;
+}

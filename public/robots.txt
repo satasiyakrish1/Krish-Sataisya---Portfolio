@@ -1,0 +1,79 @@
+# Robots.txt for Krish Satasiya Portfolio
+# https://krishsatasiya.netlify.app
+# Last Updated: 2026-05-16
+
+# Allow all search engines
+User-agent: *
+Allow: /
+Allow: /projects
+Allow: /achievements
+Allow: /research
+Allow: /design
+Allow: /experience
+Allow: /education
+Allow: /freelancing
+Allow: /community
+Allow: /project/prescripto
+Allow: /project/hirix
+Allow: /project/quarix
+Allow: /project/blogcms
+Allow: /Photos/
+Allow: /assets/
+
+# Block private/build paths
+Disallow: /build/
+Disallow: /node_modules/
+Disallow: /.env
+Disallow: /static/js/*.map
+
+# Google-specific
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Googlebot-Image
+Allow: /Photos/
+Allow: /assets/
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 3
+
+# Yandex
+User-agent: Yandex
+Allow: /
+Crawl-delay: 5
+
+# Baidu
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 5
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+
+# AI/LLM Crawlers
+User-agent: GPTBot
+Allow: /llm.txt
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# Sitemaps
+Sitemap: https://krishsatasiya.netlify.app/sitemap.xml
+
+# LLM context
+# LLM.txt: https://krishsatasiya.netlify.app/llm.txt
+# Humans.txt: https://krishsatasiya.netlify.app/humans.txt

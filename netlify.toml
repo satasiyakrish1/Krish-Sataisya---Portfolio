@@ -1,5 +1,5 @@
 [build]
-  command = "CI=true npx react-scripts build"
+  command = "rm -rf node_modules && npm install && npm run build"
   publish = "build"
 
 # ── Security & Performance Headers ──────────────────────────────────────

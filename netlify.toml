@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build"
+  command = "CI=true npx react-scripts build"
   publish = "build"
 
 # ── Security & Performance Headers ──────────────────────────────────────

@@ -17,9 +17,9 @@ export default function DocViewer({ type }) {
   const doc = DOCS[type];
   if (!doc) return null;
 
-  const previewUrl  = `https://drive.google.com/file/d/${doc.id}/preview`;
-  const downloadUrl = `https://drive.google.com/uc?export=download&id=${doc.id}`;
-  const openUrl     = `https://drive.google.com/file/d/${doc.id}/view`;
+  const previewUrl  = `https://docs.google.com/document/d/${doc.id}/preview`;
+  const downloadUrl = `https://docs.google.com/document/d/${doc.id}/export?format=pdf`;
+  const openUrl     = `https://docs.google.com/document/d/${doc.id}/view`;
 
   return (
     <>

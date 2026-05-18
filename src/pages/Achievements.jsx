@@ -97,17 +97,45 @@ const CERTIFICATIONS = [
   { name: 'AWS Educate Introduction to Generative AI', issuer: 'AWS', date: 'Mar 2025' },
   { name: 'GitHub Foundations', issuer: 'GitHub', date: 'Feb 2025' },
   { name: 'Red Hat System Administration I (RH124 - RHA) - Ver. 9.3', issuer: 'Red Hat', date: 'Aug 2025' },
+  { name: 'Introduction to OpenShift Applications 4.6', issuer: 'Red Hat', date: 'Oct 2024' },
   { name: 'Journey to Cloud: Envisioning Your Solution', issuer: 'IBM SkillsBuild', date: 'May 2025' },
   { name: 'Cloud Computing Fundamentals', issuer: 'IBM SkillsBuild', date: 'Oct 2024' },
+  { name: 'Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate', issuer: 'Oracle', date: 'Dec 2025' },
+  { name: 'Oracle Data Platform 2025 Certified Foundations Associate', issuer: 'Oracle', date: 'Dec 2025' },
+  { name: 'GitHub Copilot', issuer: 'Microsoft', date: 'Oct 2025' },
+  { name: 'Microsoft Certified: Azure AI Fundamentals', issuer: 'Microsoft', date: 'Jan 2024' },
+  { name: 'Terraform for Beginners: Hands-On AWS Infra Automation', issuer: 'Udemy', date: 'Oct 2025' },
+  { name: 'UI/UX & Web Design', issuer: 'Udemy', date: 'Sep 2024' },
+  { name: 'MongoDB - The Complete MongoDB Developers Course', issuer: 'Udemy', date: 'Aug 2024' },
+  { name: 'Ui Ux Design (Adobe XD)', issuer: 'Udemy', date: 'Oct 2023' },
+  { name: 'JavaScript Specialist Certification', issuer: 'Udemy', date: 'Feb 2023' },
+  { name: 'Adobe Photoshop CC', issuer: 'Udemy', date: 'Jun 2023' },
+  { name: 'Adobe Illustrator CC 2020', issuer: 'Udemy', date: 'Sep 2020' },
+  { name: 'Programming in C Certification', issuer: 'Udemy', date: 'May 2021' },
+  { name: 'Python Basics', issuer: 'Udemy', date: 'Sep 2020' },
+  { name: 'Introduction to Generative AI', issuer: 'Google', date: 'Dec 2023' },
+  { name: 'Developing a Google SRE Culture', issuer: 'Google', date: 'Dec 2023' },
+  { name: 'Google Play Academy - Store Listing Certificate', issuer: 'Google', date: 'Jun 2024' },
+  { name: 'Digital Design & UX Job Simulation', issuer: 'Forage', date: 'Jan 2024' },
+  { name: 'PwC Switzerland - Power BI Job Simulation', issuer: 'Forage', date: 'Dec 2023' },
+  { name: 'Introduction to Programming Using Java', issuer: 'LearnRush LMS', date: 'Sep 2022' },
+  { name: 'Flutter Workshop 101', issuer: 'Google Developer Groups', date: 'Aug 2023' },
 ];
 
 const ISSUER_META = {
   'Google Cloud': { color: '#4285F4', bg: '#f0f4ff', icon: 'https://cdn.simpleicons.org/googlecloud/4285F4' },
+  'Google': { color: '#4285F4', bg: '#f0f4ff', icon: 'https://www.vectorlogo.zone/logos/google/google-icon.svg' },
+  'Google Developer Groups': { color: '#4285F4', bg: '#f0f4ff', icon: 'https://www.vectorlogo.zone/logos/google/google-icon.svg' },
   'MongoDB': { color: '#00684A', bg: '#eef7f3', icon: 'https://cdn.simpleicons.org/mongodb/00684A' },
-  'AWS': { color: '#FF9900', bg: '#fff7eb', icon: 'https://cdn.simpleicons.org/amazonaws/FF9900' },
+  'AWS': { color: '#FF9900', bg: '#fff7eb', icon: 'https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg' },
   'GitHub': { color: '#181717', bg: '#f3f3f3', icon: 'https://cdn.simpleicons.org/github/181717' },
   'Red Hat': { color: '#EE0000', bg: '#fef2f2', icon: 'https://cdn.simpleicons.org/redhat/EE0000' },
   'IBM SkillsBuild': { color: '#0F62FE', bg: '#eef3ff', icon: 'https://www.ibm.com/favicon.ico' },
+  'Oracle': { color: '#F80000', bg: '#fff0f0', icon: 'https://www.vectorlogo.zone/logos/oracle/oracle-icon.svg' },
+  'Microsoft': { color: '#0078D4', bg: '#f0f6ff', icon: 'https://www.vectorlogo.zone/logos/microsoft/microsoft-icon.svg' },
+  'Udemy': { color: '#A435F0', bg: '#f8f0ff', icon: 'https://cdn.simpleicons.org/udemy/A435F0' },
+  'Forage': { color: '#00B186', bg: '#edfaf5', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Eo_circle_green_checkmark.svg/120px-Eo_circle_green_checkmark.svg.png' },
+  'LearnRush LMS': { color: '#FF6B35', bg: '#fff4f0', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg' },
 };
 
 export default function AchievementsPage() {
@@ -149,7 +177,7 @@ export default function AchievementsPage() {
               </div>
               <div className="ip-hero__meta-item">
                 <span className="ip-hero__meta-label">Issuers</span>
-                <span className="ip-hero__meta-value">Google · MongoDB · AWS · Red Hat · GitHub</span>
+                <span className="ip-hero__meta-value">Google · Oracle · Microsoft · AWS · MongoDB · Udemy</span>
               </div>
             </div>
           </div>

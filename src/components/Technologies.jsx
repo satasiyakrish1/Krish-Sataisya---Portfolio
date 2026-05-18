@@ -52,6 +52,7 @@ const TECH_CATEGORIES = [
     { name: 'WordPress', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg' },
     { name: 'WooCommerce', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/WooCommerce_logo_%282015%29.svg/3840px-WooCommerce_logo_%282015%29.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail' },
     { name: 'Odoo', icon: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/Odoo_Official_Logo.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original' },
+    { name: 'Webflow', icon: 'https://cdn.simpleicons.org/webflow/4353FF' },
   ]},
   { id: 'creative', label: 'Creative Tools', skills: [
     { name: 'Figma', icon: 'https://www.vectorlogo.zone/logos/figma/figma-icon.svg' },

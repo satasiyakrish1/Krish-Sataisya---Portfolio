@@ -1,0 +1,14 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Krish Satasiya
+N:Satasiya;Krish;;;
+TITLE:Full-Stack Developer & UI/UX Designer
+ORG:Freelancer
+EMAIL;TYPE=PERSONAL:krishsatasiya44@gmail.com
+EMAIL;TYPE=WORK:business@krishsatasiya.com
+URL:https://krishsatasiya.netlify.app
+URL;TYPE=LinkedIn:https://linkedin.com/in/satasiyakrish1
+URL;TYPE=GitHub:https://github.com/satasiyakrish1
+NICKNAME:satasiyakrish1
+NOTE:Full-Stack MERN Developer · UI/UX Designer · Freelancer on Fiverr & Upwork
+END:VCARD

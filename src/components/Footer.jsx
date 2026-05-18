@@ -16,6 +16,15 @@ export default function Footer() {
             <a href="/privacy-policy" className="footer__social-link font-mono text-xs uppercase text-gray-400 hover:text-white transition-colors">
               Privacy Policy
             </a>
+            <a href="/links" className="footer__social-link font-mono text-xs uppercase text-gray-400 hover:text-white transition-colors">
+              Linktree
+            </a>
+            <a href="/resume" className="footer__social-link font-mono text-xs uppercase text-gray-400 hover:text-white transition-colors">
+              Resume
+            </a>
+            <a href="/cv" className="footer__social-link font-mono text-xs uppercase text-gray-400 hover:text-white transition-colors">
+              CV
+            </a>
           </div>
         </div>
       </div>

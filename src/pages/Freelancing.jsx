@@ -6,7 +6,7 @@ const PLATFORMS = [
   {
     id: '01',
     platform: 'Fiverr',
-    badge: '5 ⭐ Rated',
+    badge: 'Top Rated',
     role: 'Professional Freelancer',
     period: '2023 – 2026',
     logoText: 'FVR',
@@ -60,10 +60,88 @@ const PROCESS = [
   { step: '03', title: 'Design & Build', desc: 'Iterative development with regular check-ins, milestone demos, and full transparency.' },
   { step: '04', title: 'Deliver & Support', desc: '30 days of post-delivery support included with every project, no extra charge.' },
 ];
+const BRANDS = [
+  { name: 'Fiverr', icon: 'https://cdn.simpleicons.org/fiverr/1DBF73' },
+  { name: 'Upwork', icon: 'https://cdn.simpleicons.org/upwork/6FDA44' },
+  { name: 'Figma', icon: 'https://www.vectorlogo.zone/logos/figma/figma-icon.svg' },
+  { name: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
+  { name: 'Next.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg' },
+  { name: 'WordPress', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg' },
+  { name: 'MongoDB', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
+  { name: 'Shopify', icon: 'https://cdn.simpleicons.org/shopify/96BF48' },
+  { name: 'Stripe', icon: 'https://www.vectorlogo.zone/logos/stripe/stripe-icon.svg' },
+  { name: 'Webflow', icon: 'https://cdn.simpleicons.org/webflow/4353FF' },
+  { name: 'Node.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
+  { name: 'Tailwind', icon: 'https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg' },
+  { name: 'AWS', icon: 'https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg' },
+  { name: 'Netlify', icon: 'https://www.vectorlogo.zone/logos/netlify/netlify-icon.svg' },
+  { name: 'Vercel', icon: 'https://www.vectorlogo.zone/logos/vercel/vercel-icon.svg' },
+  { name: 'Firebase', icon: 'https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg' },
+];
+
+const MARQUEE_STYLES = `
+  .fl-marquee-wrap {
+    overflow: hidden;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    background: #f5f5f5;
+    padding: 20px 0;
+    margin: 40px 0 8px 0;
+    position: relative;
+  }
+  .fl-marquee-wrap::before,
+  .fl-marquee-wrap::after {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0;
+    width: 80px;
+    z-index: 2;
+    pointer-events: none;
+  }
+  .fl-marquee-wrap::before { left: 0; background: linear-gradient(to right, #f5f5f5, transparent); }
+  .fl-marquee-wrap::after  { right: 0; background: linear-gradient(to left, #f5f5f5, transparent); }
+  .fl-marquee-track {
+    display: flex;
+    gap: 48px;
+    width: max-content;
+    animation: fl-scroll 28s linear infinite;
+  }
+  .fl-marquee-wrap:hover .fl-marquee-track { animation-play-state: paused; }
+  @keyframes fl-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+  .fl-marquee-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    min-width: 72px;
+    flex-shrink: 0;
+  }
+  .fl-marquee-item img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    transition: transform 0.2s;
+  }
+  .fl-marquee-item:hover img { transform: scale(1.15); }
+  .fl-marquee-item span {
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-family: var(--font-mono);
+    color: #555;
+    white-space: nowrap;
+  }
+`;
 
 export default function Freelancing() {
+  const doubled = [...BRANDS, ...BRANDS];
   return (
     <div className="ip-root">
+      <style>{MARQUEE_STYLES}</style>
       <div className="ip-bg-accent" />
 
       <div className="container ip-wrap">
@@ -116,6 +194,18 @@ export default function Freelancing() {
               <span className="fl-stat__label font-mono">{s.label}</span>
             </div>
           ))}
+        </div>
+
+        {/* Client Brands Marquee */}
+        <div className="fl-marquee-wrap">
+          <div className="fl-marquee-track">
+            {doubled.map((b, i) => (
+              <div key={i} className="fl-marquee-item">
+                <img src={b.icon} alt={b.name} />
+                <span>{b.name}</span>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Freelance Platforms */}

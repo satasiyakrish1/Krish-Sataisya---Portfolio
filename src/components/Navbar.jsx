@@ -21,6 +21,7 @@ const MORE_LINKS = [
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [moreOpen, setMoreOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
   const dropdownRef = useRef(null);
@@ -33,6 +34,12 @@ export default function Navbar() {
     };
     document.addEventListener('mousedown', handler);
     return () => document.removeEventListener('mousedown', handler);
+  }, []);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   const handleScroll = (e, href) => {
@@ -51,7 +58,10 @@ export default function Navbar() {
   };
 
   return (
-    <header className="navbar sticky top-0 z-50 bg-white border-b border-black">
+    <header
+      className={`navbar fixed top-0 left-0 right-0 z-50 bg-white border-b border-black transition-shadow duration-200${scrolled ? ' shadow-md' : ''}`}
+      style={{ width: '100%' }}
+    >
       <div className="navbar__inner h-16 flex items-stretch justify-between lg:h-20">
 
         {/* Logo */}

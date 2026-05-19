@@ -13,37 +13,49 @@ const DOCS = {
   },
 };
 
+const BAR_H = 56; // px — top bar height
+
 export default function DocViewer({ type }) {
   const doc = DOCS[type];
   if (!doc) return null;
 
-  const previewUrl  = `https://docs.google.com/document/d/${doc.id}/preview`;
+  // drive.google.com/file preview renders correctly on mobile browsers
+  const previewUrl  = `https://drive.google.com/file/d/${doc.id}/preview`;
   const downloadUrl = `https://docs.google.com/document/d/${doc.id}/export?format=pdf`;
 
   return (
     <>
       <style>{`
-        html, body { height: 100%; overflow: hidden; }
+        /* Reset html/body so mobile scroll works */
+        html { height: 100%; }
+        body { height: 100%; overflow: hidden; }
 
+        /* Full-screen container below navbar */
         .dv-wrap {
-          position: fixed;
-          top: 64px;
-          left: 0; right: 0; bottom: 0;
           display: flex;
           flex-direction: column;
           background: #f0efe9;
           font-family: var(--font-body, sans-serif);
+
+          /* navbar is 64px on mobile, 80px on lg */
+          height: calc(100dvh - 64px);
+          position: fixed;
+          top: 64px;
+          left: 0; right: 0; bottom: 0;
         }
         @media (min-width: 1024px) {
-          .dv-wrap { top: 80px; }
+          .dv-wrap {
+            top: 80px;
+            height: calc(100dvh - 80px);
+          }
         }
 
         /* ── Top Bar ── */
         .dv-bar {
-          flex-shrink: 0;
+          flex: 0 0 ${BAR_H}px;
           background: #fff;
           border-bottom: 2px solid #000;
-          padding: 10px 14px;
+          padding: 0 14px;
           display: flex;
           align-items: center;
           justify-content: space-between;
@@ -54,7 +66,6 @@ export default function DocViewer({ type }) {
           display: flex;
           align-items: center;
           gap: 10px;
-          min-width: 0;
           overflow: hidden;
         }
         .dv-tag {
@@ -80,15 +91,14 @@ export default function DocViewer({ type }) {
         }
         @media (min-width: 480px) { .dv-title { font-size: 15px; } }
         @media (min-width: 768px) { .dv-title { font-size: 17px; } }
-
         .dv-sub {
           font-size: 10px;
           color: #777;
           font-family: monospace;
-          margin: 1px 0 0;
+          margin: 2px 0 0;
           white-space: nowrap;
         }
-        .dv-actions { display: flex; gap: 6px; flex-shrink: 0; }
+        .dv-actions { flex-shrink: 0; }
         .dv-btn {
           padding: 7px 12px;
           font-size: 10px;
@@ -108,38 +118,33 @@ export default function DocViewer({ type }) {
           background: #000;
           color: #fff;
         }
-        @media (min-width: 480px) {
-          .dv-btn { padding: 8px 16px; font-size: 11px; }
-        }
+        @media (min-width: 480px) { .dv-btn { padding: 8px 16px; font-size: 11px; } }
         .dv-btn:hover  { transform: translate(-1px,-1px); box-shadow: 3px 3px 0 #000; }
         .dv-btn:active { transform: translate(1px,1px);   box-shadow: 1px 1px 0 #000; }
 
-        /* ── Iframe Scroll Container ── */
+        /* ── Iframe ── */
         .dv-frame {
-          flex: 1;
-          overflow: auto;
-          -webkit-overflow-scrolling: touch;
+          flex: 1 1 0;
+          overflow: hidden;
           position: relative;
         }
         .dv-frame iframe {
-          display: block;
+          position: absolute;
+          inset: 0;
           width: 100%;
           height: 100%;
-          min-height: 600px;
           border: none;
-          position: absolute;
-          top: 0; left: 0; right: 0; bottom: 0;
+          display: block;
         }
       `}</style>
 
       <div className="dv-wrap">
-        {/* Bar */}
         <div className="dv-bar">
           <div className="dv-bar__left">
             <span className="dv-tag">{doc.short}</span>
             <div style={{ minWidth: 0 }}>
               <h1 className="dv-title">Krish Satasiya — {doc.label}</h1>
-              <p className="dv-sub">Live · Auto-updates from Google Docs</p>
+              <p className="dv-sub">Live · Google Drive Preview</p>
             </div>
           </div>
           <div className="dv-actions">
@@ -149,13 +154,12 @@ export default function DocViewer({ type }) {
           </div>
         </div>
 
-        {/* Iframe — works on both desktop & mobile */}
         <div className="dv-frame">
           <iframe
             src={previewUrl}
             title={`Krish Satasiya ${doc.label}`}
             allow="autoplay"
-            sandbox="allow-scripts allow-same-origin allow-popups"
+            allowFullScreen
           />
         </div>
       </div>

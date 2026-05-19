@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const AVATAR = '/Photos/Krish Satasiya/Krish Satasiya.jpg';
 
@@ -326,20 +326,84 @@ export default function Links() {
     };
   }, []);
 
-  // Auto PWA install prompt — fires automatically when browser is ready
+  const [installBanner, setInstallBanner] = useState(false);
+  const deferredPrompt = useRef(null);
+
   useEffect(() => {
     const handler = (e) => {
       e.preventDefault();
-      // Automatically show the "Add to Home Screen" prompt
-      e.prompt();
+      deferredPrompt.current = e;
+      setInstallBanner(true);
     };
     window.addEventListener('beforeinstallprompt', handler);
+    // If already installed, hide banner
+    window.addEventListener('appinstalled', () => setInstallBanner(false));
     return () => window.removeEventListener('beforeinstallprompt', handler);
   }, []);
 
+  const handleInstall = async () => {
+    if (!deferredPrompt.current) return;
+    deferredPrompt.current.prompt();
+    const { outcome } = await deferredPrompt.current.userChoice;
+    deferredPrompt.current = null;
+    setInstallBanner(false);
+  };
+
   return (
     <div className="lt-root">
-      <style>{styles}</style>
+      <style>{styles}{`
+        .lt-install-banner {
+          position: fixed;
+          bottom: 20px;
+          left: 50%;
+          transform: translateX(-50%);
+          background: #000;
+          color: #fff;
+          border: 2px solid #4452FF;
+          box-shadow: 4px 4px 0 #4452FF;
+          padding: 12px 20px;
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          font-family: monospace;
+          font-size: 12px;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+          z-index: 9999;
+          white-space: nowrap;
+          animation: slideUp 0.3s ease;
+          cursor: default;
+          max-width: calc(100vw - 32px);
+        }
+        @keyframes slideUp {
+          from { opacity: 0; transform: translateX(-50%) translateY(20px); }
+          to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+        }
+        .lt-install-btn {
+          background: #4452FF;
+          color: #fff;
+          border: none;
+          padding: 8px 16px;
+          font-family: monospace;
+          font-size: 11px;
+          font-weight: 800;
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+          cursor: pointer;
+          transition: opacity 0.15s;
+        }
+        .lt-install-btn:hover { opacity: 0.85; }
+        .lt-install-close {
+          background: none;
+          border: none;
+          color: #aaa;
+          font-size: 18px;
+          cursor: pointer;
+          padding: 0 4px;
+          line-height: 1;
+        }
+      `}</style>
       <div className="lt-phone">
 
       <div className="lt-hero">
@@ -401,6 +465,15 @@ export default function Links() {
         {totalLinks} links · @satasiyakrish1 · krishsatasiya.netlify.app
       </div>
       </div>
+
+      {/* PWA Install Banner */}
+      {installBanner && (
+        <div className="lt-install-banner">
+          <span>📲 Add to Home Screen</span>
+          <button className="lt-install-btn" onClick={handleInstall}>Install</button>
+          <button className="lt-install-close" onClick={() => setInstallBanner(false)}>✕</button>
+        </div>
+      )}
     </div>
   );
 }

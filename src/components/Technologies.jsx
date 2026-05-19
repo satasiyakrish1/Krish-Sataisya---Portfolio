@@ -347,7 +347,7 @@ export default function Technologies() {
   return (
     <>
       <style>{styles}</style>
-      <section className="tech-section">
+      <section className="tech-section" id="skills">
         <div className="container mb-16">
           <h2 className="font-display text-3xl font-semibold lg:text-4xl">Skills &amp; Technologies</h2>
           <p className="text-xl lg:text-2xl mt-2 text-gray-600">

@@ -252,7 +252,7 @@ export default function ProjectsPage() {
       {/* Hero Section */}
       <section id="projects-hero">
         <div className="container py-section">
-          <div className="font-mono uppercase text-lg font-semibold leading-tight text-primary-500">
+          <div className="font-mono uppercase text-lg font-semibold leading-tight text-primary-500" style={{ marginBottom: '0.375rem' }}>
             Portfolio
           </div>
           <div className="mt-2 grid gap-2 lg:grid-cols-3 lg:gap-12">

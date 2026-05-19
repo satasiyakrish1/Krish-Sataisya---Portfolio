@@ -54,7 +54,7 @@ const BENEFITS = [
 
 export default function WhyMe() {
   return (
-    <section className="relative" id="skills">
+    <section className="relative">
       <div className="container py-section relative">
         <h2 className="font-display text-3xl font-semibold lg:text-4xl">
           Strategic Solutions for Your Next Project

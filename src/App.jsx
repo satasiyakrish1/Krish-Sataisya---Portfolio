@@ -22,16 +22,22 @@ import './App.css';
 
 const BARE_ROUTES = ['/links'];
 const NO_PAD_ROUTES = ['/cv', '/resume'];
+const NO_FOOTER_ROUTES = ['/cv', '/resume'];
+const NO_LG_PAD_ROUTES = ['/achievements', '/education', '/experience', '/freelancing', '/community'];
 
 function AppInner() {
   const { pathname } = useLocation();
   const isBare = BARE_ROUTES.includes(pathname);
   const noPad = NO_PAD_ROUTES.includes(pathname);
+  const noFooter = NO_FOOTER_ROUTES.includes(pathname);
+  const noLgPad = NO_LG_PAD_ROUTES.includes(pathname);
+
+  const mainClass = `bg-white${!isBare && !noPad ? (noLgPad ? ' pt-16' : ' pt-16 lg:pt-20') : ''}`;
 
   return (
     <div className="antialiased font-body text-base">
       {!isBare && <Navbar />}
-      <main className={`bg-white${!isBare && !noPad ? ' pt-16 lg:pt-20' : ''}`}>
+      <main className={mainClass}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<ProjectsPage />} />
@@ -54,7 +60,7 @@ function AppInner() {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
-      {!isBare && <Footer />}
+      {!isBare && !noFooter && <Footer />}
     </div>
   );
 }

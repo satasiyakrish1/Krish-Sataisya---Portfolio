@@ -78,7 +78,7 @@ export default function Education() {
               <span className="ip-hero__badge-dot" />
               Academic Background
             </div>
-            <span className="ip-hero__date">2019 – 2025</span>
+            <span className="ip-hero__date">2019 – 2026</span>
           </div>
 
           <div className="ip-hero__body">

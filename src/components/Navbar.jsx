@@ -50,7 +50,7 @@ export default function Navbar() {
         document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
       } else {
         navigate('/');
-        setTimeout(() => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' }), 100);
+        setTimeout(() => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' }), 500);
       }
       setMenuOpen(false);
       setMoreOpen(false);

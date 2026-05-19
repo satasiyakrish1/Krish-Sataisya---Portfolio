@@ -4,25 +4,25 @@ import './ProjectsPage.css';
 
 const RESEARCH_PAPERS = [
   {
-    title: 'Advancements in Medical AI',
-    desc: 'An exploration of deep learning models in real-time medical imaging.',
-    category: 'Machine Learning',
-    tags: ['AI', 'Healthcare'],
-    bg: '#000000',
+    title: 'Introduction to AI and AI Problems',
+    desc: 'A foundational overview of artificial intelligence concepts, key challenges, and emerging problem domains in the AI landscape.',
+    category: 'Artificial Intelligence',
+    tags: ['AI', 'Machine Learning'],
+    bg: '#0a0a0a',
     light: false,
     year: '2024',
-    link: '#',
+    link: 'https://www.researchgate.net/publication/400493929_Introduction_to_AI_and_AI_Problems',
   },
   {
-    title: 'Cloud Security Posture',
-    desc: 'Analyzing vulnerabilities in multi-cloud architectures.',
-    category: 'Cybersecurity',
-    tags: ['Cloud', 'Security'],
-    bg: '#111827',
+    title: 'AI-Driven Remote Patient Monitoring Using Wearables and IoT',
+    desc: 'A next-gen approach to preventive healthcare leveraging AI, wearable sensors, and IoT for continuous remote patient monitoring.',
+    category: 'Healthcare AI',
+    tags: ['AI', 'IoT', 'Healthcare', 'Wearables'],
+    bg: '#0d1b2a',
     light: false,
-    year: '2023',
-    link: '#',
-  }
+    year: '2025',
+    link: 'https://ijdieret.in/IJDI-ERET/Journal-Issues/June-2026-Vol-15-No-1',
+  },
 ];
 
 const CATEGORIES = [...new Set(RESEARCH_PAPERS.map(p => p.category))];
@@ -33,7 +33,7 @@ export default function ResearchPapers() {
       {/* Hero Section */}
       <section id="projects-hero">
         <div className="container py-section">
-          <div className="font-mono uppercase text-lg font-semibold leading-tight text-primary-500">
+          <div className="font-mono uppercase text-lg font-semibold leading-tight text-primary-500" style={{ marginBottom: '0.375rem' }}>
             Publications
           </div>
           <div className="mt-2 grid gap-2 lg:grid-cols-5 lg:gap-12">
@@ -67,7 +67,7 @@ export default function ResearchPapers() {
             <h2 className="projects-category-title mb-8 text-2xl font-semibold border-b pb-2">{cat}</h2>
             <div className="projects-page__grid">
               {RESEARCH_PAPERS.filter(p => p.category === cat).map((proj, i) => (
-                <a key={i} href={proj.link} className="project-card group">
+                <a key={i} href={proj.link} target="_blank" rel="noopener noreferrer" className="project-card group">
                   <div className="project-card__thumb" style={{ backgroundColor: proj.bg }}>
                     <span className={`project-card__initial ${proj.light ? 'text-black' : 'text-white'}`}>
                       {proj.title[0]}

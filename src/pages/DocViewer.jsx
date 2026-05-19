@@ -120,9 +120,6 @@ export default function DocViewer({ type }) {
             <a href={downloadUrl} target="_blank" rel="noopener noreferrer" className="dv-btn dv-btn--dark">
               ↓ Download PDF
             </a>
-            <a href={openUrl} target="_blank" rel="noopener noreferrer" className="dv-btn dv-btn--light">
-              ↗ Open
-            </a>
           </div>
         </div>
 

@@ -1,8 +1,8 @@
 # Robots.txt for Krish Satasiya Portfolio
 # https://krishsatasiya.netlify.app
-# Last Updated: 2026-05-16
+# Last Updated: 2026-05-19
 
-# Allow all search engines
+# ── Allow all search engines ──────────────────────────
 User-agent: *
 Allow: /
 Allow: /projects
@@ -13,6 +13,8 @@ Allow: /experience
 Allow: /education
 Allow: /freelancing
 Allow: /community
+Allow: /contributions
+Allow: /links
 Allow: /project/prescripto
 Allow: /project/hirix
 Allow: /project/quarix
@@ -26,7 +28,7 @@ Disallow: /node_modules/
 Disallow: /.env
 Disallow: /static/js/*.map
 
-# Google-specific
+# ── Google ────────────────────────────────────────────
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 2
@@ -35,26 +37,26 @@ User-agent: Googlebot-Image
 Allow: /Photos/
 Allow: /assets/
 
-# Bing
+# ── Bing ──────────────────────────────────────────────
 User-agent: Bingbot
 Allow: /
 Crawl-delay: 3
 
-# Yandex
+# ── Yandex ────────────────────────────────────────────
 User-agent: Yandex
 Allow: /
 Crawl-delay: 5
 
-# Baidu
+# ── Baidu ─────────────────────────────────────────────
 User-agent: Baiduspider
 Allow: /
 Crawl-delay: 5
 
-# DuckDuckGo
+# ── DuckDuckGo ────────────────────────────────────────
 User-agent: DuckDuckBot
 Allow: /
 
-# AI/LLM Crawlers
+# ── AI / LLM Crawlers ─────────────────────────────────
 User-agent: GPTBot
 Allow: /llm.txt
 Allow: /
@@ -71,9 +73,24 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
-# Sitemaps
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# ── Sitemaps ──────────────────────────────────────────
 Sitemap: https://krishsatasiya.netlify.app/sitemap.xml
 
-# LLM context
-# LLM.txt: https://krishsatasiya.netlify.app/llm.txt
+# ── Context files ─────────────────────────────────────
+# LLM.txt:    https://krishsatasiya.netlify.app/llm.txt
 # Humans.txt: https://krishsatasiya.netlify.app/humans.txt

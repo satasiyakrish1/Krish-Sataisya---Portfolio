@@ -5,16 +5,16 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-  <!-- Homepage -->
+  <!-- Homepage — Priority 1.0 -->
   <url>
     <loc>https://krishsatasiya.netlify.app/</loc>
     <priority>1.0</priority>
     <changefreq>daily</changefreq>
-    <lastmod>2026-05-16</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <image:image>
       <image:loc>https://krishsatasiya.netlify.app/Photos/krish-satasiya.jpg</image:loc>
-      <image:title>Krish Satasiya - Full Stack Developer and UI/UX Designer</image:title>
-      <image:caption>Professional portrait of Krish Satasiya, MERN Stack Developer and Computer Engineering student at Silver Oak University, Ahmedabad</image:caption>
+      <image:title>Krish Satasiya - Full Stack MERN Developer and UI/UX Designer from Ahmedabad</image:title>
+      <image:caption>Professional portrait of Krish Satasiya, MERN Stack Developer, UI/UX Designer, and Computer Engineering student at Silver Oak University, Ahmedabad, Gujarat, India</image:caption>
     </image:image>
   </url>
 
@@ -23,36 +23,36 @@
     <loc>https://krishsatasiya.netlify.app/projects</loc>
     <priority>0.95</priority>
     <changefreq>weekly</changefreq>
-    <lastmod>2026-05-16</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <image:image>
       <image:loc>https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800</image:loc>
-      <image:title>Krish Satasiya Full Stack Projects Portfolio</image:title>
-      <image:caption>26+ web development projects including React, Next.js, Node.js, and MongoDB applications</image:caption>
+      <image:title>Krish Satasiya Full Stack Projects — 26+ Web Development Projects</image:title>
+      <image:caption>26+ projects including React, Next.js, Node.js, MongoDB applications by Krish Satasiya</image:caption>
     </image:image>
   </url>
 
   <!-- Achievements -->
   <url>
     <loc>https://krishsatasiya.netlify.app/achievements</loc>
-    <priority>0.9</priority>
+    <priority>0.95</priority>
     <changefreq>weekly</changefreq>
-    <lastmod>2026-05-16</lastmod>
+    <lastmod>2026-05-19</lastmod>
   </url>
 
   <!-- Research Papers -->
   <url>
     <loc>https://krishsatasiya.netlify.app/research</loc>
-    <priority>0.9</priority>
+    <priority>0.90</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-05-16</lastmod>
+    <lastmod>2026-05-19</lastmod>
   </url>
 
   <!-- Design Projects -->
   <url>
     <loc>https://krishsatasiya.netlify.app/design</loc>
-    <priority>0.9</priority>
+    <priority>0.90</priority>
     <changefreq>weekly</changefreq>
-    <lastmod>2026-05-16</lastmod>
+    <lastmod>2026-05-19</lastmod>
   </url>
 
   <!-- Experience -->
@@ -60,7 +60,7 @@
     <loc>https://krishsatasiya.netlify.app/experience</loc>
     <priority>0.85</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-05-16</lastmod>
+    <lastmod>2026-05-19</lastmod>
   </url>
 
   <!-- Education -->
@@ -68,7 +68,7 @@
     <loc>https://krishsatasiya.netlify.app/education</loc>
     <priority>0.85</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-05-16</lastmod>
+    <lastmod>2026-05-19</lastmod>
   </url>
 
   <!-- Freelancing -->
@@ -76,7 +76,7 @@
     <loc>https://krishsatasiya.netlify.app/freelancing</loc>
     <priority>0.85</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-05-16</lastmod>
+    <lastmod>2026-05-19</lastmod>
   </url>
 
   <!-- Community -->
@@ -84,65 +84,73 @@
     <loc>https://krishsatasiya.netlify.app/community</loc>
     <priority>0.85</priority>
     <changefreq>weekly</changefreq>
-    <lastmod>2026-05-16</lastmod>
+    <lastmod>2026-05-19</lastmod>
   </url>
 
   <!-- Contributions List -->
   <url>
     <loc>https://krishsatasiya.netlify.app/contributions</loc>
-    <priority>0.7</priority>
+    <priority>0.75</priority>
     <changefreq>weekly</changefreq>
-    <lastmod>2026-05-16</lastmod>
+    <lastmod>2026-05-19</lastmod>
+  </url>
+
+  <!-- Links / Linktree -->
+  <url>
+    <loc>https://krishsatasiya.netlify.app/links</loc>
+    <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-05-19</lastmod>
   </url>
 
   <!-- Project: Prescripto -->
   <url>
     <loc>https://krishsatasiya.netlify.app/project/prescripto</loc>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-05-16</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <image:image>
       <image:loc>https://krishsatasiya.netlify.app/assets/prescripto-hero.png</image:loc>
       <image:title>Prescripto - AI-Powered Medical Appointment System by Krish Satasiya</image:title>
-      <image:caption>Full stack medical appointment booking platform built with React, Node.js, and MongoDB</image:caption>
+      <image:caption>Full stack medical appointment booking platform built with React, Node.js, and MongoDB by Krish Satasiya</image:caption>
     </image:image>
   </url>
 
   <!-- Project: Hirix -->
   <url>
     <loc>https://krishsatasiya.netlify.app/project/hirix</loc>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-05-16</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <image:image>
       <image:loc>https://krishsatasiya.netlify.app/assets/hirix-hero.png</image:loc>
-      <image:title>Hirix - Job Board Platform by Krish Satasiya</image:title>
-      <image:caption>Modern job board and recruitment platform built with MERN stack</image:caption>
+      <image:title>Hirix - Modern Job Board Platform by Krish Satasiya</image:title>
+      <image:caption>Modern job board and recruitment platform built with MERN stack by Krish Satasiya</image:caption>
     </image:image>
   </url>
 
   <!-- Project: Quarix -->
   <url>
     <loc>https://krishsatasiya.netlify.app/project/quarix</loc>
-    <priority>0.8</priority>
+    <priority>0.80</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-05-16</lastmod>
+    <lastmod>2026-05-19</lastmod>
   </url>
 
   <!-- Project: Blog CMS -->
   <url>
     <loc>https://krishsatasiya.netlify.app/project/blogcms</loc>
-    <priority>0.8</priority>
+    <priority>0.80</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-05-16</lastmod>
+    <lastmod>2026-05-19</lastmod>
   </url>
 
   <!-- Privacy Policy -->
   <url>
     <loc>https://krishsatasiya.netlify.app/privacy-policy</loc>
-    <priority>0.3</priority>
+    <priority>0.30</priority>
     <changefreq>yearly</changefreq>
-    <lastmod>2026-05-16</lastmod>
+    <lastmod>2026-05-19</lastmod>
   </url>
 
 </urlset>

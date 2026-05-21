@@ -15,7 +15,7 @@ const EXPERIENCES = [
       'Handled social media publishing and live event digital coverage',
       'Provided graphic design and development support for event assets',
     ],
-    logo: null,
+    logo: '/assets/logos/Laracon.png',
   },
   {
     role: 'Full Stack Developer Intern',
@@ -30,7 +30,7 @@ const EXPERIENCES = [
       'Managed GitHub-based collaboration across cross-functional dev teams',
       'Built and shipped full-stack features for production-level applications',
     ],
-    logo: null,
+    logo: '/assets/logos/Kaizenith.png',
   },
   {
     role: 'Graphic Designer Intern',
@@ -45,7 +45,7 @@ const EXPERIENCES = [
       'Elevated brand visual identity through cohesive design language',
       'Delivered print-ready and digital assets for promotional outreach',
     ],
-    logo: null,
+    logo: '/assets/logos/ridhivam 1.png',
   },
   {
     role: 'Jr. Graphic Designer',
@@ -60,7 +60,7 @@ const EXPERIENCES = [
       'Designed social media assets aligned with brand outreach strategy',
       'Delivered high-impact visual content for event campaigns',
     ],
-    logo: null,
+    logo: '/assets/logos/Wcoopef 1.png',
   },
 ];
 
@@ -138,10 +138,14 @@ export default function Experience() {
             {EXPERIENCES.map((exp, idx) => (
               <div key={idx} className="exp-card">
                 {/* Logo box */}
-                <div className="exp-card__logo">
-                  <span className="exp-card__logo-letter font-display">
-                    {exp.company.charAt(0)}
-                  </span>
+                <div className="exp-card__logo" style={{ overflow: 'hidden', padding: exp.logo ? '4px' : '0' }}>
+                  {exp.logo ? (
+                    <img src={exp.logo} alt={exp.company} style={{ width: '100%', height: '100%', objectFit: 'contain', mixBlendMode: 'multiply' }} />
+                  ) : (
+                    <span className="exp-card__logo-letter font-display">
+                      {exp.company.charAt(0)}
+                    </span>
+                  )}
                 </div>
 
                 <div className="exp-card__left">

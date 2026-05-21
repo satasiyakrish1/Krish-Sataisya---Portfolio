@@ -173,3 +173,67 @@
 .space-y-6 > :not([hidden]) ~ :not([hidden]) { margin-top: 1.5rem; }
 .space-y-4 > :not([hidden]) ~ :not([hidden]) { margin-top: 1rem; }
 .font-bold { font-weight: 700; }
+
+/* ── Portfolio Platform Link Buttons ── */
+.portfolio-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  border: 2px solid #000;
+  padding: 0.75rem 1.5rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  color: #000;
+  background: #fff;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 4px 4px 0px 0px #000;
+}
+
+.portfolio-link-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px var(--btn-shadow-color, #000);
+}
+
+.portfolio-link-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px 0px #000;
+}
+
+.dribbble-btn {
+  --btn-shadow-color: #ea4c89;
+}
+.behance-btn {
+  --btn-shadow-color: #0057ff;
+}
+.figma-btn {
+  --btn-shadow-color: #f24e1e;
+}
+
+.btn-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* ── Platform Navigation Card ── */
+.platform-nav-card {
+  background: #fafafa;
+  border: 2px solid #000;
+  padding: 1.5rem;
+  box-shadow: 4px 4px 0px 0px #000;
+  margin-top: 2rem;
+  max-width: 100%;
+}
+.platform-nav-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  margin-bottom: 1.25rem;
+}
+.platform-nav-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}

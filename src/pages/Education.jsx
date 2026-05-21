@@ -13,7 +13,8 @@ const EDUCATION = [
     highlights: ['Computer Engineering', 'Google Developer Groups', 'IEEE Club', 'AWS Club', 'Red Hat Club'],
     status: 'Ongoing',
     logoText: 'SOC',
-    logoBg: '#003366',
+    logoBg: '#fafafa',
+    logoImg: '/assets/logos/SOCET.png',
   },
   {
     degree: 'H.S.C — 12th Science (GSHEB)',
@@ -25,7 +26,8 @@ const EDUCATION = [
     highlights: ['Physics', 'Chemistry', 'Mathematics', 'Computer Science', 'GSHEB Board'],
     status: 'Completed',
     logoText: 'IMP',
-    logoBg: '#7C3AED',
+    logoBg: '#fafafa',
+    logoImg: '/assets/logos/Impirial.png',
   },
   {
     degree: 'S.S.C — 10th Board (GSHEB)',
@@ -37,7 +39,8 @@ const EDUCATION = [
     highlights: ['Mathematics', 'Science', 'English', 'Social Studies', 'GSHEB Board'],
     status: 'Completed',
     logoText: 'IMP',
-    logoBg: '#7C3AED',
+    logoBg: '#fafafa',
+    logoImg: '/assets/logos/Impirial.png',
   },
   {
     degree: '9th Standard (GSEB)',
@@ -49,7 +52,8 @@ const EDUCATION = [
     highlights: ['Mathematics', 'Science', 'English', 'GSEB Board'],
     status: 'Completed',
     logoText: 'IMP',
-    logoBg: '#7C3AED',
+    logoBg: '#fafafa',
+    logoImg: '/assets/logos/Impirial.png',
   },
   {
     degree: 'LKG – 8th Standard (GSEB)',
@@ -61,7 +65,8 @@ const EDUCATION = [
     highlights: ['Gujarati Medium', 'GSEB Board', 'Foundational Education', 'Mathematics', 'Languages'],
     status: 'Completed',
     logoText: 'SLB',
-    logoBg: '#B45309',
+    logoBg: '#fafafa',
+    logoImg: '/assets/logos/Lal Bhadur Vidhayalay.png',
   },
 ];
 
@@ -123,8 +128,12 @@ export default function Education() {
                   <span className="edu-card__status">{edu.status}</span>
                 </div>
                 <div className="edu-card__body">
-                  <div className="edu-card__logo" style={{ background: edu.logoBg }}>
-                    <span className="edu-card__logo-text font-mono">{edu.logoText}</span>
+                  <div className="edu-card__logo" style={{ background: edu.logoBg || '#fafafa', overflow: 'hidden' }}>
+                    {edu.logoImg ? (
+                      <img src={edu.logoImg} alt={edu.institution} style={{ width: '100%', height: '100%', objectFit: 'contain', mixBlendMode: 'multiply' }} />
+                    ) : (
+                      <span className="edu-card__logo-text font-mono">{edu.logoText}</span>
+                    )}
                   </div>
                   <div className="edu-card__index font-mono">0{idx + 1}</div>
                   <div className="edu-card__content">

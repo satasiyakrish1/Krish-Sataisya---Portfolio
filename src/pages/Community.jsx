@@ -127,6 +127,38 @@ const EVENTS = [
     desc: 'Volunteering at Laracon India — the largest Laravel conference in India. Coordinating technical operations, on-ground logistics, volunteer teams, and digital/social media coverage.',
     tags: ['Laracon', 'Laravel', 'Event Coordination', 'Volunteer'], badge: null,
   },
+  {
+    id: '16', name: 'Digital Commans For the Tech', community: 'Digital Commans',
+    communityColor: '#2C3E50', logoBg: '#2C3E50', logoText: 'DCT',
+    type: 'Science & Technology', role: 'Contributor',
+    date: '2024 – 2025', duration: '1 yr', location: 'Remote',
+    desc: 'Contributed to open source projects and technology-driven initiatives, supporting developer ecosystems and technical community growth.',
+    tags: ['Open Source', 'Technology', 'Contributions'], badge: null,
+  },
+  {
+    id: '17', name: 'GeeksforGeeks', community: 'GeeksforGeeks',
+    communityColor: '#2F89FC', logoBg: '#2F89FC', logoText: 'GFG',
+    type: 'Education', role: 'Campus Mantri',
+    date: '2024 – 2025', duration: '1 yr', location: 'Silver Oak University',
+    desc: 'Represented GeeksforGeeks as Campus Mantri, organizing coding contests, technical sessions, and fostering a strong programming culture on campus.',
+    tags: ['Coding', 'Campus Representative', 'Leadership'], badge: null,
+  },
+  {
+    id: '18', name: 'ExploitXplorers', community: 'ExploitXplorers',
+    communityColor: '#16A085', logoBg: '#16A085', logoText: 'EXP',
+    type: 'Science & Technology', role: 'Community Contributor',
+    date: '2023 – 2025', duration: '2 yrs', location: 'Remote',
+    desc: 'Actively contributed to full-stack and UI/UX community sessions, helping peers learn MERN stack and responsive web design.',
+    tags: ['Full Stack', 'UI/UX', 'Community', 'Mentoring'], badge: null,
+  },
+  {
+    id: '19', name: 'LetsUpgrade', community: 'LetsUpgrade',
+    communityColor: '#E74C3C', logoBg: '#E74C3C', logoText: 'LUP',
+    type: 'Education', role: 'Student Ambassador',
+    date: '2024 – 2025', duration: '1 yr', location: 'Ahmedabad',
+    desc: 'Promoted technical programs and bootcamps, guiding fellow students toward domain-specific learning resources and technical excellence.',
+    tags: ['Outreach', 'Ambassador', 'Education'], badge: null,
+  },
 ];
 
 const CATEGORIES = ['All', 'Science & Technology', 'Education', 'Arts & Culture', 'Environment'];
@@ -208,10 +240,7 @@ export default function Community() {
           <div className="cm-events-list">
             {filtered.map((ev) => (
               <div key={ev.id} className="cm-event-row">
-                {/* Logo */}
-                <div className="cm-event-row__logo" style={{ background: ev.logoBg }}>
-                  <span className="cm-event-row__logo-text font-mono">{ev.logoText}</span>
-                </div>
+
 
                 <div className="cm-event-row__body">
                   <div className="cm-event-row__top">

@@ -98,7 +98,12 @@ export default function DocViewer({ type }) {
           margin: 2px 0 0;
           white-space: nowrap;
         }
-        .dv-actions { flex-shrink: 0; }
+        .dv-actions {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          flex-shrink: 0;
+        }
         .dv-btn {
           padding: 7px 12px;
           font-size: 10px;
@@ -118,9 +123,42 @@ export default function DocViewer({ type }) {
           background: #000;
           color: #fff;
         }
+        .dv-btn--yellow {
+          background: #FFE600;
+          color: #000;
+        }
         @media (min-width: 480px) { .dv-btn { padding: 8px 16px; font-size: 11px; } }
         .dv-btn:hover  { transform: translate(-1px,-1px); box-shadow: 3px 3px 0 #000; }
         .dv-btn:active { transform: translate(1px,1px);   box-shadow: 1px 1px 0 #000; }
+
+        /* ── Warning Banner ── */
+        .dv-warn {
+          background: #FFE600;
+          border-bottom: 2px solid #000;
+          padding: 10px 14px;
+          font-size: 11px;
+          font-weight: 800;
+          color: #000;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 12px;
+          font-family: monospace;
+          z-index: 9;
+        }
+        .dv-warn a {
+          color: #000;
+          text-decoration: underline;
+          font-weight: 900;
+          white-space: nowrap;
+        }
+        @media (max-width: 768px) {
+          .dv-warn {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 6px;
+          }
+        }
 
         /* ── Iframe ── */
         .dv-frame {
@@ -148,10 +186,20 @@ export default function DocViewer({ type }) {
             </div>
           </div>
           <div className="dv-actions">
+            <a href={`https://drive.google.com/file/d/${doc.id}/view?usp=drivesdk`} target="_blank" rel="noopener noreferrer" className="dv-btn dv-btn--yellow">
+              ↗ Open File
+            </a>
             <a href={downloadUrl} target="_blank" rel="noopener noreferrer" className="dv-btn">
               ↓ Download
             </a>
           </div>
+        </div>
+
+        <div className="dv-warn">
+          <span>⚠️ If the preview fails to load, it is due to your browser's third-party cookie blocking settings or ad-blocker rules.</span>
+          <a href={`https://drive.google.com/file/d/${doc.id}/view?usp=drivesdk`} target="_blank" rel="noopener noreferrer">
+            Open Directly in New Tab ↗
+          </a>
         </div>
 
         <div className="dv-frame">

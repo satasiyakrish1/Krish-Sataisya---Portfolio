@@ -4,37 +4,220 @@ import './InfoPage.css';
 /* ─── Freelance Platforms ─── */
 const PLATFORMS = [
   {
-    id: '01',
-    platform: 'Fiverr',
-    badge: 'Top Rated',
-    role: 'Professional Freelancer',
-    period: '2023 – 2026',
-    logoText: 'FVR',
-    logoBg: '#1DBF73',
-    description: 'As a 5 ⭐ rated freelancer on Fiverr, I offer a comprehensive range of design and development services including UI/UX design, web development, graphic design, and branding. Successfully completed numerous projects for clients worldwide, delivering high-quality solutions that exceed expectations and drive business growth.',
-    tags: ['UI/UX Design', 'Web Development', 'Graphic Design', 'Branding'],
-  },
-  {
-    id: '02',
+    id: 'upwork',
     platform: 'Upwork',
     badge: 'Top Rated',
-    role: 'Professional Freelancer',
-    period: '2023 – 2026',
+    role: 'Professional Full Stack Freelancer',
+    period: '2024 – Present',
     logoText: 'UPW',
-    logoBg: '#14A800',
-    description: 'As a Top Rated freelancer on Upwork, I deliver exceptional design and development solutions to clients globally. Specializing in UI/UX design, web development, and branding, I\'ve successfully completed diverse projects across industries, maintaining a high client satisfaction rate and building long-term professional relationships.',
-    tags: ['UI/UX Design', 'Web Development', 'Branding', 'Client Relations'],
+    logoBg: '#fafafa',
+    logoImg: 'https://upload.wikimedia.org/wikipedia/commons/f/f4/Upwork_Logo.svg',
+    description: 'Deliver exceptional full-stack web applications and UI/UX designs to international clients with a 100% job success score.',
+    tags: ['UI/UX Design', 'Full Stack Dev', 'Client Relations'],
+  },
+  {
+    id: 'fiverr',
+    platform: 'Fiverr',
+    badge: 'Top Rated',
+    role: 'Professional Web Developer & Designer',
+    period: '2024 – Present',
+    logoText: 'FVR',
+    logoBg: '#fafafa',
+    logoImg: 'https://upload.wikimedia.org/wikipedia/commons/1/18/Fiverr_Logo_09.2020.svg',
+    description: 'Provide end-to-end design-to-code services, custom landing pages, and interactive branding packages to global businesses.',
+    tags: ['Web Design', 'React Development', 'Custom Branding'],
+  },
+  {
+    id: 'freelancer',
+    platform: 'Freelancer',
+    badge: 'Verified',
+    role: 'Freelance Software Engineer',
+    period: '2024 – Present',
+    logoText: 'FLR',
+    logoBg: '#fafafa',
+    logoImg: 'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/freelancer-icon.png',
+    description: 'Developed premium front-end products, responsive dashboards, and API automation systems for highly rated employers.',
+    tags: ['Frontend Dev', 'API Automation', 'SEO Optimization'],
+  },
+  {
+    id: '03',
+    platform: 'Claro',
+    badge: 'Identity',
+    role: 'Logo Designer',
+    period: '2026',
+    logoText: 'CLR',
+    logoBg: '#fafafa',
+    logoImg: '/assets/logos/Claro.png',
+    description: 'Conceptualized and crafted the modern, minimalist corporate logo identity to enhance the company\'s brand footprint.',
+    tags: ['Logo Design', 'Vector Illustration', 'Brand Identity'],
+  },
+  {
+    id: '08',
+    platform: 'OKYNUS',
+    badge: 'Graphic Design',
+    role: 'Apparel & Print Designer',
+    period: '2026',
+    logoText: 'OKN',
+    logoBg: '#fafafa',
+    logoImg: '/assets/logos/OKYNUS.png',
+    description: 'Designed stylish custom corporate t-shirts and premium business stationery to support operational and marketing workflows.',
+    tags: ['Tshirt Design', 'Business Card', 'Stationery Design', 'Print Media'],
+  },
+  {
+    id: '13',
+    platform: 'Syncromedix',
+    badge: 'Branding',
+    role: 'Logo Designer',
+    period: '2026',
+    logoText: 'SXM',
+    logoBg: '#fafafa',
+    logoImg: '/assets/logos/Syncromedix.png',
+    description: 'Designed a highly professional, modern logo mark and visual elements tailored for the medical and healthcare services sector.',
+    tags: ['Logo Design', 'Healthcare Branding', 'Vector Design'],
+  },
+  {
+    id: '15',
+    platform: 'Vltronix',
+    badge: 'Logo & Brand',
+    role: 'Brand Designer',
+    period: '2026',
+    logoText: 'VLX',
+    logoBg: '#fafafa',
+    logoImg: '/assets/logos/Vltronix.png',
+    description: 'Created professional logo marks and comprehensive branding assets aligning with cutting-edge tech and electronics standards.',
+    tags: ['Logo Design', 'Branding Design', 'Tech Identity'],
+  },
+  {
+    id: '01',
+    platform: 'AtharvaTech',
+    badge: 'UI/UX & Cloud',
+    role: 'Full Stack Developer & Designer',
+    period: '2024 – 2025',
+    logoText: 'ATT',
+    logoBg: '#fafafa',
+    logoImg: '/assets/logos/AtharvaTech.png',
+    description: 'Designed, deployed, and optimized high-performance web applications using modern UI/UX principles and scalable cloud services.',
+    tags: ['Full Stack', 'UI/UX Design', 'Cloud Services', 'Deployment'],
   },
   {
     id: '04',
+    platform: 'Devstree',
+    badge: 'Frontend Dev',
+    role: 'Frontend Developer',
+    period: '2024',
+    logoText: 'DST',
+    logoBg: '#fafafa',
+    logoImg: '/assets/logos/Devstree.png',
+    description: 'Translated high-fidelity website designs into production-ready, pixel-perfect, and fully interactive frontend codebases.',
+    tags: ['Website Design to Code', 'Frontend Development', 'React', 'CSS'],
+  },
+  {
+    id: '05',
+    platform: 'DIS',
+    badge: 'Mobile UI/UX',
+    role: 'Mobile App Designer',
+    period: '2024',
+    logoText: 'DIS',
+    logoBg: '#fafafa',
+    logoImg: '/assets/logos/DIS.png',
+    description: 'Designed comprehensive mobile application UI/UX flows and layouts tailored specifically for academic and tuition management.',
+    tags: ['Mobile App Design', 'UI/UX Design', 'Academic / Tuition', 'Figma'],
+  },
+  {
+    id: '06',
+    platform: 'Faborbit',
+    badge: 'Creative Design',
+    role: 'Creative Designer & Developer',
+    period: '2024',
+    logoText: 'FBO',
+    logoBg: '#fafafa',
+    logoImg: '/assets/logos/Faborbit.png',
+    description: 'Designed custom apparel (t-shirts, hoodies), created official corporate logo marks, and built the core responsive business website.',
+    tags: ['Apparel Design', 'Logo Design', 'Website Design', 'Vector Art'],
+  },
+  {
+    id: '09',
+    platform: 'Prominent Technologies',
+    badge: 'Corporate ID',
+    role: 'Brand Identity Designer',
+    period: '2024',
+    logoText: 'PRT',
+    logoBg: '#fafafa',
+    logoImg: '/assets/logos/Prominent Technologies.png',
+    description: 'Designed professional corporate and office stationery, maintaining absolute visual consistency across all brand assets.',
+    tags: ['Office Stationery', 'Brand Identity', 'Print Design', 'Layouts'],
+  },
+  {
+    id: '10',
+    platform: 'Ray Infrastructure',
+    badge: 'Web Redesign',
+    role: 'UI/UX Web Designer',
+    period: '2024',
+    logoText: 'RYI',
+    logoBg: '#fafafa',
+    logoImg: '/assets/logos/Ray Infra.png',
+    description: 'Conducted a comprehensive UI/UX redesign of the corporate website to elevate visual aesthetics, responsiveness, and user experience.',
+    tags: ['UI/UX Design', 'Website Redesign', 'Figma', 'Prototyping'],
+  },
+  {
+    id: '11',
     platform: 'Skillspeer',
-    badge: 'UI/UX Design',
-    role: 'UI/UX Website Designer — Freelancing',
-    period: '2024 – 2025',
+    badge: 'Web UI/UX',
+    role: 'UI/UX Website Designer',
+    period: '2024',
     logoText: 'SKP',
-    logoBg: '#4452FF',
-    description: 'Designed intuitive and user-friendly interfaces for Skillspeer\'s web platform. Conducted user research, created wireframes and prototypes, and developed a comprehensive design system that enhanced user experience and improved platform engagement metrics.',
-    tags: ['UI/UX Design', 'Wireframing', 'Prototyping', 'Design System'],
+    logoBg: '#fafafa',
+    logoImg: '/assets/logos/SKILSPEER.png',
+    description: 'Crafted intuitive, high-fidelity web platform interfaces and comprehensive design systems to ensure optimal user engagement.',
+    tags: ['Website Design', 'UI/UX Design', 'Design Systems', 'Figma'],
+  },
+  {
+    id: '12',
+    platform: 'SOLERO',
+    badge: 'Branding',
+    role: 'Logo Designer',
+    period: '2024',
+    logoText: 'SLR',
+    logoBg: '#fafafa',
+    logoImg: '/assets/logos/SOLERO.png',
+    description: 'Designed a unique corporate logo mark and developed style guidelines representing the company\'s modern vision.',
+    tags: ['Logo Design', 'Vector Graphics', 'Branding Identity'],
+  },
+  {
+    id: '02',
+    platform: 'BOXCRAFTS',
+    badge: 'Product Design',
+    role: 'Product Designer & Developer',
+    period: '2023 – 2024',
+    logoText: 'BXC',
+    logoBg: '#fafafa',
+    logoImg: '/assets/logos/BOXCRAFTS.png',
+    description: 'Directed end-to-end product design processes and custom web development to deliver intuitive and responsive digital user interfaces.',
+    tags: ['Product Design', 'Web Development', 'UX Design', 'UI Build'],
+  },
+  {
+    id: '14',
+    platform: 'THE Kesar Mango',
+    badge: 'Creative & Dev',
+    role: 'Brand & Full Stack Developer',
+    period: '2023 – 2024',
+    logoText: 'TKM',
+    logoBg: '#fafafa',
+    logoImg: '/assets/logos/THE KESAR MANGO.png',
+    description: 'Executed complete brand identity, package designs, sales funnel integration, and overall custom development initiatives to scale business operations.',
+    tags: ['Branding Design', 'Package Design', 'Development', 'Sales Solutions'],
+  },
+  {
+    id: '07',
+    platform: 'Gokul Fashion',
+    badge: 'Branding & BD',
+    role: 'Branding Designer & BDE',
+    period: '2023',
+    logoText: 'GKF',
+    logoBg: '#fafafa',
+    logoImg: '/assets/logos/Gokul Fashion.png',
+    description: 'Executed high-impact branding identity designs and performed strategic business development tasks to scale market outreach.',
+    tags: ['Branding Design', 'Business Development', 'BDE', 'Marketing'],
   },
 ];
 
@@ -47,11 +230,19 @@ const SERVICES = [
   { id: '06', title: 'API Integration & Automation', desc: 'Third-party API integrations (Stripe, Clerk, EmailJS, Twilio), webhook setups, and n8n automation workflows.', tags: ['REST API', 'Webhooks', 'n8n', 'Stripe'] },
 ];
 
+const earliestYear = Math.min(...PLATFORMS.map(p => {
+  const yrs = p.period.match(/\d{4}/g);
+  return yrs ? Math.min(...yrs.map(Number)) : new Date().getFullYear();
+}));
+const yearsOfExp = new Date().getFullYear() - earliestYear + 1;
+const happyClients = PLATFORMS.length;
+const projectsDelivered = happyClients + 9;
+
 const STATS = [
-  { value: '25+', label: 'Projects Delivered' },
-  { value: '15+', label: 'Happy Clients' },
+  { value: `${projectsDelivered}+`, label: 'Projects Delivered' },
+  { value: `${happyClients}+`, label: 'Happy Clients' },
   { value: '100%', label: 'On-Time Delivery' },
-  { value: '3+', label: 'Years of Experience' },
+  { value: `${yearsOfExp}+`, label: 'Years of Experience' },
 ];
 
 const PROCESS = [
@@ -61,50 +252,37 @@ const PROCESS = [
   { step: '04', title: 'Deliver & Support', desc: '30 days of post-delivery support included with every project, no extra charge.' },
 ];
 const BRANDS = [
-  { name: 'Fiverr', icon: 'https://cdn.simpleicons.org/fiverr/1DBF73' },
-  { name: 'Upwork', icon: 'https://cdn.simpleicons.org/upwork/6FDA44' },
-  { name: 'Figma', icon: 'https://www.vectorlogo.zone/logos/figma/figma-icon.svg' },
-  { name: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
-  { name: 'Next.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg' },
-  { name: 'WordPress', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg' },
-  { name: 'MongoDB', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
-  { name: 'Shopify', icon: 'https://cdn.simpleicons.org/shopify/96BF48' },
-  { name: 'Stripe', icon: 'https://www.vectorlogo.zone/logos/stripe/stripe-icon.svg' },
-  { name: 'Webflow', icon: 'https://cdn.simpleicons.org/webflow/4353FF' },
-  { name: 'Node.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
-  { name: 'Tailwind', icon: 'https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg' },
-  { name: 'AWS', icon: 'https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg' },
-  { name: 'Netlify', icon: 'https://www.vectorlogo.zone/logos/netlify/netlify-icon.svg' },
-  { name: 'Vercel', icon: 'https://www.vectorlogo.zone/logos/vercel/vercel-icon.svg' },
-  { name: 'Firebase', icon: 'https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg' },
+  { name: 'AtharvaTech', icon: '/assets/logos/AtharvaTech.png' },
+  { name: 'BOXCRAFTS', icon: '/assets/logos/BOXCRAFTS.png' },
+  { name: 'Claro', icon: '/assets/logos/Claro.png' },
+  { name: 'Devstree', icon: '/assets/logos/Devstree.png' },
+  { name: 'DIS', icon: '/assets/logos/DIS.png' },
+  { name: 'Faborbit', icon: '/assets/logos/Faborbit.png' },
+  { name: 'Gokul Fashion', icon: '/assets/logos/Gokul Fashion.png' },
+  { name: 'OKYNUS', icon: '/assets/logos/OKYNUS.png' },
+  { name: 'Prominent Technologies', icon: '/assets/logos/Prominent Technologies.png' },
+  { name: 'Ray Infra', icon: '/assets/logos/Ray Infra.png' },
+  { name: 'SKILSPEER', icon: '/assets/logos/SKILSPEER.png' },
+  { name: 'SOLERO', icon: '/assets/logos/SOLERO.png' },
+  { name: 'Syncromedix', icon: '/assets/logos/Syncromedix.png' },
+  { name: 'THE KESAR MANGO', icon: '/assets/logos/THE KESAR MANGO.png' },
+  { name: 'Vltronix', icon: '/assets/logos/Vltronix.png' },
 ];
 
 const MARQUEE_STYLES = `
   .fl-marquee-wrap {
     overflow: hidden;
-    border-top: 1px solid #000;
-    border-bottom: 1px solid #000;
-    background: #f5f5f5;
-    padding: 20px 0;
-    margin: 40px 0 8px 0;
-    position: relative;
+    border-top: 1px solid rgba(0,0,0,0.06);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    background: rgba(0,0,0,0.015);
+    padding: 24px 0;
+    margin: 32px 0 0 0;
   }
-  .fl-marquee-wrap::before,
-  .fl-marquee-wrap::after {
-    content: '';
-    position: absolute;
-    top: 0; bottom: 0;
-    width: 80px;
-    z-index: 2;
-    pointer-events: none;
-  }
-  .fl-marquee-wrap::before { left: 0; background: linear-gradient(to right, #f5f5f5, transparent); }
-  .fl-marquee-wrap::after  { right: 0; background: linear-gradient(to left, #f5f5f5, transparent); }
   .fl-marquee-track {
     display: flex;
-    gap: 48px;
+    gap: 24px;
     width: max-content;
-    animation: fl-scroll 28s linear infinite;
+    animation: fl-scroll 36s linear infinite;
   }
   .fl-marquee-wrap:hover .fl-marquee-track { animation-play-state: paused; }
   @keyframes fl-scroll {
@@ -115,30 +293,170 @@ const MARQUEE_STYLES = `
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
-    min-width: 72px;
+    justify-content: center;
+    gap: 12px;
+    min-width: 120px;
     flex-shrink: 0;
+    padding: 8px;
+    transition: transform 0.25s;
+  }
+  .fl-marquee-item:hover {
+    transform: translateY(-4px);
   }
   .fl-marquee-item img {
-    width: 40px;
-    height: 40px;
+    width: 80px;
+    height: 80px;
     object-fit: contain;
-    transition: transform 0.2s;
+    mix-blend-mode: multiply;
+    filter: grayscale(100%) opacity(0.6);
+    transition: transform 0.25s, filter 0.25s;
   }
-  .fl-marquee-item:hover img { transform: scale(1.15); }
+  .fl-marquee-item:hover img { transform: scale(1.08); filter: grayscale(0%) opacity(1); }
   .fl-marquee-item span {
-    font-size: 9px;
+    font-size: 9.5px;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
     font-family: var(--font-mono);
-    color: #555;
+    color: rgba(0, 0, 0, 0.7);
     white-space: nowrap;
+    text-align: center;
+    max-width: 110px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: color 0.25s;
+  }
+  .fl-marquee-item:hover span {
+    color: rgba(0, 0, 0, 0.95);
+  }
+
+  /* ── Freelance History Grid ── */
+  .fl-history-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  @media (min-width: 640px) {
+    .fl-history-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 1024px) {
+    .fl-history-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .fl-history-card {
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 0px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .fl-history-card:hover {
+    transform: translateY(-5px);
+    border-color: #4452FF;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+    background: #fff;
+  }
+  .fl-history-card__top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .fl-history-card__logo-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .fl-history-card__logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 0px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    background: #fafafa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+  }
+  .fl-history-card:hover .fl-history-card__logo {
+    transform: scale(1.05);
+  }
+  .fl-history-card__logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+  }
+  .fl-history-card__meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .fl-history-card__company {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #000;
+    margin: 0;
+    line-height: 1.1;
+  }
+  .fl-history-card__badge {
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #4452FF;
+    background: rgba(68, 82, 255, 0.06);
+    padding: 2px 8px;
+    border-radius: 0px;
+    width: fit-content;
+  }
+  .fl-history-card__period {
+    font-size: 10px;
+    font-weight: 700;
+    color: #a3a3a3;
+  }
+  .fl-history-card__body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-grow: 1;
+  }
+  .fl-history-card__role {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #000;
+    line-height: 1.25;
+    margin: 0;
+  }
+  .fl-history-card__desc {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #525252;
+    margin: 0;
+  }
+  .fl-history-card__footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    border-top: 1px dashed rgba(0,0,0,0.06);
+    padding-top: 16px;
   }
 `;
 
+
 export default function Freelancing() {
-  const doubled = [...BRANDS, ...BRANDS];
+  const doubled = [...BRANDS, ...BRANDS, ...BRANDS];
   return (
     <div className="ip-root">
       <style>{MARQUEE_STYLES}</style>
@@ -196,45 +514,54 @@ export default function Freelancing() {
           ))}
         </div>
 
-        {/* Client Brands Marquee */}
+        {/* Client Logos Marquee */}
+        <div style={{ marginBottom: '4px' }}>
+          <div className="ip-section__label font-mono" style={{ marginBottom: '12px' }}>Clients & Brands</div>
+        </div>
         <div className="fl-marquee-wrap">
           <div className="fl-marquee-track">
             {doubled.map((b, i) => (
               <div key={i} className="fl-marquee-item">
-                <img src={b.icon} alt={b.name} />
+                <img src={b.icon} alt={b.name} loading="lazy" />
                 <span>{b.name}</span>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Freelance Platforms */}
-        <section className="ip-section">
-          <div className="exp-section-header">
+        {/* Freelance History */}
+        <section className="ip-section" style={{ paddingTop: '0px' }}>
+          <div className="exp-section-header" style={{ marginBottom: '24px', borderRadius: '8px' }}>
             <span className="exp-section-header__label font-mono">Freelance History</span>
             <span className="exp-section-header__count font-mono">{PLATFORMS.length} Engagements</span>
           </div>
-          <div className="exp-list">
-            {PLATFORMS.map((p, idx) => (
-              <div key={p.id} className="exp-card">
-                <div className="exp-card__logo" style={{ background: p.logoBg }}>
-                  <span className="exp-card__logo-letter font-mono" style={{ fontSize: '10px', letterSpacing: '0.05em' }}>{p.logoText}</span>
-                </div>
-                <div className="exp-card__left">
-                  <span className="exp-card__type font-mono">{p.badge}</span>
-                  <span className="exp-card__period font-mono">{p.period}</span>
-                </div>
-                <div className="exp-card__right">
-                  <div className="exp-card__header">
-                    <h2 className="exp-card__role font-display">{p.role}</h2>
-                    <span className="exp-card__company font-display">{p.platform}</span>
+          <div className="fl-history-grid">
+            {PLATFORMS.map((p) => (
+              <div key={p.id} className="fl-history-card">
+                <div className="fl-history-card__top">
+                  <div className="fl-history-card__logo-wrap">
+                    <div className="fl-history-card__logo" style={{ background: p.logoBg || '#fafafa' }}>
+                      {p.logoImg ? (
+                        <img src={p.logoImg} alt={p.platform} />
+                      ) : (
+                        <span className="exp-card__logo-letter font-mono" style={{ fontSize: '10px', letterSpacing: '0.05em' }}>{p.logoText}</span>
+                      )}
+                    </div>
+                    <div className="fl-history-card__meta">
+                      <h3 className="fl-history-card__company font-display">{p.platform}</h3>
+                      <span className="fl-history-card__badge font-mono">{p.badge}</span>
+                    </div>
                   </div>
-                  <p className="exp-card__desc">{p.description}</p>
-                  <div className="exp-card__stack">
-                    {p.tags.map(t => (
-                      <span key={t} className="edu-tag font-mono">{t}</span>
-                    ))}
-                  </div>
+                  <span className="fl-history-card__period font-mono">{p.period}</span>
+                </div>
+                <div className="fl-history-card__body">
+                  <h4 className="fl-history-card__role font-display">{p.role}</h4>
+                  <p className="fl-history-card__desc">{p.description}</p>
+                </div>
+                <div className="fl-history-card__footer">
+                  {p.tags.map(t => (
+                    <span key={t} className="edu-tag font-mono">{t}</span>
+                  ))}
                 </div>
               </div>
             ))}

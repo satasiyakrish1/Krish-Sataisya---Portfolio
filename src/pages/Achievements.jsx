@@ -123,17 +123,17 @@ const CERTIFICATIONS = [
 ];
 
 const ISSUER_META = {
-  'Google Cloud': { color: '#4285F4', bg: '#f0f4ff', icon: 'https://cdn.simpleicons.org/googlecloud/4285F4' },
+  'Google Cloud': { color: '#4285F4', bg: '#f0f4ff', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/googlecloud.svg' },
   'Google': { color: '#4285F4', bg: '#f0f4ff', icon: 'https://www.vectorlogo.zone/logos/google/google-icon.svg' },
   'Google Developer Groups': { color: '#4285F4', bg: '#f0f4ff', icon: 'https://www.vectorlogo.zone/logos/google/google-icon.svg' },
-  'MongoDB': { color: '#00684A', bg: '#eef7f3', icon: 'https://cdn.simpleicons.org/mongodb/00684A' },
+  'MongoDB': { color: '#00684A', bg: '#eef7f3', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/mongodb.svg' },
   'AWS': { color: '#FF9900', bg: '#fff7eb', icon: 'https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg' },
-  'GitHub': { color: '#181717', bg: '#f3f3f3', icon: 'https://cdn.simpleicons.org/github/181717' },
-  'Red Hat': { color: '#EE0000', bg: '#fef2f2', icon: 'https://cdn.simpleicons.org/redhat/EE0000' },
+  'GitHub': { color: '#181717', bg: '#f3f3f3', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/github.svg' },
+  'Red Hat': { color: '#EE0000', bg: '#fef2f2', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/redhat.svg' },
   'IBM SkillsBuild': { color: '#0F62FE', bg: '#eef3ff', icon: 'https://www.ibm.com/favicon.ico' },
   'Oracle': { color: '#F80000', bg: '#fff0f0', icon: 'https://www.vectorlogo.zone/logos/oracle/oracle-icon.svg' },
   'Microsoft': { color: '#0078D4', bg: '#f0f6ff', icon: 'https://www.vectorlogo.zone/logos/microsoft/microsoft-icon.svg' },
-  'Udemy': { color: '#A435F0', bg: '#f8f0ff', icon: 'https://cdn.simpleicons.org/udemy/A435F0' },
+  'Udemy': { color: '#A435F0', bg: '#f8f0ff', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/udemy.svg' },
   'Forage': { color: '#00B186', bg: '#edfaf5', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Eo_circle_green_checkmark.svg/120px-Eo_circle_green_checkmark.svg.png' },
   'LearnRush LMS': { color: '#FF6B35', bg: '#fff4f0', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg' },
 };

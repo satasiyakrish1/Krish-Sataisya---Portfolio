@@ -1,6 +1,6 @@
 # Robots.txt for Krish Satasiya Portfolio
 # https://krishsatasiya.netlify.app
-# Last Updated: 2026-05-19
+# Last Updated: 2026-05-21
 
 # ── Allow all search engines ──────────────────────────
 User-agent: *

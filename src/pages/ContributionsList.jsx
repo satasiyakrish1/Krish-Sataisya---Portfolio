@@ -18,6 +18,10 @@ const LIST = [
   { id: 13, org: 'Open Source Weekend',                            role: 'Graphics Designer Volunteer',          period: 'Aug 2025 – Present',   category: 'Science & Technology', award: 'Volunteer Badge · OSD Volunteer' },
   { id: 14, org: 'Pixelverse.community',                          role: 'Design Volunteer',                     period: 'Dec 2025 – Present',   category: 'Science & Technology' },
   { id: 15, org: 'Laracon India',                                  role: 'Volunteer · Tech Event Coordinator',  period: 'Jan 2026 – Present',   category: 'Science & Technology' },
+  { id: 16, org: 'Digital Commans For the Tech',                          role: 'Contributor',                          period: '2024 – 2025',          category: 'Science & Technology' },
+  { id: 17, org: 'GeeksforGeeks',                                         role: 'Campus Mantri',                        period: '2024 – 2025',          category: 'Education' },
+  { id: 18, org: 'ExploitXplorers',                                       role: 'Community Contributor',                period: '2023 – 2025',          category: 'Science & Technology' },
+  { id: 19, org: 'LetsUpgrade',                                           role: 'Student Ambassador',                   period: '2024 – 2025',          category: 'Education' },
 ];
 
 export default function ContributionsList() {
@@ -31,10 +35,10 @@ export default function ContributionsList() {
             <Link to="/community" className="cl-back font-mono">← Back</Link>
             <div>
               <h1 className="cl-title font-display">All Contributions</h1>
-              <p className="cl-sub font-mono">{LIST.length} roles across communities · 2023 – Present</p>
+              <p className="cl-sub font-mono">0 roles across communities · 2023 – Present</p>
             </div>
           </div>
-          <span className="cl-total font-mono">{LIST.length}</span>
+          <span className="cl-total font-mono">0</span>
         </div>
 
         {/* Column labels */}
@@ -46,27 +50,9 @@ export default function ContributionsList() {
         </div>
 
         {/* Rows */}
-        <ol className="cl-list">
-          {LIST.map(item => (
-            <li key={item.id} className="cl-row">
-              <span className="cl-row__num font-mono">{String(item.id).padStart(2, '0')}</span>
-
-              <div className="cl-row__org">
-                <span className="cl-row__org-name font-display">{item.org}</span>
-                <span className="cl-row__category font-mono">{item.category}</span>
-              </div>
-
-              <span className="cl-row__role font-mono">{item.role}</span>
-
-              <div className="cl-row__right">
-                <span className="cl-row__period font-mono">{item.period}</span>
-                {item.award && (
-                  <span className="cl-row__award font-mono">⭐ {item.award}</span>
-                )}
-              </div>
-            </li>
-          ))}
-        </ol>
+        <div className="cl-no-data font-mono" style={{ padding: '6rem 2rem', textAlign: 'center', color: '#a3a3a3', borderTop: '1px solid #e5e5e5', borderBottom: '1px solid #e5e5e5', fontSize: '13px', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+          No Data Found
+        </div>
 
         <div className="cl-footer font-mono">
           krish satasiya · community contributions · {new Date().getFullYear()}

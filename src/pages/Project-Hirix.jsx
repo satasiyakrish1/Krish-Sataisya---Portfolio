@@ -296,7 +296,7 @@ export default function ProjectHirix() {
             <span className="pc-eyebrow" style={{ color: 'rgba(255,255,255,0.5)' }}>08 / Results</span>
             <h2 className="pc-results__heading">Complete<br />Hiring<br />Ecosystem.</h2>
             <p className="pc-results__text">Hirix delivers a production-grade recruitment platform with 4 dedicated portals, AI matching, ATS pipeline, and SaaS billing — built solo as a full-stack showcase of modern recruitment technology.</p>
-            <a href="#" target="_blank" rel="noopener noreferrer" className="pc-results__link">View Live Platform ↗</a>
+            <a href="https://hirix-4y1n-i4wuuk63c-krishsatasiya-team.vercel.app/" target="_blank" rel="noopener noreferrer" className="pc-results__link">View Live Platform ↗</a>
           </div>
           <div className="pc-results__right">
             <div className="pc-results__metrics">

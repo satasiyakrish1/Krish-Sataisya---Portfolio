@@ -35,10 +35,10 @@ export default function ContributionsList() {
             <Link to="/community" className="cl-back font-mono">← Back</Link>
             <div>
               <h1 className="cl-title font-display">All Contributions</h1>
-              <p className="cl-sub font-mono">0 roles across communities · 2023 – Present</p>
+              <p className="cl-sub font-mono">{LIST.length} roles across communities · 2023 – Present</p>
             </div>
           </div>
-          <span className="cl-total font-mono">0</span>
+          <span className="cl-total font-mono">{LIST.length}</span>
         </div>
 
         {/* Column labels */}
@@ -50,9 +50,22 @@ export default function ContributionsList() {
         </div>
 
         {/* Rows */}
-        <div className="cl-no-data font-mono" style={{ padding: '6rem 2rem', textAlign: 'center', color: '#a3a3a3', borderTop: '1px solid #e5e5e5', borderBottom: '1px solid #e5e5e5', fontSize: '13px', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
-          No Data Found
-        </div>
+        <ul className="cl-list font-mono">
+          {LIST.map((item, index) => (
+            <li key={item.id} className="cl-row">
+              <span className="cl-row__num">{(index + 1).toString().padStart(2, '0')}</span>
+              <div className="cl-row__org">
+                <span className="cl-row__org-name">{item.org}</span>
+                <span className="cl-row__category">{item.category}</span>
+              </div>
+              <span className="cl-row__role">{item.role}</span>
+              <div className="cl-row__right">
+                <span className="cl-row__period">{item.period}</span>
+                {item.award && <span className="cl-row__award">🏆 {item.award}</span>}
+              </div>
+            </li>
+          ))}
+        </ul>
 
         <div className="cl-footer font-mono">
           krish satasiya · community contributions · {new Date().getFullYear()}

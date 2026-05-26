@@ -110,11 +110,11 @@ export default function ProjectBlogCMS() {
                 <span className="pc-meta-value">2023</span>
               </div>
               <div className="pc-meta-block" style={{ marginTop: 'auto', paddingTop: '0.5rem' }}>
-                <a href="#" className="pc-hero__cta"
+                <a href="https://github.com/satasiyakrish1" className="pc-hero__cta"
                   onMouseEnter={e => { e.currentTarget.style.background = '#1e3a5f'; e.currentTarget.style.borderColor = '#1e3a5f'; }}
                   onMouseLeave={e => { e.currentTarget.style.background = '#000'; e.currentTarget.style.borderColor = '#000'; }}
                 >Visit Live ↗</a>
-                <a href="#" className="pc-hero__cta-ghost"
+                <a href="https://github.com/satasiyakrish1" className="pc-hero__cta-ghost"
                   onMouseEnter={e => { e.currentTarget.style.background = '#000'; e.currentTarget.style.color = '#fff'; }}
                   onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#000'; }}
                 >GitHub →</a>
@@ -288,7 +288,7 @@ export default function ProjectBlogCMS() {
             <span className="pc-eyebrow" style={{ color: 'rgba(255,255,255,0.5)' }}>08 / Results</span>
             <h2 className="pc-results__heading">Complete<br />Publishing<br />Platform.</h2>
             <p className="pc-results__text">Blog CMS delivers a production-ready publishing system with WYSIWYG editing, SEO automation, multi-author support, and newsletter integration — all built solo as a MERN stack showcase.</p>
-            <a href="#" className="pc-results__link">View Live Platform ↗</a>
+            <a href="https://github.com/satasiyakrish1" className="pc-results__link">View Live Platform ↗</a>
           </div>
           <div className="pc-results__right">
             <div className="pc-results__metrics">

@@ -345,7 +345,7 @@ export default function Links() {
   const handleInstall = async () => {
     if (!deferredPrompt.current) return;
     deferredPrompt.current.prompt();
-    const { outcome } = await deferredPrompt.current.userChoice;
+    await deferredPrompt.current.userChoice;
     deferredPrompt.current = null;
     setInstallBanner(false);
   };

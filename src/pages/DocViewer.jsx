@@ -186,20 +186,10 @@ export default function DocViewer({ type }) {
             </div>
           </div>
           <div className="dv-actions">
-            <a href={`https://drive.google.com/file/d/${doc.id}/view?usp=drivesdk`} target="_blank" rel="noopener noreferrer" className="dv-btn dv-btn--yellow">
-              ↗ Open File
-            </a>
             <a href={downloadUrl} target="_blank" rel="noopener noreferrer" className="dv-btn">
               ↓ Download
             </a>
           </div>
-        </div>
-
-        <div className="dv-warn">
-          <span>⚠️ If the preview fails to load, it is due to your browser's third-party cookie blocking settings or ad-blocker rules.</span>
-          <a href={`https://drive.google.com/file/d/${doc.id}/view?usp=drivesdk`} target="_blank" rel="noopener noreferrer">
-            Open Directly in New Tab ↗
-          </a>
         </div>
 
         <div className="dv-frame">

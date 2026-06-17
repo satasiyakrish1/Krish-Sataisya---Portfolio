@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 export default function Footer() {
@@ -13,18 +14,21 @@ export default function Footer() {
             © {new Date().getFullYear()} Krish Satasiya. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <a href="/privacy-policy" className="footer__social-link font-mono text-xs uppercase text-gray-400 hover:text-white transition-colors">
+            <Link to="/sitemap" className="footer__social-link font-mono text-xs uppercase text-gray-400 hover:text-white transition-colors">
+              Sitemap
+            </Link>
+            <Link to="/privacy-policy" className="footer__social-link font-mono text-xs uppercase text-gray-400 hover:text-white transition-colors">
               Privacy Policy
-            </a>
-            <a href="/links" className="footer__social-link font-mono text-xs uppercase text-gray-400 hover:text-white transition-colors">
+            </Link>
+            <Link to="/links" className="footer__social-link font-mono text-xs uppercase text-gray-400 hover:text-white transition-colors">
               Linktree
-            </a>
-            <a href="/resume" className="footer__social-link font-mono text-xs uppercase text-gray-400 hover:text-white transition-colors">
+            </Link>
+            <Link to="/resume" className="footer__social-link font-mono text-xs uppercase text-gray-400 hover:text-white transition-colors">
               Resume
-            </a>
-            <a href="/cv" className="footer__social-link font-mono text-xs uppercase text-gray-400 hover:text-white transition-colors">
+            </Link>
+            <Link to="/cv" className="footer__social-link font-mono text-xs uppercase text-gray-400 hover:text-white transition-colors">
               CV
-            </a>
+            </Link>
           </div>
         </div>
       </div>

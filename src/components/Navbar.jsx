@@ -15,6 +15,7 @@ const MORE_LINKS = [
   { label: 'Experience', href: '/experience' },
   { label: 'Freelancing', href: '/freelancing' },
   { label: 'Community', href: '/community' },
+  { label: 'Speaking', href: '/speaking' },
 ];
 
 export default function Navbar() {

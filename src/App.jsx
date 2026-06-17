@@ -17,6 +17,8 @@ import Freelancing from './pages/Freelancing';
 import Community from './pages/Community';
 import AchievementsPage from './pages/Achievements';
 import ContributionsList from './pages/ContributionsList';
+import Speaking from './pages/Speaking';
+import Sitemap from './pages/Sitemap';
 import Links from './pages/Links';
 import DocViewer from './pages/DocViewer';
 import './App.css';
@@ -24,7 +26,7 @@ import './App.css';
 const BARE_ROUTES = ['/links'];
 const NO_PAD_ROUTES = ['/cv', '/resume'];
 const NO_FOOTER_ROUTES = ['/cv', '/resume'];
-const NO_LG_PAD_ROUTES = ['/achievements', '/education', '/experience', '/freelancing', '/community'];
+const NO_LG_PAD_ROUTES = ['/achievements', '/education', '/experience', '/freelancing', '/community', '/speaking', '/sitemap'];
 
 const SEO_META = {
   '/': {
@@ -62,6 +64,14 @@ const SEO_META = {
   '/achievements': {
     title: 'Certifications, Awards & Hackathons | Krish Satasiya',
     desc: 'Browse 54+ industry credentials (Google Cloud, AWS, MongoDB, Red Hat, GitHub) and 4 national hackathon wins by Krish Satasiya.'
+  },
+  '/speaking': {
+    title: 'Speaking & Keynotes | Krish Satasiya',
+    desc: 'Public speaking, workshops, panel discussions, and keynotes by Krish Satasiya on MERN stack, UI/UX, Google Cloud, and AI.'
+  },
+  '/sitemap': {
+    title: 'Sitemap | Krish Satasiya',
+    desc: 'Comprehensive sitemap of all pages, case studies, and documents on Krish Satasiya\'s professional MERN & UI/UX portfolio.'
   },
   '/contributions': {
     title: 'Contributions List | Krish Satasiya',
@@ -146,6 +156,8 @@ function AppInner() {
           <Route path="/freelancing" element={<Freelancing />} />
           <Route path="/community" element={<Community />} />
           <Route path="/achievements" element={<AchievementsPage />} />
+          <Route path="/speaking" element={<Speaking />} />
+          <Route path="/sitemap" element={<Sitemap />} />
           <Route path="/contributions" element={<ContributionsList />} />
           <Route path="/links" element={<Links />} />
           <Route path="/cv" element={<DocViewer type="cv" />} />

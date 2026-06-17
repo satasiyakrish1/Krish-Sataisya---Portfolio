@@ -114,12 +114,18 @@ const CERTIFICATIONS = [
   { name: 'Programming in C Certification', issuer: 'Udemy', date: 'May 2021' },
   { name: 'Python Basics', issuer: 'Udemy', date: 'Sep 2020' },
   { name: 'Introduction to Generative AI', issuer: 'Google', date: 'Dec 2023' },
-  { name: 'Developing a Google SRE Culture', issuer: 'Google', date: 'Dec 2023' },
   { name: 'Google Play Academy - Store Listing Certificate', issuer: 'Google', date: 'Jun 2024' },
   { name: 'Digital Design & UX Job Simulation', issuer: 'Forage', date: 'Jan 2024' },
   { name: 'PwC Switzerland - Power BI Job Simulation', issuer: 'Forage', date: 'Dec 2023' },
   { name: 'Introduction to Programming Using Java', issuer: 'LearnRush LMS', date: 'Sep 2022' },
   { name: 'Flutter Workshop 101', issuer: 'Google Developer Groups', date: 'Aug 2023' },
+  { name: 'Foundations of User Experience (UX) Design', issuer: 'Coursera', date: 'Jan 2024', link: 'https://coursera-certificate-images.s3.amazonaws.com/3Z1AJREXCQ1R' },
+  { name: 'Foundations of Project Management', issuer: 'Coursera', date: 'Feb 2024', link: 'https://coursera.org/share/46a97d092c78fca806bc8712dfb1e8d8' },
+  { name: 'Foundations of Cybersecurity', issuer: 'Coursera', date: 'Jul 2024', link: 'https://coursera.org/share/a54b7a886785b348ef235492663616b2' },
+  { name: 'SketchUp: how to start modelling simple 3D objects', issuer: 'Coursera', date: 'Mar 2024', link: 'https://coursera.org/share/c7bf492e8ad0b15f3d665696ac70b057' },
+  { name: 'AWS S3 Basics', issuer: 'Coursera', date: 'Mar 2025', link: 'https://coursera.org/share/0a5fac80c357506fd1dcdbbd972ea194' },
+  { name: 'Developing a Google SRE Culture', issuer: 'Coursera', date: 'Dec 2023', link: 'https://coursera.org/share/e24df34e40a618d0fe775d9cb445d166' },
+  { name: 'Build a Full Website using WordPress', issuer: 'Coursera', date: 'Jun 2024', link: 'https://coursera.org/share/218bfc9fc700f821de3c215d2664f10e' },
 ];
 
 const ISSUER_META = {
@@ -136,6 +142,7 @@ const ISSUER_META = {
   'Udemy': { color: '#A435F0', bg: '#f8f0ff', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/udemy.svg' },
   'Forage': { color: '#00B186', bg: '#edfaf5', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Eo_circle_green_checkmark.svg/120px-Eo_circle_green_checkmark.svg.png' },
   'LearnRush LMS': { color: '#FF6B35', bg: '#fff4f0', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg' },
+  'Coursera': { color: '#0056D2', bg: '#f0f4ff', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@13.0.0/icons/coursera.svg' },
 };
 
 export default function AchievementsPage() {
@@ -227,13 +234,21 @@ export default function AchievementsPage() {
                   <span className="cert-group__count font-mono" style={{ borderColor: meta.color + '44', color: meta.color }}>{certs.length}</span>
                 </div>
                 <div className="cert-grid">
-                  {certs.map((c, i) => (
-                    <div key={i} className="cert-card" style={{ borderLeftColor: meta.color }}>
-                      <span className="cert-card__date font-mono">{c.date}</span>
-                      <h3 className="cert-card__name font-display">{c.name}</h3>
-                      <span className="cert-card__issuer font-mono">{c.issuer}</span>
-                    </div>
-                  ))}
+                  {certs.map((c, i) => {
+                    const CardTag = c.link ? 'a' : 'div';
+                    return (
+                      <CardTag
+                        key={i}
+                        className={`cert-card ${c.link ? 'cert-card--clickable' : ''}`}
+                        style={{ borderLeftColor: meta.color }}
+                        {...(c.link ? { href: c.link, target: '_blank', rel: 'noopener noreferrer' } : {})}
+                      >
+                        <span className="cert-card__date font-mono">{c.date}</span>
+                        <h3 className="cert-card__name font-display">{c.name}</h3>
+                        <span className="cert-card__issuer font-mono">{c.issuer}</span>
+                      </CardTag>
+                    );
+                  })}
                 </div>
               </div>
             );

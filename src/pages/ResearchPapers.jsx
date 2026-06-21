@@ -12,6 +12,7 @@ const RESEARCH_PAPERS = [
     light: false,
     year: '2024',
     link: 'https://www.researchgate.net/publication/400493929_Introduction_to_AI_and_AI_Problems',
+    image: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?q=80&w=600&auto=format&fit=crop',
   },
   {
     title: 'AI-Driven Remote Patient Monitoring Using Wearables and IoT',
@@ -22,6 +23,7 @@ const RESEARCH_PAPERS = [
     light: false,
     year: '2025',
     link: 'https://ijdieret.in/IJDI-ERET/Journal-Issues/June-2026-Vol-15-No-1',
+    image: 'https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?q=80&w=600&auto=format&fit=crop',
   },
 ];
 
@@ -69,9 +71,13 @@ export default function ResearchPapers() {
               {RESEARCH_PAPERS.filter(p => p.category === cat).map((proj, i) => (
                 <a key={i} href={proj.link} target="_blank" rel="noopener noreferrer" className="project-card group">
                   <div className="project-card__thumb" style={{ backgroundColor: proj.bg }}>
-                    <span className={`project-card__initial ${proj.light ? 'text-black' : 'text-white'}`}>
-                      {proj.title[0]}
-                    </span>
+                    {proj.image ? (
+                      <img src={proj.image} alt={proj.title} className="project-card__img" loading="lazy" />
+                    ) : (
+                      <span className={`project-card__initial ${proj.light ? 'text-black' : 'text-white'}`}>
+                        {proj.title[0]}
+                      </span>
+                    )}
                   </div>
                   <div className="project-card__body">
                     <div className="project-card__top">

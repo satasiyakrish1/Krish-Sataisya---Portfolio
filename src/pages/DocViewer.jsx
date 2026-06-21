@@ -2,205 +2,308 @@ import React from 'react';
 
 const DOCS = {
   cv: {
-    id: '1nkAFtJFPve3sKFBC6_5Cf1w4AL847iJ5',
     label: 'Curriculum Vitae',
     short: 'CV',
+    downloadUrl: 'https://docs.google.com/document/d/1nkAFtJFPve3sKFBC6_5Cf1w4AL847iJ5/export?format=pdf',
   },
   resume: {
-    id: '18QZvIwIryJjHsif7rSN893-Y7M6pE-EG',
     label: 'Resume',
     short: 'Resume',
+    variants: [
+      {
+        key: 'creative',
+        label: 'Creative Field',
+        emoji: '🎨',
+        desc: 'UI/UX & Design focused resume',
+        downloadUrl: 'https://docs.google.com/document/d/1AO1doPUlODgsVvSWkFkdwr8xTnjUOGXk/export?format=pdf',
+      },
+      {
+        key: 'tech',
+        label: 'Tech Field',
+        emoji: '💻',
+        desc: 'Full Stack MERN & Dev focused resume',
+        downloadUrl: 'https://docs.google.com/document/d/18QZvIwIryJjHsif7rSN893-Y7M6pE-EG/export?format=pdf',
+      },
+    ],
   },
 };
 
-const BAR_H = 56; // px — top bar height
+const styles = `
+  .dv-page {
+    min-height: calc(100dvh - 64px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fafafa;
+    font-family: 'Outfit', sans-serif;
+    padding: 48px 20px;
+  }
+  @media (min-width: 1024px) {
+    .dv-page { min-height: calc(100dvh - 80px); }
+  }
+
+  .dv-inner {
+    width: 100%;
+    max-width: 560px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  /* ── Top label strip ── */
+  .dv-label-strip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  .dv-pill {
+    display: inline-block;
+    padding: 3px 10px;
+    font-size: 10px;
+    font-weight: 700;
+    font-family: 'JetBrains Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    background: #4452FF;
+    color: #fff;
+    border: 1.5px solid #000;
+    box-shadow: 2px 2px 0 #000;
+  }
+  .dv-pill-line {
+    font-size: 10px;
+    font-family: 'JetBrains Mono', monospace;
+    color: #a3a3a3;
+    letter-spacing: 0.08em;
+  }
+
+  /* ── Heading ── */
+  .dv-heading {
+    font-size: clamp(28px, 6vw, 42px);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    color: #000;
+    margin: 0 0 6px;
+  }
+  .dv-heading span {
+    color: #4452FF;
+  }
+  .dv-subtext {
+    font-size: 14px;
+    color: #737373;
+    margin: 0 0 32px;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  /* ── Divider ── */
+  .dv-divider {
+    border: none;
+    border-top: 1.5px solid #000;
+    margin: 0 0 28px;
+  }
+
+  /* ── Section label ── */
+  .dv-section-lbl {
+    font-size: 10px;
+    font-weight: 700;
+    font-family: 'JetBrains Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: #a3a3a3;
+    margin-bottom: 12px;
+  }
+
+  /* ── Buttons ── */
+  .dv-btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border: 1.5px solid #000;
+    box-shadow: 4px 4px 0 #000;
+  }
+
+  .dv-dl-btn {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    background: #fff;
+    color: #000;
+    font-family: 'Outfit', sans-serif;
+    border: none;
+    border-bottom: 1.5px solid #000;
+    transition: background 0.12s;
+    position: relative;
+  }
+  .dv-dl-btn:last-child { border-bottom: none; }
+  .dv-dl-btn:hover { background: #f5f5ff; }
+  .dv-dl-btn:active { background: #eaebff; }
+
+  .dv-dl-btn__icon {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    background: #f5f5f5;
+    border: 1.5px solid #000;
+    flex-shrink: 0;
+  }
+
+  .dv-dl-btn--creative .dv-dl-btn__icon {
+    background: #eaebff;
+    border-color: #4452FF;
+  }
+  .dv-dl-btn--tech .dv-dl-btn__icon {
+    background: #f5f5f5;
+    border-color: #000;
+  }
+  .dv-dl-btn--cv .dv-dl-btn__icon {
+    background: #f5f5f5;
+    border-color: #000;
+  }
+
+  .dv-dl-btn__body { flex: 1; }
+  .dv-dl-btn__name {
+    font-size: 15px;
+    font-weight: 800;
+    display: block;
+    letter-spacing: -0.01em;
+    color: #000;
+  }
+  .dv-dl-btn--creative .dv-dl-btn__name { color: #4452FF; }
+
+  .dv-dl-btn__desc {
+    font-size: 11px;
+    color: #737373;
+    display: block;
+    margin-top: 2px;
+    font-weight: 500;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .dv-dl-btn__badge {
+    font-size: 9px;
+    font-weight: 700;
+    font-family: 'JetBrains Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 2px 7px;
+    border: 1.5px solid #000;
+    background: #000;
+    color: #fff;
+    flex-shrink: 0;
+  }
+  .dv-dl-btn--creative .dv-dl-btn__badge {
+    background: #4452FF;
+    border-color: #4452FF;
+  }
+
+  /* ── Footer note ── */
+  .dv-note {
+    margin-top: 14px;
+    font-size: 10px;
+    font-family: 'JetBrains Mono', monospace;
+    color: #a3a3a3;
+    letter-spacing: 0.06em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .dv-note::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #4452FF;
+    flex-shrink: 0;
+  }
+`;
+
+function PageShell({ badge, name, sub, children }) {
+  return (
+    <>
+      <style>{styles}</style>
+      <div className="dv-page">
+        <div className="dv-inner">
+          <div className="dv-label-strip">
+            <span className="dv-pill">{badge}</span>
+            <span className="dv-pill-line">krishsatasiya.netlify.app</span>
+          </div>
+          <h1 className="dv-heading">
+            Krish <span>Satasiya</span>
+          </h1>
+          <p className="dv-subtext">{sub}</p>
+          <hr className="dv-divider" />
+          <p className="dv-section-lbl">Choose to Download</p>
+          {children}
+          <p className="dv-note">PDF · Instant Download · No Preview Required</p>
+        </div>
+      </div>
+    </>
+  );
+}
 
 export default function DocViewer({ type }) {
   const doc = DOCS[type];
   if (!doc) return null;
 
-  // drive.google.com/file preview renders correctly on mobile browsers
-  const previewUrl  = `https://drive.google.com/file/d/${doc.id}/preview`;
-  const downloadUrl = `https://docs.google.com/document/d/${doc.id}/export?format=pdf`;
+  if (type === 'resume') {
+    return (
+      <PageShell
+        badge="Resume"
+        sub="Select your field and download the matching resume instantly."
+      >
+        <div className="dv-btn-group">
+          {doc.variants.map((v) => (
+            <a
+              key={v.key}
+              href={v.downloadUrl}
+              download
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`dv-dl-btn dv-dl-btn--${v.key}`}
+            >
+              <span className="dv-dl-btn__icon">{v.emoji}</span>
+              <span className="dv-dl-btn__body">
+                <span className="dv-dl-btn__name">{v.label} Resume</span>
+                <span className="dv-dl-btn__desc">{v.desc}</span>
+              </span>
+              <span className="dv-dl-btn__badge">↓ PDF</span>
+            </a>
+          ))}
+        </div>
+      </PageShell>
+    );
+  }
 
   return (
-    <>
-      <style>{`
-        /* Reset html/body so mobile scroll works */
-        html { height: 100%; }
-        body { height: 100%; overflow: hidden; }
-
-        /* Full-screen container below navbar */
-        .dv-wrap {
-          display: flex;
-          flex-direction: column;
-          background: #f0efe9;
-          font-family: var(--font-body, sans-serif);
-
-          /* navbar is 64px on mobile, 80px on lg */
-          height: calc(100dvh - 64px);
-          position: fixed;
-          top: 64px;
-          left: 0; right: 0; bottom: 0;
-        }
-        @media (min-width: 1024px) {
-          .dv-wrap {
-            top: 80px;
-            height: calc(100dvh - 80px);
-          }
-        }
-
-        /* ── Top Bar ── */
-        .dv-bar {
-          flex: 0 0 ${BAR_H}px;
-          background: #fff;
-          border-bottom: 2px solid #000;
-          padding: 0 14px;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          gap: 10px;
-          z-index: 10;
-        }
-        .dv-bar__left {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          overflow: hidden;
-        }
-        .dv-tag {
-          flex-shrink: 0;
-          padding: 3px 10px;
-          font-size: 10px;
-          font-weight: 800;
-          font-family: monospace;
-          text-transform: uppercase;
-          letter-spacing: 0.12em;
-          border: 2px solid #000;
-          background: #000;
-          color: #fff;
-          box-shadow: 2px 2px 0 #4452FF;
-        }
-        .dv-title {
-          font-size: 13px;
-          font-weight: 800;
-          margin: 0;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
-        @media (min-width: 480px) { .dv-title { font-size: 15px; } }
-        @media (min-width: 768px) { .dv-title { font-size: 17px; } }
-        .dv-sub {
-          font-size: 10px;
-          color: #777;
-          font-family: monospace;
-          margin: 2px 0 0;
-          white-space: nowrap;
-        }
-        .dv-actions {
-          display: flex;
-          align-items: center;
-          gap: 8px;
-          flex-shrink: 0;
-        }
-        .dv-btn {
-          padding: 7px 12px;
-          font-size: 10px;
-          font-weight: 800;
-          font-family: monospace;
-          text-transform: uppercase;
-          letter-spacing: 0.08em;
-          border: 2px solid #000;
-          text-decoration: none;
-          display: inline-flex;
-          align-items: center;
-          gap: 5px;
-          cursor: pointer;
-          transition: transform 0.1s, box-shadow 0.1s;
-          box-shadow: 2px 2px 0 #000;
-          white-space: nowrap;
-          background: #000;
-          color: #fff;
-        }
-        .dv-btn--yellow {
-          background: #FFE600;
-          color: #000;
-        }
-        @media (min-width: 480px) { .dv-btn { padding: 8px 16px; font-size: 11px; } }
-        .dv-btn:hover  { transform: translate(-1px,-1px); box-shadow: 3px 3px 0 #000; }
-        .dv-btn:active { transform: translate(1px,1px);   box-shadow: 1px 1px 0 #000; }
-
-        /* ── Warning Banner ── */
-        .dv-warn {
-          background: #FFE600;
-          border-bottom: 2px solid #000;
-          padding: 10px 14px;
-          font-size: 11px;
-          font-weight: 800;
-          color: #000;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          gap: 12px;
-          font-family: monospace;
-          z-index: 9;
-        }
-        .dv-warn a {
-          color: #000;
-          text-decoration: underline;
-          font-weight: 900;
-          white-space: nowrap;
-        }
-        @media (max-width: 768px) {
-          .dv-warn {
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 6px;
-          }
-        }
-
-        /* ── Iframe ── */
-        .dv-frame {
-          flex: 1 1 0;
-          overflow: hidden;
-          position: relative;
-        }
-        .dv-frame iframe {
-          position: absolute;
-          inset: 0;
-          width: 100%;
-          height: 100%;
-          border: none;
-          display: block;
-        }
-      `}</style>
-
-      <div className="dv-wrap">
-        <div className="dv-bar">
-          <div className="dv-bar__left">
-            <span className="dv-tag">{doc.short}</span>
-            <div style={{ minWidth: 0 }}>
-              <h1 className="dv-title">Krish Satasiya — {doc.label}</h1>
-              <p className="dv-sub">Live · Google Drive Preview</p>
-            </div>
-          </div>
-          <div className="dv-actions">
-            <a href={downloadUrl} target="_blank" rel="noopener noreferrer" className="dv-btn">
-              ↓ Download
-            </a>
-          </div>
-        </div>
-
-        <div className="dv-frame">
-          <iframe
-            src={previewUrl}
-            title={`Krish Satasiya ${doc.label}`}
-            allow="autoplay"
-            allowFullScreen
-          />
-        </div>
+    <PageShell
+      badge="CV"
+      sub="Download my complete Curriculum Vitae — academic & professional record."
+    >
+      <div className="dv-btn-group">
+        <a
+          href={doc.downloadUrl}
+          download
+          target="_blank"
+          rel="noopener noreferrer"
+          className="dv-dl-btn dv-dl-btn--cv"
+        >
+          <span className="dv-dl-btn__icon">📄</span>
+          <span className="dv-dl-btn__body">
+            <span className="dv-dl-btn__name">Curriculum Vitae</span>
+            <span className="dv-dl-btn__desc">Full academic & professional record</span>
+          </span>
+          <span className="dv-dl-btn__badge">↓ PDF</span>
+        </a>
       </div>
-    </>
+    </PageShell>
   );
 }

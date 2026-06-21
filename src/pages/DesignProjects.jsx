@@ -13,7 +13,7 @@ const DESIGN_PROJECTS = [
     light: false,
     year: "2025",
     link: "https://www.behance.net/gallery/[project-id]/STATUE-OF-THE-UNITY-DESIGN-MINIMILISTIC",
-    image: "https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=600&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1588421357574-87938a86fa28?q=80&w=600&auto=format&fit=crop"
   },
   {
     title: "Trending/Portfolio Dashboard Design!!! ✌️",
@@ -224,7 +224,7 @@ const DESIGN_PROJECTS = [
     light: false,
     year: "2023",
     link: "https://dribbble.com/satasiyakrish1",
-    image: "https://images.unsplash.com/photo-1618005198143-e5283b519a7f?q=80&w=600&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?q=80&w=600&auto=format&fit=crop"
   }
 ];
 

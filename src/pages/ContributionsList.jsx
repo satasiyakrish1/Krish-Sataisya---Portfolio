@@ -1,30 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { EVENT_GROUPS } from '../data/eventsData';
 import './ContributionsList.css';
 
-const LIST = [
-  { id: 1,  org: 'Silver Oak University',                          role: 'Event Manager',                        period: 'Oct 2023 – Oct 2024',  category: 'Education' },
-  { id: 2,  org: 'FOLK Clubs (ISKCON – Educational Clubs)',        role: 'Student Volunteer',                    period: 'Jul 2023 – Nov 2024',  category: 'Environment' },
-  { id: 3,  org: 'AWS Cloud Club – Silver Oak University',         role: 'Student Volunteer',                    period: 'Jan 2024 – Nov 2024',  category: 'Education' },
-  { id: 4,  org: 'Silver Oak University IEEE SB',                  role: 'Creative Designer',                    period: 'Jan 2024 – Dec 2025',  category: 'Arts & Culture' },
-  { id: 5,  org: 'GirlScript Summer of Code',                     role: 'Student Volunteer',                    period: 'May 2024 – Aug 2024',  category: 'Science & Technology' },
-  { id: 6,  org: 'GDG on Campus: Silver Oak University',          role: 'Cloud Facilitator',                    period: 'Sep 2024 – Dec 2024',  category: 'Science & Technology' },
-  { id: 7,  org: 'GDG on Campus: Silver Oak University',          role: 'Technical Volunteer',                  period: 'Oct 2024 – Dec 2025',  category: 'Science & Technology' },
-  { id: 8,  org: 'Google Maps',                                    role: 'Freelance Contributor',                period: 'Feb 2025 – Present',   category: 'Science & Technology' },
-  { id: 9,  org: 'GDG Cloud Gandhinagar',                         role: 'Graphics Designer Volunteer',          period: 'Feb 2025 – Present',   category: 'Science & Technology', award: 'Outstanding Contribution' },
-  { id: 10, org: 'GirlScript Summer of Code',                     role: 'Campus Ambassador',                    period: 'Jun 2025 – Jul 2025',  category: 'Science & Technology' },
-  { id: 11, org: 'Google Developers Group Gandhinagar',           role: 'Graphic Design & Management Team',     period: 'Aug 2025 – Present',   category: 'Science & Technology' },
-  { id: 12, org: 'JavaScript Gujarat',                             role: 'Student Volunteer',                    period: 'Aug 2025 – Present',   category: 'Science & Technology' },
-  { id: 13, org: 'Open Source Weekend',                            role: 'Graphics Designer Volunteer',          period: 'Aug 2025 – Present',   category: 'Science & Technology', award: 'Volunteer Badge · OSD Volunteer' },
-  { id: 14, org: 'Pixelverse.community',                          role: 'Design Volunteer',                     period: 'Dec 2025 – Present',   category: 'Science & Technology' },
-  { id: 15, org: 'Laracon India',                                  role: 'Volunteer · Tech Event Coordinator',  period: 'Jan 2026 – Present',   category: 'Science & Technology' },
-  { id: 16, org: 'Digital Commans For the Tech',                          role: 'Contributor',                          period: '2024 – 2025',          category: 'Science & Technology' },
-  { id: 17, org: 'GeeksforGeeks',                                         role: 'Campus Mantri',                        period: '2024 – 2025',          category: 'Education' },
-  { id: 18, org: 'ExploitXplorers',                                       role: 'Community Contributor',                period: '2023 – 2025',          category: 'Science & Technology' },
-  { id: 19, org: 'LetsUpgrade',                                           role: 'Student Ambassador',                   period: '2024 – 2025',          category: 'Education' },
-];
+const parseDate = (d) => {
+  const s = d.replace('Early ', '01 Jan ').trim();
+  const rangeMatch = s.match(/^(\d+)[–—]\d+\s+(\w+\s+\d{4})/);
+  if (rangeMatch) return Date.parse(`${rangeMatch[1]} ${rangeMatch[2]}`);
+  const t = Date.parse(s.replace(/[–—].*/, '').trim());
+  return isNaN(t) ? new Date(parseInt(s, 10), 0, 1).getTime() : t;
+};
+
+const ALL_EVENTS = EVENT_GROUPS
+  .flatMap(g => g.events.map(ev => ({ ...ev, org: g.org, color: g.color })))
+  .sort((a, b) => parseDate(b.date) - parseDate(a.date));
+
+const PER_PAGE = 10;
 
 export default function ContributionsList() {
+  const [page, setPage] = useState(1);
+  const totalPages = Math.ceil(ALL_EVENTS.length / PER_PAGE);
+  const start = (page - 1) * PER_PAGE;
+  const visible = ALL_EVENTS.slice(start, start + PER_PAGE);
+
   return (
     <div className="cl-root">
       <div className="cl-container">
@@ -34,43 +32,58 @@ export default function ContributionsList() {
           <div className="cl-header__left">
             <Link to="/community" className="cl-back font-mono">← Back</Link>
             <div>
-              <h1 className="cl-title font-display">All Contributions</h1>
-              <p className="cl-sub font-mono">{LIST.length} roles across communities · 2023 – Present</p>
+              <h1 className="cl-title font-display">All Events</h1>
+              <p className="cl-sub font-mono">{ALL_EVENTS.length} events across communities · 2023 – Present</p>
             </div>
           </div>
-          <span className="cl-total font-mono">{LIST.length}</span>
+          <span className="cl-total font-mono">{ALL_EVENTS.length}</span>
         </div>
 
         {/* Column labels */}
         <div className="cl-cols font-mono">
           <span className="cl-cols__num">#</span>
-          <span className="cl-cols__org">Organisation</span>
-          <span className="cl-cols__role">Role</span>
-          <span className="cl-cols__period">Period</span>
+          <span className="cl-cols__role">Event</span>
+          <span className="cl-cols__org">Date</span>
+          <span className="cl-cols__period">Organiser</span>
         </div>
 
         {/* Rows */}
         <ul className="cl-list font-mono">
-          {LIST.map((item, index) => (
-            <li key={item.id} className="cl-row">
-              <span className="cl-row__num">{(index + 1).toString().padStart(2, '0')}</span>
+          {visible.map((ev, i) => (
+            <li key={start + i} className="cl-row">
+              <span className="cl-row__num">{(start + i + 1).toString().padStart(2, '0')}</span>
               <div className="cl-row__org">
-                <span className="cl-row__org-name">{item.org}</span>
-                <span className="cl-row__category">{item.category}</span>
+                <span className="cl-row__org-name">{ev.name}</span>
+                <span className="cl-row__category">{ev.chapter}</span>
               </div>
-              <span className="cl-row__role">{item.role}</span>
+              <span className="cl-row__role">{ev.date}</span>
               <div className="cl-row__right">
-                <span className="cl-row__period">{item.period}</span>
-                {item.award && <span className="cl-row__award">🏆 {item.award}</span>}
+                <span className="cl-row__award" style={{ color: ev.color }}>● {ev.org}</span>
               </div>
             </li>
           ))}
         </ul>
 
+        {/* Pagination */}
+        <div className="cl-pagination font-mono">
+          <button
+            className="cl-page-btn"
+            onClick={() => { setPage(p => Math.max(1, p - 1)); window.scrollTo(0, 0); }}
+            disabled={page === 1}
+          >← Prev</button>
+          <span className="cl-page-info">Page {page} / {totalPages}</span>
+          <button
+            className="cl-page-btn"
+            onClick={() => { setPage(p => Math.min(totalPages, p + 1)); window.scrollTo(0, 0); }}
+            disabled={page === totalPages}
+          >Next →</button>
+        </div>
+
         <div className="cl-footer font-mono">
-          krish satasiya · community contributions · {new Date().getFullYear()}
+          krish satasiya · community contributions
         </div>
       </div>
     </div>
   );
 }
+

@@ -234,15 +234,16 @@ const earliestYear = Math.min(...PLATFORMS.map(p => {
   const yrs = p.period.match(/\d{4}/g);
   return yrs ? Math.min(...yrs.map(Number)) : new Date().getFullYear();
 }));
-const yearsOfExp = new Date().getFullYear() - earliestYear + 1;
-const happyClients = PLATFORMS.length;
-const projectsDelivered = happyClients + 9;
+const currentYear   = new Date().getFullYear();
+const yearsOfExp    = currentYear - earliestYear;          // 2023 → 3 years as of 2026
+const happyClients  = PLATFORMS.length;                    // 1 entry = 1 client
+const projectsDelivered = happyClients + 10;               // clients + extra one-off tasks
 
 const STATS = [
   { value: `${projectsDelivered}+`, label: 'Projects Delivered' },
-  { value: `${happyClients}+`, label: 'Happy Clients' },
-  { value: '100%', label: 'On-Time Delivery' },
-  { value: `${yearsOfExp}+`, label: 'Years of Experience' },
+  { value: `${happyClients}+`,      label: 'Happy Clients'      },
+  { value: '100%',                  label: 'On-Time Delivery'   },
+  { value: `${yearsOfExp}+`,        label: 'Years of Experience'},
 ];
 
 const PROCESS = [
@@ -490,7 +491,7 @@ export default function Freelancing() {
               </div>
               <div className="ip-hero__meta-item">
                 <span className="ip-hero__meta-label">Projects Done</span>
-                <span className="ip-hero__meta-value">25+ Delivered</span>
+                <span className="ip-hero__meta-value">{projectsDelivered}+ Delivered</span>
               </div>
               <div className="ip-hero__meta-item">
                 <span className="ip-hero__meta-label">Availability</span>

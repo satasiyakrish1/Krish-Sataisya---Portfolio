@@ -116,7 +116,7 @@ export default function Speaking() {
             <h2 className="ip-cta__title font-display">Interested in having me speak at your next event?</h2>
             <div className="ip-cta__actions">
               <a href="mailto:krishsatasiya44@gmail.com" className="ip-cta__btn font-mono">Invite to Speak →</a>
-              <Link to="/#contact" className="ip-cta__btn-outline font-mono">Other Inquiries</Link>
+              <Link to="/speaking/all" className="ip-cta__btn-outline font-mono">All Speaking</Link>
             </div>
           </div>
         </section>

@@ -211,6 +211,9 @@
 .figma-btn {
   --btn-shadow-color: #f24e1e;
 }
+.youtube-btn {
+  --btn-shadow-color: #FF0000;
+}
 
 .btn-icon {
   width: 1.25rem;
@@ -236,4 +239,131 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+}
+
+/* ── Creativity Tabs ── */
+.cr-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid #000;
+  margin-bottom: 0;
+}
+
+.cr-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border: none;
+  border-bottom: 3px solid transparent;
+  background: transparent;
+  color: #737373;
+  cursor: pointer;
+  margin-bottom: -2px;
+  transition: color 0.18s, border-color 0.18s;
+}
+
+.cr-tab:hover {
+  color: #111;
+}
+
+.cr-tab--active {
+  color: #111;
+  border-bottom-color: #111;
+}
+
+.cr-tab__count {
+  background: #f3f4f6;
+  color: #374151;
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 1px 6px;
+  border-radius: 999px;
+  letter-spacing: 0;
+}
+
+.cr-tab--active .cr-tab__count {
+  background: #111;
+  color: #fff;
+}
+
+/* ── Filter Pills ── */
+.cr-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.cr-pill {
+  padding: 0.4rem 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  border: 1.5px solid #d4d4d4;
+  border-radius: 0;
+  background: #fff;
+  color: #525252;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.cr-pill:hover {
+  border-color: #111;
+  color: #111;
+}
+
+.cr-pill--active {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+/* ── Video Tab Header ── */
+.cr-video-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1.5px solid #e5e7eb;
+}
+
+.cr-video-sub {
+  font-size: 0.9rem;
+  color: #737373;
+  margin: 0;
+}
+
+.cr-yt-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #FF0000;
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  padding: 0.6rem 1.25rem;
+  border: 2px solid #000;
+  box-shadow: 3px 3px 0px #000;
+  transition: transform 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
+}
+
+.cr-yt-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px #000;
 }

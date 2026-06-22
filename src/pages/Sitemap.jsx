@@ -9,7 +9,7 @@ const SITEMAP_SECTIONS = [
       { name: 'Home / Landing Page', path: '/' },
       { name: 'Projects Portfolio', path: '/projects' },
       { name: 'Research Publications', path: '/research' },
-      { name: 'Design Portfolio', path: '/design' },
+      { name: 'Creativity', path: '/design' },
     ],
   },
   {
@@ -40,6 +40,7 @@ const SITEMAP_SECTIONS = [
       { name: 'Freelancing Services', path: '/freelancing' },
       { name: 'Community Contributions', path: '/community' },
       { name: 'Speaking & Keynotes', path: '/speaking' },
+      { name: 'All Speaking Engagements (Log)', path: '/speaking/all' },
       { name: 'Contributions List', path: '/contributions' },
     ],
   },

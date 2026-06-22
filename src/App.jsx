@@ -18,6 +18,7 @@ import Community from './pages/Community';
 import AchievementsPage from './pages/Achievements';
 import ContributionsList from './pages/ContributionsList';
 import Speaking from './pages/Speaking';
+import SpeakingList from './pages/SpeakingList';
 import Sitemap from './pages/Sitemap';
 import Links from './pages/Links';
 import DocViewer from './pages/DocViewer';
@@ -68,6 +69,10 @@ const SEO_META = {
   '/speaking': {
     title: 'Speaking & Keynotes | Krish Satasiya',
     desc: 'Public speaking, workshops, panel discussions, and keynotes by Krish Satasiya on MERN stack, UI/UX, Google Cloud, and AI.'
+  },
+  '/speaking/all': {
+    title: 'All Speaking Engagements | Krish Satasiya - Ahmedabad, India',
+    desc: 'Complete list of past and upcoming speaking engagements, tech workshops, and keynotes by Krish Satasiya in Ahmedabad, India. Looking for an expert speaker on MERN stack, UI/UX design, or AI? Discover Krish\'s speaking portfolio here.'
   },
   '/sitemap': {
     title: 'Sitemap | Krish Satasiya',
@@ -125,8 +130,11 @@ function AppInner() {
     setMeta('meta[property="og:title"]', 'content', currentMeta.title);
     setMeta('meta[property="og:description"]', 'content', currentMeta.desc);
     setMeta('meta[property="og:url"]', 'content', `https://krishsatasiya.netlify.app${pathname}`);
+    setMeta('meta[property="og:image"]', 'content', 'https://krishsatasiya.netlify.app/Photos/krish-satasiya.jpg');
+    setMeta('meta[name="twitter:card"]', 'content', 'summary_large_image');
     setMeta('meta[name="twitter:title"]', 'content', currentMeta.title);
     setMeta('meta[name="twitter:description"]', 'content', currentMeta.desc);
+    setMeta('meta[name="twitter:image"]', 'content', 'https://krishsatasiya.netlify.app/Photos/krish-satasiya.jpg');
     setMeta('link[rel="canonical"]', 'href', `https://krishsatasiya.netlify.app${pathname}`);
   }, [pathname]);
 
@@ -157,6 +165,7 @@ function AppInner() {
           <Route path="/community" element={<Community />} />
           <Route path="/achievements" element={<AchievementsPage />} />
           <Route path="/speaking" element={<Speaking />} />
+          <Route path="/speaking/all" element={<SpeakingList />} />
           <Route path="/sitemap" element={<Sitemap />} />
           <Route path="/contributions" element={<ContributionsList />} />
           <Route path="/links" element={<Links />} />

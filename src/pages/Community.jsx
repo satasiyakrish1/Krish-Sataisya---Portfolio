@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { EVENT_GROUPS, TOTAL_EVENTS } from '../data/eventsData';
 import './InfoPage.css';
 import './Community.css';
 
@@ -231,11 +232,11 @@ export default function Community() {
             <div className="ip-hero__meta">
               <div className="ip-hero__meta-item">
                 <span className="ip-hero__meta-label">Communities</span>
-                <span className="ip-hero__meta-value">{new Set(EVENTS.map(e => e.community)).size}+ Active</span>
+                <span className="ip-hero__meta-value">{new Set(EVENT_GROUPS.map(g => g.org)).size}+ Active</span>
               </div>
               <div className="ip-hero__meta-item">
                 <span className="ip-hero__meta-label">Contributions</span>
-                <span className="ip-hero__meta-value">{EVENTS.length} Roles</span>
+                <span className="ip-hero__meta-value">{EVENTS.length} Roles · {TOTAL_EVENTS} Events</span>
               </div>
               <div className="ip-hero__meta-item">
                 <span className="ip-hero__meta-label">Since</span>
@@ -249,7 +250,7 @@ export default function Community() {
           </div>
 
           <p className="ip-hero__sub">
-            Actively contributing across {new Set(EVENTS.map(e => e.community)).size}+ developer communities, open-source programs, and tech events — from Google Developer Groups to Laracon India.
+            Actively contributing across {new Set(EVENT_GROUPS.map(g => g.org)).size}+ developer communities, open-source programs, and tech events — from Google Developer Groups to Laracon India.
           </p>
         </header>
 
@@ -257,7 +258,7 @@ export default function Community() {
         <section className="ip-section">
           <div className="cm-events-header">
             <span className="exp-section-header__label font-mono">All Contributions</span>
-            <span className="exp-section-header__count font-mono">{EVENTS.length} Roles</span>
+            <span className="exp-section-header__count font-mono">{EVENTS.length} Roles · {TOTAL_EVENTS} Events</span>
           </div>
 
           {/* Filter pills */}

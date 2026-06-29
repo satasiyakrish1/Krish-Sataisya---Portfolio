@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useCallback, useState } from 'react';
 import './Testimonials.css';
 
 const STARS = (n) =>
@@ -62,7 +62,65 @@ const TESTIMONIALS = [
   },
 ];
 
+function TestimonialCard({ t, onHoldStart, onHoldEnd }) {
+  const [held, setHeld] = useState(false);
+  const timerRef = useRef(null);
+  const firedRef = useRef(false);
+
+  const handleTouchStart = useCallback(() => {
+    firedRef.current = false;
+    onHoldStart(); // pause scroll animation
+    timerRef.current = setTimeout(() => {
+      firedRef.current = true;
+      setHeld(true);
+    }, 5000);
+  }, [onHoldStart]);
+
+  const handleTouchEnd = useCallback(() => {
+    clearTimeout(timerRef.current);
+    if (!firedRef.current) {
+      onHoldEnd(); // resume scroll if timer didn't fire
+    }
+    // if fired, keep blue; user taps again to reset
+  }, [onHoldEnd]);
+
+  const handleTap = useCallback(() => {
+    if (firedRef.current && held) {
+      firedRef.current = false;
+      setHeld(false);
+      onHoldEnd(); // resume scroll
+    }
+  }, [held, onHoldEnd]);
+
+  return (
+    <div
+      className={`testimonial-card flex-none${held ? ' mobile-held' : ''}`}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+      onTouchCancel={handleTouchEnd}
+      onClick={handleTap}
+    >
+      <div className="tc-stars">{STARS(t.rating)}</div>
+      <p className="tc-text">"{t.text}"</p>
+      <div className="tc-author">
+        <p className="tc-author__name">{t.name}</p>
+        <p className="tc-author__role">{t.role}</p>
+      </div>
+    </div>
+  );
+}
+
 export default function Testimonials() {
+  const trackRef = useRef(null);
+
+  const pauseScroll = useCallback(() => {
+    if (trackRef.current) trackRef.current.style.animationPlayState = 'paused';
+  }, []);
+
+  const resumeScroll = useCallback(() => {
+    if (trackRef.current) trackRef.current.style.animationPlayState = 'running';
+  }, []);
+
   return (
     <section className="py-section bg-gray-50">
       <div className="container">
@@ -72,35 +130,14 @@ export default function Testimonials() {
         </p>
       </div>
 
-      {/* Auto-scroll testimonials */}
       <div className="mt-8 overflow-hidden">
         <div className="testimonials-scroll">
-          <div className="testimonials-track flex gap-4 animate-scroll">
-            {/* First set */}
+          <div ref={trackRef} className="testimonials-track flex gap-4 animate-scroll">
             {TESTIMONIALS.map((t) => (
-              <div key={t.name} className="testimonial-card border bg-white p-8 w-80 flex-none flex flex-col h-96">
-                <div className="flex gap-0.5 mb-6">{STARS(t.rating)}</div>
-                <div className="flex-grow flex flex-col justify-start">
-                  <p className="text-lg text-gray-700 italic mx-4 my-4">"{t.text}"</p>
-                </div>
-                <div className="mt-8">
-                  <p className="font-mono font-semibold text-sm uppercase mx-4 mb-1">{t.name}</p>
-                  <p className="text-sm text-gray-500 mx-4">{t.role}</p>
-                </div>
-              </div>
+              <TestimonialCard key={t.name} t={t} onHoldStart={pauseScroll} onHoldEnd={resumeScroll} />
             ))}
-            {/* Duplicate set for seamless loop */}
             {TESTIMONIALS.map((t) => (
-              <div key={`${t.name}-duplicate`} className="testimonial-card border bg-white p-8 w-80 flex-none flex flex-col h-96">
-                <div className="flex gap-0.5 mb-6">{STARS(t.rating)}</div>
-                <div className="flex-grow flex flex-col justify-start">
-                  <p className="text-lg text-gray-700 italic mx-4 my-4">"{t.text}"</p>
-                </div>
-                <div className="mt-8">
-                  <p className="font-mono font-semibold text-sm uppercase mx-4 mb-1">{t.name}</p>
-                  <p className="text-sm text-gray-500 mx-4">{t.role}</p>
-                </div>
-              </div>
+              <TestimonialCard key={`${t.name}-dup`} t={t} onHoldStart={pauseScroll} onHoldEnd={resumeScroll} />
             ))}
           </div>
         </div>

@@ -16,6 +16,7 @@ const MORE_LINKS = [
   { label: 'Freelancing', href: '/freelancing' },
   { label: 'Community', href: '/community' },
   { label: 'Speaking', href: '/speaking' },
+  { label: 'Gallery', href: '/gallery' },
 ];
 
 export default function Navbar() {

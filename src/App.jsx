@@ -22,12 +22,13 @@ import SpeakingList from './pages/SpeakingList';
 import Sitemap from './pages/Sitemap';
 import Links from './pages/Links';
 import DocViewer from './pages/DocViewer';
+import Gallery from './pages/Gallery';
 import './App.css';
 
 const BARE_ROUTES = ['/links'];
 const NO_PAD_ROUTES = ['/cv', '/resume'];
 const NO_FOOTER_ROUTES = ['/cv', '/resume'];
-const NO_LG_PAD_ROUTES = ['/achievements', '/education', '/experience', '/freelancing', '/community', '/speaking', '/sitemap'];
+const NO_LG_PAD_ROUTES = ['/achievements', '/education', '/experience', '/freelancing', '/community', '/speaking', '/sitemap', '/gallery'];
 
 const SEO_META = {
   '/': {
@@ -168,6 +169,7 @@ function AppInner() {
           <Route path="/speaking/all" element={<SpeakingList />} />
           <Route path="/sitemap" element={<Sitemap />} />
           <Route path="/contributions" element={<ContributionsList />} />
+          <Route path="/gallery" element={<Gallery />} />
           <Route path="/links" element={<Links />} />
           <Route path="/cv" element={<DocViewer type="cv" />} />
           <Route path="/resume" element={<DocViewer type="resume" />} />

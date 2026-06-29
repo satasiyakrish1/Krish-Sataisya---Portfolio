@@ -1,0 +1,334 @@
+/* ── Root ── */
+.gl-root {
+  min-height: 100vh;
+  background: #fff;
+  padding-bottom: 5rem;
+}
+
+/* ── Hero ── */
+.gl-hero {
+  border-bottom: 1px solid #000;
+  padding: 3.5rem 0 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.gl-hero__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.gl-hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  border: 1px solid #000;
+  padding: 0.3rem 0.8rem;
+  margin-bottom: 1.25rem;
+}
+
+.gl-hero__badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #4452FF;
+  flex-shrink: 0;
+  animation: pulse-dot 1.8s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.4; transform: scale(0.65); }
+}
+
+.gl-hero__title {
+  font-family: var(--font-display, serif);
+  font-size: clamp(2.2rem, 5.5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: #000;
+  margin: 0 0 0.6rem;
+}
+
+.gl-hero__sub {
+  font-size: 0.95rem;
+  color: #525252;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 0 1rem;
+}
+
+.gl-hero__meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.72rem;
+  color: #737373;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.gl-hero__sep { color: #d4d4d4; }
+.gl-hero__count { color: #4452FF; font-weight: 700; }
+.gl-hero__hint { color: #a3a3a3; font-style: italic; }
+
+/* ── Grid wrapper ── */
+.gl-grid-wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ── Pinterest-style Masonry Layout (No cropping) ── */
+.gl-grid {
+  column-count: 4;
+  column-gap: 1rem;
+  width: 100%;
+}
+
+/* ── Card ── */
+.gl-item {
+  break-inside: avoid;
+  margin-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #e5e5e5;
+  background: #f5f5f5;
+  cursor: pointer;
+  display: block;
+  /* entry animation */
+  opacity: 0;
+  transform: translateY(20px) scale(0.98);
+  transition:
+    opacity 0.5s cubic-bezier(0.4,0,0.2,1) var(--delay,0ms),
+    transform 0.5s cubic-bezier(0.4,0,0.2,1) var(--delay,0ms),
+    box-shadow 0.22s ease;
+}
+
+.gl-item--visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.gl-item:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  z-index: 2;
+}
+
+/* ── Image: Scale naturally ── */
+.gl-item__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
+}
+
+.gl-item:hover .gl-item__img {
+  transform: scale(1.04);
+}
+
+/* ── Overlay ── */
+.gl-item__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.1) 60%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem;
+  gap: 0.2rem;
+}
+
+.gl-item:hover .gl-item__overlay {
+  opacity: 1;
+}
+
+.gl-item__label {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #fff;
+  line-height: 1.3;
+}
+
+.gl-item__year {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.62rem;
+  color: rgba(255,255,255,0.6);
+  letter-spacing: 0.06em;
+}
+
+/* ── Lightbox ── */
+.gl-lb {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(6px);
+  animation: lb-in 0.2s ease;
+}
+
+@keyframes lb-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.gl-lb__close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  background: none;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #fff;
+  font-size: 1.1rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  z-index: 10;
+}
+.gl-lb__close:hover { background: rgba(255,255,255,0.15); }
+
+.gl-lb__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  font-size: 1.4rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  z-index: 10;
+}
+.gl-lb__nav:hover { background: rgba(255,255,255,0.2); }
+.gl-lb__prev { left: 1.25rem; }
+.gl-lb__next { right: 1.25rem; }
+
+.gl-lb__frame {
+  max-width: 90vw;
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.gl-lb__img {
+  max-width: 90vw;
+  max-height: 80vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  animation: lb-img-in 0.25s ease;
+}
+
+@keyframes lb-img-in {
+  from { transform: scale(0.96); opacity: 0; }
+  to   { transform: scale(1);    opacity: 1; }
+}
+
+.gl-lb__caption {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: rgba(255,255,255,0.7);
+}
+
+.gl-lb__cap-label {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+
+.gl-lb__cap-year {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.65rem;
+  color: #4452FF;
+}
+
+.gl-lb__cap-count {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.65rem;
+  color: rgba(255,255,255,0.4);
+  margin-left: auto;
+}
+
+/* ── Tablet ── */
+@media (max-width: 1024px) {
+  .gl-grid {
+    column-count: 3;
+    column-gap: 0.75rem;
+  }
+  .gl-item {
+    margin-bottom: 0.75rem;
+  }
+}
+
+/* ── Mobile ── */
+@media (max-width: 640px) {
+  .gl-hero { padding: 2rem 0 1.5rem; margin-bottom: 1.25rem; }
+  .gl-hero__inner { padding: 0 1rem; }
+  .gl-hero__sub { white-space: normal; font-size: 0.85rem; }
+
+  .gl-grid-wrap { padding: 0 0.5rem; }
+  .gl-grid {
+    column-count: 2;
+    column-gap: 0.5rem;
+  }
+  .gl-item {
+    margin-bottom: 0.5rem;
+  }
+
+  /* Always show overlay on mobile */
+  .gl-item__overlay {
+    opacity: 1;
+    background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 60%);
+    padding: 0.6rem;
+  }
+
+  .gl-item__label { font-size: 0.6rem; }
+  .gl-item__year  { display: none; }
+
+  .gl-lb__nav { width: 2.4rem; height: 2.4rem; font-size: 1rem; }
+  .gl-lb__prev { left: 0.5rem; }
+  .gl-lb__next { right: 0.5rem; }
+  .gl-lb__img { max-height: 75vh; }
+}
+
+/* ── Very small phones ── */
+@media (max-width: 360px) {
+  .gl-grid {
+    column-count: 1;
+  }
+}

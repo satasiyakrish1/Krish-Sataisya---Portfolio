@@ -197,6 +197,15 @@ const EVENTS = [
     tags: ['GDG', 'Community', 'Volunteering', 'Tech Events'], badge: null,
     url: 'https://gdg.community.dev/gdg-ahmedabad/',
   },
+  {
+    id: '23', name: 'Webflow Ahmedabad', community: 'Webflow Ahmedabad',
+    communityColor: '#146EF5', logoBg: '#146EF5', logoText: 'WF',
+    type: 'Science & Technology', role: 'Community Member',
+    date: '2025 – Present', duration: '1 yr', location: 'Ahmedabad',
+    desc: 'Part of the Webflow Ahmedabad community — connecting with designers, developers, and no-code enthusiasts to share knowledge, collaborate on projects, and explore the Webflow ecosystem.',
+    tags: ['Webflow', 'No-Code', 'Community', 'Web Design'], badge: null,
+    url: 'https://webflow.com',
+  },
 ];
 
 const CATEGORIES = ['All', 'Science & Technology', 'Education', 'Arts & Culture', 'Environment'];

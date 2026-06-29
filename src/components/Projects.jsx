@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useCallback, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Projects.css';
 
@@ -53,35 +53,81 @@ const PROJECTS = [
   },
 ];
 
-const ProjectCard = ({ proj }) => (
-  <div className="project-card group">
-    <div className="project-card__thumb" style={{ backgroundColor: proj.bg }}>
-      {proj.image ? (
-        <img src={proj.image} alt={proj.title} className="project-card__img" />
-      ) : (
-        <span className={`project-card__initial ${proj.light ? 'text-black' : 'text-white'}`}>
-          {proj.title[0]}
-        </span>
-      )}
-    </div>
+function ProjectCard({ proj, onHoldStart, onHoldEnd }) {
+  const [held, setHeld] = useState(false);
+  const timerRef = useRef(null);
+  const firedRef = useRef(false);
 
-    <div className="project-card__body">
-      <div className="project-card__top">
-        <h3 className="project-card__title">{proj.title}</h3>
-        <span className="project-card__arrow">→</span>
+  const handleTouchStart = useCallback(() => {
+    firedRef.current = false;
+    onHoldStart();
+    timerRef.current = setTimeout(() => {
+      firedRef.current = true;
+      setHeld(true);
+    }, 5000);
+  }, [onHoldStart]);
+
+  const handleTouchEnd = useCallback(() => {
+    clearTimeout(timerRef.current);
+    if (!firedRef.current) {
+      onHoldEnd();
+    }
+  }, [onHoldEnd]);
+
+  const handleTap = useCallback(() => {
+    if (firedRef.current && held) {
+      firedRef.current = false;
+      setHeld(false);
+      onHoldEnd();
+    }
+  }, [held, onHoldEnd]);
+
+  return (
+    <div
+      className={`project-card group${held ? ' mobile-held' : ''}`}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+      onTouchCancel={handleTouchEnd}
+      onClick={handleTap}
+    >
+      <div className="project-card__thumb" style={{ backgroundColor: proj.bg }}>
+        {proj.image ? (
+          <img src={proj.image} alt={proj.title} className="project-card__img" />
+        ) : (
+          <span className={`project-card__initial ${proj.light ? 'text-black' : 'text-white'}`}>
+            {proj.title[0]}
+          </span>
+        )}
       </div>
-      <p className="project-card__desc">{proj.desc}</p>
-      <div className="project-card__tags">
-        {proj.tags.map(t => (
-          <span key={t} className="project-card__tag">{t}</span>
-        ))}
+
+      <div className="project-card__body">
+        <div className="project-card__top">
+          <h3 className="project-card__title">{proj.title}</h3>
+          <span className="project-card__arrow">→</span>
+        </div>
+        <p className="project-card__desc">{proj.desc}</p>
+        <div className="project-card__tags">
+          {proj.tags.map(t => (
+            <span key={t} className="project-card__tag">{t}</span>
+          ))}
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
+}
 
 export default function Projects() {
   const navigate = useNavigate();
+  const trackRef = useRef(null);
+
+  const pauseScroll = useCallback(() => {
+    if (trackRef.current) trackRef.current.style.animationPlayState = 'paused';
+  }, []);
+
+  const resumeScroll = useCallback(() => {
+    if (trackRef.current) trackRef.current.style.animationPlayState = 'running';
+  }, []);
+
   return (
     <section className="py-section" id="projects">
       <div className="container">
@@ -100,9 +146,9 @@ export default function Projects() {
 
       <div className="projects-marquee-wrapper">
         <div className="projects-marquee">
-          <div className="projects-marquee__track">
+          <div ref={trackRef} className="projects-marquee__track">
             {[...PROJECTS, ...PROJECTS].map((proj, i) => (
-              <ProjectCard key={i} proj={proj} />
+              <ProjectCard key={i} proj={proj} onHoldStart={pauseScroll} onHoldEnd={resumeScroll} />
             ))}
           </div>
         </div>

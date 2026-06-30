@@ -1,7 +1,7 @@
 const PROFILE = {
   name: 'Krish Satasiya',
   role: 'Full Stack Developer & Product Designer',
-  education: 'B.Tech (CE) | Silver Oak University (9.4 SPI)',
+  education: 'B.Tech (CE) | Silver Oak University (8.81 CGPA)',
   location: 'Ahmedabad, Gujarat, India',
   email: 'krishsatasiya44@gmail.com',
   phone: '+91 6353112999',
@@ -25,7 +25,7 @@ const PROFILE = {
   goal: 'Motivated and creative Full Stack Developer adept at delivering performance-optimized web applications with seamless user experience.',
   stats: [
     { val: '1st', label: 'RedHat India Winner' },
-    { val: '9.4', label: 'B.Tech SPI' },
+    { val: '8.81', label: 'B.Tech CGPA' },
     { val: '35%', label: 'Engagement Boost' },
     { val: '99.9%', label: 'Project Uptime' },
   ],

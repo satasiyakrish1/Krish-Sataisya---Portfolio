@@ -74,11 +74,37 @@
   }
 }
 
+.hero__designer-box {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 3px solid #4452FF;
+  padding: 12px 20px 8px;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.hero__box-handle {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  background-color: #4452FF;
+  border: 1.5px solid #fff;
+  pointer-events: none;
+}
+
+.hero__box-handle.tl { top: -6px; left: -6px; }
+.hero__box-handle.tr { top: -6px; right: -6px; }
+.hero__box-handle.bl { bottom: -6px; left: -6px; }
+.hero__box-handle.br { bottom: -6px; right: -6px; }
+
 .hero__name {
-  font-size: clamp(2rem, 8vw, 3rem);
-  font-weight: 800;
+  font-family: var(--font-handwritten);
+  font-size: clamp(2.8rem, 10vw, 4.2rem);
+  font-weight: 700;
   line-height: 1;
-  color: #000;
+  color: var(--color-primary-500);
+  -webkit-text-stroke: 1.5px var(--color-primary-500);
   margin-bottom: 0.5rem;
 }
 

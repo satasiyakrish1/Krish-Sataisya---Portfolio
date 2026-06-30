@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Outfit:wght@100..900&family=Caveat:wght@400..700&display=swap');
 
 *,
 ::after,
@@ -10,6 +10,7 @@
 }
 
 :root {
+  --font-handwritten: 'Caveat', cursive;
   --color-primary-50: #d0d4ff;
   --color-primary-100: #d0d4ff;
   --color-primary-200: #909aff;

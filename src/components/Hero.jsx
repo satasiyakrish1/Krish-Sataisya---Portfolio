@@ -46,9 +46,15 @@ export default function Hero() {
               <div className="hero__identity-line" />
               <span className="hero__pre-name font-mono">Hi, I'm</span>
             </div>
-            <h2 className="hero__name font-display">{PROFILE.name}</h2>
-            <p className="hero__designation font-mono">{PROFILE.role}</p>
-            <h1 className="hero__title mt-8">
+            <div className="hero__designer-box">
+              <h2 className="hero__name">{PROFILE.name}</h2>
+              <p className="hero__designation font-mono">{PROFILE.role}</p>
+              <span className="hero__box-handle tl" />
+              <span className="hero__box-handle tr" />
+              <span className="hero__box-handle bl" />
+              <span className="hero__box-handle br" />
+            </div>
+            <h1 className="hero__title mt-2">
               Building clarity where <br /> others add complexity
             </h1>
             <p className="hero__description">

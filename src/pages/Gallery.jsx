@@ -140,6 +140,24 @@ const JSON_LD = {
   ],
 };
 
+function GalleryImage({ src, alt, title, className }) {
+  const [isLoaded, setIsLoaded] = useState(false);
+  return (
+    <div className="gl-image-container">
+      {!isLoaded && <div className="gl-image-shimmer" />}
+      <img
+        src={src}
+        alt={alt}
+        title={title}
+        className={`${className} ${isLoaded ? 'visible' : ''}`}
+        onLoad={() => setIsLoaded(true)}
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+  );
+}
+
 export default function Gallery() {
   const itemsRef = useRef([]);
   const [lightbox, setLightbox] = useState(null); // index of open photo
@@ -232,13 +250,11 @@ export default function Gallery() {
               <meta itemProp="name" content={item.alt} />
               <meta itemProp="description" content={item.desc} />
               <meta itemProp="contentUrl" content={`https://krishsatasiya.netlify.app${item.src}`} />
-              <img
+              <GalleryImage
                 src={item.src}
                 alt={item.alt}
                 title={`${item.alt} — Double-click to view full`}
                 className="gl-item__img"
-                loading="lazy"
-                decoding="async"
               />
               <figcaption className="gl-item__overlay">
                 <span className="gl-item__label">{item.label}</span>

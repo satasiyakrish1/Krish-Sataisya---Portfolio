@@ -1,0 +1,58 @@
+.custom-cursor-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 27px;
+  height: 29px;
+  pointer-events: none;
+  z-index: 99999;
+  opacity: 0;
+  transition: opacity 0.15s ease-out;
+  will-change: transform;
+}
+
+.custom-cursor-container.visible {
+  opacity: 1;
+}
+
+.custom-cursor-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 27px;
+  height: 29px;
+  transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+  transform-origin: top left;
+}
+
+.custom-cursor-container.hovered .custom-cursor-svg {
+  transform: scale(1.1);
+}
+
+/* Disable custom cursor and show default behaviors on touch-active bodies */
+body.touch-active .custom-cursor-container {
+  display: none !important;
+}
+
+/* Hide default cursor on desktop screens (fine pointer) only when not touch-active */
+@media (pointer: fine) {
+  body:not(.touch-active) *,
+  body:not(.touch-active) input[type="text"],
+  body:not(.touch-active) input[type="email"],
+  body:not(.touch-active) input[type="search"],
+  body:not(.touch-active) input[type="tel"],
+  body:not(.touch-active) input[type="url"],
+  body:not(.touch-active) input[type="password"],
+  body:not(.touch-active) input[type="number"],
+  body:not(.touch-active) textarea,
+  body:not(.touch-active) [contenteditable="true"] {
+    cursor: none !important;
+  }
+}
+
+/* Touch-only screen fallback */
+@media (pointer: coarse) {
+  .custom-cursor-container {
+    display: none !important;
+  }
+}

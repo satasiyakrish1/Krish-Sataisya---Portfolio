@@ -107,6 +107,8 @@ export const EVENT_GROUPS = [
     org: 'Pixelverse Community',
     color: '#6C3483',
     events: [
+      { date: '05 Jul 2026', name: 'Figma Master Class',                                   chapter: 'Pixelverse Community' },
+      { date: '04 Jul 2026', name: 'Webflow Meetup July #2',                                chapter: 'Pixelverse Community' },
       { date: '27 Sep 2025', name: 'Open Source with AI Workshop | Open Source Day 2025', chapter: 'Pixelverse Community' },
       { date: '24 Jan 2026', name: 'How to Create a Design System',                        chapter: 'Pixelverse Community' },
       { date: '21 Feb 2026', name: 'How To Design A Logo!!',                               chapter: 'Pixelverse Community' },

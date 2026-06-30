@@ -128,7 +128,12 @@
   width: 100%;
   height: auto;
   display: block;
-  transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
+  opacity: 0;
+  transition: transform 0.5s cubic-bezier(0.4,0,0.2,1), opacity 0.45s ease-out;
+}
+
+.gl-item__img.visible {
+  opacity: 1;
 }
 
 .gl-item:hover .gl-item__img {
@@ -326,9 +331,39 @@
   .gl-lb__img { max-height: 75vh; }
 }
 
-/* ── Very small phones ── */
 @media (max-width: 360px) {
   .gl-grid {
     column-count: 1;
+  }
+}
+
+/* ── Shimmer & Lazy Loading Container ── */
+.gl-image-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.gl-image-shimmer {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    #f5f5f5 0%,
+    #e5e5e5 50%,
+    #f5f5f5 100%
+  );
+  background-size: 200% 100%;
+  animation: gl-shimmer-pulse 1.6s infinite linear;
+  z-index: 1;
+}
+
+@keyframes gl-shimmer-pulse {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
   }
 }

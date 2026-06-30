@@ -23,6 +23,7 @@ import Sitemap from './pages/Sitemap';
 import Links from './pages/Links';
 import DocViewer from './pages/DocViewer';
 import Gallery from './pages/Gallery';
+import CustomCursor from './components/CustomCursor';
 import './App.css';
 
 const BARE_ROUTES = ['/links'];
@@ -148,6 +149,7 @@ function AppInner() {
 
   return (
     <div className="antialiased font-body text-base">
+      <CustomCursor />
       {!isBare && <Navbar />}
       <main className={mainClass}>
         <Routes>

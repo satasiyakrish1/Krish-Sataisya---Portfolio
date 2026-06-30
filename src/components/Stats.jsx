@@ -9,7 +9,7 @@ const STATS = [
     alt: 'Competition Winner',
   },
   {
-    value: '9.50',
+    value: '8.81',
     label: 'B.Tech SPI / CGPA',
     image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&h=800&fit=crop&q=80',
     alt: 'Academic Excellence',

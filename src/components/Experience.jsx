@@ -37,7 +37,7 @@ const EDUCATION = [
     school: 'Silver Oak University',
     degree: 'B.Tech Computer Engineering',
     year: '2023 - 2027',
-    score: '9.4 SPI',
+    score: '8.81 CGPA',
   },
   {
     school: 'The Imperial Science School',

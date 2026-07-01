@@ -242,6 +242,15 @@ const ALL_PROJECTS = [
     link: 'https://krishsatasiya-prescripto.onrender.com/', external: true,
     image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80&fit=crop',
   },
+  {
+    title: 'Flowza Pro',
+    desc: 'Flowza – Pro Suite is a powerful all-in-one utility plugin designed to enhance your Figma workflow. It combines essential tools like document conversion, unit conversion, and smart export features into a single seamless experience.',
+    category: 'Figma Plugins',
+    tags: ['Figma API', 'Productivity', 'TS'],
+    bg: '#A259FF', light: false, year: '2025',
+    link: 'https://www.figma.com/community/plugin/1628437598032928929', external: true,
+    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&q=80&fit=crop',
+  },
 ];
 
 const CATEGORIES = [...new Set(ALL_PROJECTS.map(p => p.category))];

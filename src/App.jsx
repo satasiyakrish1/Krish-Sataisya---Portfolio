@@ -34,11 +34,11 @@ const NO_LG_PAD_ROUTES = ['/achievements', '/education', '/experience', '/freela
 const SEO_META = {
   '/': {
     title: 'Krish Satasiya | Full Stack MERN Developer & UI/UX Designer — Ahmedabad, India',
-    desc: 'Krish Satasiya is a Full Stack MERN Developer, UI/UX Designer & Computer Engineering student at Silver Oak University, Ahmedabad. Explore 26+ projects, 54+ certifications, and 4 national hackathon wins.'
+    desc: 'Krish Satasiya is a Full Stack MERN Developer, UI/UX Designer & Computer Engineering student at Silver Oak University, Ahmedabad. Explore 29+ projects, 54+ certifications, and 4 national hackathon wins.'
   },
   '/projects': {
     title: 'Web Development Projects | Krish Satasiya',
-    desc: 'Explore 26+ Full Stack MERN projects built by Krish Satasiya, including AI medical booking systems, job boards, and custom content management systems.'
+    desc: 'Explore 29+ Full Stack MERN projects built by Krish Satasiya, including AI medical booking systems, job boards, and custom figma plugins.'
   },
   '/research': {
     title: 'Research Publications | Krish Satasiya',
@@ -87,6 +87,10 @@ const SEO_META = {
   '/links': {
     title: 'Connect with Krish Satasiya | Social Links',
     desc: 'Unified hub of social links and profiles for MERN Developer & UI/UX Designer Krish Satasiya.'
+  },
+  '/gallery': {
+    title: 'Community Gallery & Moments | Krish Satasiya',
+    desc: 'Browse photos and memorable tech moments of Krish Satasiya volunteering, organizing, and speaking at major tech community meetups across Gujarat, India.'
   },
   '/cv': {
     title: 'Curriculum Vitae | Krish Satasiya',

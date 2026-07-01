@@ -10,7 +10,7 @@
     <loc>https://krishsatasiya.netlify.app/</loc>
     <priority>1.0</priority>
     <changefreq>daily</changefreq>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-07-01</lastmod>
     <image:image>
       <image:loc>https://krishsatasiya.netlify.app/Photos/krish-satasiya.jpg</image:loc>
       <image:title>Krish Satasiya - Full Stack MERN Developer and UI/UX Designer from Ahmedabad</image:title>
@@ -23,7 +23,7 @@
     <loc>https://krishsatasiya.netlify.app/projects</loc>
     <priority>0.95</priority>
     <changefreq>weekly</changefreq>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-07-01</lastmod>
     <image:image>
       <image:loc>https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800</image:loc>
       <image:title>Krish Satasiya Full Stack Projects — 26+ Web Development Projects</image:title>
@@ -36,7 +36,7 @@
     <loc>https://krishsatasiya.netlify.app/achievements</loc>
     <priority>0.95</priority>
     <changefreq>weekly</changefreq>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-07-01</lastmod>
   </url>
 
   <!-- Research Papers -->
@@ -44,7 +44,7 @@
     <loc>https://krishsatasiya.netlify.app/research</loc>
     <priority>0.90</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-07-01</lastmod>
   </url>
 
   <!-- Design Projects -->
@@ -52,7 +52,7 @@
     <loc>https://krishsatasiya.netlify.app/design</loc>
     <priority>0.90</priority>
     <changefreq>weekly</changefreq>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-07-01</lastmod>
   </url>
 
   <!-- Experience -->
@@ -60,7 +60,7 @@
     <loc>https://krishsatasiya.netlify.app/experience</loc>
     <priority>0.85</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-07-01</lastmod>
   </url>
 
   <!-- Education -->
@@ -68,7 +68,7 @@
     <loc>https://krishsatasiya.netlify.app/education</loc>
     <priority>0.85</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-07-01</lastmod>
   </url>
 
   <!-- Freelancing -->
@@ -76,7 +76,19 @@
     <loc>https://krishsatasiya.netlify.app/freelancing</loc>
     <priority>0.85</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-07-01</lastmod>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/logos/Baldevpari.com.png</image:loc>
+      <image:title>Shikshan Na Prerna Pushpa Logo — Baldev Pari Website</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/logos/Mathsapari.png</image:loc>
+      <image:title>MathsPari Educational App Logo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/logos/Group%2014.png</image:loc>
+      <image:title>Hexa Tech LLP Logo Design</image:title>
+    </image:image>
   </url>
 
   <!-- Community -->
@@ -84,7 +96,7 @@
     <loc>https://krishsatasiya.netlify.app/community</loc>
     <priority>0.85</priority>
     <changefreq>weekly</changefreq>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-07-01</lastmod>
   </url>
 
   <!-- Contributions List -->
@@ -92,7 +104,7 @@
     <loc>https://krishsatasiya.netlify.app/contributions</loc>
     <priority>0.75</priority>
     <changefreq>weekly</changefreq>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-07-01</lastmod>
   </url>
 
   <!-- Links / Linktree -->
@@ -100,7 +112,7 @@
     <loc>https://krishsatasiya.netlify.app/links</loc>
     <priority>0.80</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-07-01</lastmod>
   </url>
 
   <!-- Project: Prescripto -->
@@ -108,7 +120,7 @@
     <loc>https://krishsatasiya.netlify.app/project/prescripto</loc>
     <priority>0.85</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-07-01</lastmod>
     <image:image>
       <image:loc>https://krishsatasiya.netlify.app/assets/prescripto-hero.png</image:loc>
       <image:title>Prescripto - AI-Powered Medical Appointment System by Krish Satasiya</image:title>
@@ -121,7 +133,7 @@
     <loc>https://krishsatasiya.netlify.app/project/hirix</loc>
     <priority>0.85</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-07-01</lastmod>
     <image:image>
       <image:loc>https://krishsatasiya.netlify.app/assets/hirix-hero.png</image:loc>
       <image:title>Hirix - Modern Job Board Platform by Krish Satasiya</image:title>
@@ -134,7 +146,7 @@
     <loc>https://krishsatasiya.netlify.app/project/quarix</loc>
     <priority>0.80</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-07-01</lastmod>
   </url>
 
   <!-- Project: Blog CMS -->
@@ -142,7 +154,251 @@
     <loc>https://krishsatasiya.netlify.app/project/blogcms</loc>
     <priority>0.80</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-07-01</lastmod>
+  </url>
+
+  <!-- Gallery -->
+  <url>
+    <loc>https://krishsatasiya.netlify.app/gallery</loc>
+    <priority>0.85</priority>
+    <changefreq>weekly</changefreq>
+    <lastmod>2026-07-01</lastmod>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/IMG-20260502-WA0007.jpg</image:loc>
+      <image:title>Krish Satasiya — Tech Event May 2026</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/IMG_20260424_214629.jpg</image:loc>
+      <image:title>Krish Satasiya — Night Event April 2026</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/IMG-20260424-WA0096.jpg</image:loc>
+      <image:title>Krish Satasiya — Event Coordination April 2026</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/IMG_20260404_133310.jpg</image:loc>
+      <image:title>Krish Satasiya — Tech Gathering April 2026</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/IMG_20260314_151530.jpg</image:loc>
+      <image:title>Krish Satasiya — Community Event March 2026</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/IMG-20260314-WA0017.jpg</image:loc>
+      <image:title>Krish Satasiya — Dev Meetup March 2026</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/IMG-20260308-WA0019.jpg</image:loc>
+      <image:title>Krish Satasiya — Tech Session March 2026</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/20260314_083840.jpg</image:loc>
+      <image:title>Krish Satasiya — Community Event March 2026 II</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/IMG_20260301_152043.jpg</image:loc>
+      <image:title>Krish Satasiya — Community Day March 2026</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/IMG_20260301_153209.jpg</image:loc>
+      <image:title>Krish Satasiya — Team Collaboration March 2026</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/IMG_20260201_184757.jpg</image:loc>
+      <image:title>Krish Satasiya — Laracon India 2026 — Evening</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/IMG_20260201_165757.jpg</image:loc>
+      <image:title>Krish Satasiya — Laracon India 2026 — Networking</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/IMG_20260201_112442.jpg</image:loc>
+      <image:title>Krish Satasiya — Laracon India 2026 — Conference</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/IMG_20260201_112413.jpg</image:loc>
+      <image:title>Krish Satasiya — Laracon India 2026 — Stage</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/IMG_20260201_103117.jpg</image:loc>
+      <image:title>Krish Satasiya — Laracon India 2026 — Backstage</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/IMG_20260201_100707.jpg</image:loc>
+      <image:title>Krish Satasiya — Laracon India 2026 — Morning</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/IMG_20260201_100316.jpg</image:loc>
+      <image:title>Krish Satasiya — Laracon India 2026 — Team</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/IMG_20260131_074832.jpg</image:loc>
+      <image:title>Krish Satasiya — Morning Event Jan 2026 II</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/IMG_20260131_074538.jpg</image:loc>
+      <image:title>Krish Satasiya — Morning Tech Event January 2026</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/IMG_20260117_185948.jpg</image:loc>
+      <image:title>Krish Satasiya — Community Event January 2026</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/IMG_20260110_115343.jpg</image:loc>
+      <image:title>Krish Satasiya — Community Meetup January 2026</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/IMG_20260110_110325.jpg</image:loc>
+      <image:title>Krish Satasiya — Open Source Weekend Jan 2026</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/IMG_20260110_070431.jpg</image:loc>
+      <image:title>Krish Satasiya — Early Morning Event Jan 2026</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/JS%20Gujarat%20Team.jpg</image:loc>
+      <image:title>Krish Satasiya — JavaScript Gujarat — Team</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/Js%20Gujarat%20Team%202.jpg</image:loc>
+      <image:title>Krish Satasiya — JavaScript Gujarat — Meetup</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/Js%20Gujarat.jpg</image:loc>
+      <image:title>Krish Satasiya — JavaScript Gujarat Community</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/JS%20Gujarat%20(2).jpg</image:loc>
+      <image:title>Krish Satasiya — JavaScript Gujarat — Session</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/FlutterFlow%20Event.jpg</image:loc>
+      <image:title>Krish Satasiya — FlutterFlow Event</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/FlutterFlow%20Meetup%20-%20NFSU.jpg</image:loc>
+      <image:title>Krish Satasiya — FlutterFlow Meetup — NFSU</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/7%20Span%20Meetup.jpg</image:loc>
+      <image:title>Krish Satasiya — 7Span Meetup</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/7span%20-%20Visit.jpg</image:loc>
+      <image:title>Krish Satasiya — 7Span Office Visit</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/Atlasian%20Meetup.jpg</image:loc>
+      <image:title>Krish Satasiya — Atlassian Community Meetup</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/CCD%20-%20Cloud%20Community%20Day%20Gandhinagar%202.jpg</image:loc>
+      <image:title>Krish Satasiya — Cloud Community Day Gandhinagar</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/CCD%20-%20Cloud%20Community%20Day%20Gandhinagar.jpg</image:loc>
+      <image:title>Krish Satasiya — CCD Gandhinagar — Stage</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/CCD%20-%20GDG%20Cloud%20Gn%20Team.jpg</image:loc>
+      <image:title>Krish Satasiya — GDG Cloud Gandhinagar Team</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/Crew%20CCD.webp</image:loc>
+      <image:title>Krish Satasiya — CCD Crew — GDG Cloud</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/Wrokshop%20CCD%20-%20Cloud%20Community%20Day%20Gandhinagar.jpg</image:loc>
+      <image:title>Krish Satasiya — CCD Workshop Session</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/Best%20Volunter%20Award%20-%20ccd%20-%20gdg%20cloud%20gn.jpg</image:loc>
+      <image:title>Krish Satasiya — Best Volunteer Award — GDG Cloud GN</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/IMG_20251228_101959.jpg</image:loc>
+      <image:title>Krish Satasiya — Community Event Dec 2025</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/IMG_20251122_124422.jpg</image:loc>
+      <image:title>Krish Satasiya — Community Gathering Nov 2025</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/IMG_20251122_133349.jpg</image:loc>
+      <image:title>Krish Satasiya — Workshop Session Nov 2025</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/IMG_20251129_101854321.jpg</image:loc>
+      <image:title>Krish Satasiya — Tech Event Nov 2025</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/IMG-20251116-WA0053.jpg</image:loc>
+      <image:title>Krish Satasiya — Tech Event November 2025</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/IMG_20251102_080246.jpg</image:loc>
+      <image:title>Krish Satasiya — Developer Meetup Nov 2025</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/IMG_20251102_140436.jpg</image:loc>
+      <image:title>Krish Satasiya — Tech Session Nov 2025</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/IMG_20251102_184002.jpg</image:loc>
+      <image:title>Krish Satasiya — Evening Community Event Nov 2025</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/IMG_20251005_114437.jpg</image:loc>
+      <image:title>Krish Satasiya — Community Event Oct 2025</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/IMG_20250720_134539.jpg</image:loc>
+      <image:title>Krish Satasiya — Tech Meetup July 2025</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/IMG-20250705-WA0005.jpg</image:loc>
+      <image:title>Krish Satasiya — Community Initiative July 2025</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/1770219377784.jpg</image:loc>
+      <image:title>Krish Satasiya — Community Moment</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/1770219378382.jpg</image:loc>
+      <image:title>Krish Satasiya — Community Moment II</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/1770219380589.jpg</image:loc>
+      <image:title>Krish Satasiya — Community Moment III</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/Smart%20INDIA%20Hackathon%20%20Team.jpg</image:loc>
+      <image:title>Krish Satasiya — Smart India Hackathon — Team</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/E%20Cell%20Tech%20Fest.jpg</image:loc>
+      <image:title>Krish Satasiya — E-Cell Tech Fest Silver Oak</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/ECELL%20TECH%20FEST%20PEACH.jpg</image:loc>
+      <image:title>Krish Satasiya — E-Cell Tech Fest — Award</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/RHA%20India%20Challenge%202024_page-0001.jpg</image:loc>
+      <image:title>Krish Satasiya — RHA India Challenge 2024</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/RHA%20WINNING%20AWARD%20BY%20DEAN%20SOU%20COT.jpg</image:loc>
+      <image:title>Krish Satasiya — RHA Winning Award — Dean SOU</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/DSC_7304.JPG</image:loc>
+      <image:title>Krish Satasiya — Community Event — Ahmedabad</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishsatasiya.netlify.app/assets/gallery/Krish%20Satasiya.jpg</image:loc>
+      <image:title>Krish Satasiya — Krish Satasiya — Portrait</image:title>
+    </image:image>
   </url>
 
   <!-- Privacy Policy -->
@@ -150,7 +406,7 @@
     <loc>https://krishsatasiya.netlify.app/privacy-policy</loc>
     <priority>0.30</priority>
     <changefreq>yearly</changefreq>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-07-01</lastmod>
   </url>
 
 </urlset>

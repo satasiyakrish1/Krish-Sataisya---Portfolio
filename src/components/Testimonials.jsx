@@ -60,6 +60,13 @@ const TESTIMONIALS = [
     rating: 5,
     text: 'Krish Satasiya is a highly versatile professional with excellence in full-stack development, UI/UX design, and community leadership. His dedication and proactive mindset make him an asset to any forward-thinking organization.',
   },
+  {
+    name: 'Mr. Baldev Javer Pari',
+    role: 'President Award Winning & Founder of Shikshan Na Prerna Pushpa',
+    rating: 5,
+    text: 'Krish is a brilliant developer and inspiring mentor. His ability to engage students and simplify coding makes the journey to becoming a top-tier developer seamless and achievable.',
+    link: 'https://www.baldevpari.com/',
+  },
 ];
 
 function TestimonialCard({ t, onHoldStart, onHoldEnd }) {
@@ -103,7 +110,15 @@ function TestimonialCard({ t, onHoldStart, onHoldEnd }) {
       <div className="tc-stars">{STARS(t.rating)}</div>
       <p className="tc-text">"{t.text}"</p>
       <div className="tc-author">
-        <p className="tc-author__name">{t.name}</p>
+        <p className="tc-author__name">
+          {t.link ? (
+            <a href={t.link} target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }} onClick={(e) => e.stopPropagation()}>
+              {t.name}
+            </a>
+          ) : (
+            t.name
+          )}
+        </p>
         <p className="tc-author__role">{t.role}</p>
       </div>
     </div>

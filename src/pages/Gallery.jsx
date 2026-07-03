@@ -160,7 +160,17 @@ function GalleryImage({ src, alt, title, className }) {
 
 export default function Gallery() {
   const itemsRef = useRef([]);
-  const [lightbox, setLightbox] = useState(null); // index of open photo
+  const gridContainerRef = useRef(null);
+  const [lightbox, setLightbox] = useState(null); // index of open photo on current page
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const IMAGES_PER_PAGE = 16;
+  const totalPages = Math.ceil(GALLERY.length / IMAGES_PER_PAGE);
+  const startIndex = (currentPage - 1) * IMAGES_PER_PAGE;
+  const currentImages = GALLERY.slice(startIndex, startIndex + IMAGES_PER_PAGE);
+
+  // Reset itemsRef when page changes
+  itemsRef.current = [];
 
   // JSON-LD injection
   useEffect(() => {
@@ -183,19 +193,26 @@ export default function Gallery() {
           }
         });
       },
-      { threshold: 0.08, rootMargin: '0px 0px -30px 0px' }
+      { threshold: 0.05, rootMargin: '0px 0px -20px 0px' }
     );
-    itemsRef.current.forEach((el) => { if (el) observer.observe(el); });
-    return () => observer.disconnect();
-  }, []);
+    
+    const timer = setTimeout(() => {
+      itemsRef.current.forEach((el) => { if (el) observer.observe(el); });
+    }, 50);
+
+    return () => {
+      clearTimeout(timer);
+      observer.disconnect();
+    };
+  }, [currentPage]);
 
   // Keyboard navigation for lightbox
   useEffect(() => {
     if (lightbox === null) return;
     const onKey = (e) => {
       if (e.key === 'Escape') setLightbox(null);
-      if (e.key === 'ArrowRight') setLightbox((p) => (p + 1) % GALLERY.length);
-      if (e.key === 'ArrowLeft')  setLightbox((p) => (p - 1 + GALLERY.length) % GALLERY.length);
+      if (e.key === 'ArrowRight') setLightbox((p) => (p + 1) % currentImages.length);
+      if (e.key === 'ArrowLeft')  setLightbox((p) => (p - 1 + currentImages.length) % currentImages.length);
     };
     window.addEventListener('keydown', onKey);
     document.body.style.overflow = 'hidden';
@@ -203,12 +220,19 @@ export default function Gallery() {
       window.removeEventListener('keydown', onKey);
       document.body.style.overflow = '';
     };
-  }, [lightbox]);
+  }, [lightbox, currentImages.length]);
 
   const openLightbox  = (i) => setLightbox(i);
   const closeLightbox = () => setLightbox(null);
-  const prev = (e) => { e.stopPropagation(); setLightbox((p) => (p - 1 + GALLERY.length) % GALLERY.length); };
-  const next = (e) => { e.stopPropagation(); setLightbox((p) => (p + 1) % GALLERY.length); };
+  const prev = (e) => { e.stopPropagation(); setLightbox((p) => (p - 1 + currentImages.length) % currentImages.length); };
+  const next = (e) => { e.stopPropagation(); setLightbox((p) => (p + 1) % currentImages.length); };
+
+  const handlePageChange = (pageNum) => {
+    setCurrentPage(pageNum);
+    if (gridContainerRef.current) {
+      gridContainerRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
 
   return (
     <div className="gl-root" itemScope itemType="https://schema.org/CollectionPage">
@@ -235,14 +259,14 @@ export default function Gallery() {
       </div>
 
       {/* Bento Grid */}
-      <div className="gl-grid-wrap">
-        <div className="gl-grid">
-          {GALLERY.map((item, i) => (
+      <div className="gl-grid-wrap" ref={gridContainerRef}>
+        <div className="gl-grid" key={currentPage}>
+          {currentImages.map((item, i) => (
             <figure
               key={i}
               ref={(el) => (itemsRef.current[i] = el)}
               className="gl-item"
-              style={{ '--delay': `${Math.min(i, 8) * 70}ms` }}
+              style={{ '--delay': `${Math.min(i, 8) * 80}ms` }}
               onDoubleClick={() => openLightbox(i)}
               itemScope
               itemType="https://schema.org/ImageObject"
@@ -263,6 +287,37 @@ export default function Gallery() {
             </figure>
           ))}
         </div>
+
+        {/* Pagination */}
+        {totalPages > 1 && (
+          <div className="gl-pagination">
+            <button 
+              className="gl-page-btn" 
+              onClick={() => handlePageChange(currentPage - 1)}
+              disabled={currentPage === 1}
+            >
+              ← Prev
+            </button>
+            <div className="gl-page-numbers">
+              {Array.from({ length: totalPages }, (_, idx) => idx + 1).map((pageNum) => (
+                <button
+                  key={pageNum}
+                  className={`gl-page-number ${currentPage === pageNum ? 'active' : ''}`}
+                  onClick={() => handlePageChange(pageNum)}
+                >
+                  {pageNum}
+                </button>
+              ))}
+            </div>
+            <button 
+              className="gl-page-btn" 
+              onClick={() => handlePageChange(currentPage + 1)}
+              disabled={currentPage === totalPages}
+            >
+              Next →
+            </button>
+          </div>
+        )}
       </div>
 
       {/* Lightbox */}
@@ -277,14 +332,14 @@ export default function Gallery() {
           {/* Image */}
           <div className="gl-lb__frame" onClick={(e) => e.stopPropagation()}>
             <img
-              src={GALLERY[lightbox].src}
-              alt={GALLERY[lightbox].alt}
+              src={currentImages[lightbox].src}
+              alt={currentImages[lightbox].alt}
               className="gl-lb__img"
             />
             <div className="gl-lb__caption">
-              <span className="gl-lb__cap-label">{GALLERY[lightbox].label}</span>
-              <span className="gl-lb__cap-year">{GALLERY[lightbox].year}</span>
-              <span className="gl-lb__cap-count">{lightbox + 1} / {GALLERY.length}</span>
+              <span className="gl-lb__cap-label">{currentImages[lightbox].label}</span>
+              <span className="gl-lb__cap-year">{currentImages[lightbox].year}</span>
+              <span className="gl-lb__cap-count">{lightbox + 1} / {currentImages.length}</span>
             </div>
           </div>
 

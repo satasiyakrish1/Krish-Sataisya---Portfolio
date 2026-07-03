@@ -24,10 +24,10 @@ const PROFILE = {
   languages: ['English', 'Hindi', 'Gujarati'],
   goal: 'Motivated and creative Full Stack Developer adept at delivering performance-optimized web applications with seamless user experience.',
   stats: [
-    { val: '1st', label: 'RedHat India Winner' },
+    { val: '1st', label: 'RedHat India Winner Compition' },
     { val: '8.81', label: 'B.Tech CGPA' },
     { val: '35%', label: 'Engagement Boost' },
-    { val: '99.9%', label: 'Project Uptime' },
+    { val: '93.9%', label: 'Project Uptime' },
   ],
 };
 

@@ -1,28 +1,29 @@
 import React from 'react';
 import './Stats.css';
+import PROFILE from '../utils/profile';
 
 const STATS = [
   {
-    value: '1st',
-    label: 'RedHat Winner',
+    value: PROFILE.stats[0].val,
+    label: PROFILE.stats[0].label,
     image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&h=800&fit=crop&q=80',
     alt: 'Competition Winner',
   },
   {
-    value: '8.81',
-    label: 'B.Tech SPI / CGPA',
+    value: PROFILE.stats[1].val,
+    label: PROFILE.stats[1].label,
     image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&h=800&fit=crop&q=80',
     alt: 'Academic Excellence',
   },
   {
-    value: '35%',
-    label: 'Engagement ↑',
+    value: PROFILE.stats[2].val,
+    label: PROFILE.stats[2].label,
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=800&fit=crop&q=80',
     alt: 'Product Impact',
   },
   {
-    value: '99.9%',
-    label: 'App Uptime',
+    value: PROFILE.stats[3].val,
+    label: PROFILE.stats[3].label,
     image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=800&fit=crop&q=80',
     alt: 'Reliable Engineering',
   },

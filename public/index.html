@@ -158,6 +158,14 @@
         "addressCountry": "IN"
       }
     },
+    "homeLocation": {
+      "@type": "Place",
+      "@id": "https://krishsatasiya.netlify.app/#location"
+    },
+    "workLocation": {
+      "@type": "Place",
+      "@id": "https://krishsatasiya.netlify.app/#location"
+    },
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Ahmedabad",
@@ -390,6 +398,10 @@
       "name": "Krish Satasiya"
     },
     "datePublished": "2026-06-01",
+    "locationCreated": {
+      "@type": "Place",
+      "@id": "https://krishsatasiya.netlify.app/#location"
+    },
     "publisher": {
       "@type": "Organization",
       "name": "IJDI-ERET Journal",
@@ -516,6 +528,8 @@
     "@type": "Place",
     "@id": "https://krishsatasiya.netlify.app/#location",
     "name": "Ahmedabad, Gujarat, India",
+    "url": "https://krishsatasiya.netlify.app",
+    "telephone": "+916353112999",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Ahmedabad",
@@ -540,6 +554,92 @@
     }
   }
   </script>
+
+  <!-- 12. Static Article Schemas for Project Case Studies (For Non-JS Crawlers) -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "@id": "https://krishsatasiya.netlify.app/project/prescripto#article",
+      "headline": "Prescripto Case Study — AI Medical Appointment Booking System",
+      "description": "Comprehensive engineering case study of Prescripto: an AI-powered medical booking system built on the MERN stack.",
+      "url": "https://krishsatasiya.netlify.app/project/prescripto",
+      "image": "https://krishsatasiya.netlify.app/Photos/krish-satasiya.jpg",
+      "datePublished": "2026-05-21",
+      "dateModified": "2026-05-21",
+      "author": {
+        "@type": "Person",
+        "@id": "https://krishsatasiya.netlify.app/#person"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://krishsatasiya.netlify.app/#organization"
+      },
+      "mainEntityOfPage": "https://krishsatasiya.netlify.app/project/prescripto"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "@id": "https://krishsatasiya.netlify.app/project/hirix#article",
+      "headline": "Hirix Case Study — Centralized Job Board & Recruitment Portal",
+      "description": "Technical case study of Hirix: a high-performance MERN job board platform with automated n8n workflows.",
+      "url": "https://krishsatasiya.netlify.app/project/hirix",
+      "image": "https://krishsatasiya.netlify.app/Photos/krish-satasiya.jpg",
+      "datePublished": "2026-05-21",
+      "dateModified": "2026-05-21",
+      "author": {
+        "@type": "Person",
+        "@id": "https://krishsatasiya.netlify.app/#person"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://krishsatasiya.netlify.app/#organization"
+      },
+      "mainEntityOfPage": "https://krishsatasiya.netlify.app/project/hirix"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "@id": "https://krishsatasiya.netlify.app/project/quarix#article",
+      "headline": "Quarix Case Study — High Performance File Storage Platform",
+      "description": "Architecture breakdown of Quarix: a modern cloud storage platform built using Next.js 15 and Appwrite.",
+      "url": "https://krishsatasiya.netlify.app/project/quarix",
+      "image": "https://krishsatasiya.netlify.app/Photos/krish-satasiya.jpg",
+      "datePublished": "2026-05-21",
+      "dateModified": "2026-05-21",
+      "author": {
+        "@type": "Person",
+        "@id": "https://krishsatasiya.netlify.app/#person"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://krishsatasiya.netlify.app/#organization"
+      },
+      "mainEntityOfPage": "https://krishsatasiya.netlify.app/project/quarix"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "@id": "https://krishsatasiya.netlify.app/project/blogcms#article",
+      "headline": "Blog CMS Case Study — Dynamic Content Management System",
+      "description": "Technical case study of a custom WYSIWYG blogging platform built with MongoDB, Express, React, and Node.js.",
+      "url": "https://krishsatasiya.netlify.app/project/blogcms",
+      "image": "https://krishsatasiya.netlify.app/Photos/krish-satasiya.jpg",
+      "datePublished": "2026-05-21",
+      "dateModified": "2026-05-21",
+      "author": {
+        "@type": "Person",
+        "@id": "https://krishsatasiya.netlify.app/#person"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://krishsatasiya.netlify.app/#organization"
+      },
+      "mainEntityOfPage": "https://krishsatasiya.netlify.app/project/blogcms"
+    }
+  ]
+  </script>
   <style>
     #root > header, #root > main {
       display: none !important;
@@ -555,10 +655,12 @@
   <div id="root">
     <!-- Static SEO/AEO Fallback Content for Crawlers (Replaced by React on mount) -->
     <header>
+      <img src="https://krishsatasiya.netlify.app/favicon.svg" alt="Krish Satasiya Portfolio Logo" width="80" height="80" />
       <h1>Krish Satasiya — Full Stack MERN Developer & UI/UX Designer</h1>
       <nav>
         <ul>
           <li><a href="/">Home</a></li>
+          <li><a href="/about">About Page</a></li>
           <li><a href="/projects">Projects</a></li>
           <li><a href="/research">Research Papers</a></li>
           <li><a href="/design">Design Portfolio</a></li>
@@ -571,7 +673,7 @@
           <li><a href="/gallery">Gallery</a></li>
           <li><a href="/privacy-policy">Privacy Policy</a></li>
           <li><a href="/terms">Terms of Service</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <li><a href="/contact">Contact Page</a></li>
         </ul>
       </nav>
     </header>
@@ -582,25 +684,74 @@
           <h3>Professional Profile</h3>
           <p>Krish Satasiya is an accomplished Full Stack MERN Developer and UI/UX Designer currently pursuing a Computer Engineering degree at Silver Oak University, Ahmedabad. He possesses a track record of building over 26 web applications, earning more than 54 industry credentials from top-tier providers like AWS, Google Cloud, and MongoDB, and securing victories in four national-level hackathons.</p>
           <h3>Core Competencies & Technology Stack</h3>
-          <p>Specializing in the development of modern web applications, Krish leverages MongoDB, ExpressJS, ReactJS, NodeJS, and NextJS to build scalable, high-performance backends and intuitive user interfaces. His design process relies heavily on Figma for producing premium design systems and responsive layout prototypes.</p>
+          <p>Specializing in the development of modern web applications, Krish leverages a robust technology stack:</p>
+          <ul>
+            <li><strong>Frontend Stack:</strong> ReactJS, NextJS, TypeScript, HTML5, CSS3, Tailwind CSS.</li>
+            <li><strong>Backend & Database:</strong> NodeJS, ExpressJS, MongoDB, PostgreSQL, GraphQL.</li>
+            <li><strong>DevOps & Cloud:</strong> AWS, Google Cloud, Docker, Kubernetes, Firebase, CI/CD.</li>
+            <li><strong>Design Tools:</strong> Figma, Adobe Illustrator, Adobe AfterEffects, UI/UX systems.</li>
+          </ul>
         </section>
         
         <section>
           <h2>Featured Case Studies & Software Engineering Projects</h2>
           <h3>Prescripto — AI Medical Booking System</h3>
-          <p>An advanced AI-powered medical appointment system designed to optimize healthcare access. This application won 2nd Rank at the E-CELL Tech Fest 2025, showcasing robust backend integration and user-centric frontend experiences built with the MERN stack.</p>
+          <p>An advanced AI-powered medical appointment system designed to optimize healthcare access. Key details:</p>
+          <ul>
+            <li>Won 2nd Rank at the E-CELL Tech Fest 2025.</li>
+            <li>Features automated doctor scheduling and EMR integrations.</li>
+            <li>Built with MongoDB, Express.js, React, and Node.js.</li>
+          </ul>
           <h3>Hirix — Premium Job Board & Recruitment Portal</h3>
-          <p>A high-performance employment platform designed for modern recruitment workflows. It features real-time search functionality, structured database architectures, and secure user authentication to streamline the hiring process for organizations and job seekers alike.</p>
+          <p>A high-performance employment platform designed for modern recruitment workflows. Key features:</p>
+          <ul>
+            <li>Real-time advanced search and filter functionality.</li>
+            <li>Centralized applicant tracking system (ATS) with Clerk authentication.</li>
+            <li>Integrated automated workflows using n8n and Sentry monitoring.</li>
+          </ul>
           <h3>Quarix & Blog CMS — Scalable Content Platforms</h3>
-          <p>A suite of dynamic content platforms engineered to demonstrate performance optimization, state management practices, and micro-animations that deliver rich, engaging web experiences for content editors and end-users.</p>
+          <p>A suite of dynamic content platforms engineered for scalability and performance. Deliverables include:</p>
+          <ul>
+            <li>Custom CMS with WYSIWYG editor and SEO tools.</li>
+            <li>Optimized frontend architectures with premium micro-animations.</li>
+            <li>Clean state management practices for heavy interactive loads.</li>
+          </ul>
         </section>
 
         <section>
           <h2>Professional Contact & Collaboration</h2>
           <h3>Inquiries & Freelance Opportunities</h3>
-          <p>For project consultations, engineering roles, speaking engagements, or freelance inquiries, contact directly at: krishsatasiya44@gmail.com. Collaborative proposals are welcome from clients and teams globally.</p>
+          <p>For project consultations, engineering roles, speaking engagements, or freelance inquiries, contact directly:</p>
+          <ul>
+            <li>Email address: krishsatasiya44@gmail.com</li>
+            <li>Freelancing platforms: <a href="https://www.fiverr.com/satasiyakrish1" target="_blank" rel="noopener noreferrer">Fiverr (5★ rated)</a> and <a href="https://www.upwork.com/freelancers/satasiyakrish1" target="_blank" rel="noopener noreferrer">Upwork (Top Rated)</a></li>
+            <li>Social Profiles & Channels: 
+              <a href="https://github.com/satasiyakrish1" target="_blank" rel="noopener noreferrer">GitHub</a>, 
+              <a href="https://linkedin.com/in/satasiyakrish1" target="_blank" rel="noopener noreferrer">LinkedIn</a>, 
+              <a href="https://x.com/satasiyakrish1" target="_blank" rel="noopener noreferrer">Twitter/X</a>, 
+              <a href="https://www.instagram.com/satasiyakrish1" target="_blank" rel="noopener noreferrer">Instagram</a>, 
+              <a href="https://www.facebook.com/satasiyakrish1" target="_blank" rel="noopener noreferrer">Facebook</a>, 
+              <a href="https://medium.com/@satasiyakrish1" target="_blank" rel="noopener noreferrer">Medium</a>, 
+              <a href="https://www.credly.com/users/satasiyakrish1/" target="_blank" rel="noopener noreferrer">Credly</a>
+            </li>
+          </ul>
           <h3>Primary Location & Geographic Reach</h3>
           <p>Based in Ahmedabad, Gujarat, India, offering professional software engineering services locally and digitally to companies worldwide.</p>
+        </section>
+
+        <section id="citations-and-references">
+          <h2>Sources, Citations & Verified References</h2>
+          <h3>Author Attribution</h3>
+          <p>This portfolio website is authored, created, and published by <strong>Krish Satasiya</strong>. All professional achievements, academic credentials, and software engineering project metrics presented across this site are verified through the following official sources, organizations, and references:</p>
+          <ul>
+            <li><strong>Research Publications & Scholarly Articles:</strong> "AI-Driven Remote Patient Monitoring Using Wearables and IoT" published in the <a href="https://ijdieret.in/IJDI-ERET/Journal-Issues/June-2026-Vol-15-No-1" target="_blank" rel="noopener noreferrer">IJDI-ERET Journal (Vol 15, No 1, June 2026)</a>.</li>
+            <li><strong>Verified Academic Credentials:</strong> Computer Engineering degree records at <a href="https://silveroakuni.ac.in" target="_blank" rel="noopener noreferrer">Silver Oak University</a>, Ahmedabad.</li>
+            <li><strong>Professional Certifications:</strong> 54+ industry credentials issued via <a href="https://www.credly.com/users/satasiyakrish1/" target="_blank" rel="noopener noreferrer">Credly Certification Profiles</a> (including Google Cloud, AWS, MongoDB, Red Hat, and GitHub).</li>
+            <li><strong>Developer Source Code & Repositories:</strong> Public code repositories, contributions, and project documentation hosted on <a href="https://github.com/satasiyakrish1" target="_blank" rel="noopener noreferrer">GitHub (satasiyakrish1)</a>.</li>
+            <li><strong>Verified Professional Networks:</strong> Professional validation and career endorsements via <a href="https://linkedin.com/in/satasiyakrish1" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>.</li>
+            <li><strong>Verified Physical Location:</strong> <a href="https://krishsatasiya.netlify.app/#location" target="_blank" rel="noopener noreferrer">Ahmedabad, Gujarat, India</a></li>
+            <li><strong>Publisher Digital Location:</strong> <a href="https://ijdieret.in" target="_blank" rel="noopener noreferrer">IJDI-ERET Journal Digital Library</a></li>
+          </ul>
         </section>
       </article>
     </main>

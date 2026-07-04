@@ -3,10 +3,11 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Navbar.css';
 
 const NAV_LINKS = [
-  { label: 'Skills', href: '/#skills' },
+  { label: 'About', href: '/about' },
   { label: 'Projects', href: '/projects' },
   { label: 'Research', href: '/research' },
   { label: 'Creativity', href: '/design' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 const MORE_LINKS = [
@@ -16,6 +17,7 @@ const MORE_LINKS = [
   { label: 'Freelancing', href: '/freelancing' },
   { label: 'Community', href: '/community' },
   { label: 'Speaking', href: '/speaking' },
+  { label: 'References', href: '/references' },
   { label: 'Gallery', href: '/gallery' },
 ];
 

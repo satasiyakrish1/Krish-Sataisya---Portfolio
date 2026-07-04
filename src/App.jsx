@@ -23,13 +23,15 @@ import Sitemap from './pages/Sitemap';
 import Links from './pages/Links';
 import DocViewer from './pages/DocViewer';
 import Gallery from './pages/Gallery';
+import ContactPage from './pages/ContactPage';
+import TermsOfService from './pages/TermsOfService';
 import CustomCursor from './components/CustomCursor';
 import './App.css';
 
 const BARE_ROUTES = ['/links'];
 const NO_PAD_ROUTES = ['/cv', '/resume'];
 const NO_FOOTER_ROUTES = ['/cv', '/resume'];
-const NO_LG_PAD_ROUTES = ['/achievements', '/education', '/experience', '/freelancing', '/community', '/speaking', '/sitemap', '/gallery'];
+const NO_LG_PAD_ROUTES = ['/achievements', '/education', '/experience', '/freelancing', '/community', '/speaking', '/sitemap', '/gallery', '/contact'];
 
 const SEO_META = {
   '/': {
@@ -115,6 +117,26 @@ const SEO_META = {
   '/project/blogcms': {
     title: 'Blog CMS Case Study | Dynamic Content Management',
     desc: 'Deep-dive into the custom MERN Blog Content Management System designed and coded by Krish Satasiya.'
+  },
+  '/contact': {
+    title: 'Contact Krish Satasiya | Full Stack MERN Developer',
+    desc: 'Get in touch with Krish Satasiya for freelance projects, job opportunities, or technical collaboration.'
+  },
+  '/terms': {
+    title: 'Terms of Service | Krish Satasiya',
+    desc: 'Terms of service and usage regulations for Krish Satasiya\'s official portfolio website.'
+  },
+  '/examples': {
+    title: 'Project Examples & Showcase | Krish Satasiya',
+    desc: 'Case studies and live code examples of Full Stack MERN applications built by Krish Satasiya.'
+  },
+  '/about': {
+    title: 'About Krish Satasiya | MERN Developer & UI/UX Designer',
+    desc: 'Biography and professional background of Krish Satasiya, full stack developer and designer.'
+  },
+  '/references': {
+    title: 'References & Publications | Krish Satasiya',
+    desc: 'Scholarly citations, publications, and professional references for Krish Satasiya.'
   }
 };
 
@@ -142,6 +164,40 @@ function AppInner() {
     setMeta('meta[name="twitter:description"]', 'content', currentMeta.desc);
     setMeta('meta[name="twitter:image"]', 'content', 'https://krishsatasiya.netlify.app/Photos/krish-satasiya.jpg');
     setMeta('link[rel="canonical"]', 'href', `https://krishsatasiya.netlify.app${pathname}`);
+
+    const schemaId = 'dynamic-seo-jsonld';
+    const pageType = ['/projects', '/design', '/gallery', '/achievements', '/research', '/examples', '/references'].includes(pathname)
+      ? 'CollectionPage'
+      : ['/', '/about', '/experience', '/education', '/freelancing', '/community', '/speaking', '/links', '/contact'].includes(pathname)
+        ? 'AboutPage'
+        : 'WebPage';
+
+    const pageJsonLd = {
+      "@context": "https://schema.org",
+      "@type": pageType,
+      "@id": `https://krishsatasiya.netlify.app${pathname === '/' ? '' : pathname}#webpage`,
+      "name": currentMeta.title,
+      "description": currentMeta.desc,
+      "url": `https://krishsatasiya.netlify.app${pathname === '/' ? '' : pathname}`,
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://krishsatasiya.netlify.app/#website"
+      },
+      "about": {
+        "@type": "Person",
+        "@id": "https://krishsatasiya.netlify.app/#person"
+      }
+    };
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.id = schemaId;
+    script.textContent = JSON.stringify(pageJsonLd);
+    document.head.appendChild(script);
+
+    return () => {
+      document.getElementById(schemaId)?.remove();
+    };
   }, [pathname]);
 
   const isBare = BARE_ROUTES.includes(pathname);
@@ -177,6 +233,11 @@ function AppInner() {
           <Route path="/contributions" element={<ContributionsList />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/links" element={<Links />} />
+          <Route path="/about" element={<Home />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/terms" element={<TermsOfService />} />
+          <Route path="/examples" element={<ProjectsPage />} />
+          <Route path="/references" element={<ResearchPapers />} />
           <Route path="/cv" element={<DocViewer type="cv" />} />
           <Route path="/resume" element={<DocViewer type="resume" />} />
           <Route path="*" element={<Navigate to="/" replace />} />

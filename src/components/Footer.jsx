@@ -18,10 +18,16 @@ export default function Footer() {
               Sitemap
             </Link>
             <Link to="/privacy-policy" className="footer__social-link font-mono text-xs uppercase text-gray-400 hover:text-white transition-colors">
-              Privacy Policy
+              Privacy
             </Link>
-            <Link to="/links" className="footer__social-link font-mono text-xs uppercase text-gray-400 hover:text-white transition-colors">
-              Linktree
+            <Link to="/terms" className="footer__social-link font-mono text-xs uppercase text-gray-400 hover:text-white transition-colors">
+              Terms
+            </Link>
+            <Link to="/contact" className="footer__social-link font-mono text-xs uppercase text-gray-400 hover:text-white transition-colors">
+              Contact
+            </Link>
+            <Link to="/examples" className="footer__social-link font-mono text-xs uppercase text-gray-400 hover:text-white transition-colors">
+              Examples
             </Link>
             <Link to="/resume" className="footer__social-link font-mono text-xs uppercase text-gray-400 hover:text-white transition-colors">
               Resume

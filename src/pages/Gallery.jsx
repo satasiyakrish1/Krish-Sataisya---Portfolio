@@ -122,7 +122,7 @@ const JSON_LD = {
     },
     {
       '@type': 'Person',
-      '@id': 'https://krishsatasiya.netlify.app/#krish',
+      '@id': 'https://krishsatasiya.netlify.app/#person',
       name: 'Krish Satasiya',
       alternateName: 'Krish',
       description: 'Full Stack MERN Developer, UI/UX Designer, and active tech community contributor from Ahmedabad, Gujarat, India.',
@@ -132,9 +132,15 @@ const JSON_LD = {
       worksFor: { '@type': 'Organization', name: 'Silver Oak University' },
       address: { '@type': 'PostalAddress', addressLocality: 'Ahmedabad', addressRegion: 'Gujarat', addressCountry: 'IN' },
       sameAs: [
-        'https://www.linkedin.com/in/krishsatasiya',
-        'https://github.com/krishsatasiya',
-        'https://twitter.com/krishsatasiya',
+        'https://github.com/satasiyakrish1',
+        'https://linkedin.com/in/satasiyakrish1',
+        'https://x.com/satasiyakrish1',
+        'https://www.instagram.com/satasiyakrish1',
+        'https://www.facebook.com/satasiyakrish1',
+        'https://medium.com/@satasiyakrish1',
+        'https://www.credly.com/users/satasiyakrish1/',
+        'https://www.fiverr.com/satasiyakrish1',
+        'https://www.upwork.com/freelancers/satasiyakrish1'
       ],
     },
   ],

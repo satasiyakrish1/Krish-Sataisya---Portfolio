@@ -170,14 +170,16 @@ function AppInner() {
       ? 'CollectionPage'
       : pathname === '/contact'
         ? 'ContactPage'
-        : ['/', '/about', '/experience', '/education', '/freelancing', '/community', '/speaking', '/links'].includes(pathname)
-          ? 'AboutPage'
-          : 'WebPage';
+        : pathname.startsWith('/project/')
+          ? 'Article'
+          : ['/', '/about', '/experience', '/education', '/freelancing', '/community', '/speaking', '/links'].includes(pathname)
+            ? 'AboutPage'
+            : 'WebPage';
 
     const pageJsonLd = {
       "@context": "https://schema.org",
       "@type": pageType,
-      "@id": `https://krishsatasiya.netlify.app${pathname === '/' ? '' : pathname}#webpage`,
+      "@id": `https://krishsatasiya.netlify.app${pathname === '/' ? '' : pathname}#${pageType === 'Article' ? 'article' : 'webpage'}`,
       "name": currentMeta.title,
       "description": currentMeta.desc,
       "url": `https://krishsatasiya.netlify.app${pathname === '/' ? '' : pathname}`,
@@ -186,12 +188,94 @@ function AppInner() {
         "@id": "https://krishsatasiya.netlify.app/#website"
       },
       "about": [
-        { "@type": "Person", "@id": "https://krishsatasiya.netlify.app/#person" },
-        { "@type": "Organization", "@id": "https://krishsatasiya.netlify.app/#organization" },
-        { "@type": "Brand", "@id": "https://krishsatasiya.netlify.app/#brand" },
-        { "@type": "Place", "@id": "https://krishsatasiya.netlify.app/#location" }
+        {
+          "@type": "Person",
+          "@id": "https://krishsatasiya.netlify.app/#person",
+          "name": "Krish Satasiya",
+          "url": "https://krishsatasiya.netlify.app",
+          "image": "https://krishsatasiya.netlify.app/Photos/krish-satasiya.jpg",
+          "sameAs": [
+            "https://github.com/satasiyakrish1",
+            "https://linkedin.com/in/satasiyakrish1",
+            "https://x.com/satasiyakrish1",
+            "https://www.instagram.com/satasiyakrish1",
+            "https://www.facebook.com/satasiyakrish1",
+            "https://medium.com/@satasiyakrish1",
+            "https://www.credly.com/users/satasiyakrish1/",
+            "https://www.fiverr.com/satasiyakrish1",
+            "https://www.upwork.com/freelancers/satasiyakrish1"
+          ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://krishsatasiya.netlify.app/#organization",
+          "name": "Krish Satasiya Portfolio",
+          "url": "https://krishsatasiya.netlify.app",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://krishsatasiya.netlify.app/favicon.svg",
+            "width": 512,
+            "height": 512
+          },
+          "sameAs": [
+            "https://github.com/satasiyakrish1",
+            "https://linkedin.com/in/satasiyakrish1",
+            "https://x.com/satasiyakrish1",
+            "https://www.instagram.com/satasiyakrish1",
+            "https://www.facebook.com/satasiyakrish1",
+            "https://medium.com/@satasiyakrish1",
+            "https://www.credly.com/users/satasiyakrish1/",
+            "https://www.fiverr.com/satasiyakrish1",
+            "https://www.upwork.com/freelancers/satasiyakrish1"
+          ]
+        },
+        {
+          "@type": "Brand",
+          "@id": "https://krishsatasiya.netlify.app/#brand",
+          "name": "Krish Satasiya Portfolio",
+          "logo": "https://krishsatasiya.netlify.app/favicon.svg",
+          "url": "https://krishsatasiya.netlify.app",
+          "sameAs": [
+            "https://github.com/satasiyakrish1",
+            "https://linkedin.com/in/satasiyakrish1",
+            "https://x.com/satasiyakrish1",
+            "https://www.instagram.com/satasiyakrish1",
+            "https://www.facebook.com/satasiyakrish1",
+            "https://medium.com/@satasiyakrish1",
+            "https://www.credly.com/users/satasiyakrish1/",
+            "https://www.fiverr.com/satasiyakrish1",
+            "https://www.upwork.com/freelancers/satasiyakrish1"
+          ]
+        },
+        {
+          "@type": "Place",
+          "@id": "https://krishsatasiya.netlify.app/#location",
+          "name": "Ahmedabad, Gujarat, India",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Ahmedabad",
+            "addressRegion": "Gujarat",
+            "addressCountry": "IN"
+          }
+        }
       ]
     };
+
+    if (pageType === 'Article') {
+      pageJsonLd.headline = currentMeta.title;
+      pageJsonLd.image = "https://krishsatasiya.netlify.app/Photos/krish-satasiya.jpg";
+      pageJsonLd.author = {
+        "@type": "Person",
+        "@id": "https://krishsatasiya.netlify.app/#person"
+      };
+      pageJsonLd.publisher = {
+        "@type": "Organization",
+        "@id": "https://krishsatasiya.netlify.app/#organization"
+      };
+      pageJsonLd.datePublished = "2026-05-21";
+      pageJsonLd.dateModified = "2026-05-21";
+      pageJsonLd.mainEntityOfPage = `https://krishsatasiya.netlify.app${pathname}`;
+    }
 
     const script = document.createElement('script');
     script.type = 'application/ld+json';

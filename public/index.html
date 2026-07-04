@@ -209,77 +209,27 @@
         "@type": "EntryPoint",
         "urlTemplate": "https://krishsatasiya.netlify.app/?q={search_term_string}"
       },
-      "query-input": "required name=search_term_string"
+      "query-input": {
+        "@type": "PropertyValueSpecification",
+        "valueName": "search_term_string",
+        "valueRequired": true
+      }
     }
   }
   </script>
 
   <!-- 3. SiteNavigationElement — Google Sitelinks (sub-links under search result) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "name": "Krish Satasiya Portfolio Navigation",
-    "description": "Key sections of Krish Satasiya's professional portfolio",
-    "itemListElement": [
-      {
-        "@type": "SiteNavigationElement",
-        "position": 1,
-        "name": "Projects",
-        "description": "26+ full stack web development projects including Prescripto (AI medical system), Hirix (job platform), and Quarix",
-        "url": "https://krishsatasiya.netlify.app/projects"
-      },
-      {
-        "@type": "SiteNavigationElement",
-        "position": 2,
-        "name": "Achievements & Certifications",
-        "description": "54+ industry certifications from Google Cloud, AWS, MongoDB, Red Hat, GitHub and 4 national hackathon wins",
-        "url": "https://krishsatasiya.netlify.app/achievements"
-      },
-      {
-        "@type": "SiteNavigationElement",
-        "position": 3,
-        "name": "Research Papers",
-        "description": "Published research on AI, IoT healthcare monitoring, and preventive healthcare technology",
-        "url": "https://krishsatasiya.netlify.app/research"
-      },
-      {
-        "@type": "SiteNavigationElement",
-        "position": 4,
-        "name": "Experience",
-        "description": "Professional full stack development and UI/UX design experience",
-        "url": "https://krishsatasiya.netlify.app/experience"
-      },
-      {
-        "@type": "SiteNavigationElement",
-        "position": 5,
-        "name": "Design Portfolio",
-        "description": "UI/UX and graphic design projects showcasing creative expertise",
-        "url": "https://krishsatasiya.netlify.app/design"
-      },
-      {
-        "@type": "SiteNavigationElement",
-        "position": 6,
-        "name": "Freelancing",
-        "description": "Freelance web development and design services — Fiverr 5★ & Upwork Top Rated",
-        "url": "https://krishsatasiya.netlify.app/freelancing"
-      },
-      {
-        "@type": "SiteNavigationElement",
-        "position": 7,
-        "name": "Community",
-        "description": "15 community roles across IEEE, GDG, AWS Cloud Club, GirlScript and more",
-        "url": "https://krishsatasiya.netlify.app/community"
-      },
-      {
-        "@type": "SiteNavigationElement",
-        "position": 8,
-        "name": "Education",
-        "description": "Computer Engineering at Silver Oak University, Ahmedabad",
-        "url": "https://krishsatasiya.netlify.app/education"
-      }
-    ]
-  }
+  [
+    {"@context": "https://schema.org", "@type": "SiteNavigationElement", "name": "Projects", "url": "https://krishsatasiya.netlify.app/projects"},
+    {"@context": "https://schema.org", "@type": "SiteNavigationElement", "name": "Achievements & Certifications", "url": "https://krishsatasiya.netlify.app/achievements"},
+    {"@context": "https://schema.org", "@type": "SiteNavigationElement", "name": "Research Papers", "url": "https://krishsatasiya.netlify.app/research"},
+    {"@context": "https://schema.org", "@type": "SiteNavigationElement", "name": "Experience", "url": "https://krishsatasiya.netlify.app/experience"},
+    {"@context": "https://schema.org", "@type": "SiteNavigationElement", "name": "Design Portfolio", "url": "https://krishsatasiya.netlify.app/design"},
+    {"@context": "https://schema.org", "@type": "SiteNavigationElement", "name": "Freelancing", "url": "https://krishsatasiya.netlify.app/freelancing"},
+    {"@context": "https://schema.org", "@type": "SiteNavigationElement", "name": "Community", "url": "https://krishsatasiya.netlify.app/community"},
+    {"@context": "https://schema.org", "@type": "SiteNavigationElement", "name": "Education", "url": "https://krishsatasiya.netlify.app/education"}
+  ]
   </script>
 
   <!-- 4. BreadcrumbList -->
@@ -449,35 +399,18 @@
       "@id": "https://krishsatasiya.netlify.app/#person",
       "name": "Krish Satasiya"
     },
+    "brand": {
+      "@type": "Brand",
+      "@id": "https://krishsatasiya.netlify.app/#brand",
+      "name": "Krish Satasiya Portfolio",
+      "logo": "https://krishsatasiya.netlify.app/favicon.svg"
+    },
     "contactPoint": {
       "@type": "ContactPoint",
       "email": "krishsatasiya44@gmail.com",
-      "contactType": "professional",
+      "contactType": "customer support",
       "availableLanguage": ["English", "Hindi", "Gujarati"]
     },
-    "sameAs": [
-      "https://github.com/satasiyakrish1",
-      "https://linkedin.com/in/satasiyakrish1",
-      "https://x.com/satasiyakrish1",
-      "https://www.instagram.com/satasiyakrish1",
-      "https://www.facebook.com/satasiyakrish1",
-      "https://medium.com/@satasiyakrish1",
-      "https://www.credly.com/users/satasiyakrish1/",
-      "https://www.fiverr.com/satasiyakrish1",
-      "https://www.upwork.com/freelancers/satasiyakrish1"
-    ]
-  }
-  </script>
-
-  <!-- 8b. Brand Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Brand",
-    "@id": "https://krishsatasiya.netlify.app/#brand",
-    "name": "Krish Satasiya Portfolio",
-    "logo": "https://krishsatasiya.netlify.app/favicon.svg",
-    "url": "https://krishsatasiya.netlify.app",
     "sameAs": [
       "https://github.com/satasiyakrish1",
       "https://linkedin.com/in/satasiyakrish1",

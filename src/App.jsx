@@ -166,115 +166,55 @@ function AppInner() {
     setMeta('link[rel="canonical"]', 'href', `https://krishsatasiya.netlify.app${pathname}`);
 
     const schemaId = 'dynamic-seo-jsonld';
-    const pageType = ['/projects', '/design', '/gallery', '/achievements', '/research', '/examples', '/references'].includes(pathname)
-      ? 'CollectionPage'
-      : pathname === '/contact'
-        ? 'ContactPage'
-        : pathname.startsWith('/project/')
-          ? 'Article'
-          : ['/', '/about', '/experience', '/education', '/freelancing', '/community', '/speaking', '/links'].includes(pathname)
-            ? 'AboutPage'
-            : 'WebPage';
+    document.getElementById(schemaId)?.remove();
+
+    const isCollection = ['/projects', '/design', '/gallery', '/achievements', '/research', '/examples', '/references'].includes(pathname);
+    const isArticle = pathname.startsWith('/project/');
+    const isAbout = ['/', '/about', '/experience', '/education', '/freelancing', '/community', '/speaking', '/links'].includes(pathname);
+    const pageType = isCollection ? 'CollectionPage' : isArticle ? 'Article' : isAbout ? 'AboutPage' : 'WebPage';
+    const pageUrl = `https://krishsatasiya.netlify.app${pathname === '/' ? '' : pathname}`;
+    const anchorId = isArticle ? 'article' : 'webpage';
 
     const pageJsonLd = {
       "@context": "https://schema.org",
       "@type": pageType,
-      "@id": `https://krishsatasiya.netlify.app${pathname === '/' ? '' : pathname}#${pageType === 'Article' ? 'article' : 'webpage'}`,
+      "@id": `${pageUrl}#${anchorId}`,
       "name": currentMeta.title,
       "description": currentMeta.desc,
-      "url": `https://krishsatasiya.netlify.app${pathname === '/' ? '' : pathname}`,
+      "url": pageUrl,
+      "inLanguage": "en-US",
       "isPartOf": {
         "@type": "WebSite",
         "@id": "https://krishsatasiya.netlify.app/#website"
       },
-      "about": [
-        {
-          "@type": "Person",
-          "@id": "https://krishsatasiya.netlify.app/#person",
-          "name": "Krish Satasiya",
-          "url": "https://krishsatasiya.netlify.app",
-          "image": "https://krishsatasiya.netlify.app/Photos/krish-satasiya.jpg",
-          "sameAs": [
-            "https://github.com/satasiyakrish1",
-            "https://linkedin.com/in/satasiyakrish1",
-            "https://x.com/satasiyakrish1",
-            "https://www.instagram.com/satasiyakrish1",
-            "https://www.facebook.com/satasiyakrish1",
-            "https://medium.com/@satasiyakrish1",
-            "https://www.credly.com/users/satasiyakrish1/",
-            "https://www.fiverr.com/satasiyakrish1",
-            "https://www.upwork.com/freelancers/satasiyakrish1"
-          ]
-        },
-        {
-          "@type": "Organization",
-          "@id": "https://krishsatasiya.netlify.app/#organization",
-          "name": "Krish Satasiya Portfolio",
-          "url": "https://krishsatasiya.netlify.app",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://krishsatasiya.netlify.app/favicon.svg",
-            "width": 512,
-            "height": 512
-          },
-          "sameAs": [
-            "https://github.com/satasiyakrish1",
-            "https://linkedin.com/in/satasiyakrish1",
-            "https://x.com/satasiyakrish1",
-            "https://www.instagram.com/satasiyakrish1",
-            "https://www.facebook.com/satasiyakrish1",
-            "https://medium.com/@satasiyakrish1",
-            "https://www.credly.com/users/satasiyakrish1/",
-            "https://www.fiverr.com/satasiyakrish1",
-            "https://www.upwork.com/freelancers/satasiyakrish1"
-          ]
-        },
-        {
-          "@type": "Brand",
-          "@id": "https://krishsatasiya.netlify.app/#brand",
-          "name": "Krish Satasiya Portfolio",
-          "logo": "https://krishsatasiya.netlify.app/favicon.svg",
-          "url": "https://krishsatasiya.netlify.app",
-          "sameAs": [
-            "https://github.com/satasiyakrish1",
-            "https://linkedin.com/in/satasiyakrish1",
-            "https://x.com/satasiyakrish1",
-            "https://www.instagram.com/satasiyakrish1",
-            "https://www.facebook.com/satasiyakrish1",
-            "https://medium.com/@satasiyakrish1",
-            "https://www.credly.com/users/satasiyakrish1/",
-            "https://www.fiverr.com/satasiyakrish1",
-            "https://www.upwork.com/freelancers/satasiyakrish1"
-          ]
-        },
-        {
-          "@type": "Place",
-          "@id": "https://krishsatasiya.netlify.app/#location",
-          "name": "Ahmedabad, Gujarat, India",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Ahmedabad",
-            "addressRegion": "Gujarat",
-            "addressCountry": "IN"
-          }
-        }
-      ]
+      "about": {
+        "@type": "Person",
+        "@id": "https://krishsatasiya.netlify.app/#person",
+        "name": "Krish Satasiya"
+      },
+      "author": {
+        "@type": "Person",
+        "@id": "https://krishsatasiya.netlify.app/#person",
+        "name": "Krish Satasiya"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://krishsatasiya.netlify.app/#organization",
+        "name": "Krish Satasiya Portfolio"
+      }
     };
 
-    if (pageType === 'Article') {
+    if (isArticle) {
       pageJsonLd.headline = currentMeta.title;
-      pageJsonLd.image = "https://krishsatasiya.netlify.app/Photos/krish-satasiya.jpg";
-      pageJsonLd.author = {
-        "@type": "Person",
-        "@id": "https://krishsatasiya.netlify.app/#person"
-      };
-      pageJsonLd.publisher = {
-        "@type": "Organization",
-        "@id": "https://krishsatasiya.netlify.app/#organization"
+      pageJsonLd.image = {
+        "@type": "ImageObject",
+        "url": "https://krishsatasiya.netlify.app/Photos/krish-satasiya.jpg",
+        "width": 1200,
+        "height": 630
       };
       pageJsonLd.datePublished = "2026-05-21";
-      pageJsonLd.dateModified = "2026-05-21";
-      pageJsonLd.mainEntityOfPage = `https://krishsatasiya.netlify.app${pathname}`;
+      pageJsonLd.dateModified = "2026-07-04";
+      pageJsonLd.mainEntityOfPage = `${pageUrl}#${anchorId}`;
     }
 
     const script = document.createElement('script');

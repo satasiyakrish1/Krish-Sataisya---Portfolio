@@ -168,9 +168,11 @@ function AppInner() {
     const schemaId = 'dynamic-seo-jsonld';
     const pageType = ['/projects', '/design', '/gallery', '/achievements', '/research', '/examples', '/references'].includes(pathname)
       ? 'CollectionPage'
-      : ['/', '/about', '/experience', '/education', '/freelancing', '/community', '/speaking', '/links', '/contact'].includes(pathname)
-        ? 'AboutPage'
-        : 'WebPage';
+      : pathname === '/contact'
+        ? 'ContactPage'
+        : ['/', '/about', '/experience', '/education', '/freelancing', '/community', '/speaking', '/links'].includes(pathname)
+          ? 'AboutPage'
+          : 'WebPage';
 
     const pageJsonLd = {
       "@context": "https://schema.org",
@@ -183,10 +185,12 @@ function AppInner() {
         "@type": "WebSite",
         "@id": "https://krishsatasiya.netlify.app/#website"
       },
-      "about": {
-        "@type": "Person",
-        "@id": "https://krishsatasiya.netlify.app/#person"
-      }
+      "about": [
+        { "@type": "Person", "@id": "https://krishsatasiya.netlify.app/#person" },
+        { "@type": "Organization", "@id": "https://krishsatasiya.netlify.app/#organization" },
+        { "@type": "Brand", "@id": "https://krishsatasiya.netlify.app/#brand" },
+        { "@type": "Place", "@id": "https://krishsatasiya.netlify.app/#location" }
+      ]
     };
 
     const script = document.createElement('script');

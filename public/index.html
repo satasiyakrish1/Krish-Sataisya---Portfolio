@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" itemscope itemtype="https://schema.org/WebPage">
+<html lang="en" dir="ltr">
 <head>
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -393,7 +393,12 @@
     "publisher": {
       "@type": "Organization",
       "name": "IJDI-ERET Journal",
-      "url": "https://ijdieret.in"
+      "url": "https://ijdieret.in",
+      "location": {
+        "@type": "Place",
+        "name": "IJDI-ERET Journal Digital Library",
+        "url": "https://ijdieret.in"
+      }
     },
     "url": "https://ijdieret.in/IJDI-ERET/Journal-Issues/June-2026-Vol-15-No-1",
     "sameAs": "https://ijdieret.in/IJDI-ERET/Journal-Issues/June-2026-Vol-15-No-1",
@@ -413,6 +418,10 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "@id": "https://krishsatasiya.netlify.app/#organization",
+    "location": {
+      "@type": "Place",
+      "@id": "https://krishsatasiya.netlify.app/#location"
+    },
     "name": "Krish Satasiya Portfolio",
     "url": "https://krishsatasiya.netlify.app",
     "logo": {
@@ -479,9 +488,7 @@
     "name": "Full Stack MERN Web Development",
     "description": "Premium full-stack web development using MongoDB, ExpressJS, ReactJS, NodeJS, and NextJS.",
     "provider": {
-      "@type": "Organization",
-      "name": "Krish Satasiya | Full Stack MERN Developer & UI/UX Designer — Ahmedabad, India",
-      "url": "https://krishsatasiya.netlify.app"
+      "@id": "https://krishsatasiya.netlify.app/#organization"
     },
     "areaServed": "Worldwide",
     "serviceType": "Web Development"
@@ -495,9 +502,7 @@
     "name": "UI/UX & Graphics Design",
     "description": "Professional user experience and interface design for web and mobile platforms using Figma.",
     "provider": {
-      "@type": "Organization",
-      "name": "Krish Satasiya | Full Stack MERN Developer & UI/UX Designer — Ahmedabad, India",
-      "url": "https://krishsatasiya.netlify.app"
+      "@id": "https://krishsatasiya.netlify.app/#organization"
     },
     "areaServed": "Worldwide",
     "serviceType": "Design"
@@ -519,6 +524,11 @@
     }
   }
   </script>
+  <style>
+    #root > header, #root > main {
+      display: none !important;
+    }
+  </style>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -550,25 +560,33 @@
       </nav>
     </header>
     <main>
-      <section>
-        <h2>About Krish Satasiya</h2>
-        <p>Krish Satasiya is a Full Stack MERN Developer, UI/UX Designer, and Computer Engineering student at Silver Oak University, Ahmedabad. He has built 26+ projects, earned 54+ industry certifications from Google Cloud, AWS, MongoDB, GitHub, and Red Hat, and won 4 national hackathons.</p>
-        <p>Specializing in React.js, Node.js, Express.js, MongoDB, Next.js, and Figma, Krish delivers high-performance web applications and premium design systems.</p>
-      </section>
-      <section>
-        <h2>Featured Projects & Case Studies</h2>
-        <ul>
-          <li><strong>Prescripto:</strong> AI-powered medical appointment system (E-CELL 2nd Rank Winner).</li>
-          <li><strong>Hirix:</strong> High-performance Job Board and recruitment platform built on MERN.</li>
-          <li><strong>Quarix:</strong> Technical breakdown and UI/UX design showcase.</li>
-          <li><strong>Blog CMS:</strong> Dynamic content management system.</li>
-        </ul>
-      </section>
-      <section>
-        <h2>Contact Information</h2>
-        <p>Email: krishsatasiya44@gmail.com</p>
-        <p>Location: Ahmedabad, Gujarat, India</p>
-      </section>
+      <article>
+        <section>
+          <h2>About Krish Satasiya</h2>
+          <h3>Professional Profile</h3>
+          <p>Krish Satasiya is an accomplished Full Stack MERN Developer and UI/UX Designer currently pursuing a Computer Engineering degree at Silver Oak University, Ahmedabad. He possesses a track record of building over 26 web applications, earning more than 54 industry credentials from top-tier providers like AWS, Google Cloud, and MongoDB, and securing victories in four national-level hackathons.</p>
+          <h3>Core Competencies & Technology Stack</h3>
+          <p>Specializing in the development of modern web applications, Krish leverages MongoDB, ExpressJS, ReactJS, NodeJS, and NextJS to build scalable, high-performance backends and intuitive user interfaces. His design process relies heavily on Figma for producing premium design systems and responsive layout prototypes.</p>
+        </section>
+        
+        <section>
+          <h2>Featured Case Studies & Software Engineering Projects</h2>
+          <h3>Prescripto — AI Medical Booking System</h3>
+          <p>An advanced AI-powered medical appointment system designed to optimize healthcare access. This application won 2nd Rank at the E-CELL Tech Fest 2025, showcasing robust backend integration and user-centric frontend experiences built with the MERN stack.</p>
+          <h3>Hirix — Premium Job Board & Recruitment Portal</h3>
+          <p>A high-performance employment platform designed for modern recruitment workflows. It features real-time search functionality, structured database architectures, and secure user authentication to streamline the hiring process for organizations and job seekers alike.</p>
+          <h3>Quarix & Blog CMS — Scalable Content Platforms</h3>
+          <p>A suite of dynamic content platforms engineered to demonstrate performance optimization, state management practices, and micro-animations that deliver rich, engaging web experiences for content editors and end-users.</p>
+        </section>
+
+        <section>
+          <h2>Professional Contact & Collaboration</h2>
+          <h3>Inquiries & Freelance Opportunities</h3>
+          <p>For project consultations, engineering roles, speaking engagements, or freelance inquiries, contact directly at: krishsatasiya44@gmail.com. Collaborative proposals are welcome from clients and teams globally.</p>
+          <h3>Primary Location & Geographic Reach</h3>
+          <p>Based in Ahmedabad, Gujarat, India, offering professional software engineering services locally and digitally to companies worldwide.</p>
+        </section>
+      </article>
     </main>
   </div>
 </body>

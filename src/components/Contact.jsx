@@ -76,6 +76,34 @@ export default function Contact() {
                 github.com/satasiyakrish1
               </a>
             </div>
+
+            <div className="mt-8 pt-8 border-t border-gray-200">
+              <h3 className="font-mono text-xs uppercase tracking-wider text-gray-500 mb-4">Entity Verification & EEAT Details</h3>
+              <div className="grid grid-cols-2 gap-4 text-sm">
+                <div>
+                  <span className="block text-gray-500 text-xs uppercase font-mono">Person</span>
+                  <span className="font-semibold text-black">Krish Satasiya</span>
+                </div>
+                <div>
+                  <span className="block text-gray-500 text-xs uppercase font-mono">Brand</span>
+                  <span className="font-semibold text-black">Krish Satasiya Portfolio</span>
+                </div>
+                <div>
+                  <span className="block text-gray-500 text-xs uppercase font-mono">Service</span>
+                  <span className="font-semibold text-black">Full Stack MERN Web Development</span>
+                </div>
+                <div>
+                  <span className="block text-gray-500 text-xs uppercase font-mono">Location</span>
+                  <span className="font-semibold text-black">Ahmedabad, Gujarat, India</span>
+                </div>
+                <div className="col-span-2">
+                  <span className="block text-gray-500 text-xs uppercase font-mono">Publisher Affiliation</span>
+                  <a href="https://ijdieret.in" target="_blank" rel="noopener noreferrer" className="font-semibold text-black hover:text-primary transition-colors underline">
+                    IJDI-ERET Journal
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Right: form */}

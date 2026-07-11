@@ -111,7 +111,7 @@ export default function Hero() {
               I help businesses design, build, and scale digital products with the right technology — whatever your stage or vision.
             </p>
             <div className="hero__actions">
-              <a href="#work" className="btn-primary">View My Work</a>
+              <a href="#projects" className="btn-primary">View My Work</a>
               <a href="#contact" className="btn-secondary">Let's Connect →</a>
             </div>
           </div>

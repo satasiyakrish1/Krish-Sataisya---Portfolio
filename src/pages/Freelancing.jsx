@@ -41,6 +41,32 @@ const PLATFORMS = [
     tags: ['Frontend Dev', 'API Automation', 'SEO Optimization'],
   },
   {
+    id: 'thelandstories',
+    platform: 'The Land Stories',
+    badge: 'Website Build',
+    role: 'Website Developer',
+    period: '2026',
+    logoText: 'TLS',
+    logoBg: '#fafafa',
+    logoImg: '/logos/thelandstories.png',
+    description: 'Designed and developed the official website for The Land Stories.',
+    tags: ['Website Design', 'Development', 'React'],
+    link: 'https://thelandstories.com/'
+  },
+  {
+    id: 'ekaantik',
+    platform: 'ekaantik',
+    badge: 'Website Build',
+    role: 'Website Developer',
+    period: '2026',
+    logoText: 'EKT',
+    logoBg: '#fafafa',
+    logoImg: '',
+    description: 'Designed and developed the official website for ekaantik.',
+    tags: ['Website Design', 'Development', 'React'],
+    link: 'http://ekaantik.com/'
+  },
+  {
     id: '03',
     platform: 'Claro',
     badge: 'Identity',
@@ -297,6 +323,8 @@ const FREELANCE_WORKS = [
   { id: '01', title: 'Full Stack MERN Web Application', client: 'Upwork', period: '2024 – Present', category: 'Development', status: 'Ongoing' },
   { id: '02', title: 'Custom Landing Pages & React Builds', client: 'Fiverr', period: '2024 – Present', category: 'Development & UI/UX', status: 'Ongoing' },
   { id: '03', title: 'Responsive Dashboards & Frontend Products', client: 'Freelancer', period: '2024 – Present', category: 'Development', status: 'Ongoing' },
+  { id: 'thelandstories-work', title: 'The Land Stories Web Platform', client: 'The Land Stories', period: '2026', category: 'Development & Design', status: 'Completed', link: 'https://thelandstories.com/' },
+  { id: 'ekaantik-work', title: 'ekaantik Web Platform Build', client: 'ekaantik', period: '2026', category: 'Development & Design', status: 'Completed', link: 'http://ekaantik.com/' },
   { id: '04', title: 'Claro Corporate Logo Identity', client: 'Claro', period: '2026', category: 'Branding & Design', status: 'Completed' },
   { id: '05', title: 'OKYNUS Custom T-Shirts & Stationery', client: 'OKYNUS', period: '2026', category: 'Print Design', status: 'Completed' },
   { id: '06', title: 'Syncromedix Medical Brand Logo', client: 'Syncromedix', period: '2026', category: 'Branding & Design', status: 'Completed' },
@@ -368,6 +396,7 @@ const BRANDS = [
   { name: 'Shikshan Na Prerna Pushpa', icon: '/logos/Baldevpari.com.png' },
   { name: 'Syncromedix', icon: '/assets/logos/Syncromedix.png' },
   { name: 'THE KESAR MANGO', icon: '/assets/logos/THE KESAR MANGO.png' },
+  { name: 'The Land Stories', icon: '/logos/thelandstories.png' },
   { name: 'Vltronix', icon: '/assets/logos/Vltronix.png' },
 ];
 

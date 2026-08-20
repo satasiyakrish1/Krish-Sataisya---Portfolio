@@ -3,6 +3,7 @@ export const EVENT_GROUPS = [
     org: 'GDG Gandhinagar & GDG Cloud Gandhinagar',
     color: '#4285F4',
     events: [
+      { date: '01 Aug 2026', name: 'Antigravity Final Series', chapter: 'GDG Cloud Gandhinagar + GDG Gandhinagar' },
       { date: '26 Jul 2026', name: 'Build With Antigravity – Final Edition', chapter: 'GDG Gandhinagar + GDG Cloud Gandhinagar' },
       { date: '14 Jun 2026', name: 'Build with Antigravity Series : Part 3', chapter: 'GDG Gandhinagar + GDG Cloud Gandhinagar' },
       { date: '21 May 2026', name: 'Agentic Premier League - Gandhinagar', chapter: 'GDG Cloud Gandhinagar' },

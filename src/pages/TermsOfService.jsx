@@ -5,27 +5,32 @@ const SECTIONS = [
   {
     id: '01',
     title: 'Agreement to Terms',
-    body: 'By accessing or using the website krishsatasiya.netlify.app, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use this website.',
+    body: 'By accessing this portfolio or engaging in professional freelance services with Krish Satasiya, you enter into a binding legal contract and agree to adhere to these Terms of Service. If you do not agree to these terms, you are prohibited from utilizing any deliverables or initiating any project engagement.',
   },
   {
     id: '02',
-    title: 'Intellectual Property',
-    body: 'All content, including design assets, project case studies, custom source code samples, and portfolio text, is the property of Krish Satasiya unless specified otherwise. Unauthorized duplication, distribution, or commercial reuse without explicit written consent is prohibited.',
+    title: 'Intellectual Property & Copyright Transfer',
+    body: 'In accordance with the Indian Copyright Act, 1957, all custom source code, design layouts, digital assets, and documentation created remain the sole intellectual property of Krish Satasiya. Legal ownership and copyright transfer to the client occur exclusively upon the receipt and clearance of the final payment in full. Any unauthorized usage, staging, or deployment of the deliverables prior to final settlement is strictly prohibited and constitutes copyright infringement.',
   },
   {
     id: '03',
-    title: 'Service Engagements & Agreements',
-    body: 'Any freelance, consulting, or project contract entered into via Fiverr, Upwork, or direct email communication will be governed by its own respective contract or service agreements. The materials provided on this website are for informational and showcase purposes.',
+    title: 'Advance Deposit & Earnest Money Forfeiture',
+    body: 'A 30% advance deposit is required before any project initiation. Pursuant to Section 74 of the Indian Contract Act, 1872, this deposit serves as earnest money and reasonable liquidated damages for reserved resource capacity. In the event of project cancellation, scope abandonment, or unilateral termination by the client, this 30% advance payment is strictly non-refundable and will be forfeited in full.',
   },
   {
     id: '04',
-    title: 'Disclaimer of Liability',
-    body: 'This website and its content are provided on an "as-is" and "as-available" basis without any warranties of any kind. Krish Satasiya shall not be held liable for any damages arising out of the use or inability to use the site or its project code samples.',
+    title: 'Reciprocal Promises & Communication Delays',
+    body: 'Under Section 54 of the Indian Contract Act, 1872, the developer’s performance is contingent upon the client fulfilling reciprocal promises, including providing feedback and assets. If the client fails to communicate, respond to queries, or answer phone calls for a period exceeding 3 consecutive business days, the developer reserves the right to immediately pause work, void all project deadlines, and apply a 10% delay surcharge to the final invoice to resume.',
   },
   {
     id: '05',
-    title: 'Governing Law',
-    body: 'These terms shall be governed and construed in accordance with the laws of India, Gujarat, and applicable international laws. Any disputes arising in connection with these terms shall be subject to the exclusive jurisdiction of the courts of Ahmedabad, Gujarat, India.',
+    title: 'Final Settlement Window & Service Suspension',
+    body: 'The remaining balance must be cleared within 3 to 4 business days upon project completion or delivery. Under Section 55 of the Indian Contract Act, 1872, time is of the essence for payment obligations. Failure to settle the dues within this timeframe will lead to the immediate revocation of licenses, suspension of active hosting, removal of deployed source code, and a late fee surcharge.',
+  },
+  {
+    id: '06',
+    title: 'Governing Law & Dispute Resolution',
+    body: 'These Terms of Service and all project engagements are governed by the laws of India, specifically the Indian Contract Act, 1872. Any legal disputes, claims, or arbitration arising from or related to the services shall be subject to the exclusive jurisdiction of the competent courts in Ahmedabad, Gujarat, India.',
   },
 ];
 
@@ -43,7 +48,7 @@ export default function TermsOfService() {
               <span className="pp-hero__badge-dot" />
               Terms of Service
             </div>
-            <span className="pp-hero__date font-mono">Last Review: May 2026</span>
+            <span className="pp-hero__date font-mono">Last Review: August 2026</span>
           </div>
 
           <h1 className="pp-hero__title">

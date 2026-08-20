@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './Gallery.css';
+import AsciifyImage from '../components/AsciifyImage';
 
 // Helper: (filename, label, span, year, description)
 const g = (file, label, span = 'normal', year = 2026, desc = '') => ({
@@ -146,8 +147,9 @@ const JSON_LD = {
   ],
 };
 
-function GalleryImage({ src, alt, title, className }) {
+function GalleryImage({ src, alt, title, className, index }) {
   const [isLoaded, setIsLoaded] = useState(false);
+  const isEager = index < 4;
   return (
     <div className="gl-image-container">
       {!isLoaded && <div className="gl-image-shimmer" />}
@@ -157,8 +159,9 @@ function GalleryImage({ src, alt, title, className }) {
         title={title}
         className={`${className} ${isLoaded ? 'visible' : ''}`}
         onLoad={() => setIsLoaded(true)}
-        loading="lazy"
+        loading={isEager ? "eager" : "lazy"}
         decoding="async"
+        fetchPriority={isEager ? "high" : "low"}
       />
     </div>
   );
@@ -187,6 +190,21 @@ export default function Gallery() {
     document.head.appendChild(script);
     return () => document.getElementById('gallery-jsonld')?.remove();
   }, []);
+
+  // Preload adjacent pages' images
+  useEffect(() => {
+    const preloadPageImages = (pageNumber) => {
+      if (pageNumber < 1 || pageNumber > totalPages) return;
+      const sIndex = (pageNumber - 1) * IMAGES_PER_PAGE;
+      const imgs = GALLERY.slice(sIndex, sIndex + IMAGES_PER_PAGE);
+      imgs.forEach((item) => {
+        const img = new Image();
+        img.src = item.src;
+      });
+    };
+    preloadPageImages(currentPage + 1);
+    preloadPageImages(currentPage - 1);
+  }, [currentPage, totalPages]);
 
   // Scroll-in animation
   useEffect(() => {
@@ -285,6 +303,7 @@ export default function Gallery() {
                 alt={item.alt}
                 title={`${item.alt} — Double-click to view full`}
                 className="gl-item__img"
+                index={i}
               />
               <figcaption className="gl-item__overlay">
                 <span className="gl-item__label">{item.label}</span>
@@ -337,7 +356,7 @@ export default function Gallery() {
 
           {/* Image */}
           <div className="gl-lb__frame" onClick={(e) => e.stopPropagation()}>
-            <img
+            <AsciifyImage
               src={currentImages[lightbox].src}
               alt={currentImages[lightbox].alt}
               className="gl-lb__img"

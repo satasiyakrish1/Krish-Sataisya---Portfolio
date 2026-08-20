@@ -1,5 +1,6 @@
 import React, { useRef, useCallback, useState } from 'react';
 import './Testimonials.css';
+import DecryptReveal from './DecryptReveal';
 
 const STARS = (n) =>
   Array.from({ length: 5 }, (_, i) => (
@@ -71,6 +72,7 @@ const TESTIMONIALS = [
 
 function TestimonialCard({ t, onHoldStart, onHoldEnd }) {
   const [held, setHeld] = useState(false);
+  const [hovered, setHovered] = useState(false);
   const timerRef = useRef(null);
   const firedRef = useRef(false);
 
@@ -106,9 +108,11 @@ function TestimonialCard({ t, onHoldStart, onHoldEnd }) {
       onTouchEnd={handleTouchEnd}
       onTouchCancel={handleTouchEnd}
       onClick={handleTap}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
     >
       <div className="tc-stars">{STARS(t.rating)}</div>
-      <p className="tc-text">"{t.text}"</p>
+      <p className="tc-text">"<DecryptReveal text={t.text} isHovered={hovered || held} />"</p>
       <div className="tc-author">
         <p className="tc-author__name">
           {t.link ? (

@@ -68,7 +68,7 @@ export default function CustomCursor() {
     };
 
     const render = () => {
-      const ease = 0.14;
+      const ease = 0.65;
       cursor.x += (mouse.x - cursor.x) * ease;
       cursor.y += (mouse.y - cursor.y) * ease;
 

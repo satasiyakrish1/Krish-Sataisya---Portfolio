@@ -3,6 +3,8 @@ export const EVENT_GROUPS = [
     org: 'GDG Gandhinagar & GDG Cloud Gandhinagar',
     color: '#4285F4',
     events: [
+      { date: '01 Nov 2026', name: 'DevFest Gandhinagar 26', chapter: 'GDG Gandhinagar + GDG Cloud Gandhinagar' },
+      { date: '26 Sep 2026', name: 'Code With Kids', chapter: 'GDG Gandhinagar + GDG Cloud Gandhinagar' },
       { date: '01 Aug 2026', name: 'Antigravity Final Series', chapter: 'GDG Cloud Gandhinagar + GDG Gandhinagar' },
       { date: '26 Jul 2026', name: 'Build With Antigravity – Final Edition', chapter: 'GDG Gandhinagar + GDG Cloud Gandhinagar' },
       { date: '14 Jun 2026', name: 'Build with Antigravity Series : Part 3', chapter: 'GDG Gandhinagar + GDG Cloud Gandhinagar' },
@@ -197,6 +199,13 @@ export const EVENT_GROUPS = [
     color: '#FBBC04',
     events: [
       { date: '12 Jun 2026', name: "Prompt War '26", chapter: 'H2skill & Google For Dev' },
+    ],
+  },
+  {
+    org: 'GDG Baroda',
+    color: '#4285F4',
+    events: [
+      { date: '25 Oct 2026', name: 'DevFest Baroda 2026', chapter: 'GDG Baroda' },
     ],
   },
 ];

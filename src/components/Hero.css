@@ -2,12 +2,34 @@
   position: relative;
   overflow: hidden;
   background: #fff;
-  padding-top: 4rem; /* Buffer for sticky navbar */
+  padding-top: 4rem;
+  /* Buffer for sticky navbar */
 }
 
 @media (min-width: 1024px) {
   .hero {
     padding-top: 6rem;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 10rem;
+    background-image: url('../../public/assets/HERO BG.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .hero>.container {
+    position: relative;
+    z-index: 1;
   }
 }
 
@@ -27,8 +49,9 @@
 
 @media (min-width: 1024px) {
   .hero__grid {
-    grid-template-columns: 1.2fr 0.8fr; /* More stable ratio */
-    gap: 4rem;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 3.5rem;
+    align-items: center;
   }
 }
 
@@ -93,10 +116,25 @@
   pointer-events: none;
 }
 
-.hero__box-handle.tl { top: -6px; left: -6px; }
-.hero__box-handle.tr { top: -6px; right: -6px; }
-.hero__box-handle.bl { bottom: -6px; left: -6px; }
-.hero__box-handle.br { bottom: -6px; right: -6px; }
+.hero__box-handle.tl {
+  top: -6px;
+  left: -6px;
+}
+
+.hero__box-handle.tr {
+  top: -6px;
+  right: -6px;
+}
+
+.hero__box-handle.bl {
+  bottom: -6px;
+  left: -6px;
+}
+
+.hero__box-handle.br {
+  bottom: -6px;
+  right: -6px;
+}
 
 .hero__name {
   font-family: var(--font-handwritten);
@@ -169,7 +207,8 @@
 }
 
 /* ── Buttons ── */
-.btn-primary, .btn-secondary {
+.btn-primary,
+.btn-secondary {
   padding: 0.85rem 1.75rem;
   font-family: var(--font-mono);
   font-size: 0.75rem;
@@ -183,7 +222,9 @@
 }
 
 @media (min-width: 768px) {
-  .btn-primary, .btn-secondary {
+
+  .btn-primary,
+  .btn-secondary {
     padding: 1rem 2rem;
     font-size: 0.85rem;
   }
@@ -228,7 +269,8 @@
   position: relative;
   width: 100%;
   max-width: 320px;
-  margin: 0 auto; /* Center on mobile */
+  margin: 0 auto;
+  /* Center on mobile */
   aspect-ratio: 1 / 1;
   transform: rotate(2deg);
   transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
@@ -249,8 +291,10 @@
 
 @media (min-width: 1024px) {
   .hero__photo-wrapper {
-    max-width: 400px; /* Slightly larger for desktop */
-    margin: 0 4rem 0 auto; /* Shifted slightly to the left on desktop */
+    max-width: 400px;
+    /* Slightly larger for desktop */
+    margin: 0 4rem 0 auto;
+    /* Shifted slightly to the left on desktop */
   }
 }
 
@@ -296,7 +340,7 @@
   font-family: var(--font-display);
   font-size: 6rem;
   font-weight: 800;
-  color: rgba(0,0,0,0.05);
+  color: rgba(0, 0, 0, 0.05);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -505,8 +549,14 @@
   }
 }
 
-.tag--light { background: #fff; }
-.tag--dark { background: #000; color: #fff; }
+.tag--light {
+  background: #fff;
+}
+
+.tag--dark {
+  background: #000;
+  color: #fff;
+}
 
 .card__footer {
   padding: 1.5rem;

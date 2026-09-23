@@ -206,6 +206,15 @@ const EVENTS = [
     tags: ['Webflow', 'No-Code', 'Community', 'Web Design'], badge: null,
     url: 'https://webflow.com',
   },
+  {
+    id: '24', name: 'GDG Baroda', community: 'GDG Baroda',
+    communityColor: '#4285F4', logoBg: '#4285F4', logoText: 'GDG',
+    type: 'Science & Technology', role: 'Community Volunteer',
+    date: '2026 – Present', duration: 'Present', location: 'Vadodara',
+    desc: 'Actively volunteering with GDG Baroda, supporting developer meetups, workshops, and large-scale conferences like DevFest Baroda 2026.',
+    tags: ['GDG', 'Community', 'DevFest', 'Volunteering'], badge: null,
+    url: 'https://gdg.community.dev/gdg-baroda/',
+  },
 ];
 
 const CATEGORIES = ['All', 'Science & Technology', 'Education', 'Arts & Culture', 'Environment'];
@@ -292,10 +301,10 @@ export default function Community() {
                   <div className="cm-event-row__top">
                     <div>
                       <h3 className="cm-event-row__name font-display">
-                        <a 
-                          href={ev.url} 
-                          target="_blank" 
-                          rel="noopener noreferrer" 
+                        <a
+                          href={ev.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           style={{ color: 'inherit', textDecoration: 'none' }}
                           onMouseEnter={(e) => e.currentTarget.style.color = '#4452FF'}
                           onMouseLeave={(e) => e.currentTarget.style.color = 'inherit'}

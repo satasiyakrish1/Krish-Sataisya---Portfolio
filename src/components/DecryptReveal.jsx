@@ -21,8 +21,7 @@ export default function DecryptReveal({ text, isHovered, speed = 80, className =
   };
 
   useEffect(() => {
-    const isDesktop = window.matchMedia('(min-width: 1024px)').matches;
-    if (isDesktop && !isHovered) {
+    if (!isHovered) {
       startScramble();
     } else {
       if (intervalRef.current) clearInterval(intervalRef.current);

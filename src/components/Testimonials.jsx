@@ -73,33 +73,17 @@ const TESTIMONIALS = [
 function TestimonialCard({ t, onHoldStart, onHoldEnd }) {
   const [held, setHeld] = useState(false);
   const [hovered, setHovered] = useState(false);
-  const timerRef = useRef(null);
-  const firedRef = useRef(false);
 
   const handleTouchStart = useCallback(() => {
-    firedRef.current = false;
-    onHoldStart(); // pause scroll animation
-    timerRef.current = setTimeout(() => {
-      firedRef.current = true;
-      setHeld(true);
-    }, 5000);
+    setHeld(true);
+    onHoldStart();
   }, [onHoldStart]);
 
   const handleTouchEnd = useCallback(() => {
-    clearTimeout(timerRef.current);
-    if (!firedRef.current) {
-      onHoldEnd(); // resume scroll if timer didn't fire
-    }
-    // if fired, keep blue; user taps again to reset
+    setHeld(false);
+    setHovered(false);
+    onHoldEnd();
   }, [onHoldEnd]);
-
-  const handleTap = useCallback(() => {
-    if (firedRef.current && held) {
-      firedRef.current = false;
-      setHeld(false);
-      onHoldEnd(); // resume scroll
-    }
-  }, [held, onHoldEnd]);
 
   return (
     <div
@@ -107,9 +91,8 @@ function TestimonialCard({ t, onHoldStart, onHoldEnd }) {
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
       onTouchCancel={handleTouchEnd}
-      onClick={handleTap}
       onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
+      onMouseLeave={() => { setHovered(false); setHeld(false); }}
     >
       <div className="tc-stars">{STARS(t.rating)}</div>
       <p className="tc-text">"<DecryptReveal text={t.text} isHovered={hovered || held} />"</p>

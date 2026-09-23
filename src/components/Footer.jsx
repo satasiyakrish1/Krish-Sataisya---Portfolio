@@ -3,39 +3,114 @@ import { Link } from 'react-router-dom';
 import './Footer.css';
 
 export default function Footer() {
-  return (
-    <footer className="footer bg-white border-t border-black">
-      {/* Bottom bar */}
+  const openAiPrompt = (platform) => {
+    const prompt = encodeURIComponent("Who is Krish Satasiya? Tell me about his full stack development skills, projects, and work experience.");
+    const urls = {
+      chatgpt: `https://chatgpt.com?q=${prompt}`,
+      perplexity: `https://www.perplexity.ai/search?q=${prompt}`,
+      grok: `https://grok.com?q=${prompt}`,
+      claude: `https://claude.ai/new?q=${prompt}`
+    };
+    window.open(urls[platform] || urls.chatgpt, '_blank', 'noopener,noreferrer');
+  };
 
-      {/* Bottom bar */}
-      <div className="footer__bottom bg-black text-white py-6">
-        <div className="container flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="font-mono text-xs uppercase text-gray-400">
-            © {new Date().getFullYear()} Krish Satasiya. All rights reserved.
-          </p>
-          <div className="flex gap-6">
-            <Link to="/sitemap" className="footer__social-link font-mono text-xs uppercase text-gray-400 hover:text-white transition-colors">
-              Sitemap
-            </Link>
-            <Link to="/privacy-policy" className="footer__social-link font-mono text-xs uppercase text-gray-400 hover:text-white transition-colors">
-              Privacy
-            </Link>
-            <Link to="/terms" className="footer__social-link font-mono text-xs uppercase text-gray-400 hover:text-white transition-colors">
-              Terms
-            </Link>
-            <Link to="/contact" className="footer__social-link font-mono text-xs uppercase text-gray-400 hover:text-white transition-colors">
-              Contact
-            </Link>
-            <Link to="/examples" className="footer__social-link font-mono text-xs uppercase text-gray-400 hover:text-white transition-colors">
-              Examples
-            </Link>
-            <Link to="/resume" className="footer__social-link font-mono text-xs uppercase text-gray-400 hover:text-white transition-colors">
-              Resume
-            </Link>
-            <Link to="/cv" className="footer__social-link font-mono text-xs uppercase text-gray-400 hover:text-white transition-colors">
-              CV
-            </Link>
+  return (
+    <footer className="ar-image-footer">
+      <div className="ar-footer-row">
+        {/* Left: Copyright (Bold) & Legal */}
+        <div className="ar-left-block">
+          <span className="ar-copyright">
+            <strong className="ar-copyright-name">© {new Date().getFullYear()} Krish Satasiya.</strong> All rights reserved.
+          </span>
+          <Link to="/privacy-policy" className="ar-link">
+            Privacy Policy
+          </Link>
+          <Link to="/terms" className="ar-link">
+            Terms and Conditions
+          </Link>
+          <Link to="/resume" className="ar-link">
+            Resume
+          </Link>
+          <Link to="/cv" className="ar-link">
+            CV
+          </Link>
+        </div>
+
+        {/* Center: Explore with AI */}
+        <div className="ar-center-ai-block">
+          <span className="ar-ai-text">Explore with AI</span>
+          <div className="ar-ai-cards-row">
+            {/* ChatGPT */}
+            <button
+              type="button"
+              onClick={() => openAiPrompt('chatgpt')}
+              className="ar-ai-btn ar-ai-btn-chatgpt"
+              title="ChatGPT"
+              aria-label="ChatGPT"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M9.10911 8.56774V6.33162C9.10911 6.1433 9.1798 6.00202 9.34449 5.90794L13.8404 3.31881C14.4524 2.96576 15.182 2.80109 15.9351 2.80109C18.7596 2.80109 20.5486 4.99015 20.5486 7.3203C20.5486 7.48502 20.5486 7.67335 20.525 7.86168L15.8645 5.13124C15.5821 4.9665 15.2995 4.9665 15.0171 5.13124L9.10911 8.56774ZM19.607 17.2767V11.9336C19.607 11.6039 19.4656 11.3686 19.1833 11.2039L13.2754 7.76739L15.2054 6.66104C15.3701 6.567 15.5114 6.567 15.6761 6.66104L20.172 9.2502C21.4666 10.0035 22.3375 11.6039 22.3375 13.1574C22.3375 14.9462 21.2784 16.594 19.607 17.2767ZM7.7204 12.5693L5.7903 11.4395C5.62561 11.3454 5.55492 11.2041 5.55492 11.0158V5.83754C5.55492 3.31901 7.48502 1.41231 10.0978 1.41231C11.0865 1.41231 12.0043 1.74197 12.7812 2.33035L8.14429 5.01379C7.86193 5.17848 7.72064 5.41384 7.72064 5.74345L7.7204 12.5693ZM11.8749 14.97L9.10911 13.4166V10.1214L11.8749 8.56798L14.6405 10.1214V13.4166L11.8749 14.97ZM13.652 22.1256C12.6632 22.1256 11.7455 21.7961 10.9686 21.2076L15.6055 18.5243C15.8879 18.3595 16.0291 18.1243 16.0291 17.7945V10.9686L17.9829 12.0983C18.1476 12.1924 18.2183 12.3336 18.2183 12.522V17.7003C18.2183 20.2188 16.2645 22.1256 13.652 22.1256ZM8.07345 16.8768L3.57759 14.2876C2.28291 13.5343 1.41212 11.9339 1.41212 10.3804C1.41212 8.56799 2.49488 6.94389 4.16596 6.26124V11.6278C4.16596 11.9574 4.30729 12.1928 4.58966 12.3575L10.4742 15.7704L8.54414 16.8768C8.37946 16.9708 8.23812 16.9708 8.07345 16.8768ZM7.81469 20.737C5.15487 20.737 3.20119 18.7362 3.20119 16.2647C3.20119 16.0764 3.22478 15.8881 3.24818 15.6997L7.88513 18.3831C8.16749 18.5479 8.4501 18.5479 8.73246 18.3831L14.6405 14.9703V17.2064C14.6405 17.3947 14.5698 17.536 14.4051 17.63L9.90926 20.2192C9.29725 20.5723 8.56779 20.737 7.81469 20.737ZM13.652 23.5379C16.5001 23.5379 18.8773 21.5136 19.4189 18.8302C22.0551 18.1476 23.7498 15.6761 23.7498 13.1576C23.7498 11.5099 23.0438 9.90946 21.7726 8.75606C21.8904 8.26172 21.961 7.76739 21.961 7.2733C21.961 3.90744 19.2305 1.38873 16.0764 1.38873C15.441 1.38873 14.829 1.48276 14.217 1.69473C13.1576 0.659015 11.6983 0 10.0978 0C7.2497 0 4.87251 2.02414 4.33094 4.70754C1.69473 5.3902 0 7.86168 0 10.3801C0 12.0279 0.706059 13.6284 1.97714 14.7818C1.85946 15.2761 1.78881 15.7704 1.78881 16.2645C1.78881 19.6304 4.51926 22.1491 7.67335 22.1491C8.30877 22.1491 8.92079 22.055 9.53281 21.843C10.5919 22.8787 12.0513 23.5379 13.652 23.5379Z" />
+              </svg>
+            </button>
+
+            {/* Perplexity */}
+            <button
+              type="button"
+              onClick={() => openAiPrompt('perplexity')}
+              className="ar-ai-btn ar-ai-btn-perplexity"
+              title="Perplexity"
+              aria-label="Perplexity"
+            >
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.5757 5.98924H16.2142V0L10.4592 5.36246V0H9.50322V5.36246L3.74823 0V5.98924H1.38672V14.6185H3.7419V20L9.50322 14.8717V20H10.4592V14.8717L16.2204 20V14.6185H18.5757V5.98924ZM15.2518 2.20323V5.98924H11.1936L15.2518 2.20323ZM4.70423 2.20323L8.76247 5.98924H4.70423V2.20323ZM2.34272 13.6625V6.95156H8.74981L3.7419 11.5543V13.6625H2.34906H2.34272ZM4.6979 11.9721L9.50322 7.55935V13.5929L4.6979 17.8664V11.9721ZM15.2582 17.8664L10.4528 13.5929V7.55935L15.2582 11.9721V17.8664ZM17.6133 13.6625H16.2204V11.5543L11.2126 6.95156H17.6197V13.6625H17.6133Z" fill="#1FB8CD"/>
+              </svg>
+            </button>
+
+            {/* Grok */}
+            <button
+              type="button"
+              onClick={() => openAiPrompt('grok')}
+              className="ar-ai-btn ar-ai-btn-grok"
+              title="Grok"
+              aria-label="Grok"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M9.17494 14.6355L17.0707 8.79993C17.4578 8.51386 18.011 8.62544 18.1955 9.06983C19.1661 11.4134 18.7325 14.2297 16.8011 16.1634C14.8697 18.097 12.1824 18.5211 9.7262 17.5552L7.04297 18.7991C10.8915 21.4327 15.5648 20.7815 18.4852 17.8556C20.8016 15.5364 21.5191 12.3751 20.8482 9.52434L20.8543 9.5304C19.8815 5.34246 21.0935 3.66851 23.5761 0.245514C23.6348 0.164352 23.6936 0.0831905 23.7523 0L20.4855 3.27081V3.26066L9.17294 14.6375" />
+                <path d="M7.5431 16.0527C4.7808 13.4108 5.25705 9.3223 7.614 6.9646C9.35687 5.2196 12.2124 4.50742 14.7051 5.5544L17.3822 4.31668C16.9 3.96769 16.2819 3.59232 15.5725 3.32854C12.3665 2.00764 8.52801 2.66504 5.92179 5.27236C3.41485 7.78228 2.6265 11.6415 3.98029 14.9347C4.99156 17.3959 3.33379 19.1368 1.66385 20.8939C1.07208 21.5168 0.47828 22.1398 0 22.7992L7.54104 16.0547" />
+              </svg>
+            </button>
+
+            {/* Claude */}
+            <button
+              type="button"
+              onClick={() => openAiPrompt('claude')}
+              className="ar-ai-btn ar-ai-btn-claude"
+              title="Claude"
+              aria-label="Claude"
+            >
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.48 20L8.98 19.62L8.7 19L8.98 17.76L9.3 16.16L9.56 14.88L9.8 13.3L9.94 12.78L9.92 12.74L9.82 12.76L8.62 14.4L6.8 16.86L5.36 18.38L5.02 18.52L4.42 18.22L4.48 17.66L4.82 17.18L6.8 14.64L8 13.06L8.78 12.16L8.76 12.04H8.72L3.44 15.48L2.5 15.6L2.08 15.22L2.14 14.6L2.34 14.4L3.92 13.3L7.86 11.1L7.92 10.9L7.86 10.8H7.66L7 10.76L4.76 10.7L2.82 10.62L0.92 10.52L0.44 10.42L0 9.82L0.04 9.52L0.44 9.26L1.02 9.3L2.28 9.4L4.18 9.52L5.56 9.6L7.6 9.82H7.92L7.96 9.68L7.86 9.6L7.78 9.52L5.8 8.2L3.68 6.8L2.56 5.98L1.96 5.56L1.66 5.18L1.54 4.34L2.08 3.74L2.82 3.8L3 3.84L3.74 4.42L5.32 5.64L7.4 7.18L7.7 7.42L7.84 7.34V7.28L7.7 7.06L6.58 5.02L5.38 2.94L4.84 2.08L4.7 1.56C4.64666 1.38 4.62 1.18 4.62 0.96L5.24 0.120001L5.58 0L6.42 0.120001L6.76 0.420001L7.28 1.6L8.1 3.46L9.4 5.98L9.78 6.74L9.98 7.42L10.06 7.64H10.2V7.52L10.3 6.08L10.5 4.34L10.7 2.1L10.76 1.46L11.08 0.700001L11.7 0.300001L12.18 0.520001L12.58 1.1L12.52 1.46L12.3 3L11.82 5.42L11.52 7.06H11.7L11.9 6.84L12.72 5.76L14.1 4.04L14.7 3.36L15.42 2.6L15.88 2.24H16.74L17.36 3.18L17.08 4.16L16.2 5.28L15.46 6.22L14.4 7.64L13.76 8.78L13.82 8.86H13.96L16.34 8.34L17.64 8.12L19.16 7.86L19.86 8.18L19.94 8.5L19.66 9.18L18.02 9.58L16.1 9.96L13.24 10.64L13.2 10.66L13.24 10.72L14.52 10.84L15.08 10.88H16.44L18.96 11.06L19.62 11.5L20 12.02L19.94 12.44L18.92 12.94L17.56 12.62L14.36 11.86L13.28 11.6H13.12V11.68L14.04 12.58L15.7 14.08L17.8 16.02L17.9 16.5L17.64 16.9L17.36 16.86L15.52 15.46L14.8 14.84L13.2 13.5H13.1V13.64L13.46 14.18L15.42 17.12L15.52 18.02L15.38 18.3L14.86 18.48L14.32 18.38L13.16 16.78L11.98 14.96L11.02 13.34L10.92 13.42L10.34 19.46L10.08 19.76L9.48 20Z" fill="white"/>
+              </svg>
+            </button>
           </div>
+        </div>
+
+        {/* Right: Official Framer Creator Badge */}
+        <div className="ar-right-framer-block">
+          <a
+            href="https://framer.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ar-framer-creator-badge"
+            aria-label="Official Framer Creator"
+          >
+            <svg viewBox="0 0 8 12" width="8" height="12" fill="currentColor" className="ar-framer-logo">
+              <path d="M8 0L8 4L4 4L0 0Z" />
+              <path d="M0 4L4 4L8 8L0 8Z" />
+              <path d="M0 8L4 8L4 12Z" />
+            </svg>
+            <span className="ar-framer-creator-text">Official Framer Creator</span>
+          </a>
         </div>
       </div>
     </footer>

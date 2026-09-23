@@ -6,6 +6,7 @@ import Stats from '../components/Stats';
 import Technologies from '../components/Technologies';
 import Projects from '../components/Projects';
 import Testimonials from '../components/Testimonials';
+import Pricing from '../components/Pricing';
 import Contact from '../components/Contact';
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
       <Technologies />
       <Projects />
       <Testimonials />
+      <Pricing />
       <Contact />
     </div>
   );

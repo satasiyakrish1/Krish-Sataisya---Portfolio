@@ -37,9 +37,7 @@ const SECTIONS = [
     title: 'Project Cancellation, Outstanding Payments & Cancellation Charges',
     body: `In the event of project cancellation, suspension, or unilateral termination by the client after work has commenced, the client shall remain liable for payment for all work completed up to the cancellation date, including design, development, research, revisions, and other agreed services.
 
-The final amount payable shall be calculated based on the value of work completed, any approved additional expenses, and applicable cancellation charges, less any payments already received. The 30% advance deposit shall be adjusted against the total amount due and shall not automatically replace the client's obligation to pay for work completed and other agreed charges.
-
-If the total amount due exceeds the advance deposit, the client must pay the outstanding balance within 3–4 business days of receiving the final invoice. Any cancellation charge must be reasonable, disclosed in advance, and proportionate to the actual loss, work performed, and resources reserved, subject to applicable Indian law.
+The final amount payable shall be calculated based on the value of work completed, any approved additional expenses, and applicable cancellation charges, less any payments already received. The 30% advance deposit shall be adjusted against the total amount due and shall not automatically replace the client's obligation to pay for work completed and other agreed charges.If the total amount due exceeds the advance deposit, the client must pay the outstanding balance within 3–4 business days of receiving the final invoice. Any cancellation charge must be reasonable, disclosed in advance, and proportionate to the actual loss, work performed, and resources reserved, subject to applicable Indian law.
 
 Upon settlement of all outstanding dues, the client may use the paid-for deliverables in accordance with the agreed project terms. Unpaid deliverables shall remain subject to the intellectual property and usage restrictions specified in these Terms of Service.`,
   },

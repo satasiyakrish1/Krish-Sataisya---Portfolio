@@ -276,7 +276,8 @@
   transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.hero__photo-wrapper:hover {
+.hero__photo-wrapper:hover,
+.hero__photo-wrapper.is-active {
   transform: rotate(-4deg) translateX(-6px) scale(1.02);
 }
 
@@ -328,12 +329,74 @@
   z-index: 2;
 }
 
-.hero__photo-wrapper:hover .hero__img--default {
+.hero__photo-wrapper:hover .hero__img--default,
+.hero__photo-wrapper.is-active .hero__img--default {
   opacity: 0;
 }
 
-.hero__photo-wrapper:hover .hero__img--hover {
+.hero__photo-wrapper:hover .hero__img--hover,
+.hero__photo-wrapper.is-active .hero__img--hover {
   opacity: 1;
+}
+
+.hero__click-tip {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .hero__click-tip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    position: absolute;
+    bottom: 2.5rem;
+    right: -1.25rem;
+    background: #fff;
+    border: 1px solid #000;
+    padding: 0.5rem 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    box-shadow: 3px 3px 0 #000;
+    white-space: nowrap;
+    transform: rotate(4deg);
+    z-index: 10;
+    pointer-events: none;
+    animation: tipFloat 2.6s ease-in-out infinite;
+    transition: opacity 0.35s cubic-bezier(0.22, 0.8, 0.24, 1), transform 0.45s cubic-bezier(0.3, 1.6, 0.5, 1);
+    user-select: none;
+  }
+
+  .hero__photo-wrapper:hover .hero__click-tip,
+  .hero__photo-wrapper.is-active .hero__click-tip {
+    opacity: 0;
+    transform: rotate(8deg) translateY(-8px) scale(0.65);
+    pointer-events: none;
+  }
+}
+
+.hero__tip-sparkle {
+  display: inline-block;
+  animation: sparkleTwinkle 1.8s ease-in-out infinite;
+}
+
+@keyframes sparkleTwinkle {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.25) rotate(15deg);
+  }
+}
+
+@keyframes tipFloat {
+  0%, 100% {
+    transform: rotate(4deg) translateY(0);
+  }
+  50% {
+    transform: rotate(4deg) translateY(-4px);
+  }
 }
 
 .hero__photo-initial {

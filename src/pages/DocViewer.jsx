@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const DOCS = {
   cv: {
     label: 'Curriculum Vitae',
     short: 'CV',
     downloadUrl: 'https://docs.google.com/document/d/1nkAFtJFPve3sKFBC6_5Cf1w4AL847iJ5/export?format=pdf',
+    mobileUrl: 'https://docs.google.com/document/d/1nkAFtJFPve3sKFBC6_5Cf1w4AL847iJ5/view',
   },
   resume: {
     label: 'Resume',
@@ -16,6 +17,7 @@ const DOCS = {
         emoji: '🎨',
         desc: 'UI/UX & Design focused resume',
         downloadUrl: 'https://docs.google.com/document/d/1AO1doPUlODgsVvSWkFkdwr8xTnjUOGXk/export?format=pdf',
+        mobileUrl: 'https://docs.google.com/document/d/1AO1doPUlODgsVvSWkFkdwr8xTnjUOGXk/view',
       },
       {
         key: 'tech',
@@ -23,10 +25,13 @@ const DOCS = {
         emoji: '💻',
         desc: 'Full Stack MERN & Dev focused resume',
         downloadUrl: 'https://docs.google.com/document/d/18QZvIwIryJjHsif7rSN893-Y7M6pE-EG/export?format=pdf',
+        mobileUrl: 'https://docs.google.com/document/d/18QZvIwIryJjHsif7rSN893-Y7M6pE-EG/view',
       },
     ],
   },
 };
+
+const isMobile = () => /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 768;
 
 const styles = `
   .dv-page {
@@ -250,6 +255,22 @@ function PageShell({ badge, name, sub, children }) {
   );
 }
 
+const handleDocClick = (e, downloadUrl, mobileUrl) => {
+  e.preventDefault();
+  if (isMobile()) {
+    window.open(mobileUrl, '_blank', 'noopener,noreferrer');
+  } else {
+    const a = document.createElement('a');
+    a.href = downloadUrl;
+    a.download = '';
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  }
+};
+
 export default function DocViewer({ type }) {
   const doc = DOCS[type];
   if (!doc) return null;
@@ -265,7 +286,7 @@ export default function DocViewer({ type }) {
             <a
               key={v.key}
               href={v.downloadUrl}
-              download
+              onClick={(e) => handleDocClick(e, v.downloadUrl, v.mobileUrl)}
               target="_blank"
               rel="noopener noreferrer"
               className={`dv-dl-btn dv-dl-btn--${v.key}`}
@@ -291,7 +312,7 @@ export default function DocViewer({ type }) {
       <div className="dv-btn-group">
         <a
           href={doc.downloadUrl}
-          download
+          onClick={(e) => handleDocClick(e, doc.downloadUrl, doc.mobileUrl)}
           target="_blank"
           rel="noopener noreferrer"
           className="dv-dl-btn dv-dl-btn--cv"

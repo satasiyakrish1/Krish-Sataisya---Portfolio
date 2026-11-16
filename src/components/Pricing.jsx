@@ -21,16 +21,6 @@ const SUBSCRIPTION_FEATURES = [
 ];
 
 export default function Pricing() {
-  const scrollToContact = (e) => {
-    e.preventDefault();
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      window.location.href = 'mailto:krishsatasiya44@gmail.com?subject=Project%20Inquiry';
-    }
-  };
-
   return (
     <section className="pricing-section py-section" id="pricing">
       <div className="container relative">
@@ -75,8 +65,9 @@ export default function Pricing() {
 
             <div className="pricing-card__footer">
               <a
-                href="#contact"
-                onClick={scrollToContact}
+                href="https://topmate.io/satasiyakrish1/2411693"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="pricing-btn pricing-btn--primary font-mono"
               >
                 Book a Free Call →
@@ -122,11 +113,12 @@ export default function Pricing() {
 
             <div className="pricing-card__footer">
               <a
-                href="#contact"
-                onClick={scrollToContact}
+                href="https://topmate.io/satasiyakrish1/2411693"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="pricing-btn pricing-btn--white font-mono"
               >
-                Book a Free call →
+                Book a Free Call →
               </a>
             </div>
           </div>

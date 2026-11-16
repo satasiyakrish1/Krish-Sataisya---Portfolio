@@ -10,7 +10,7 @@
     <loc>https://krishsatasiya.netlify.app/</loc>
     <priority>1.0</priority>
     <changefreq>daily</changefreq>
-    <lastmod>2026-07-01</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <image:image>
       <image:loc>https://krishsatasiya.netlify.app/Photos/krish-satasiya.jpg</image:loc>
       <image:title>Krish Satasiya - Full Stack MERN Developer and UI/UX Designer from Ahmedabad</image:title>
@@ -23,7 +23,7 @@
     <loc>https://krishsatasiya.netlify.app/projects</loc>
     <priority>0.95</priority>
     <changefreq>weekly</changefreq>
-    <lastmod>2026-07-01</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <image:image>
       <image:loc>https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800</image:loc>
       <image:title>Krish Satasiya Full Stack Projects — 26+ Web Development Projects</image:title>
@@ -36,7 +36,7 @@
     <loc>https://krishsatasiya.netlify.app/achievements</loc>
     <priority>0.95</priority>
     <changefreq>weekly</changefreq>
-    <lastmod>2026-07-01</lastmod>
+    <lastmod>2026-11-16</lastmod>
   </url>
 
   <!-- Research Papers -->
@@ -44,7 +44,7 @@
     <loc>https://krishsatasiya.netlify.app/research</loc>
     <priority>0.90</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-07-01</lastmod>
+    <lastmod>2026-11-16</lastmod>
   </url>
 
   <!-- Design Projects -->
@@ -52,7 +52,7 @@
     <loc>https://krishsatasiya.netlify.app/design</loc>
     <priority>0.90</priority>
     <changefreq>weekly</changefreq>
-    <lastmod>2026-07-01</lastmod>
+    <lastmod>2026-11-16</lastmod>
   </url>
 
   <!-- Experience -->
@@ -60,7 +60,7 @@
     <loc>https://krishsatasiya.netlify.app/experience</loc>
     <priority>0.85</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-07-01</lastmod>
+    <lastmod>2026-11-16</lastmod>
   </url>
 
   <!-- Education -->
@@ -68,7 +68,7 @@
     <loc>https://krishsatasiya.netlify.app/education</loc>
     <priority>0.85</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-07-01</lastmod>
+    <lastmod>2026-11-16</lastmod>
   </url>
 
   <!-- Freelancing -->
@@ -76,7 +76,7 @@
     <loc>https://krishsatasiya.netlify.app/freelancing</loc>
     <priority>0.85</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-07-01</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <image:image>
       <image:loc>https://krishsatasiya.netlify.app/logos/Baldevpari.com.png</image:loc>
       <image:title>Shikshan Na Prerna Pushpa Logo — Baldev Pari Website</image:title>
@@ -96,7 +96,7 @@
     <loc>https://krishsatasiya.netlify.app/community</loc>
     <priority>0.85</priority>
     <changefreq>weekly</changefreq>
-    <lastmod>2026-07-01</lastmod>
+    <lastmod>2026-11-16</lastmod>
   </url>
 
   <!-- Contributions List -->
@@ -104,7 +104,7 @@
     <loc>https://krishsatasiya.netlify.app/contributions</loc>
     <priority>0.75</priority>
     <changefreq>weekly</changefreq>
-    <lastmod>2026-07-01</lastmod>
+    <lastmod>2026-11-16</lastmod>
   </url>
 
   <!-- Links / Linktree -->
@@ -112,7 +112,7 @@
     <loc>https://krishsatasiya.netlify.app/links</loc>
     <priority>0.80</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-07-01</lastmod>
+    <lastmod>2026-11-16</lastmod>
   </url>
 
   <!-- Project: Prescripto -->
@@ -120,7 +120,7 @@
     <loc>https://krishsatasiya.netlify.app/project/prescripto</loc>
     <priority>0.85</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-07-01</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <image:image>
       <image:loc>https://krishsatasiya.netlify.app/assets/prescripto-hero.png</image:loc>
       <image:title>Prescripto - AI-Powered Medical Appointment System by Krish Satasiya</image:title>
@@ -133,7 +133,7 @@
     <loc>https://krishsatasiya.netlify.app/project/hirix</loc>
     <priority>0.85</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-07-01</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <image:image>
       <image:loc>https://krishsatasiya.netlify.app/assets/hirix-hero.png</image:loc>
       <image:title>Hirix - Modern Job Board Platform by Krish Satasiya</image:title>
@@ -146,7 +146,7 @@
     <loc>https://krishsatasiya.netlify.app/project/quarix</loc>
     <priority>0.80</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-07-01</lastmod>
+    <lastmod>2026-11-16</lastmod>
   </url>
 
   <!-- Project: Blog CMS -->
@@ -154,7 +154,7 @@
     <loc>https://krishsatasiya.netlify.app/project/blogcms</loc>
     <priority>0.80</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-07-01</lastmod>
+    <lastmod>2026-11-16</lastmod>
   </url>
 
   <!-- Gallery -->
@@ -162,7 +162,7 @@
     <loc>https://krishsatasiya.netlify.app/gallery</loc>
     <priority>0.85</priority>
     <changefreq>weekly</changefreq>
-    <lastmod>2026-07-01</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <image:image>
       <image:loc>https://krishsatasiya.netlify.app/assets/gallery/IMG-20260502-WA0007.jpg</image:loc>
       <image:title>Krish Satasiya — Tech Event May 2026</image:title>
@@ -406,7 +406,7 @@
     <loc>https://krishsatasiya.netlify.app/privacy-policy</loc>
     <priority>0.30</priority>
     <changefreq>yearly</changefreq>
-    <lastmod>2026-07-01</lastmod>
+    <lastmod>2026-11-16</lastmod>
   </url>
 
 </urlset>

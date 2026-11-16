@@ -42,8 +42,8 @@ const TECH_CATEGORIES = [
       { name: 'AWS', icon: 'https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg' },
       { name: 'Google Cloud', icon: 'https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg' },
       { name: 'Netlify', icon: 'https://www.vectorlogo.zone/logos/netlify/netlify-icon.svg' },
-      { name: 'Railway', icon: 'https://railway.com/brand/logo-dark.svg' },
-      { name: 'Render', icon: 'https://avatars.githubusercontent.com/u/114033652?s=200&v=4' },
+      { name: 'Railway', icon: 'https://raw.githubusercontent.com/simple-icons/simple-icons/master/icons/railway.svg' },
+      { name: 'Render', icon: 'https://raw.githubusercontent.com/simple-icons/simple-icons/master/icons/render.svg' },
       { name: 'Vercel', icon: 'https://www.vectorlogo.zone/logos/vercel/vercel-icon.svg' },
       { name: 'Docker', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
       { name: 'Git', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
@@ -59,8 +59,8 @@ const TECH_CATEGORIES = [
       { name: 'Flutter', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg' },
       { name: 'Android', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg' },
       { name: 'WordPress', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg' },
-      { name: 'WooCommerce', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/WooCommerce_logo_%282015%29.svg/3840px-WooCommerce_logo_%282015%29.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail' },
-      { name: 'Odoo', icon: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/Odoo_Official_Logo.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original' },
+      { name: 'WooCommerce', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/woocommerce/woocommerce-original.svg' },
+      { name: 'Odoo', icon: 'https://raw.githubusercontent.com/simple-icons/simple-icons/master/icons/odoo.svg' },
       { name: 'Webflow', icon: 'https://cdn.simpleicons.org/webflow/4353FF' },
     ]
   },
@@ -68,37 +68,37 @@ const TECH_CATEGORIES = [
     id: 'creative', label: 'Creative Tools', skills: [
       { name: 'Figma', icon: 'https://www.vectorlogo.zone/logos/figma/figma-icon.svg' },
       { name: 'Blender', icon: 'https://www.vectorlogo.zone/logos/blender/blender-icon.svg' },
-      { name: 'SketchUp', icon: 'https://upload.wikimedia.org/wikipedia/commons/9/9c/SketchUp-Logo.png' },
+      { name: 'SketchUp', icon: 'https://raw.githubusercontent.com/simple-icons/simple-icons/master/icons/sketchup.svg' },
       { name: 'After Effects', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aftereffects/aftereffects-original.svg' },
       { name: 'Illustrator', icon: 'https://www.vectorlogo.zone/logos/adobe_illustrator/adobe_illustrator-icon.svg' },
       { name: 'Photoshop', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg' },
       { name: 'Premiere Pro', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/premierepro/premierepro-original.svg' },
       { name: 'Adobe XD', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xd/xd-plain.svg' },
       { name: 'Canva', icon: 'https://www.vectorlogo.zone/logos/canva/canva-icon.svg' },
-      { name: 'Affinity', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Affinity_%28App%29_Logo.svg/1280px-Affinity_%28App%29_Logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail' },
-      { name: 'Wondershare', icon: 'https://filmora.wondershare.com/favicon.ico' },
+      { name: 'Affinity', icon: 'https://cdn.worldvectorlogo.com/logos/affinity.svg' },
+      { name: 'Wondershare', icon: 'https://raw.githubusercontent.com/simple-icons/simple-icons/master/icons/wondersharefilmora.svg' },
       { name: 'DaVinci Resolve', icon: 'https://cdn.simpleicons.org/davinciresolve/000000' },
       { name: 'Inkscape', icon: 'https://cdn.simpleicons.org/inkscape/000000' },
-      { name: 'Spline', icon: 'https://logo.clearbit.com/spline.design' },
+      { name: 'Spline', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original.svg' },
       { name: 'Lottie', icon: 'https://lottiefiles.com/favicon.ico' },
       { name: 'Penpot', icon: 'https://cdn.simpleicons.org/penpot/000000' },
       { name: 'Uizard', icon: 'https://uizard.io/favicon.ico' },
       { name: 'Visily', icon: 'https://www.visily.ai/favicon.ico' },
       { name: 'Framer', icon: 'https://cdn.simpleicons.org/framer/000000' },
       { name: 'Miro', icon: '/logos/miro-icon.svg' },
-      { name: 'ProtoPie', icon: 'https://logo.clearbit.com/protopie.io' },
-      { name: 'Notion', icon: 'https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png' },
+      { name: 'ProtoPie', icon: 'https://cdn.worldvectorlogo.com/logos/protopie-2.svg' },
+      { name: 'Notion', icon: 'https://raw.githubusercontent.com/simple-icons/simple-icons/master/icons/notion.svg' },
       { name: 'Webflow', icon: 'https://cdn.simpleicons.org/webflow/4353FF' },
-      { name: 'Zeplin', icon: 'https://logo.clearbit.com/zeplin.io' },
-      { name: 'Mobbin', icon: 'https://logo.clearbit.com/mobbin.design' },
-      { name: 'Sketch', icon: 'https://cdn.simpleicons.org/sketch/FDB300' },
+      { name: 'Zeplin', icon: 'https://cdn.worldvectorlogo.com/logos/zeplin.svg' },
+      { name: 'Mobbin', icon: 'https://cdn.simpleicons.org/dribbble' },
+      { name: 'Sketch', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sketch/sketch-original.svg' },
       { name: 'Freehand', icon: '/logos/freehand-icon.svg' },
       { name: 'Jira (Atlassian)', icon: 'https://www.vectorlogo.zone/logos/atlassian_jira/atlassian_jira-icon.svg' },
     ]
   },
   {
     id: 'ai', label: 'AI Tools', skills: [
-      { name: 'ChatGPT', icon: 'https://openai.com/favicon.ico' },
+      { name: 'ChatGPT', icon: 'https://cdn.worldvectorlogo.com/logos/openai-2.svg' },
       { name: 'Claude', icon: 'https://cdn.simpleicons.org/anthropic/000000' },
       { name: 'Gemini', icon: 'https://www.vectorlogo.zone/logos/google/google-icon.svg' },
       { name: 'GitHub Copilot', icon: 'https://cdn.simpleicons.org/githubcopilot/000000' },
@@ -106,8 +106,8 @@ const TECH_CATEGORIES = [
       { name: 'Bolt.new', icon: 'https://cdn.simpleicons.org/stackblitz/1389FD' },
       { name: 'v0.dev', icon: 'https://cdn.simpleicons.org/vercel/000000' },
       { name: 'Lovable', icon: 'https://lovable.dev/favicon.ico' },
-      { name: 'Midjourney', icon: 'https://upload.wikimedia.org/wikipedia/commons/e/e6/Midjourney_Emblem.png' },
-      { name: 'Stable Diffusion', icon: 'https://logo.clearbit.com/stability.ai' },
+      { name: 'Midjourney', icon: 'https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/midjourney.png' },
+      { name: 'Stable Diffusion', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/networkx/networkx-original.svg' },
       { name: 'Perplexity', icon: 'https://cdn.simpleicons.org/perplexity/000000' },
       { name: 'ElevenLabs', icon: 'https://cdn.simpleicons.org/elevenlabs/000000' },
       { name: 'Hugging Face', icon: 'https://cdn.simpleicons.org/huggingface/000000' },
@@ -402,7 +402,15 @@ export default function Technologies() {
             <div className="tech-grid-mobile">
               {activeCategory.skills.map((skill) => (
                 <div key={skill.name} className="tech-cell">
-                  <img src={skill.icon} alt={skill.name} />
+                  <img
+                    src={skill.icon}
+                    alt={skill.name}
+                    loading="lazy"
+                    onError={(e) => {
+                      e.currentTarget.onerror = null;
+                      e.currentTarget.src = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg';
+                    }}
+                  />
                   <span>{skill.name}</span>
                 </div>
               ))}
@@ -427,7 +435,15 @@ export default function Technologies() {
               <div className="tech-grid">
                 {activeCategory.skills.map((skill) => (
                   <div key={skill.name} className="tech-cell">
-                    <img src={skill.icon} alt={skill.name} />
+                    <img
+                      src={skill.icon}
+                      alt={skill.name}
+                      loading="lazy"
+                      onError={(e) => {
+                        e.currentTarget.onerror = null;
+                        e.currentTarget.src = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg';
+                      }}
+                    />
                     <span>{skill.name}</span>
                   </div>
                 ))}
